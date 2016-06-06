@@ -39,7 +39,6 @@ $jk_options = get_option('redux_demo');
         <div class="container">
             <span class="toggle menu-icon"></span>
             <?php sutunam_menu(''); ?>
-
             <div class="logo">
                 <?php if (!$jk_options['logo_img']['url']): ?>
                     <i class="rombust d-bg-c d-border-c"><i

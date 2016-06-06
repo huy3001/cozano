@@ -100,15 +100,15 @@ if (!function_exists('sutunam_theme_setup')) {
         );
         register_sidebar($sidebar);
 
-        $right_sidebar = array(
+        $left_sidebar = array(
             'name' => __('Left Sidebar', 'sutunam'),
-            'id' => 'right-sidebar',
-            'description' => 'Right sidebar for Cozano theme',
-            'class' => 'right-sidebar',
-            'before_title' => '<h3 class="right-sidebar-title">',
+            'id' => 'left-sidebar',
+            'description' => 'Left sidebar for Cozano theme',
+            'class' => 'left-sidebar',
+            'before_title' => '<h3 class="left-sidebar-title">',
             'after_title' => '</h3>'
         );
-        register_sidebar($right_sidebar);
+        register_sidebar($left_sidebar);
 
         add_theme_support('post-thumbnails');
 

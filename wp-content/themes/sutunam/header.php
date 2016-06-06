@@ -7,19 +7,87 @@
  * This template to display header
  */
 ?>
+<?php
+
+$jk_options = get_option('redux_demo');
+
+?>
 <!DOCTYPE html>
-<!--[if IE 8]> <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
-<!--[if !IE]> <html <?php language_attributes(); ?>> <![endif]-->
-    <head>
-    <meta charset="<?php bloginfo('charset'); ?>" />
-    <link rel="profile" href="http://gmgp.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<!--[if IE 8]>
+<html <?php language_attributes(); ?> class="ie8"> <![endif]-->
+<!--[if !IE]>
+<html <?php language_attributes(); ?>> <![endif]-->
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>"/>
+    <!-- ======================================================================
+    Mobile Specific Meta
+    ======================================================================= -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="profile" href="http://gmgp.org/xfn/11"/>
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
+    <link rel="shortcut icon"
+          href="<?php echo $jk_options['fav_img']['url']; ?>"
+          type="image/x-icon"/>
     <?php wp_head(); ?>
+
 </head>
-<body <?php body_class(); ?>>
-    <div id="container">
-        <div id="header">
-            <?php sutunam_logo(); ?>
-            <?php sutunam_menu('primary-menu'); ?>
+<body <?php body_class(); ?> <?php language_attributes(); ?>>
+<header id="header">
+    <div class="menu nav-menu">
+        <div class="container">
+            <span class="toggle menu-icon"></span>
+            <?php sutunam_menu(''); ?>
+
+            <div class="logo">
+                <?php if (!$jk_options['logo_img']['url']): ?>
+                    <i class="rombust d-bg-c d-border-c"><i
+                            class="fa <?php echo $jk_options['logo_icon'] ?>"></i></i><a
+                        href="<?php echo home_url(); ?>"> <?php echo $jk_options['logo_txt'] ?></a>
+                <?php else: ?>
+                    <a href="<?php echo home_url(); ?>"> <img
+                            src="<?php echo esc_url($jk_options['logo_img']['url']); ?>"
+                            alt="<?php echo get_site_url() ?>"
+                            width="268"
+                            height="80"></a>
+                <?php endif ?>
+            </div>
+
+            <div class="search-form">
+                <?php get_search_form(); ?>
+            </div>
+
+            <div class="language">
+                <?php if (get_locale() == 'en_US'): ?>
+                    <b><a href="<?php echo get_site_url(1);?>" class="vn-lang"><?php echo __('VN') ?></a></b>
+                    |
+                    <b><a href="<?php echo get_site_url() ?>" class="en-lang current"><?php echo __('EN') ?></a></b>
+                <?php else: ?>
+                    <b><a href="<?php echo get_site_url() ?>" class="vn-lang current"><?php echo __('VN') ?></a></b>
+                    |
+                    <b><a href="<?php echo get_site_url(2);?>" class="en-lang"><?php echo __('EN') ?></a></b>
+                <?php endif; ?>
+            </div>
+
+            <div class="login">
+                <?php if (is_user_logged_in()) { ?>
+                    <a class="login_button"
+                       href="<?php echo wp_logout_url(home_url()); ?>"><span><?php echo __('Log out','sutunam') ?></span></a>
+                <?php } else { ?>
+                    <a class="login_button show_login" id="show_login"
+                       href="#"><span><?php echo __('Log in','sutunam') ?></span></a>
+                <?php } ?>
+            </div>
+
+            <div class="shopping-cart">
+                <a class="cart-icon" href="#">
+                    <span><?php echo __('Cart','sutunam'); ?></span>
+                </a>
+            </div>
         </div>
+    </div>
+
+</header>
+<div id="container">
 

@@ -95,8 +95,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => true,
         // Show the sections below the admin menu item or not
-        'menu_title'           => __( 'NShape Options', 'redux-framework-demo' ),
-        'page_title'           => __( 'NShape Options', 'redux-framework-demo' ),
+        'menu_title'           => __( 'Cozano Options', 'redux-framework-demo' ),
+        'page_title'           => __( 'Cozano Options', 'redux-framework-demo' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -302,23 +302,6 @@
                 'title'     => __('General Settings', 'hercules'),
                 'fields'    => array(
                     array(
-                        'id'        => 'hercules_primary_colour',
-                        'type'      => 'color',
-                        'title'     => __('Color Scheme', 'hercules'),
-                        'subtitle'  => __('Pick a color scheme for the site.', 'hercules'),
-                        'default'   => '#dd9933',
-                        'transparent'=> false,
-                        'validate'  => 'color',
-                    ),
-                    array(
-                        'id'        => 'layout_bw',
-                        'type'      => 'select',
-                        'title'     => __('Theme Stylesheet', 'hercules'),
-                        'subtitle'  => __('Select your themes layout boxed or wide.', 'hercules'),
-                        'options'   => array('boxed' => 'Boxed', 'wide' => 'Wide'),
-                        'default'   => 'wide',
-                    ),
-                    array(
                         'id'    => 'logo_icon',
                         'type'  => 'text',
                         'title' => 'Logo Icon',
@@ -358,15 +341,7 @@
                         //    'title'     => 'Hint Title',
                         //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
                         //)
-                    ),
-                   array(
-                        'id'        => 'menu-mode',
-                        'type'      => 'switch',
-                        'title'     => __('One page or multipage menu', 'hercules'),
-                        'subtitle'  => __('Change menu for multipage or singel page On is for multiplage and off is for one page', 'hercules'),
-                        //'options' => array('on', 'off'),
-                        'default'   => false,
-                    ),
+                    )
                 )
             ));
             Redux::setSection( $opt_name,array(
@@ -375,16 +350,16 @@
                 'heading' => 'Expanded New Section Title',
                 'desc'    => '<br />Top of the header phone and timing can be edited from here.<br />',
                 'fields'  => array(
-                    array(
-                        'id'    => 'phone_no',
-                        'type'  => 'text',
-                        'title' => 'Phone No',
-                    ),
-                    array(
-                        'id'    => 'of_timing',
-                        'type'  => 'text',
-                        'title' => 'Timing',
-                    ),
+                    array(  "title"      => "Facebook",
+                        "id"        => "face_link",
+                        "type"      => "text"
+                    ),array(  "title"      => "Twitter",
+                        "id"        => "twit_link",
+                        "type"      => "text"
+                    ),array(  "title"      => "Youtube",
+                        "id"        => "youtube_link",
+                        "type"      => "text"
+                    )
                 ),
             ));
             Redux::setSection( $opt_name,array(
@@ -405,16 +380,141 @@
                             'btntitle'         => __('This is button title', 'hercules'),
                             'url'           => __('Give us a link!', 'hercules'),
                         ))
-                    ),
+                    )
+
             ));
+
             Redux::setSection( $opt_name,array(
-                'title'   => 'Below Slider',
+                'title'   => 'Cozano Overview',
                 'icon'    => 'el-icon-eye-open',
-                'heading' => 'Expanded New Section Title',
-                'desc'    => '<br />Below slider slides can be edited from here.<br />',
+                'heading' => 'Cozano Overview',
+                'desc'    => '<br />Cozano Overview can be edited from here.<br />',
                 'fields'  => array(
                     array(
-                        'id'        => 'small-slides',
+                        'id'        => 'overview_title',
+                        'type'      => 'textarea',
+                        'title'     => __('Overview Title'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'overview_content_1',
+                        'type'      => 'textarea',
+                        'title'     => __('Overview Content 1'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'overview_img_1',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Overview Image 1'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    ),
+                    array(
+                        'id'        => 'overview_content_2',
+                        'type'      => 'textarea',
+                        'title'     => __('Overview Content 2'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'overview_img_2',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Overview Image 2'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    ),
+                    array(
+                        'id'        => 'overview_content_3',
+                        'type'      => 'textarea',
+                        'title'     => __('Overview Content 3'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'overview_img_3',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Overview Image 3'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    ),
+                    array(
+                        'id'        => 'overview_content_4',
+                        'type'      => 'textarea',
+                        'title'     => __('Overview Content 4'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'overview_img_4',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Overview Image 4'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    )
+                )
+            ));
+            Redux::setSection( $opt_name,array(
+                'title'   => 'Ingredients',
+                'icon'    => 'el-icon-eye-open',
+                'heading' => 'Ingredients Slider',
+                'desc'    => '<br />Ingredients slider slides can be edited from here.<br />',
+                'fields'  => array(
+                    array(
+                        'id'        => 'ingredient_slides',
                         'type'      => 'slides',
                         'title'     => __('Slides Options', 'hercules'),
                         'subtitle'  => __('Unlimited slides with drag and drop sortings.', 'hercules'),
@@ -424,301 +524,219 @@
                             'description'   => __('Description Here', 'hercules'),
                             'btntitle'         => __('This is button title', 'hercules'),
                             'url'           => __('Give us a link!', 'hercules'),
-                        ))
+                        )),
+                    array(
+                        'id'    => 'ingredient_title',
+                        'type'  => 'text',
+                        'title' => 'Ingredient Title',
+                    ),
+                    array(
+                        'id'        => 'ingredient_desc',
+                        'type'      => 'textarea',
+                        'title'     => __('Ingredient description'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'ingredient_img',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Ingredient Image'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    ),
+                    array(
+                        'id'        => 'ingredient_background',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Ingredient Background', 'hercules'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    )
                 ),
             ));
-
             Redux::setSection( $opt_name,array(
-                'title'   => "What's Hot",
+                'title'   => 'Food Service',
                 'icon'    => 'el-icon-eye-open',
-                'heading' => "What's Hot Section ",
-                'desc'    => "<br />You can edit and add more what's hot here.<br />",
+                'heading' => 'Food Service Slider',
+                'desc'    => '<br />Food Service slider slides can be edited from here.<br />',
                 'fields'  => array(
                     array(
-                        'id'        => 'hot-slides',
+                        'id'        => 'food_slides',
                         'type'      => 'slides',
-                        'title'     => __("What's Hot Options", 'hercules'),
-                        'subtitle'  => __("What's Hot Options", 'hercules'),
+                        'title'     => __('Slides Options', 'hercules'),
+                        'subtitle'  => __('Unlimited slides with drag and drop sortings.', 'hercules'),
                         'desc'      => __('', 'hercules'),
                         'placeholder'   => array(
                             'title'         => __('This is a title', 'hercules'),
                             'description'   => __('Description Here', 'hercules'),
+                            'btntitle'         => __('This is button title', 'hercules'),
                             'url'           => __('Give us a link!', 'hercules'),
-                        ))
-                ),
+                        )),
+                    array(
+                        'id'    => 'food_title',
+                        'type'  => 'text',
+                        'title' => 'Food Title',
+                    ),
+                    array(
+                        'id'        => 'food_desc',
+                        'type'      => 'textarea',
+                        'title'     => __('Food description'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'food_img',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Food Image'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    ),
+                    array(
+                        'id'        => 'food_background',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Food Background', 'hercules'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    )
+                )
+            ));
+            Redux::setSection( $opt_name,array(
+                'title'   => 'Retailers Supply',
+                'icon'    => 'el-icon-eye-open',
+                'heading' => 'Retailer Supply',
+                'desc'    => '<br />Retailers Supply slider slides can be edited from here.<br />',
+                'fields'  => array(
+                    array(
+                        'id'        => 'retailer_slides',
+                        'type'      => 'slides',
+                        'title'     => __('Slides Options', 'hercules'),
+                        'subtitle'  => __('Unlimited slides with drag and drop sortings.', 'hercules'),
+                        'desc'      => __('', 'hercules'),
+                        'placeholder'   => array(
+                            'title'         => __('This is a title', 'hercules'),
+                            'description'   => __('Description Here', 'hercules'),
+                            'btntitle'         => __('This is button title', 'hercules'),
+                            'url'           => __('Give us a link!', 'hercules'),
+                        )),
+                    array(
+                        'id'    => 'retailer_title',
+                        'type'  => 'text',
+                        'title' => 'Retailers Supply Title',
+                    ),
+                    array(
+                        'id'        => 'retailer_desc',
+                        'type'      => 'textarea',
+                        'title'     => __('Retailers Supply description'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'retailer_img',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Retailers Supply Image'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    ),
+                    array(
+                        'id'        => 'retailer_background',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Retailers Supply Background', 'hercules'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    )
+                )
             ));
 
             Redux::setSection( $opt_name,array(
-                'title'   => 'Schedule Options',
-                'icon'    => 'el-icon-list-alt',
-                'heading' => 'Expanded New Section Title',
-                'desc'    => '<br />After slider schedule section content can be edited from here.<br />',
-                'fields'  => array(
-                    array(
-                        'id'    => 'title_1',
-                        'type'  => 'text',
-                        'title' => 'Title Schedule section 1',
-                    ),
-                    array(
-                        'id'    => 'sub_title_1',
-                        'type'  => 'text',
-                        'title' => 'Sub Title Schedule section 1',
-                    ),
-                    array(
-                        'id'    => 'icon_1',
-                        'type'  => 'text',
-                        'title' => 'Icon Name',
-                        'desc'  =>  'Please Enter the Font Awesome icon here e.g fa-asterisk'
-                    ),
-                    array(
-                        'id'        => 'desc_1',
-                        'type'      => 'textarea',
-                        'title'     => __('Desc Section 1', 'hercules'),
-                        'subtitle'  => __('All HTML will be stripped', 'hercules'),
-                        'desc'      => __('', 'hercules'),
-                        'validate'  => 'no_html',
-                        'default'   => 'No HTML is allowed in here.'
-                    ),
-                    array(
-                        'id'    => 'title_2',
-                        'type'  => 'text',
-                        'title' => 'Title Schedule section 2',
-                    ),
-                    array(
-                        'id'    => 'sub_title_2',
-                        'type'  => 'text',
-                        'title' => 'Sub Title Schedule section 2',
-                    ),
-                     array(
-                        'id'    => 'icon_2',
-                        'type'  => 'text',
-                        'title' => 'Icon Name',
-                        'desc'  =>  'Please Enter the Font Awesome icon here e.g fa-asterisk'
-                    ),
-                    array(
-                        'id'        => 'desc_2',
-                        'type'      => 'textarea',
-                        'title'     => __('Desc Section 1', 'hercules'),
-                        'subtitle'  => __('All HTML will be stripped', 'hercules'),
-                        'desc'      => __('', 'hercules'),
-                        'validate'  => 'no_html',
-                        'default'   => 'No HTML is allowed in here.'
-                    ),
-                    array(
-                        'id'    => 'title_3',
-                        'type'  => 'text',
-                        'title' => 'Title Schedule section 3',
-                    ),
-                    array(
-                        'id'    => 'sub_title_3',
-                        'type'  => 'text',
-                        'title' => 'Sub Title Schedule section 3',
-                    ),
-                     array(
-                        'id'    => 'icon_3',
-                        'type'  => 'text',
-                        'title' => 'Icon Name',
-                        'desc'  =>  'Please Enter the Font Awesome icon here e.g fa-asterisk'
-                    ),
-                    array(
-                        'id'        => 'desc_3',
-                        'type'      => 'textarea',
-                        'title'     => __('Desc Section 3', 'hercules'),
-                        'subtitle'  => __('All HTML will be stripped', 'hercules'),
-                        'desc'      => __('', 'hercules'),
-                        'validate'  => 'no_html',
-                        'default'   => 'No HTML is allowed in here.'
-                    ),
-                    array(
-                        'id'    => 'title_4',
-                        'type'  => 'text',
-                        'title' => 'Title Schedule section 4',
-                    ),
-                    array(
-                        'id'    => 'sub_title_4',
-                        'type'  => 'text',
-                        'title' => 'Sub Title Schedule section 4',
-                    ),
-                     array(
-                        'id'    => 'icon_4',
-                        'type'  => 'text',
-                        'title' => 'Icon Name',
-                        'desc'  =>  'Please Enter the Font Awesome icon here e.g fa-asterisk'
-                    ),
-                    array(
-                        'id'        => 'desc_4',
-                        'type'      => 'textarea',
-                        'title'     => __('Desc Section 4', 'hercules'),
-                        'subtitle'  => __('Some Html tags are allowed', 'hercules'),
-                        'desc'      => __('', 'hercules'),
-                        'validate'  => 'html',
-                        'default'   => 'Some HTML are allowed in here.',
-                        'allowed_html' => array(
-                            'ul' => array(),
-                            'li' => array(),
-                            'i' => array(
-                                'class' => array()
-                                ),
-                            'span' => array()
-                        )
-                    )
-                ),
-            ));
-                Redux::setSection( $opt_name,array(
-                'icon'      => 'el-icon-star',
-                'title'     => __('What\' New Section', 'hercules'),
-                'fields'    => array(
-                    array(     
-                        "id"        => "class_title",
-                        "type"      => "text",
-                        "title"      => "Class Title",
-                ),array(  
-                        "id"        => "class_desc",                        
-                        "type"      => "textarea",
-                        "title"      => "Class Details",
-                ),array(  
-                        "id"        => "pro_days",
-                        "type"      => "text",
-                        "title"      => "Program Days",
-                ),array(  
-                        "id"        => "pro_timing",
-                        "type"      => "text",
-                        "title"      => "Program Timing",
-                ),array(  
-                        "id"        => "trainer_name",
-                        "type"      => "text",
-                        "title"      => "Trainer Name",
-                ),array( 
-                        "id"        => "timetable_link",
-                        "type"      => "text",
-                         "title"      => "Timetable Link",
-                ),array(                         
-                        "id"        => "class_link",
-                        "type"      => "text",
-                        "title"      => "Class Link",
-                ),array(
-                        'id'        => 'pro_img',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => __('Media w/ URL', 'hercules'),
-                        'compiler'  => 'true',
-                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
-                    ),
-                )));
-                Redux::setSection( $opt_name,array(
-                'icon'      => ' el-icon-photo',
-                'title'     => __('Application Section', 'hercules'),
-                'fields'    => array( array( "title"      => "Title",
-                        "id"        => "app_title_text",
-                        "type"      => "text"
-                ),array(  "title"      => "Description 1",
-                        "id"        => "app_desc_1",
-                        "type"      => "text"
-                ),array(  "title"      => "Description 2",
-                        "id"        => "app_desc_2",
-                        "type"      => "text"
-                ),array(  "title"      => "Description 3",
-                        "id"        => "app_desc_3",
-                        "type"      => "text"
-                ),array(  "title"      => "Description 4",
-                        "id"        => "app_desc_4",
-                        "type"      => "text"
-                ),array(  "title"      => "Button Text",
-                        "id"        => "app_btn_text",
-                        "type"      => "text"
-                ),array(  "title"      => "Button Link",
-                        "id"        => "down_btn_link",
-                        "type"      => "text"
-                ),array(
-                        'id'        => 'app_img',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => __('Media w/ URL', 'hercules'),
-                        'compiler'  => 'true',
-                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
-                    ),
-                )));
-                Redux::setSection( $opt_name,array(
-                'title'   => 'Parallex background images',
+                'title'   => 'Shop Online',
                 'icon'    => 'el-icon-eye-open',
-                'heading' => 'Parallex background images',
-                'desc'    => '<br />You can change parallex background images from here.<br />',
+                'heading' => 'Shop Online',
+                'desc'    => '<br />Shop Online can be edited from here.<br />',
                 'fields'  => array(
                     array(
-                        'id'        => 'p2_img',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => __('Tweets section', 'hercules'),
-                        'compiler'  => 'true',
-                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('Tweets section parallex background image', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
+                        'id'    => 'shop_title',
+                        'type'  => 'text',
+                        'title' => 'Shop Online Title',
                     ),
                     array(
-                        'id'        => 'p3_img',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => __('App section', 'hercules'),
-                        'compiler'  => 'true',
-                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('App section parallex background image', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
+                        'id'        => 'shop_desc',
+                        'type'      => 'textarea',
+                        'title'     => __('Shop Online description'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
                     ),
                     array(
-                        'id'        => 'p4_img',
+                        'id'        => 'shop_img',
                         'type'      => 'media',
                         'url'       => true,
-                        'title'     => __('Parallexblock', 'hercules'),
+                        'title'     => __('Shop Online Image'),
                         'compiler'  => 'true',
                         //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('Parallexblock with one or two button parallex bakground image.', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
                     ),
                     array(
-                        'id'        => 'p5_img',
+                        'id'        => 'shop_background',
                         'type'      => 'media',
                         'url'       => true,
-                        'title'     => __('Testimonial', 'hercules'),
+                        'title'     => __('Shop Online Background', 'hercules'),
                         'compiler'  => 'true',
                         //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('Testimonial parallex bakground image', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
-                    ),)
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'hercules'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules')
+                    )
+                )
             ));
+
                Redux::setSection( $opt_name,array(
                 'icon'      => 'el-icon-map-marker-alt',
                 'title'     => __('Contact', 'hercules'),
@@ -734,84 +752,40 @@
                 ),array(  "title"      => "Longitude",
                         "id"        => "g_long",
                         "type"      => "text"
-                ),array(  "title"      => "Zoom",
-                        "id"        => "g_zoom",
+                ),array(  "title"      => "Telephone",
+                        "id"        => "telephone",
                         "type"      => "text"
                 )
                 )));
                Redux::setSection( $opt_name,array(
                 'icon'      => 'el-icon-website',
                 'title'     => __('Footer', 'hercules'),
-                'fields'    => array(array( "title"      => "Footer Copyright Text",
+                'fields'    => array(
+                    array( "title"      => "Footer Copyright Title",
                         "id"        => "copy_text",
                         "type"      => "text"
-                ),array(  "title"      => "Facebook",
-                        "id"        => "face_link",
-                        "type"      => "text"
-                ),array(  "title"      => "Twitter",
-                        "id"        => "twit_link",
-                        "type"      => "text"
-                ),array(  "title"      => "pinterest",
-                        "id"        => "pin_link",
-                        "type"      => "text"
-                ),array(  "title"      => "Google Plus",
-                        "id"        => "gplus_link",
-                        "type"      => "text"
-                ),array(  "title"      => "Dribbble",
-                        "id"        => "dri_link",
-                        "type"      => "text"
-                ),array(  "title"      => "LimkedIn",
-                        "id"        => "lin_link",
-                        "type"      => "text"
-                ),array(  "title"      => "Rss",
-                        "id"        => "rss_link",
-                        "type"      => "text"
-                ),
-                    array(
+                    ),array(
+                        'id'        => 'copy_desc',
+                        'type'      => 'textarea',
+                        'title'     => __('Footer Copyright Title'),
+                        'subtitle'  => __('HTML can be used', 'hercules'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),array(
                         'id'        => 'footer_background',
                         'type'      => 'media',
                         'url'       => true,
-                        'title'     => __('Footer Background', 'hercules'),
-                        'compiler'  => 'true',
-                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'      => __('Footer bakground image', 'hercules'),
-                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'hercules'),
-                        'default'   => array('url' => 'http://s.wordpress.org/style/images/codeispoetry.png'),
-                        //'hint'      => array(
-                        //    'title'     => 'Hint Title',
-                        //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                        //)
+                        'title'     => __('Footer background')
                     )
                 )));
-            Redux::setSection( $opt_name,array(
-                'title'     => __('Import / Export', 'hercules'),
-                'desc'      => __('Import and Export your Redux Framework settings from file, text or URL.', 'hercules'),
-                'icon'      => 'el-icon-refresh',
-                'fields'    => array(
-                    array(
-                        'id'            => 'opt-import-export',
-                        'type'          => 'import_export',
-                        'title'         => 'Import Export',
-                        'subtitle'      => 'Save and restore your Redux options',
-                        'full_width'    => false,
-                    ),
-                ),
-            ));                     
-            /*Redux::setSection( $opt_name,array(
-                'type' => 'divide',
-            ));
-            Redux::setSection( $opt_name,array(
-                'icon'      => 'el-icon-info-sign',
-                'title'     => __('Theme Information', 'hercules'),
-                'desc'      => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'hercules'),
-                'fields'    => array(
-                    array(
-                        'id'        => 'opt-raw-info',
-                        'type'      => 'raw',
-                        'content'   => $item_info,
-                    )
-                ),
-            ));*/
+
 
     if ( file_exists( dirname( __FILE__ ) . '/../README.md' ) ) {
         $section = array(

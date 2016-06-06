@@ -6,7 +6,17 @@
  * Time: 17:44
  */
 
+/*-----------------------------------------------------------------------------------*/
+/* ReduxFramework Admin Panel
+/*-----------------------------------------------------------------------------------*/
 
+if ( !class_exists( 'ReduxFramework' ) ) {
+    require_once( get_template_directory() . '/lib/admin_core/framework.php' );
+}
+
+//if ( !isset( $redux_demo ) ) {
+require_once( get_template_directory() . '/lib/admin_core/admin-config.php' );
+//}
 /**
  * Get path of theme
  */
@@ -14,7 +24,7 @@ define('THEME_URL', get_stylesheet_directory());
 define('CORE', THEME_URL . '/core');
 
 require_once(CORE . '/init.php');
-
+require_once ('lib/post-types.php');
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -80,14 +90,28 @@ if (!function_exists('sutunam_theme_setup')) {
          * Create sidebar for sutunam theme
          */
         $sidebar = array(
-            'name' => __('Main Sidebar', 'sutunam'),
-            'id' => 'main-sidebar',
-            'description' => 'Main sidebar for Sutunam theme',
-            'class' => 'main-sidebar',
-            'before_title' => '<h3 class="widgettitle">',
-            'after_sidebar' => '</h3>'
+            'name' => __('Footer Sidebar', 'sutunam'),
+            'id' => 'footer-sidebar',
+            'description' => 'Footer sidebar for Cozano theme',
+            'class' => 'footer-sidebar',
+            'before_title' => '<h3 class="footer-title">',
+            'after_title' => '</h3>',
+
         );
         register_sidebar($sidebar);
+
+        $right_sidebar = array(
+            'name' => __('Left Sidebar', 'sutunam'),
+            'id' => 'right-sidebar',
+            'description' => 'Right sidebar for Cozano theme',
+            'class' => 'right-sidebar',
+            'before_title' => '<h3 class="right-sidebar-title">',
+            'after_title' => '</h3>'
+        );
+        register_sidebar($right_sidebar);
+
+        add_theme_support('post-thumbnails');
+
     }
 
     add_action('init', 'sutunam_theme_setup');
@@ -257,5 +281,25 @@ if (!function_exists('sutunam_entry_content')) {
             wp_link_pages($link_pages);
         endif;
     }
+}
+
+add_action( 'wp_enqueue_scripts','stn_frontend_scripts' );
+add_filter( 'wp_default_editor', create_function('', 'return "tinymce";') );
+/**
+ * Enqueue js  css
+ */
+function stn_frontend_scripts() {
+    /*============ Styles ============ */
+    wp_enqueue_style( 'styles',   get_template_directory_uri() . '/css/style.css');
+    wp_enqueue_style( 'custom',   get_template_directory_uri() . '/css/custom.css');
+    /*============ Javascripts ============ */
+    wp_enqueue_script( 'jquery',   get_template_directory_uri() . '/js/jquery.js');
+    wp_enqueue_script( 'bootstrap',   get_template_directory_uri() . '/js/bootstrap.min.js',array('jquery'), '3.1.1', true);
+    wp_enqueue_script( 'custom',   get_template_directory_uri() . '/js/custom.min.js',array('jquery'), '3.1.1', true);
+}
+
+add_filter( 'wp_mail_content_type', 'set_html_content_type' );
+function set_html_content_type() {
+    return 'text/html';
 }
 

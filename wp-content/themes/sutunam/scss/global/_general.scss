@@ -1,5 +1,23 @@
 /* General style */
 
+html, body {
+    height: 100%;
+}
+
 body {
     @include font('font-gotham-medium');
+}
+
+#wrapper {
+    min-height: 100%;
+    padding-top: $header-height;
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

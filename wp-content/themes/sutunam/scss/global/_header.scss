@@ -1,0 +1,21 @@
+/* Header style */
+
+#header {
+    background: $header-bg;
+    height: $header-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .nav-menu {
+        position: relative;
+    }
+    .logo {
+        max-width: 160px;
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+}
+

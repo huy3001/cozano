@@ -1,3 +1,7 @@
+/* Backgound */
+$header-bg: #303030;
+
+
 /* Break point */
 
 
@@ -20,4 +24,7 @@ $white: #ffffff;
     @include font('font-style');
     font-family: 'GothamBold', sans-serif;
 }
+
+/* Layout */
+$header-height: 54px;
 

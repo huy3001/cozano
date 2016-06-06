@@ -38,6 +38,8 @@
 
 /* Variable */
 
+/* Backgound */
+
 /* Break point */
 
 /* Color */
@@ -53,9 +55,60 @@ body {
   font-family: 'GothamMedium', sans-serif;
 }
 
+/* Layout */
+
 /* Global */
 
 /* General style */
+
+html,
+body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  padding-top: 54px;
+}
+
+#wrapper:after {
+  content: "";
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header style */
+
+#header {
+  background: #303030;
+  height: 54px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#header .nav-menu {
+  position: relative;
+}
+
+#header .logo {
+  max-width: 160px;
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* Footer style */
 
 /* Component */
 

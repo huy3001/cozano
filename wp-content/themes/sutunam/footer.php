@@ -94,6 +94,7 @@ if (!isset($jk_options['copy_text'])) {
     </div>
 </footer>
 </div> <!-- end #container -->
+</div> <!-- End #wrapper -->
 <a href="#0" class="cd-top cd-is-visible">Top</a>
 <?php wp_footer(); ?>
 </body> <!-- end body -->

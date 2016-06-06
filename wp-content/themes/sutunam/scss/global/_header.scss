@@ -13,7 +13,7 @@
     .logo {
         max-width: 160px;
         position: absolute;
-        top: 17px;
+        top: 12px;
         left: 50%;
         @include transform(translateX(-50%));
     }

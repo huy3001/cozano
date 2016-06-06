@@ -1,0 +1,23 @@
+/* Break point */
+
+
+/* Color */
+$black: #000000;
+$white: #ffffff;
+
+/* Font */
+@include placeholder('font-style') {
+    font-style: normal;
+    font-weight: normal;
+}
+
+@include placeholder('font-gotham-medium') {
+    @include font('font-style');
+    font-family: 'GothamMedium', sans-serif;
+}
+
+@include placeholder('font-gotham-bold') {
+    @include font('font-style');
+    font-family: 'GothamBold', sans-serif;
+}
+

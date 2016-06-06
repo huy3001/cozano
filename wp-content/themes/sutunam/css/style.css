@@ -1,0 +1,64 @@
+/* Sutunam theme style */
+
+/* Font */
+
+/* Font style */
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url("../fonts/GothamBold.eot");
+  src: url("../fonts/GothamBold.eot") format("embedded-opentype"), url("../fonts/GothamBold.woff2") format("woff2"), url("../fonts/GothamBold.woff") format("woff"), url("../fonts/GothamBold.ttf") format("truetype"), url("../fonts/GothamBold.svg#GothamBold") format("svg");
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url("../fonts/GothamMedium.eot");
+  src: url("../fonts/GothamMedium.eot") format("embedded-opentype"), url("../fonts/GothamMedium.woff2") format("woff2"), url("../fonts/GothamMedium.woff") format("woff"), url("../fonts/GothamMedium.ttf") format("truetype"), url("../fonts/GothamMedium.svg#GothamMedium") format("svg");
+}
+
+/* Mixin */
+
+/* border radius */
+
+/* box shadow */
+
+/* box sizing */
+
+/* transform */
+
+/* transition */
+
+/* opacity */
+
+/* breakpoint with one condition(min or max) */
+
+/* breakpoint with two conditions (min and max) */
+
+/* extend placeholder */
+
+/* Variable */
+
+/* Break point */
+
+/* Color */
+
+/* Font */
+
+body {
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'GothamMedium', sans-serif;
+}
+
+/* Global */
+
+/* General style */
+
+/* Component */
+
+/* Pages */
+
+/* Home page style */

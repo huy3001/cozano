@@ -16,3 +16,12 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
+# Config file
+wp-config.php
+
+# Idea files
+.idea
+
+# Node modules files
+node_modules
+

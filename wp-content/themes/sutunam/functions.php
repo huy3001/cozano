@@ -290,12 +290,14 @@ add_filter( 'wp_default_editor', create_function('', 'return "tinymce";') );
  */
 function stn_frontend_scripts() {
     /*============ Styles ============ */
+    wp_enqueue_style( 'bootstrap',   get_template_directory_uri() . '/css/bootstrap.min.css');
+    wp_enqueue_style( 'bootstrap-theme',   get_template_directory_uri() . '/css/bootstrap-theme.min.css');
     wp_enqueue_style( 'styles',   get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style( 'custom',   get_template_directory_uri() . '/css/custom.css');
     /*============ Javascripts ============ */
     wp_enqueue_script( 'jquery',   get_template_directory_uri() . '/js/jquery.js');
     wp_enqueue_script( 'bootstrap',   get_template_directory_uri() . '/js/bootstrap.min.js',array('jquery'), '3.1.1', true);
-    wp_enqueue_script( 'custom',   get_template_directory_uri() . '/js/custom.min.js',array('jquery'), '3.1.1', true);
+    wp_enqueue_script( 'custom',   get_template_directory_uri() . '/js/custom.js',array('jquery'), '3.1.1', true);
 }
 
 add_filter( 'wp_mail_content_type', 'set_html_content_type' );

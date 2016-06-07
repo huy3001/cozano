@@ -60,13 +60,13 @@ $jk_options = get_option('redux_demo');
 
             <div class="language">
                 <?php if (get_locale() == 'en_US'): ?>
-                    <b><a href="<?php echo get_site_url(1); ?>" class="vn-lang"><?php echo __('VN') ?></a></b>
+                    <a href="<?php echo get_site_url(1); ?>" class="vn-lang"><?php echo __('VN') ?></a>
                     |
-                    <b><a href="<?php echo get_site_url() ?>" class="en-lang current"><?php echo __('EN') ?></a></b>
+                    <a href="<?php echo get_site_url() ?>" class="en-lang current"><?php echo __('EN') ?></a>
                 <?php else: ?>
-                    <b><a href="<?php echo get_site_url() ?>" class="vn-lang current"><?php echo __('VN') ?></a></b>
+                    <a href="<?php echo get_site_url() ?>" class="vn-lang current"><?php echo __('VN') ?></a>
                     |
-                    <b><a href="<?php echo get_site_url(2); ?>" class="en-lang"><?php echo __('EN') ?></a></b>
+                    <a href="<?php echo get_site_url(2); ?>" class="en-lang"><?php echo __('EN') ?></a>
                 <?php endif; ?>
             </div>
 

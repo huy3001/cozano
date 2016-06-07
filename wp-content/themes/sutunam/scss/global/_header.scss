@@ -18,6 +18,42 @@
         left: 50%;
         @include transform(translate(-50%, -50%));
     }
+    .search-form {
+        position: absolute;
+        top: 0;
+        right: 300px;
+        height: 100%;
+        input {
+            background: none;
+            border-color: $search-input-bd;
+            border-style: solid;
+            border-width: 0 1px;
+            color: $header-bg;
+            height: $header-height;
+            width: 170px;
+            padding: 0 15px;
+            outline: none;
+            @include transition();
+            @include input-placeholder() {
+                color: $white;
+            }
+            &:focus {
+                background: $white;
+            }
+        }
+        label {
+
+        }
+    }
+    .language {
+        position: absolute;
+        top: 50%;
+        right: 230px;
+        @include transform(translateY(-50%));
+        a {
+            color: $white;
+        }
+    }
     .login {
         position: absolute;
         top: 50%;

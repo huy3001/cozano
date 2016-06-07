@@ -18,5 +18,28 @@
         left: 50%;
         @include transform(translate(-50%, -50%));
     }
+    .login {
+        position: absolute;
+        top: 50%;
+        right: 110px;
+        @include transform(translateY(-50%));
+        .login-button {
+            color: $white;
+            .fa {
+                font-size: 18px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .shopping-cart {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        @include transform(translateY(-50%));
+        .cart-icon {
+            color: $white;
+            font-size: 18px;
+        }
+    }
 }
 

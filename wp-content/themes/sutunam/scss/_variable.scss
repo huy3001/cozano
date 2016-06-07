@@ -25,6 +25,10 @@ $white: #ffffff;
     font-family: 'GothamBold', sans-serif;
 }
 
+@include placeholder('font-awesome') {
+    font-family:'FontAwesome';
+}
+
 /* Layout */
 $header-height: 54px;
 

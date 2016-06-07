@@ -52,7 +52,7 @@ body {
 }
 
 body {
-  font-family: 'GothamMedium', sans-serif;
+  font-family: 'GothamBold', sans-serif;
 }
 
 /* Layout */
@@ -81,6 +81,11 @@ img {
   height: auto;
 }
 
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
 /* Header style */
 
 #header {
@@ -107,6 +112,42 @@ img {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+#header .login {
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#header .login .login-button {
+  color: #ffffff;
+}
+
+#header .login .login-button .fa {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+#header .shopping-cart {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#header .shopping-cart .cart-icon {
+  color: #ffffff;
+  font-size: 18px;
 }
 
 /* Footer style */

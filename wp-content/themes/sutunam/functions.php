@@ -82,8 +82,8 @@ if (!function_exists('sutunam_theme_setup')) {
 
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(array(
-            'primary' => __('Primary Menu', 'sutunam'),
-            'social' => __('Social Links Menu', 'sutunam'),
+            'top-menu' => __('Top Menu', 'sutunam'),
+            'left-menu' => __('Left Menu', 'sutunam'),
         ));
 
         /*
@@ -100,15 +100,15 @@ if (!function_exists('sutunam_theme_setup')) {
         );
         register_sidebar($sidebar);
 
-        $left_sidebar = array(
-            'name' => __('Left Sidebar', 'sutunam'),
-            'id' => 'left-sidebar',
-            'description' => 'Left sidebar for Cozano theme',
-            'class' => 'left-sidebar',
-            'before_title' => '<h3 class="left-sidebar-title">',
-            'after_title' => '</h3>'
-        );
-        register_sidebar($left_sidebar);
+//        $left_sidebar = array(
+//            'name' => __('Left Sidebar', 'sutunam'),
+//            'id' => 'left-sidebar',
+//            'description' => 'Left sidebar for Cozano theme',
+//            'class' => 'left-sidebar',
+//            'before_title' => '<h3 class="left-sidebar-title">',
+//            'after_title' => '</h3>'
+//        );
+//        register_sidebar($left_sidebar);
 
         add_theme_support('post-thumbnails');
 

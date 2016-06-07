@@ -11,11 +11,7 @@ get_header(); ?>
 $jk_options = get_option('redux_demo');
 ?>
 <div class="left-menu">
-    <?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
-        <ul id="sidebar">
-            <?php dynamic_sidebar( 'left-sidebar' ); ?>
-        </ul>
-    <?php endif; ?>
+    <?php sutunam_menu('left-menu'); ?>
 </div>
 <div class="right-content">
     <aside class="upsbar">

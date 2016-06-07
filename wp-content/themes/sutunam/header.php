@@ -39,7 +39,7 @@ $jk_options = get_option('redux_demo');
     <div class="menu nav-menu">
         <div class="container">
             <span class="toggle menu-icon"></span>
-            <?php sutunam_menu(''); ?>
+            <?php sutunam_menu('top-menu'); ?>
             <div class="logo">
                 <?php if (!$jk_options['logo_img']['url']): ?>
                     <i class="rombust d-bg-c d-border-c"><i
@@ -58,6 +58,7 @@ $jk_options = get_option('redux_demo');
                 <?php get_search_form(); ?>
             </div>
 
+            <?php /*
             <div class="language">
                 <?php if (get_locale() == 'en_US'): ?>
                     <a href="<?php echo get_site_url(1); ?>" class="vn-lang"><?php echo __('VN') ?></a>
@@ -69,7 +70,7 @@ $jk_options = get_option('redux_demo');
                     <a href="<?php echo get_site_url(2); ?>" class="en-lang"><?php echo __('EN') ?></a>
                 <?php endif; ?>
             </div>
-
+            */?>
             <div class="login">
                 <?php if (is_user_logged_in()) { ?>
                     <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">

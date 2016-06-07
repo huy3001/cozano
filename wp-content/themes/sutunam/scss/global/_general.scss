@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    @include font('font-gotham-medium');
+    @include font('font-gotham-bold');
 }
 
 #wrapper {
@@ -20,4 +20,10 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    &:hover, &:focus {
+        text-decoration: none;
+    }
 }

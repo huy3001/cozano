@@ -133,7 +133,7 @@ a:focus {
   color: #303030;
   height: 54px;
   width: 170px;
-  padding: 0 15px;
+  padding: 10px 15px 10px 35px;
   outline: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -159,6 +159,27 @@ a:focus {
 
 #header .search-form input:focus {
   background: #ffffff;
+}
+
+#header .search-form input:focus + button {
+  color: #303030;
+}
+
+#header .search-form button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #header .language {

@@ -31,7 +31,7 @@
             color: $header-bg;
             height: $header-height;
             width: 170px;
-            padding: 0 15px;
+            padding: 10px 15px 10px 35px;
             outline: none;
             @include transition();
             @include input-placeholder() {
@@ -40,9 +40,22 @@
             &:focus {
                 background: $white;
             }
+            &:focus + button {
+                color: $header-bg;
+            }
         }
-        label {
-
+        button {
+            background: none;
+            border: none;
+            color: $white;
+            font-size: 18px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            outline: none;
+            @include transition();
         }
     }
     .language {

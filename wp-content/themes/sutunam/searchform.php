@@ -6,10 +6,10 @@
  * Time: 17:48
  */
 ?>
-<form role="search" method="get" id="searchform" class="searchform"
-      action="<?php echo esc_url(home_url('/')); ?>">
+<form role="search" method="get" id="form-search" class="form-search"
+      action="<?php echo esc_url( home_url( '/' ) ); ?>" xmlns="http://www.w3.org/1999/html">
     <div class="search-item">
-        <input placeholder="<?php echo __('Search', 'sutunam') ?>" type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"/>
-        <label class="screen-reader-text fa fa-search" for="s"><?php _x('Search for:', 'label'); ?></label>
+        <input class="form-text" placeholder="<?php echo __('Search', 'sutunam') ?>" type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"/>
+        <button class="form-submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
 </form>

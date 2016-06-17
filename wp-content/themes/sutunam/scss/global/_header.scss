@@ -21,17 +21,20 @@
         margin-top: -20px;
     }
     .top-menu {
+        position: absolute;
+        left: 70px;
+        top: 0;
         ul {
             float: left;
             margin: 0;
             padding: 0;
             li {
                 float: left;
-                margin: 0 6px;
+                margin: 0 8px;
                 a {
                     color: $white;
                     display: block;
-                    padding: 17px 6px;
+                    padding: 17px 8px;
                     text-transform: uppercase;
                     &:hover {
                         text-decoration: underline;
@@ -107,6 +110,9 @@
                 font-size: 18px;
                 margin-right: 5px;
             }
+            &:hover {
+                color: $header-link-hover;
+            }
         }
     }
     .shopping-cart {
@@ -117,6 +123,9 @@
         .cart-icon {
             color: $white;
             font-size: 18px;
+            &:hover {
+                color: $header-link-hover;
+            }
         }
     }
 }

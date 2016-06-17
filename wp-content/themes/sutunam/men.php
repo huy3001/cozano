@@ -10,7 +10,7 @@ get_header(); ?>
 <?php
 $jk_options = get_option('redux_demo');
 ?>
-<div class="left-menu">
+<div class="left-content">
     <?php sutunam_menu('left-menu'); ?>
 </div>
 <div class="right-content">

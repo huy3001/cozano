@@ -19,6 +19,13 @@
     box-sizing: $box-model;
 }
 
+/* calculate */
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
 /* transform */
 @mixin transform($transforms) {
     -webkit-transform: $transforms;

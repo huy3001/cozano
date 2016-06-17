@@ -1,8 +1,10 @@
 /* Backgound */
 $header-bg: #303030;
+$left-menu-bg: #999999;
 
 /* Border */
 $search-input-bd: #666666;
+$left-menu-bd: #dcdcdc;
 
 /* Break point */
 
@@ -10,6 +12,8 @@ $search-input-bd: #666666;
 /* Color */
 $black: #000000;
 $white: #ffffff;
+$header-link-hover: #aaaaaa;
+$submenu-item-color: #a2a2a2;
 
 /* Font */
 @include placeholder('font-style') {
@@ -33,4 +37,5 @@ $white: #ffffff;
 
 /* Layout */
 $header-height: 54px;
+$left-content-width: 250px;
 

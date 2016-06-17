@@ -106,6 +106,38 @@ a:focus {
   position: relative;
 }
 
+#header .toggle-menu {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 28px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+#header .top-menu ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#header .top-menu ul li {
+  float: left;
+  margin: 0 6px;
+}
+
+#header .top-menu ul li a {
+  color: #ffffff;
+  display: block;
+  padding: 17px 6px;
+  text-transform: uppercase;
+}
+
+#header .top-menu ul li a:hover {
+  text-decoration: underline;
+}
+
 #header .logo {
   max-width: 160px;
   position: absolute;

@@ -11,6 +11,35 @@
         height: 100%;
         position: relative;
     }
+    .toggle-menu {
+        color: $white;
+        cursor: pointer;
+        font-size: 28px;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        margin-top: -20px;
+    }
+    .top-menu {
+        ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                margin: 0 6px;
+                a {
+                    color: $white;
+                    display: block;
+                    padding: 17px 6px;
+                    text-transform: uppercase;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
     .logo {
         max-width: 160px;
         position: absolute;

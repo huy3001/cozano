@@ -38,7 +38,7 @@ $jk_options = get_option('redux_demo');
 <header id="header">
     <div class="menu nav-menu">
         <div class="container">
-            <span class="toggle menu-icon"></span>
+            <span class="toggle-menu"><i class="fa fa-bars" aria-hidden="true"></i></span>
             <?php sutunam_menu('top-menu'); ?>
             <div class="logo">
                 <?php if (!$jk_options['logo_img']['url']): ?>

@@ -24,8 +24,8 @@ img {
 }
 
 a {
+    @include transition();
     &:hover, &:focus {
         text-decoration: none;
-        @include transition();
     }
 }

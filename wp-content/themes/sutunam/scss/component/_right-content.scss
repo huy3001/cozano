@@ -4,5 +4,8 @@
     left: $left-content-width;
     position: relative;
     overflow-x: hidden;
-    @include calc(width, '100%' - $left-content-width);
+    @include calc(width, '100% - 250px');
+    > .container {
+        width: 100%;
+    }
 }

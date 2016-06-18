@@ -19,3 +19,13 @@
     url('../fonts/GothamMedium.ttf') format('truetype'),
     url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
 }
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../fonts/GothamLight.eot');
+    src: url('../fonts/GothamLight.eot') format('embedded-opentype'),
+    url('../fonts/GothamLight.woff2') format('woff2'),
+    url('../fonts/GothamLight.woff') format('woff'),
+    url('../fonts/GothamLight.ttf') format('truetype'),
+    url('../fonts/GothamLight.svg#GothamLight') format('svg');
+}

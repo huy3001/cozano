@@ -21,6 +21,11 @@ $submenu-item-color: #a2a2a2;
     font-weight: normal;
 }
 
+@include placeholder('font-gotham-light') {
+    @include font('font-style');
+    font-family: 'GothamLight', sans-serif;
+}
+
 @include placeholder('font-gotham-medium') {
     @include font('font-style');
     font-family: 'GothamMedium', sans-serif;

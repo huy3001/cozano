@@ -16,6 +16,7 @@ if (!isset($jk_options['copy_text'])) {
 <div class="newsletter-footer">
 	<div class="container">
 		<div class="newsletter">
+			<p><?php echo __('Receive our newsletter', 'sutunam') ?></p>
 			<?php echo  do_shortcode('[contact-form-7 id="286" title="new-contact-us-footer" html_class="use-floating-validation-tip"]') ?>
 		</div>
 	</div>
@@ -28,47 +29,47 @@ if (!isset($jk_options['copy_text'])) {
 		<div class="social-block">
 			<?php if($jk_options['face_link']):?>
 				<a href="<?php echo $jk_options['face_link']?>">
-					<i class="facebook"></i>
+					<i class="fa fa-facebook" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['twit_link']):?>
 				<a href="<?php echo $jk_options['twit_link']?>">
-					<i class="twitter"></i>
+					<i class="fa fa-twitter" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['youtube_link']):?>
 				<a href="<?php echo $jk_options['youtube_link']?>">
-					<i class="youtube"></i>
+					<i class="fa fa-youtube" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['gmail_link']):?>
 				<a href="<?php echo $jk_options['gmail_link']?>">
-					<i class="gmail"></i>
+					<i class="fa fa-envelope" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['instagram_link']):?>
 				<a href="<?php echo $jk_options['instagram_link']?>">
-					<i class="instergram"></i>
+					<i class="fa fa-instagram" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['pinterest_link']):?>
 				<a href="<?php echo $jk_options['pinterest_link']?>">
-					<i class="pinterest"></i>
+					<i class="fa fa-pinterest" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['google_link']):?>
 				<a href="<?php echo $jk_options['google_link']?>">
-					<i class="google"></i>
+					<i class="fa fa-google-plus-official" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['linkin_link']):?>
 				<a href="<?php echo $jk_options['linkin_link']?>">
-					<i class="linkin"></i>
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 			<?php if($jk_options['tumblr_link']):?>
 				<a href="<?php echo $jk_options['tumblr_link']?>">
-					<i class="tumblr"></i>
+					<i class="fa fa-tumblr" aria-hidden="true"></i>
 				</a>
 			<?php endif;?>
 		</div>

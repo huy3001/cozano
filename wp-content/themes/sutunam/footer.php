@@ -15,7 +15,7 @@ if (!isset($jk_options['copy_text'])) {
 ?>
 <div class="newsletter-footer col-lg-3 col-md-12">
     <div class="newsletter">
-        <?php echo  do_shortcode('[contact-form-7 id="845" title="new-contact-us-footer" html_class="use-floating-validation-tip"]') ?>
+        <?php echo  do_shortcode('[contact-form-7 id="286" title="new-contact-us-footer" html_class="use-floating-validation-tip"]') ?>
     </div>
 </div>
 <footer id="footer">

@@ -15,6 +15,27 @@
                     }
                 });
             }
+        },
+
+        backTop: function() {
+            var windowHeight = $(window).height(),
+                backTopBtn = $('.back-top');
+            if(backTopBtn.length) {
+                backTopBtn.on('click', function(e) {
+                    e.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000);
+                });
+                $(window).on('scroll', function() {
+                    if($(window).scrollTop() > windowHeight) {
+                        backTopBtn.css('bottom', 0);
+                    }
+                    else {
+                        backTopBtn.css('bottom', '-40px');
+                    }
+                });
+            }
         }
     };
 
@@ -26,7 +47,8 @@
 
     /* Window load function */
     $(window).load(function () {
-
+        // Back top button
+        customJS.backTop();
     });
 
     /* Window resize function */

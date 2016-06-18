@@ -86,7 +86,7 @@ if (!isset($jk_options['copy_text'])) {
 </div> <!-- end right-content -->
 </div> <!-- end #container -->
 </div> <!-- end #wrapper -->
-<a href="#" class="cd-top cd-is-visible">Top</a>
+<a href="#" class="back-top"><?php echo __('Back top', 'sutunam') ?></a>
 <?php wp_footer(); ?>
 </body> <!-- end body -->
 </html> <!-- end html -->

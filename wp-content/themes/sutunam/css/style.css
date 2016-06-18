@@ -304,10 +304,21 @@ a:focus {
 .left-content {
   background: #ffffff;
   width: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: fixed;
+  left: 0;
   bottom: 0;
   top: 54px;
   z-index: 111;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.no-sidebar .left-content {
+  left: -250px;
 }
 
 .left-content .left-menu ul {
@@ -387,6 +398,15 @@ a:focus {
   width: -moz-calc(100% - 250px);
   width: -webkit-calc(100% - 250px);
   width: calc(100% - 250px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.no-sidebar .right-content {
+  left: auto;
+  width: 100%;
 }
 
 .right-content > .container {
@@ -442,6 +462,6 @@ a:focus {
 }
 
 .home .content-block .content-block-body a:hover {
-  background: transparent;
+  background: #ffffff;
   color: #303030;
 }

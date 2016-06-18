@@ -5,6 +5,11 @@
     position: relative;
     overflow-x: hidden;
     @include calc(width, '100% - 250px');
+    @include transition();
+    .no-sidebar & {
+        left: auto;
+        width: 100%;
+    }
     > .container {
         width: 100%;
     }

@@ -3,10 +3,17 @@
 .left-content {
     background: $white;
     width: $left-content-width;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: fixed;
+    left: 0;
     bottom: 0;
     top: $header-height;
     z-index: 111;
+    @include transition();
+    .no-sidebar & {
+        left: -$left-content-width;
+    }
     .left-menu {
         ul {
             margin: 0;

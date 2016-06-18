@@ -1,5 +1,39 @@
 /* Newsletter footer style */
 
 .newsletter-footer {
-
+    .newsletter {
+        padding: 45px 0;
+        > p {
+            color: $left-menu-bg;
+            font-size: 13px;
+            @include font('font-gotham-medium');
+            margin-bottom: 25px;
+        }
+        .wpcf7-form {
+            .wpcf7-email {
+                border: 2px solid $header-bg;
+                color: $header-bg;
+                font-size: 13px;
+                padding: 9px 10px;
+                outline: none;
+            }
+            .wpcf7-submit {
+                background: $header-bg;
+                border: 2px solid $header-bg;
+                color: $white;
+                font-size: 13px;
+                margin-left: 10px;
+                padding: 9px 10px;
+                outline: none;
+                @include transition();
+                &:hover {
+                    background: $white;
+                    color: $header-bg;
+                }
+            }
+            .ajax-loader {
+                display: none;
+            }
+        }
+    }
 }

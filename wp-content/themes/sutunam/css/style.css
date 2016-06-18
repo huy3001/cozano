@@ -58,13 +58,17 @@
 
 /* Font */
 
+#footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
+.newsletter-footer .newsletter > p,
 body {
   font-style: normal;
   font-weight: normal;
 }
 
-.left-content .left-menu ul.sub-menu > li > a {
+#footer .copyright,
+.left-content .left-menu ul.sub-menu > li > a,
+.newsletter-footer .newsletter > p {
   font-family: 'GothamMedium', sans-serif;
 }
 
@@ -347,6 +351,20 @@ a:focus {
 
 /* Footer style */
 
+#footer {
+  padding: 0 0 50px;
+}
+
+#footer .payment-block {
+  display: none;
+}
+
+#footer .copyright {
+  color: #bababa;
+  font-size: 11px;
+  text-align: center;
+}
+
 /* Component */
 
 /* Left content style */
@@ -465,6 +483,10 @@ a:focus {
 
 /* Upsbar style */
 
+.upsbar {
+  background: #ffffff;
+}
+
 .upsbar .upsbar-list {
   margin: 0;
   padding: 0;
@@ -485,6 +507,47 @@ a:focus {
 }
 
 /* Newsletter footer style */
+
+.newsletter-footer .newsletter {
+  padding: 45px 0;
+}
+
+.newsletter-footer .newsletter > p {
+  color: #999999;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.newsletter-footer .newsletter .wpcf7-form .wpcf7-email {
+  border: 2px solid #303030;
+  color: #303030;
+  font-size: 13px;
+  padding: 9px 10px;
+  outline: none;
+}
+
+.newsletter-footer .newsletter .wpcf7-form .wpcf7-submit {
+  background: #303030;
+  border: 2px solid #303030;
+  color: #ffffff;
+  font-size: 13px;
+  margin-left: 10px;
+  padding: 9px 10px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.newsletter-footer .newsletter .wpcf7-form .wpcf7-submit:hover {
+  background: #ffffff;
+  color: #303030;
+}
+
+.newsletter-footer .newsletter .wpcf7-form .ajax-loader {
+  display: none;
+}
 
 /* Pages */
 

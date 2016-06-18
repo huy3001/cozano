@@ -1,5 +1,14 @@
 /* Footer style */
 
 #footer {
-
+    padding: 0 0 50px;
+    .payment-block {
+        display: none;
+    }
+    .copyright {
+        color: $footer-copyright-color;
+        font-size: 11px;
+        @include font('font-gotham-medium');
+        text-align: center;
+    }
 }

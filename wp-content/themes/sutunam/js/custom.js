@@ -17,6 +17,27 @@
             }
         },
 
+        accordionMenu: function() {
+            var itemHasChild = $('.menu-item-has-children > a');
+            if(itemHasChild.length) {
+                itemHasChild.off('click').on('click', function(e) {
+                    e.preventDefault();
+                    if($(this).hasClass('open-sub')) {
+                        $(this).removeClass('open-sub');
+                    }
+                    else {
+                        $(this).addClass('open-sub');
+                    }
+                    $(this).parent().siblings().find('.open-sub').removeClass('open-sub');
+                    $(this).parent().siblings().find('.sub-menu').slideUp(300);
+                    $(this).parent().find('.sub-menu').slideUp(300);
+                    if(!$(this).next('.sub-menu').is(':visible')) {
+                        $(this).next('.sub-menu').slideDown(300);
+                    }
+                });
+            }
+        },
+
         backTop: function() {
             var windowHeight = $(window).height(),
                 backTopBtn = $('.back-top');
@@ -47,6 +68,9 @@
 
     /* Window load function */
     $(window).load(function () {
+        // Accordion menu
+        customJS.accordionMenu();
+
         // Back top button
         customJS.backTop();
     });

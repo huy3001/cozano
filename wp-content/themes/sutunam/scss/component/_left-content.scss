@@ -43,6 +43,11 @@
                             height: 10px;
                             margin-top: -5px;
                         }
+                        &.open-sub {
+                            &:after {
+                                @include transform(rotate(90deg));
+                            }
+                        }
                     }
                 }
             }
@@ -62,6 +67,7 @@
                 }
             }
             &.sub-menu {
+                display: none;
                 padding-bottom: 20px;
                 > li {
                     > a {
@@ -73,6 +79,10 @@
                         &:hover {
                             color: $header-bg;
                         }
+                    }
+                    .sub-menu {
+                        padding-top: 20px;
+                        padding-left: 15px;
                     }
                 }
             }

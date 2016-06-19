@@ -486,6 +486,14 @@ a:focus {
   margin-top: -5px;
 }
 
+.left-content .left-menu ul li.menu-item-has-children > a.open-sub:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .left-content .left-menu ul.menu > li {
   border-bottom: 1px solid #dcdcdc;
 }
@@ -503,6 +511,7 @@ a:focus {
 }
 
 .left-content .left-menu ul.sub-menu {
+  display: none;
   padding-bottom: 20px;
 }
 
@@ -515,6 +524,11 @@ a:focus {
 
 .left-content .left-menu ul.sub-menu > li > a:hover {
   color: #303030;
+}
+
+.left-content .left-menu ul.sub-menu > li .sub-menu {
+  padding-top: 20px;
+  padding-left: 15px;
 }
 
 /* Right content style */

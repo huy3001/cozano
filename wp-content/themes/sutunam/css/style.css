@@ -623,11 +623,24 @@ a:focus {
 
 /* Home page style */
 
-.home .content-block {
+.home .content-block,
+.page-template-men .content-block,
+.page-template-women .content-block,
+.page-template-shoes .content-block {
   position: relative;
 }
 
-.home .content-block .content-block-body {
+.home .content-block > img,
+.page-template-men .content-block > img,
+.page-template-women .content-block > img,
+.page-template-shoes .content-block > img {
+  width: 100%;
+}
+
+.home .content-block .content-block-body,
+.page-template-men .content-block .content-block-body,
+.page-template-women .content-block .content-block-body,
+.page-template-shoes .content-block .content-block-body {
   text-align: center;
   position: absolute;
   bottom: 150px;
@@ -639,14 +652,26 @@ a:focus {
   transform: translateX(-50%);
 }
 
-.home .content-block .content-block-body a {
+.home .content-block .content-block-body a,
+.page-template-men .content-block .content-block-body a,
+.page-template-women .content-block .content-block-body a,
+.page-template-shoes .content-block .content-block-body a {
   background: #ffffff;
   border: 2px solid #303030;
   color: #303030;
   padding: 10px 20px;
 }
 
-.home .content-block .content-block-body a:hover {
+.home .content-block .content-block-body a:hover,
+.page-template-men .content-block .content-block-body a:hover,
+.page-template-women .content-block .content-block-body a:hover,
+.page-template-shoes .content-block .content-block-body a:hover {
   background: #303030;
   color: #ffffff;
 }
+
+/* Men page style */
+
+/* Women page style */
+
+/* Shoes page style */

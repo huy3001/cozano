@@ -58,17 +58,17 @@
 
 /* Font */
 
+#footer .footer-menu ul li a,
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
-.newsletter-footer .newsletter > p,
 body {
   font-style: normal;
   font-weight: normal;
 }
 
+#footer .footer-menu ul li a,
 #footer .copyright,
-.left-content .left-menu ul.sub-menu > li > a,
-.newsletter-footer .newsletter > p {
+.left-content .left-menu ul.sub-menu > li > a {
   font-family: 'GothamMedium', sans-serif;
 }
 
@@ -355,6 +355,66 @@ a:focus {
   padding: 0 0 50px;
 }
 
+#footer .footer-content {
+  padding: 0 50px;
+}
+
+#footer .footer-menu .footer-title {
+  display: none;
+}
+
+#footer .footer-menu li {
+  list-style: none;
+}
+
+#footer .footer-menu ul {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+#footer .footer-menu ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+
+#footer .footer-menu ul li a {
+  color: #999999;
+  font-size: 13px;
+  text-align: justify;
+  display: inline-block;
+  padding: 8px 10px;
+}
+
+#footer .footer-menu ul li a:hover {
+  color: #303030;
+}
+
+#footer .social-block {
+  text-align: center;
+  margin: 50px 0;
+}
+
+#footer .social-block a {
+  background: #999999;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  height: 32px;
+  width: 32px;
+  margin: 0 5px;
+  line-height: 30px;
+}
+
+#footer .social-block a:hover {
+  background: #303030;
+}
+
 #footer .payment-block {
   display: none;
 }
@@ -509,13 +569,23 @@ a:focus {
 /* Newsletter footer style */
 
 .newsletter-footer .newsletter {
-  padding: 45px 0;
+  padding: 45px 50px;
+  text-align: center;
 }
 
-.newsletter-footer .newsletter > p {
-  color: #999999;
-  font-size: 13px;
-  margin-bottom: 25px;
+.newsletter-footer .newsletter .newsletter-title {
+  color: #303030;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 13px;
+  margin-right: 10px;
+}
+
+.newsletter-footer .newsletter .wpcf7 {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .newsletter-footer .newsletter .wpcf7-form .wpcf7-email {
@@ -570,13 +640,13 @@ a:focus {
 }
 
 .home .content-block .content-block-body a {
-  background: #303030;
+  background: #ffffff;
   border: 2px solid #303030;
-  color: #ffffff;
+  color: #303030;
   padding: 10px 20px;
 }
 
 .home .content-block .content-block-body a:hover {
-  background: #ffffff;
-  color: #303030;
+  background: #303030;
+  color: #ffffff;
 }

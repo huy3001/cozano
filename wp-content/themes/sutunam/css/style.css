@@ -61,6 +61,8 @@
 #footer .footer-menu ul li a,
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
+.single-product div.product .summary div p,
+.single-product div.product .product_meta a,
 body {
   font-style: normal;
   font-weight: normal;
@@ -68,7 +70,9 @@ body {
 
 #footer .footer-menu ul li a,
 #footer .copyright,
-.left-content .left-menu ul.sub-menu > li > a {
+.left-content .left-menu ul.sub-menu > li > a,
+.single-product div.product .summary div p,
+.single-product div.product .product_meta a {
   font-family: 'GothamMedium', sans-serif;
 }
 
@@ -555,6 +559,19 @@ a:focus {
   width: 100%;
 }
 
+.right-content .woocommerce-breadcrumb {
+  background: #ffffff;
+  color: #303030;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0;
+}
+
+.right-content .woocommerce-breadcrumb a {
+  color: #999999;
+}
+
 /* Upsbar style */
 
 .upsbar {
@@ -691,3 +708,75 @@ a:focus {
 /* Shoes page style */
 
 /* Product detail style */
+
+.single-product div.product .summary {
+  color: #666666;
+  font-size: 13px;
+  width: 25%;
+  padding: 50px;
+}
+
+.single-product div.product .product_title {
+  color: #303030;
+  font-size: 30px;
+}
+
+.single-product div.product .woocommerce-product-rating {
+  margin-bottom: 10px;
+}
+
+.single-product div.product .woocommerce-product-rating .star-rating {
+  margin: 6px 5px 0 0;
+}
+
+.single-product div.product .woocommerce-product-rating .woocommerce-review-link {
+  color: #666666;
+  font-size: 12px;
+}
+
+.single-product div.product .woocommerce-product-rating .woocommerce-review-link:hover {
+  color: #303030;
+}
+
+.single-product div.product .price {
+  color: #303030 !important;
+  font-size: 13px !important;
+}
+
+.single-product div.product .cart {
+  margin-bottom: 10px;
+}
+
+.single-product div.product .cart .quantity {
+  display: none;
+}
+
+.single-product div.product .cart .button {
+  background: #00385f;
+  border: 2px solid #00385f;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 13px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.single-product div.product .cart .button:hover {
+  background: transparent;
+  color: #00385f;
+}
+
+.single-product div.product .product_meta {
+  color: #303030;
+}
+
+.single-product div.product .product_meta a {
+  color: #666666;
+}

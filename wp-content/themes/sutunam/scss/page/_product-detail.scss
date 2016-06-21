@@ -5,7 +5,7 @@
         .summary {
             color: $search-input-bd;
             font-size: 13px;
-            width: 25%;
+            width: 25% !important;
             padding: 50px;
             div {
                 p {
@@ -37,7 +37,7 @@
         .cart {
             margin-bottom: 10px;
             .quantity {
-                display: none;
+                display: none !important;
             }
             .button {
                 background: $cart-btn-bg;

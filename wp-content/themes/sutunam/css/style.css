@@ -62,6 +62,7 @@
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
 .single-product div.product .summary div p,
+.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
 .single-product div.product .product_meta a,
 body {
   font-style: normal;
@@ -72,6 +73,7 @@ body {
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
 .single-product div.product .summary div p,
+.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
 .single-product div.product .product_meta a {
   font-family: 'GothamMedium', sans-serif;
 }
@@ -803,6 +805,66 @@ a:focus {
 .single-product div.product .cart .button:hover {
   background: transparent;
   color: #00385f;
+}
+
+.single-product div.product .cart .variations tr {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 4px;
+  width: 33%;
+}
+
+.single-product div.product .cart .variations tr td.label {
+  display: none;
+}
+
+.single-product div.product .cart .variations tr td.value {
+  display: block;
+  width: 100%;
+}
+
+.single-product div.product .cart .reset_variations {
+  display: none !important;
+}
+
+.single-product div.product .cart .bootstrap-select {
+  width: 100%;
+}
+
+.single-product div.product .cart .bootstrap-select .dropdown-toggle {
+  background: none;
+  border: 2px solid #dfdfdf;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #01385f;
+  font-size: 13px;
+  text-shadow: none;
+  padding: 9px 25px 9px 10px;
+  outline: none;
+}
+
+.single-product div.product .cart .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.single-product div.product .cart .bootstrap-select .dropdown-menu {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a {
+  color: #999999;
+  font-size: 13px;
+  padding: 3px 10px;
 }
 
 .single-product div.product .product_meta {

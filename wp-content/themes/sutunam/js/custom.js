@@ -57,6 +57,13 @@
                     }
                 });
             }
+        },
+
+        bootstrapSelect: function() {
+            var select = $('select');
+            if(select.length) {
+                select.selectpicker();
+            }
         }
     };
 
@@ -64,6 +71,9 @@
     $(window).ready(function () {
         // Sidebar toggle
         customJS.sidebarToggle();
+
+        // Bootstrap select
+        customJS.bootstrapSelect();
     });
 
     /* Window load function */

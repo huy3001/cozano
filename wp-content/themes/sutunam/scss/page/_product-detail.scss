@@ -2,11 +2,32 @@
 
 .single-product {
     div.product {
+        .onsale {
+            background: $sale-tag-bg;
+            width: 60px;
+            height: 60px;
+            font-size: 22px;
+            line-height: normal;
+            min-height: inherit;
+            min-width: inherit;
+            white-space: nowrap;
+            padding: 15px 0;
+            top: 0;
+            left: 0;
+
+        }
+        .images {
+            width: 100% !important;
+        }
         .summary {
             color: $search-input-bd;
             font-size: 13px;
-            width: 25% !important;
-            padding: 50px;
+            width: 28% !important;
+            padding: 50px 90px 50px 10px;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
             div {
                 p {
                     @include font('font-gotham-medium');
@@ -33,6 +54,14 @@
         .price {
             color: $header-bg !important;
             font-size: 13px !important;
+            font-weight: bold !important;
+            del {
+                font-weight: normal;
+                margin-right: 5px;
+            }
+            ins {
+                text-decoration: none;
+            }
         }
         .cart {
             margin-bottom: 10px;

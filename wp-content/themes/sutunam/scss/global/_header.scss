@@ -129,5 +129,19 @@
             }
         }
     }
+
+    @include bp(max-width, $desktop) {
+        .login {
+            right: 90px;
+            .login-button {
+                .fa {
+                    margin: 0;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 

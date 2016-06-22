@@ -24,4 +24,12 @@
             color: $left-menu-bg;
         }
     }
+
+    @include bp(max-width, $large-desktop - 1) {
+        * {
+            .container {
+                width: 940px;
+            }
+        }
+    }
 }

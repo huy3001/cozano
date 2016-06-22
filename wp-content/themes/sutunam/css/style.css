@@ -918,3 +918,43 @@ a:focus {
   width: 25%;
   margin: 0;
 }
+
+.single-product div.product .related.products ul.products li.product a img {
+  margin: 0 0 10px;
+}
+
+.single-product div.product .related.products ul.products li.product h3 {
+  color: #303030;
+  font-size: 13px;
+  float: left;
+  padding: 0 10px 10px;
+}
+
+.single-product div.product .related.products ul.products li.product .onsale {
+  top: auto;
+  right: auto;
+  bottom: 45px;
+  left: 10px;
+  margin: 0;
+}
+
+.single-product div.product .related.products ul.products li.product .star-rating {
+  color: #303030;
+  display: none;
+  margin: 0 10px;
+}
+
+.single-product div.product .related.products ul.products li.product .price {
+  float: right;
+  margin: 0 10px;
+}
+
+.single-product div.product .related.products ul.products li.product .price del,
+.single-product div.product .related.products ul.products li.product .price ins {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.single-product div.product .related.products ul.products li.product .button {
+  display: none;
+}

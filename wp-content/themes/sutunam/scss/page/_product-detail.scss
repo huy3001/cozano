@@ -176,6 +176,40 @@
                 li.product {
                     width: 25%;
                     margin: 0;
+                    a {
+                        img {
+                            margin: 0 0 10px;
+                        }
+                    }
+                    h3 {
+                        color: $header-bg;
+                        font-size: 13px;
+                        float: left;
+                        padding: 0 10px 10px;
+                    }
+                    .onsale {
+                        top: auto;
+                        right: auto;
+                        bottom: 45px;
+                        left: 10px;
+                        margin: 0;
+                    }
+                    .star-rating {
+                        color: $header-bg;
+                        display: none;
+                        margin: 0 10px;
+                    }
+                    .price {
+                        float: right;
+                        margin: 0 10px;
+                        del, ins {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                    }
+                    .button {
+                        display: none;
+                    }
                 }
             }
         }

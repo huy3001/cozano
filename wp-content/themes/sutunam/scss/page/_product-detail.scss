@@ -14,10 +14,29 @@
             padding: 15px 0;
             top: 0;
             left: 0;
-
+            z-index: 1;
         }
         .images {
             width: 100% !important;
+            margin-bottom: 0 !important;
+            position: relative;
+            .thumbnails {
+                max-width: 80px;
+                padding: 0;
+                position: absolute;
+                bottom: 40px;
+                left: 40px;
+                a {
+                    border: 1px solid $search-input-bd;
+                    width: 80px !important;
+                    height: 80px !important;
+                    margin-right: 10px !important;
+                    margin-bottom: 10px !important;
+                    &:last-child {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
         }
         .summary {
             color: $search-input-bd;
@@ -139,6 +158,25 @@
             a {
                 color: $search-input-bd;
                 @include font('font-gotham-medium');
+            }
+        }
+        .woocommerce-tabs {
+            display: none;
+        }
+        .related.products {
+            float: left;
+            width: 100%;
+            h2 {
+                color: $header-bg;
+                line-height: 1;
+                margin: 25px 0;
+                padding: 0 40px;
+            }
+            ul.products {
+                li.product {
+                    width: 25%;
+                    margin: 0;
+                }
             }
         }
     }

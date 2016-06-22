@@ -296,6 +296,14 @@ a:focus {
   transition: all 0.3s ease;
 }
 
+#header .search-form button.toggle-search {
+  display: none;
+}
+
+#header .search-form .form-close {
+  display: none;
+}
+
 #header .language {
   position: absolute;
   top: 50%;
@@ -366,6 +374,58 @@ a:focus {
 
   #header .login .login-button span {
     display: none;
+  }
+
+  #header .language {
+    right: 140px;
+  }
+
+  #header .search-form {
+    right: 190px;
+  }
+
+  #header .search-form .search-item {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 54px;
+    left: 0;
+  }
+
+  #header .search-form input {
+    background: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 10px 40px;
+  }
+
+  #header .search-form input:focus + button {
+    color: #303030;
+  }
+
+  #header .search-form button.toggle-search {
+    display: block;
+    height: 54px;
+    position: static;
+  }
+
+  #header .search-form button.form-submit {
+    color: #303030;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  #header .search-form .form-close {
+    display: block;
+    cursor: pointer;
+    color: #303030;
+    font-size: 20px;
+    height: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -458,7 +518,7 @@ a:focus {
   left: 0;
   bottom: 0;
   top: 54px;
-  z-index: 111;
+  z-index: 11;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;

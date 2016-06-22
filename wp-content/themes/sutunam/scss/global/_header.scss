@@ -89,6 +89,12 @@
             padding: 10px;
             outline: none;
             @include transition();
+            &.toggle-search {
+                display: none;
+            }
+        }
+        .form-close {
+            display: none;
         }
     }
     .language {
@@ -140,6 +146,52 @@
                 span {
                     display: none;
                 }
+            }
+        }
+        .language {
+            right: 140px;
+        }
+        .search-form {
+            right: 190px;
+            .search-item {
+                display: none;
+                position: fixed;
+                width: 100%;
+                top: $header-height;
+                left: 0;
+            }
+            input {
+                background: $white;
+                border: none;
+                width: 100%;
+                padding: 10px 40px;
+                &:focus + button {
+                    color: $header-bg;
+                }
+            }
+            button {
+                &.toggle-search {
+                    display: block;
+                    height: $header-height;
+                    position: static;
+                }
+                &.form-submit {
+                    color: $header-bg;
+                    font-size: 14px;
+                    padding: 15px;
+                }
+            }
+            .form-close {
+                display: block;
+                cursor: pointer;
+                color: $header-bg;
+                font-size: 20px;
+                height: 100%;
+                margin: 0;
+                padding: 10px 15px;
+                position: absolute;
+                right: 0;
+                top: 0;
             }
         }
     }

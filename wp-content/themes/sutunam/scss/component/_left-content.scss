@@ -9,7 +9,7 @@
     left: 0;
     bottom: 0;
     top: $header-height;
-    z-index: 111;
+    z-index: 11;
     @include transition();
     .no-sidebar & {
         left: -$left-content-width;

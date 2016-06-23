@@ -52,4 +52,28 @@
             }
         }
     }
+
+    @include bp(max-width, $laptop - 1) {
+        .newsletter {
+            padding: 45px 0;
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        .newsletter {
+            padding: 30px 0;
+            .wpcf7 {
+                max-width: 100%;
+            }
+            .wpcf7-form {
+                .wpcf7-email {
+                    max-width: 100%;
+                }
+                .wpcf7-submit {
+                    width: 100%;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
 }

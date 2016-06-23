@@ -59,4 +59,20 @@
             }
         }
     }
+
+    @include bp(max-width, $laptop - 1) {
+        * {
+            .container {
+                width: 510px;
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        * {
+            .container {
+                width: 100%;
+            }
+        }
+    }
 }

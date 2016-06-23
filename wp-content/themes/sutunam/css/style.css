@@ -429,6 +429,38 @@ a:focus {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  #header .toggle-menu {
+    font-size: 22px;
+    margin-top: -16px;
+  }
+
+  #header .top-menu,
+  #header .login {
+    display: none;
+  }
+
+  #header .logo {
+    max-width: 140px;
+  }
+
+  #header .search-form {
+    right: 50px;
+  }
+
+  #header .search-form button {
+    font-size: 15px;
+  }
+
+  #header .shopping-cart {
+    right: 30px;
+  }
+
+  #header .shopping-cart .cart-icon {
+    font-size: 15px;
+  }
+}
+
 /* Footer style */
 
 #footer {

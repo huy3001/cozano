@@ -2,6 +2,8 @@
 
 .upsbar {
     background: $white;
+    max-height: 40px;
+    overflow: hidden;
     .upsbar-list {
         margin: 0;
         padding: 0;

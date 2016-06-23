@@ -2,13 +2,20 @@
 $body-bg: #f7f7f7;
 $header-bg: #303030;
 $left-menu-bg: #999999;
+$cart-btn-bg: #00385f;
+$sale-tag-bg: #00436d;
 
 /* Border */
 $search-input-bd: #666666;
 $left-menu-bd: #dcdcdc;
+$product-select-bd: #dfdfdf;
 
 /* Break point */
-
+$large-desktop: 1440px;
+$desktop: 1200px;
+$laptop: 992px;
+$tablet: 768px;
+$mobile: 480px;
 
 /* Color */
 $black: #000000;
@@ -16,6 +23,7 @@ $white: #ffffff;
 $header-link-hover: #aaaaaa;
 $submenu-item-color: #a2a2a2;
 $footer-copyright-color: #bababa;
+$product-select-color: #01385f;
 
 /* Font */
 @include placeholder('font-style') {

@@ -3,6 +3,9 @@
 .home {
     .content-block {
         position: relative;
+        > img {
+            width: 100%;
+        }
         .content-block-body {
             text-align: center;
             position: absolute;
@@ -10,13 +13,13 @@
             left: 50%;
             @include transform(translateX(-50%));
             a {
-                background: $header-bg;
+                background: $white;
                 border: 2px solid $header-bg;
-                color: $white;
+                color: $header-bg;
                 padding: 10px 20px;
                 &:hover {
-                    background: $white;
-                    color: $header-bg;
+                    background: $header-bg;
+                    color: $white;
                 }
             }
         }

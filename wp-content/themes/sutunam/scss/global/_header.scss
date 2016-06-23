@@ -89,6 +89,12 @@
             padding: 10px;
             outline: none;
             @include transition();
+            &.toggle-search {
+                display: none;
+            }
+        }
+        .form-close {
+            display: none;
         }
     }
     .language {
@@ -126,6 +132,106 @@
             font-size: 18px;
             &:hover {
                 color: $header-link-hover;
+            }
+        }
+    }
+
+    @include bp(max-width, $desktop) {
+        .toggle-menu {
+            .fa {
+                &:before {
+                    content: "\f00d";
+                }
+            }
+            .no-sidebar & {
+                .fa {
+                    &:before {
+                        content: "\f0c9";
+                    }
+                }
+            }
+        }
+        .login {
+            right: 90px;
+            .login-button {
+                .fa {
+                    margin: 0;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+        .language {
+            right: 140px;
+        }
+        .search-form {
+            right: 190px;
+            .search-item {
+                display: none;
+                position: fixed;
+                width: 100%;
+                top: $header-height;
+                left: 0;
+            }
+            input {
+                background: $white;
+                border: none;
+                width: 100%;
+                padding: 10px 40px;
+                &:focus + button {
+                    color: $header-bg;
+                }
+            }
+            button {
+                &.toggle-search {
+                    display: block;
+                    height: $header-height;
+                    position: static;
+                }
+                &.form-submit {
+                    color: $header-bg;
+                    font-size: 14px;
+                    padding: 15px;
+                }
+            }
+            .form-close {
+                display: block;
+                cursor: pointer;
+                color: $header-bg;
+                font-size: 20px;
+                height: 100%;
+                margin: 0;
+                padding: 10px 15px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        .toggle-menu {
+            font-size: 22px;
+            margin-top: -16px;
+        }
+        .top-menu,
+        .login {
+            display: none;
+        }
+        .logo {
+            max-width: 140px;
+        }
+        .search-form {
+            right: 35px;
+            button {
+                font-size: 15px;
+            }
+        }
+        .shopping-cart {
+            right: 15px;
+            .cart-icon {
+                font-size: 15px;
             }
         }
     }

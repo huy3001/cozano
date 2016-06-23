@@ -12,27 +12,46 @@ $jk_options = get_option('redux_demo');
 ?>
 <div class="left-content">
     <?php sutunam_menu('left-menu'); ?>
+    <div class="login">
+        <?php if (is_user_logged_in()) { ?>
+            <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span><?php echo __('logout', 'sutunam') ?></span>
+            </a>
+        <?php } else { ?>
+            <a class="login-button show-login" id="show-login" href="#">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span><?php echo __('login', 'sutunam') ?></span>
+            </a>
+        <?php } ?>
+    </div>
 </div>
 <div class="right-content">
 	<div class="container">
 		<div class="row">
 			<aside class="upsbar">
 				<ul class="upsbar-list">
-					<li class="upsbar-item">
-						<a class="upsbar-link" href="<?php echo $jk_options['overview_url'] ?>" target="_self">
-							<?php echo $jk_options['overview_content'] ?>
-						</a>
-					</li>
-					<li class="upsbar-item">
-						<a class="upsbar-link" href="<?php echo $jk_options['overview_url_2'] ?>" target="_self">
-							<?php echo $jk_options['overview_content_2'] ?>
-						</a>
-					</li>
-					<li class="upsbar-item">
-						<a class="upsbar-link" href="<?php echo $jk_options['overview_url_3'] ?>" target="_self">
-							<?php echo $jk_options['overview_content_3'] ?>
-						</a>
-					</li>
+					<?php if(isset($jk_options['overview_content'])):?>
+						<li class="upsbar-item">
+							<a class="upsbar-link" href="<?php echo $jk_options['overview_url'] ?>" target="_self">
+								<?php echo $jk_options['overview_content'] ?>
+							</a>
+						</li>
+					<?php endif;?>
+					<?php if(isset($jk_options['overview_content_2'])):?>
+						<li class="upsbar-item">
+							<a class="upsbar-link" href="<?php echo $jk_options['overview_url_2'] ?>" target="_self">
+								<?php echo $jk_options['overview_content_2'] ?>
+							</a>
+						</li>
+					<?php endif;?>
+					<?php if(isset($jk_options['overview_content_3'])):?>
+						<li class="upsbar-item">
+							<a class="upsbar-link" href="<?php echo $jk_options['overview_url_3'] ?>" target="_self">
+								<?php echo $jk_options['overview_content_3'] ?>
+							</a>
+						</li>
+					<?php endif;?>
 				</ul>
 			</aside>
 		</div>

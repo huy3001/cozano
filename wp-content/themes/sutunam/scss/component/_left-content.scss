@@ -9,7 +9,7 @@
     left: 0;
     bottom: 0;
     top: $header-height;
-    z-index: 111;
+    z-index: 11;
     @include transition();
     .no-sidebar & {
         left: -$left-content-width;
@@ -43,6 +43,11 @@
                             height: 10px;
                             margin-top: -5px;
                         }
+                        &.open-sub {
+                            &:after {
+                                @include transform(rotate(90deg));
+                            }
+                        }
                     }
                 }
             }
@@ -62,6 +67,7 @@
                 }
             }
             &.sub-menu {
+                display: none;
                 padding-bottom: 20px;
                 > li {
                     > a {
@@ -74,6 +80,38 @@
                             color: $header-bg;
                         }
                     }
+                    .sub-menu {
+                        padding-top: 20px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .login {
+        display: none;
+    }
+
+    @include bp(max-width, $desktop) {
+        .left-menu {
+            padding-bottom: $header-height;
+        }
+        .login {
+            background: $header-bg;
+            display: block;
+            height: $header-height;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            .login-button {
+                color: $white;
+                display: block;
+                text-align: center;
+                padding: 17px;
+                .fa {
+                    font-size: 18px;
+                    margin-right: 5px;
                 }
             }
         }

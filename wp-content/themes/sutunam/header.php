@@ -71,6 +71,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif; ?>
             </div>
             */?>
+
             <div class="login">
                 <?php if (is_user_logged_in()) { ?>
                     <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">

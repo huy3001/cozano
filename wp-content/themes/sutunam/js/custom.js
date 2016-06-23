@@ -87,11 +87,24 @@
             else {
                 searchItem.show();
             }
+        },
+
+        closeSidebar: function() {
+            var body = $('body');
+            if($(window).width() < 1201) {
+                body.addClass('no-sidebar');
+            }
+            else {
+                body.removeClass('no-sidebar');
+            }
         }
     };
 
     /* Window ready function */
     $(window).ready(function () {
+        // Close sidebar
+        customJS.closeSidebar();
+
         // Sidebar toggle
         customJS.sidebarToggle();
 
@@ -113,6 +126,9 @@
 
     /* Window resize function */
     $(window).resize(function () {
+        // Close sidebar
+        customJS.closeSidebar();
+
         // Search toggle
         customJS.searchToggle();
     });

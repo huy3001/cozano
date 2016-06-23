@@ -30,6 +30,14 @@ a {
         content: "";
         display: block;
     }
+    @include bp(max-width, $desktop) {
+        height: 100%;
+        overflow-y: hidden;
+        .no-sidebar & {
+            height: auto;
+            overflow-y: auto;
+        }
+    }
 }
 
 .back-top {

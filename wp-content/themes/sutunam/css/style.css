@@ -126,6 +126,18 @@ a:focus {
   display: block;
 }
 
+@media only screen and (max-width: 1200px) {
+  #wrapper {
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .no-sidebar #wrapper {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
 .back-top {
   background: #ffffff;
   color: #999999;
@@ -364,6 +376,14 @@ a:focus {
 }
 
 @media only screen and (max-width: 1200px) {
+  #header .toggle-menu .fa:before {
+    content: "\f00d";
+  }
+
+  .no-sidebar #header .toggle-menu .fa:before {
+    content: "\f0c9";
+  }
+
   #header .login {
     right: 90px;
   }
@@ -445,7 +465,7 @@ a:focus {
   }
 
   #header .search-form {
-    right: 50px;
+    right: 35px;
   }
 
   #header .search-form button {
@@ -453,7 +473,7 @@ a:focus {
   }
 
   #header .shopping-cart {
-    right: 30px;
+    right: 15px;
   }
 
   #header .shopping-cart .cart-icon {
@@ -686,10 +706,38 @@ a:focus {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .right-content:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  .no-sidebar .right-content:before {
+    z-index: -1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
 /* Upsbar style */
 
 .upsbar {
   background: #ffffff;
+  max-height: 40px;
+  overflow: hidden;
 }
 
 .upsbar .upsbar-list {

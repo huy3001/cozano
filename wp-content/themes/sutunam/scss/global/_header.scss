@@ -137,6 +137,20 @@
     }
 
     @include bp(max-width, $desktop) {
+        .toggle-menu {
+            .fa {
+                &:before {
+                    content: "\f00d";
+                }
+            }
+            .no-sidebar & {
+                .fa {
+                    &:before {
+                        content: "\f0c9";
+                    }
+                }
+            }
+        }
         .login {
             right: 90px;
             .login-button {
@@ -209,13 +223,13 @@
             max-width: 140px;
         }
         .search-form {
-            right: 50px;
+            right: 35px;
             button {
                 font-size: 15px;
             }
         }
         .shopping-cart {
-            right: 30px;
+            right: 15px;
             .cart-icon {
                 font-size: 15px;
             }

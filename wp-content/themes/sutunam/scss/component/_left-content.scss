@@ -88,4 +88,32 @@
             }
         }
     }
+    .login {
+        display: none;
+    }
+
+    @include bp(max-width, $desktop) {
+        .left-menu {
+            padding-bottom: $header-height;
+        }
+        .login {
+            background: $header-bg;
+            display: block;
+            height: $header-height;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            .login-button {
+                color: $white;
+                display: block;
+                text-align: center;
+                padding: 17px;
+                .fa {
+                    font-size: 18px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }

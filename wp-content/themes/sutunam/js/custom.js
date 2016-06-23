@@ -64,6 +64,29 @@
             if(select.length) {
                 select.selectpicker();
             }
+        },
+
+        searchToggle: function() {
+            var toggleSearch = $('.toggle-search'),
+                searchItem = $('.search-item');
+            if($(window).width() < 1201) {
+                if(toggleSearch.length) {
+                    toggleSearch.off('click').on('click', function() {
+                        $(this).next('.search-item').slideToggle(300);
+                    });
+                    setTimeout(function() {
+                        var formClose = $('.form-close');
+                        if(formClose.length) {
+                            formClose.off('click').on('click', function() {
+                                $(this).parents('.search-item').slideUp(300);
+                            });
+                        }
+                    }, 300);
+                }
+            }
+            else {
+                searchItem.show();
+            }
         }
     };
 
@@ -83,10 +106,14 @@
 
         // Back top button
         customJS.backTop();
+
+        // Search toggle
+        customJS.searchToggle();
     });
 
     /* Window resize function */
     $(window).resize(function () {
-
+        // Search toggle
+        customJS.searchToggle();
     });
 })(jQuery);

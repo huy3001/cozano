@@ -58,10 +58,6 @@ $jk_options = get_option('redux_demo');
                 <?php get_search_form(); ?>
             </div>
 
-            <div class="language">
-                <a href="<?php echo get_site_url(1); ?>" class="vn-lang"><?php echo __('VN') ?></a>
-            </div>
-
             <?php /*
             <div class="language">
                 <?php if (get_locale() == 'en_US'): ?>
@@ -75,6 +71,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif; ?>
             </div>
             */?>
+
             <div class="login">
                 <?php if (is_user_logged_in()) { ?>
                     <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">

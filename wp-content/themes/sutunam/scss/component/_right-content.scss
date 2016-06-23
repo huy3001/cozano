@@ -53,5 +53,10 @@
                 @include opacity(0);
             }
         }
+        * {
+            .container {
+                width: 730px;
+            }
+        }
     }
 }

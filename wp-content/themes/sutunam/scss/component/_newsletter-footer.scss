@@ -44,4 +44,12 @@
             }
         }
     }
+
+    @include bp(max-width, $desktop) {
+        .newsletter {
+            .newsletter-title {
+                margin: 0 0 15px;
+            }
+        }
+    }
 }

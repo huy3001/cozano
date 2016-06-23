@@ -730,6 +730,10 @@ a:focus {
     opacity: 0;
     filter: alpha(opacity=0);
   }
+
+  .right-content * .container {
+    width: 730px;
+  }
 }
 
 /* Upsbar style */
@@ -810,6 +814,12 @@ a:focus {
 
 .newsletter-footer .newsletter .wpcf7-form .ajax-loader {
   display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .newsletter-footer .newsletter .newsletter-title {
+    margin: 0 0 15px;
+  }
 }
 
 /* Pages */

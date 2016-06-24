@@ -11,7 +11,7 @@
             min-height: inherit;
             min-width: inherit;
             white-space: nowrap;
-            padding: 15px 0;
+            padding: 17px 0;
             top: 10px;
             left: 10px;
             z-index: 1;
@@ -49,7 +49,7 @@
             right: 0;
             div {
                 p {
-                    @include font('font-gotham-book');
+                    @include font('font-roboto-medium');
                 }
             }
         }
@@ -75,10 +75,11 @@
             font-size: 13px !important;
             font-weight: bold !important;
             del {
-                font-weight: normal;
+                @include font('font-roboto-medium');
                 margin-right: 5px;
             }
             ins {
+                @include font('font-roboto-bold');
                 text-decoration: none;
             }
         }
@@ -146,7 +147,7 @@
                         > a {
                             color: $left-menu-bg;
                             font-size: 13px;
-                            @include font('font-gotham-book');
+                            @include font('font-roboto-medium');
                             padding: 3px 10px;
                         }
                     }
@@ -157,7 +158,7 @@
             color: $header-bg;
             a {
                 color: $search-input-bd;
-                @include font('font-gotham-book');
+                @include font('font-roboto-medium');
             }
         }
         .woocommerce-tabs {

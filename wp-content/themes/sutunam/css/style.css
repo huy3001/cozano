@@ -46,30 +46,34 @@
 
 /* Font */
 
+body,
+.single-product div.product .price ins,
 #footer .footer-menu ul li a,
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
 .single-product div.product .summary div p,
+.single-product div.product .price del,
 .single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
-.single-product div.product .product_meta a,
-body {
+.single-product div.product .product_meta a {
   font-style: normal;
   font-weight: normal;
 }
 
+body,
+.single-product div.product .price ins {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
 #footer .footer-menu ul li a,
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
 .single-product div.product .summary div p,
+.single-product div.product .price del,
 .single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
 .single-product div.product .product_meta a {
-  font-family: 'VNFGothamBook', sans-serif;
-  font-weight: 700;
-}
-
-body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* Layout */
@@ -978,7 +982,7 @@ h6 {
   min-height: inherit;
   min-width: inherit;
   white-space: nowrap;
-  padding: 15px 0;
+  padding: 17px 0;
   top: 10px;
   left: 10px;
   z-index: 1;
@@ -1050,7 +1054,6 @@ h6 {
 }
 
 .single-product div.product .price del {
-  font-weight: normal;
   margin-right: 5px;
 }
 

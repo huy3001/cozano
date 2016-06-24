@@ -43,6 +43,12 @@ $product-select-color: #01385f;
     font-weight: 700;
 }
 
+@include placeholder('font-roboto-medium') {
+    @include font('font-style');
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
 @include placeholder('font-awesome') {
     font-family:'FontAwesome';
 }

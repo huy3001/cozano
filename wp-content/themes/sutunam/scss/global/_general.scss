@@ -7,7 +7,8 @@ html, body {
 body {
     background: $body-bg;
     color: $header-bg;
-    @include font('font-gotham-bold');
+    @include font('font-gotham-book');
+    font-weight: 700;
 }
 
 img {

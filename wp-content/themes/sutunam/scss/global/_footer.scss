@@ -23,7 +23,7 @@
                 a {
                     color: $left-menu-bg;
                     font-size: 13px;
-                    @include font('font-gotham-medium');
+                    @include font('font-gotham-book');
                     text-align: justify;
                     display: inline-block;
                     padding: 8px 10px;
@@ -44,10 +44,10 @@
             display: inline-block;
             vertical-align: middle;
             font-size: 18px;
+            line-height: 32px;
             height: 32px;
             width: 32px;
             margin: 0 5px;
-            line-height: 30px;
             &:hover {
                 background: $header-bg;
             }
@@ -59,7 +59,7 @@
     .copyright {
         color: $footer-copyright-color;
         font-size: 11px;
-        @include font('font-gotham-medium');
+        @include font('font-gotham-book');
         text-align: center;
     }
 

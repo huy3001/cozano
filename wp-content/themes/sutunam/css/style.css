@@ -5,21 +5,9 @@
 /* Font style */
 
 @font-face {
-  font-family: 'GothamBold';
-  src: url("../fonts/GothamBold.eot");
-  src: url("../fonts/GothamBold.eot") format("embedded-opentype"), url("../fonts/GothamBold.woff2") format("woff2"), url("../fonts/GothamBold.woff") format("woff"), url("../fonts/GothamBold.ttf") format("truetype"), url("../fonts/GothamBold.svg#GothamBold") format("svg");
-}
-
-@font-face {
-  font-family: 'GothamMedium';
-  src: url("../fonts/GothamMedium.eot");
-  src: url("../fonts/GothamMedium.eot") format("embedded-opentype"), url("../fonts/GothamMedium.woff2") format("woff2"), url("../fonts/GothamMedium.woff") format("woff"), url("../fonts/GothamMedium.ttf") format("truetype"), url("../fonts/GothamMedium.svg#GothamMedium") format("svg");
-}
-
-@font-face {
-  font-family: 'GothamLight';
-  src: url("../fonts/GothamLight.eot");
-  src: url("../fonts/GothamLight.eot") format("embedded-opentype"), url("../fonts/GothamLight.woff2") format("woff2"), url("../fonts/GothamLight.woff") format("woff"), url("../fonts/GothamLight.ttf") format("truetype"), url("../fonts/GothamLight.svg#GothamLight") format("svg");
+  font-family: 'VNFGothamBook';
+  src: url("../fonts/VNFGothamBook.eot");
+  src: url("../fonts/VNFGothamBook.eot") format("embedded-opentype"), url("../fonts/VNFGothamBook.woff2") format("woff2"), url("../fonts/VNFGothamBook.woff") format("woff"), url("../fonts/VNFGothamBook.ttf") format("truetype"), url("../fonts/VNFGothamBook.svg#VNFGothamBook") format("svg");
 }
 
 /* Mixin */
@@ -58,28 +46,19 @@
 
 /* Font */
 
+body,
 #footer .footer-menu ul li a,
 #footer .copyright,
-.left-content .left-menu ul.sub-menu > li > a,
-.single-product div.product .summary div p,
-.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
-.single-product div.product .product_meta a,
-body {
+.left-content .left-menu ul.sub-menu > li > a {
   font-style: normal;
   font-weight: normal;
 }
 
+body,
 #footer .footer-menu ul li a,
 #footer .copyright,
-.left-content .left-menu ul.sub-menu > li > a,
-.single-product div.product .summary div p,
-.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
-.single-product div.product .product_meta a {
-  font-family: 'GothamMedium', sans-serif;
-}
-
-body {
-  font-family: 'GothamBold', sans-serif;
+.left-content .left-menu ul.sub-menu > li > a {
+  font-family: 'VNFGothamBook', sans-serif;
 }
 
 /* Layout */
@@ -96,6 +75,7 @@ body {
 body {
   background: #f7f7f7;
   color: #303030;
+  font-weight: 700;
 }
 
 img {
@@ -537,10 +517,10 @@ a:focus {
   display: inline-block;
   vertical-align: middle;
   font-size: 18px;
+  line-height: 32px;
   height: 32px;
   width: 32px;
   margin: 0 5px;
-  line-height: 30px;
 }
 
 #footer .social-block a:hover {
@@ -839,6 +819,7 @@ a:focus {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
   margin-top: 13px;
   margin-right: 10px;

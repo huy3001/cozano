@@ -73,7 +73,7 @@
                     > a {
                         color: $submenu-item-color;
                         display: block;
-                        @include font('font-gotham-medium');
+                        @include font('font-gotham-book');
                         line-height: 1;
                         padding: 8px 15px;
                         &:hover {

@@ -34,6 +34,13 @@ $product-select-color: #01385f;
 @include placeholder('font-gotham-book') {
     @include font('font-style');
     font-family: 'VNFGothamBook', sans-serif;
+    font-weight: 700;
+}
+
+@include placeholder('font-roboto-bold') {
+    @include font('font-style');
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 @include placeholder('font-awesome') {

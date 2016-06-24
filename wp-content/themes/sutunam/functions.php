@@ -294,6 +294,7 @@ function stn_frontend_scripts() {
     wp_enqueue_style( 'bootstrap-theme',   get_template_directory_uri() . '/css/bootstrap-theme.min.css');
     wp_enqueue_style( 'bootstrap-select',   get_template_directory_uri() . '/css/bootstrap-select.min.css');
     wp_enqueue_style( 'font-awesome',   get_template_directory_uri() . '/css/font-awesome.min.css');
+    wp_enqueue_style( 'font-roboto',   get_template_directory_uri() . 'https://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,vietnamese');
     wp_enqueue_style( 'styles',   get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style( 'custom',   get_template_directory_uri() . '/css/custom.css');
     /*============ Javascripts ============ */

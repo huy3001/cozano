@@ -49,7 +49,7 @@
             right: 0;
             div {
                 p {
-                    @include font('font-gotham-medium');
+                    @include font('font-gotham-book');
                 }
             }
         }
@@ -146,7 +146,7 @@
                         > a {
                             color: $left-menu-bg;
                             font-size: 13px;
-                            @include font('font-gotham-medium');
+                            @include font('font-gotham-book');
                             padding: 3px 10px;
                         }
                     }
@@ -157,7 +157,7 @@
             color: $header-bg;
             a {
                 color: $search-input-bd;
-                @include font('font-gotham-medium');
+                @include font('font-gotham-book');
             }
         }
         .woocommerce-tabs {

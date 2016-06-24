@@ -46,19 +46,30 @@
 
 /* Font */
 
-body,
 #footer .footer-menu ul li a,
 #footer .copyright,
-.left-content .left-menu ul.sub-menu > li > a {
+.left-content .left-menu ul.sub-menu > li > a,
+.single-product div.product .summary div p,
+.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
+.single-product div.product .product_meta a,
+body {
   font-style: normal;
   font-weight: normal;
 }
 
-body,
 #footer .footer-menu ul li a,
 #footer .copyright,
-.left-content .left-menu ul.sub-menu > li > a {
+.left-content .left-menu ul.sub-menu > li > a,
+.single-product div.product .summary div p,
+.single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
+.single-product div.product .product_meta a {
   font-family: 'VNFGothamBook', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 /* Layout */
@@ -75,7 +86,6 @@ body {
 body {
   background: #f7f7f7;
   color: #303030;
-  font-weight: 700;
 }
 
 img {
@@ -93,6 +103,15 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
 #wrapper {
@@ -819,7 +838,6 @@ a:focus {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
-  font-weight: 700;
   text-transform: uppercase;
   margin-top: 13px;
   margin-right: 10px;

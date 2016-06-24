@@ -97,6 +97,15 @@
             else {
                 body.removeClass('no-sidebar');
             }
+        },
+        
+        hoverImageProduct: function () {
+            $( '.thumbnails a img' ).hover(
+                function() {
+                    var photo_fullsize = $( this ).attr( 'srcset' );
+                    $( '.woocommerce-main-image img' ).attr( 'srcset', photo_fullsize );
+                }
+            );
         }
     };
 
@@ -110,6 +119,9 @@
 
         // Bootstrap select
         customJS.bootstrapSelect();
+        
+        //Hover product image
+        customJS.hoverImageProduct();
     });
 
     /* Window load function */

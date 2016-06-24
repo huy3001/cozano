@@ -517,10 +517,10 @@ a:focus {
   display: inline-block;
   vertical-align: middle;
   font-size: 18px;
+  line-height: 32px;
   height: 32px;
   width: 32px;
   margin: 0 5px;
-  line-height: 30px;
 }
 
 #footer .social-block a:hover {

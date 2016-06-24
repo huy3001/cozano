@@ -1,31 +1,11 @@
 /* Font style */
 
 @font-face {
-    font-family: 'GothamBold';
-    src: url('../fonts/GothamBold.eot');
-    src: url('../fonts/GothamBold.eot') format('embedded-opentype'),
-    url('../fonts/GothamBold.woff2') format('woff2'),
-    url('../fonts/GothamBold.woff') format('woff'),
-    url('../fonts/GothamBold.ttf') format('truetype'),
-    url('../fonts/GothamBold.svg#GothamBold') format('svg');
-}
-
-@font-face {
-    font-family: 'GothamMedium';
-    src: url('../fonts/GothamMedium.eot');
-    src: url('../fonts/GothamMedium.eot') format('embedded-opentype'),
-    url('../fonts/GothamMedium.woff2') format('woff2'),
-    url('../fonts/GothamMedium.woff') format('woff'),
-    url('../fonts/GothamMedium.ttf') format('truetype'),
-    url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
-}
-
-@font-face {
-    font-family: 'GothamLight';
-    src: url('../fonts/GothamLight.eot');
-    src: url('../fonts/GothamLight.eot') format('embedded-opentype'),
-    url('../fonts/GothamLight.woff2') format('woff2'),
-    url('../fonts/GothamLight.woff') format('woff'),
-    url('../fonts/GothamLight.ttf') format('truetype'),
-    url('../fonts/GothamLight.svg#GothamLight') format('svg');
+    font-family: 'VNFGothamBook';
+    src: url('../fonts/VNFGothamBook.eot');
+    src: url('../fonts/VNFGothamBook.eot') format('embedded-opentype'),
+    url('../fonts/VNFGothamBook.woff2') format('woff2'),
+    url('../fonts/VNFGothamBook.woff') format('woff'),
+    url('../fonts/VNFGothamBook.ttf') format('truetype'),
+    url('../fonts/VNFGothamBook.svg#VNFGothamBook') format('svg');
 }

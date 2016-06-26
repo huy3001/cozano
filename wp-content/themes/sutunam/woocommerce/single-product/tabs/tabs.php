@@ -20,16 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-
-<div class="product-description contain-1">
-	<?php echo types_render_field("product-image-description-1", array()); ?>
-	<?php echo types_render_field("product-description-1", array()); ?>
-</div>
-<div class="product-description contain-2">
-	<?php echo types_render_field("product-image-description-2", array()); ?>
-	<?php echo types_render_field("product-description-2", array()); ?>
-</div>
-<div class="product-description contain-3">
-	<?php echo types_render_field("product-image-description-3", array()); ?>
-	<?php echo types_render_field("product-description-3", array()); ?>
+<div class="product-info-detail">
+	<div class="product-description contain-1">
+		<?php echo types_render_field("product-image-description-1", array()); ?>
+		<?php echo types_render_field("product-description-1", array()); ?>
+	</div>
+	<div class="product-description contain-2">
+		<?php echo types_render_field("product-image-description-2", array()); ?>
+		<?php echo types_render_field("product-description-2", array()); ?>
+	</div>
+	<div class="product-description contain-3">
+		<?php echo types_render_field("product-image-description-3", array()); ?>
+		<?php echo types_render_field("product-description-3", array()); ?>
+	</div>
 </div>

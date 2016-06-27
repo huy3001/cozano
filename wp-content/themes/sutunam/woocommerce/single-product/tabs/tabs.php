@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+</div>
 <div class="product-info-detail">
 	<div class="product-description contain-1">
 		<?php echo types_render_field("product-image-description-1", array()); ?>

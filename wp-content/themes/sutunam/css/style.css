@@ -47,10 +47,12 @@
 /* Font */
 
 body,
+.tax-product_cat ul.products li.product .price ins,
 .single-product div.product .price ins,
 #footer .footer-menu ul li a,
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
+.tax-product_cat ul.products li.product .price del,
 .single-product div.product .summary div p,
 .single-product div.product .price del,
 .single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
@@ -62,6 +64,7 @@ body,
 }
 
 body,
+.tax-product_cat ul.products li.product .price ins,
 .single-product div.product .price ins {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -70,6 +73,7 @@ body,
 #footer .footer-menu ul li a,
 #footer .copyright,
 .left-content .left-menu ul.sub-menu > li > a,
+.tax-product_cat ul.products li.product .price del,
 .single-product div.product .summary div p,
 .single-product div.product .price del,
 .single-product div.product .cart .bootstrap-select .dropdown-menu > li > a,
@@ -976,6 +980,77 @@ h6 {
 /* Shoes page style */
 
 /* Product category style */
+
+.tax-product_cat ul.products {
+  margin: 0 -1px;
+}
+
+.tax-product_cat ul.products li.product {
+  width: 25%;
+  padding: 0 1px;
+  margin: 0 0 35px;
+}
+
+.tax-product_cat ul.products li.product a img {
+  margin: 0 0 10px;
+}
+
+.tax-product_cat ul.products li.product h3 {
+  color: #303030;
+  font-size: 13px;
+  float: left;
+  padding: 0 10px 10px;
+}
+
+.tax-product_cat ul.products li.product .onsale {
+  background: #00436d;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  line-height: normal;
+  min-height: inherit;
+  min-width: inherit;
+  white-space: nowrap;
+  padding: 17px 0;
+  margin: 0;
+  top: auto;
+  right: auto;
+  bottom: 45px;
+  left: 10px;
+  z-index: 1;
+}
+
+.tax-product_cat ul.products li.product .star-rating {
+  color: #303030;
+  display: none;
+  margin: 0 10px;
+}
+
+.tax-product_cat ul.products li.product .price {
+  color: #303030;
+  font-size: 13px;
+  font-weight: bold;
+  float: right;
+  margin: 0 10px;
+}
+
+.tax-product_cat ul.products li.product .price del {
+  margin-right: 5px;
+}
+
+.tax-product_cat ul.products li.product .price ins {
+  text-decoration: none;
+}
+
+.tax-product_cat ul.products li.product .price del,
+.tax-product_cat ul.products li.product .price ins {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tax-product_cat ul.products li.product .button {
+  display: none;
+}
 
 /* Product detail style */
 

@@ -40,7 +40,7 @@ class WC_Frontnend_Shop_Manager_Free {
 		add_action( 'init', array(&$this, 'wfsm_textdomain') );
 		add_action( 'wp_enqueue_scripts', array(&$this, 'wfsm_scripts') );
 
-		add_action( 'woocommerce_before_shop_loop_item', array(&$this, 'wfsm_content') );
+		add_action( 'woocommerce_before_shop_loop_item', array(&$this, 'wfsm_content'),5 );
 		add_action( 'woocommerce_before_single_product_summary', array(&$this, 'wfsm_content'), 5 );
 		add_action( 'wp_ajax_wfsm_respond', array(&$this, 'wfsm_respond') );
 		add_action( 'wp_ajax_wfsm_save', array(&$this, 'wfsm_save') );

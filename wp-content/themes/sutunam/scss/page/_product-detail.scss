@@ -2,6 +2,11 @@
 
 .single-product {
     div.product {
+        .product-container {
+            float: left;
+            width: 100%;
+            position: relative;
+        }
         .onsale {
             background: $sale-tag-bg;
             width: 60px;
@@ -45,8 +50,9 @@
             padding: 50px 90px 50px 10px;
             margin: 0;
             position: absolute;
-            top: 0;
+            top: 50%;
             right: 0;
+            @include transform(translateY(-50%));
             div {
                 p {
                     @include font('font-roboto-medium');
@@ -163,6 +169,71 @@
         }
         .woocommerce-tabs {
             display: none;
+        }
+        .product-info-detail {
+            float: left;
+            width: 100%;
+        }
+        .product-description {
+            float: left;
+            width: 100%;
+            position: relative;
+            .desc-img,
+            .desc-detail {
+                width: 50%;
+            }
+            .desc-img {
+                img {
+                    width: 100%;
+                }
+            }
+            .desc-detail {
+                max-width: 420px;
+                position: absolute;
+                top: 50%;
+                h2 {
+                    font-size: 30px;
+                    margin: 0 0 10px;
+                }
+                h3 {
+                    font-size: 15px;
+                    margin: 0 0 10px;
+                }
+                p {
+                    color: $search-input-bd;
+                    font-size: 13px;
+                    @include font('font-roboto-medium');
+                }
+                ul {
+                    padding-left: 20px;
+                    li {
+                        color: $search-input-bd;
+                        font-size: 13px;
+                        @include font('font-roboto-medium');
+                    }
+                }
+            }
+            &.contain-1,
+            &.contain-3 {
+                .desc-img {
+                    float: right;
+                }
+                .desc-detail {
+                    float: left;
+                    left: 25%;
+                    @include transform(translate(-50%, -50%));
+                }
+            }
+            &.contain-2 {
+                .desc-img {
+                    float: left;
+                }
+                .desc-detail {
+                    float: right;
+                    right: 25%;
+                    @include transform(translate(50%, -50%));
+                }
+            }
         }
         .related.products {
             float: left;

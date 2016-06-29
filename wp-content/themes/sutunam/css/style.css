@@ -595,8 +595,7 @@ h6 {
 .left-content {
   background: #ffffff;
   width: 250px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -700,7 +699,11 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .left-content .left-menu {
-    padding-bottom: 54px;
+    max-height: -moz-calc(100% - 54px);
+    max-height: -webkit-calc(100% - 54px);
+    max-height: calc(100% - 54px);
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .left-content .login {
@@ -770,6 +773,16 @@ h6 {
 }
 
 @media only screen and (max-width: 1200px) {
+  .right-content {
+    left: auto;
+    width: 100%;
+    -webkit-transform: translate3d(250px, 0, 0);
+    -moz-transform: translate3d(250px, 0, 0);
+    -o-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0);
+  }
+
   .right-content:before {
     content: "";
     display: block;
@@ -788,6 +801,14 @@ h6 {
     transition: opacity 0.3s ease;
   }
 
+  .no-sidebar .right-content {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
   .no-sidebar .right-content:before {
     z-index: -1;
     opacity: 0;
@@ -795,7 +816,7 @@ h6 {
   }
 
   .right-content * .container {
-    width: 730px;
+    width: 960px;
   }
 }
 
@@ -891,12 +912,6 @@ h6 {
   display: none;
 }
 
-@media only screen and (max-width: 1200px) {
-  .newsletter-footer .newsletter .newsletter-title {
-    margin: 0 0 15px;
-  }
-}
-
 @media only screen and (max-width: 991px) {
   .newsletter-footer .newsletter {
     padding: 45px 0;
@@ -963,6 +978,7 @@ h6 {
   border: 2px solid #303030;
   color: #303030;
   padding: 10px 20px;
+  white-space: nowrap;
 }
 
 .home .content-block .content-block-body a:hover,

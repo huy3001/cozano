@@ -3,8 +3,7 @@
 .left-content {
     background: $white;
     width: $left-content-width;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -94,7 +93,9 @@
 
     @include bp(max-width, $desktop) {
         .left-menu {
-            padding-bottom: $header-height;
+            @include calc(max-height, '100% - 54px');
+            overflow-x: hidden;
+            overflow-y: auto;
         }
         .login {
             background: $header-bg;

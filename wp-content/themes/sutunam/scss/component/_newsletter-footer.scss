@@ -45,14 +45,6 @@
         }
     }
 
-    @include bp(max-width, $desktop) {
-        .newsletter {
-            .newsletter-title {
-                margin: 0 0 15px;
-            }
-        }
-    }
-
     @include bp(max-width, $laptop - 1) {
         .newsletter {
             padding: 45px 0;

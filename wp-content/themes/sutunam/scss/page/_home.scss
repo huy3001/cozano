@@ -17,6 +17,7 @@
                 border: 2px solid $header-bg;
                 color: $header-bg;
                 padding: 10px 20px;
+                white-space: nowrap;
                 &:hover {
                     background: $header-bg;
                     color: $white;

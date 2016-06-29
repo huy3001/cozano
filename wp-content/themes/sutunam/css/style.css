@@ -865,6 +865,11 @@ h6 {
     height: auto;
   }
 
+  .upsbar .upsbar-list {
+    max-height: 40px;
+    overflow: hidden;
+  }
+
   .upsbar .top-menu ul {
     margin: 0;
     padding: 0;

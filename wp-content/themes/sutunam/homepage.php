@@ -53,6 +53,7 @@ $jk_options = get_option('redux_demo');
 						</li>
 					<?php endif;?>
 				</ul>
+                <?php sutunam_menu('top-menu'); ?>
 			</aside>
 		</div>
 		<div class="row">

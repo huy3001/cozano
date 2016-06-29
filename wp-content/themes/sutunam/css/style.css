@@ -836,16 +836,16 @@ h6 {
 /* Upsbar style */
 
 .upsbar {
-  background: #ffffff;
-  max-height: 40px;
+  height: 40px;
   overflow: hidden;
+  text-align: center;
 }
 
 .upsbar .upsbar-list {
+  background: #ffffff;
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center;
 }
 
 .upsbar .upsbar-list li {
@@ -858,6 +858,34 @@ h6 {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .upsbar {
+    height: auto;
+  }
+
+  .upsbar .top-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .upsbar .top-menu ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: -moz-calc(50% - 15px);
+    width: -webkit-calc(50% - 15px);
+    width: calc(50% - 15px);
+  }
+
+  .upsbar .top-menu ul li a {
+    border: 2px solid #303030;
+    color: #303030;
+    display: block;
+    margin: 10px 2px;
+    padding: 8px 10px;
+  }
 }
 
 /* Newsletter footer style */

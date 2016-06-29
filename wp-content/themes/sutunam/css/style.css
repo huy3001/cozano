@@ -838,8 +838,6 @@ h6 {
 
 .upsbar {
   background: #ffffff;
-  max-height: 40px;
-  overflow: hidden;
 }
 
 .upsbar .upsbar-list {
@@ -859,6 +857,36 @@ h6 {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .upsbar {
+    background: #f7f7f7;
+  }
+
+  .upsbar .upsbar-list li:first-child {
+    background: #ffffff;
+    display: block;
+  }
+
+  .upsbar .upsbar-list li:first-child ~ li {
+    width: -moz-calc(50% - 15px);
+    width: -webkit-calc(50% - 15px);
+    width: calc(50% - 15px);
+  }
+
+  .upsbar .upsbar-list li:first-child ~ li a {
+    border: 2px solid #303030;
+    display: block;
+    margin: 10px 2px;
+    padding: 8px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .upsbar .upsbar-list li:first-child ~ li a .fa {
+    display: none;
+  }
 }
 
 /* Newsletter footer style */

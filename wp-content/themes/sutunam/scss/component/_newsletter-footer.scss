@@ -54,6 +54,10 @@
     @include bp(max-width, $tablet - 1) {
         .newsletter {
             padding: 30px 0;
+            .newsletter-title {
+                display: block;
+                margin: 0 auto 15px;
+            }
             .wpcf7 {
                 max-width: 100%;
             }

@@ -67,7 +67,7 @@
     @include bp(max-width, $laptop - 1) {
         * {
             .container {
-                width: 510px;
+                width: 750px;
             }
         }
     }

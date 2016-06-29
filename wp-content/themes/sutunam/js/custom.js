@@ -90,9 +90,15 @@
         },
 
         closeSidebar: function() {
-            var body = $('body');
+            var body = $('body'),
+                rightContent = $('.right-content');
             if($(window).width() < 1201) {
                 body.addClass('no-sidebar');
+                rightContent.off('lick').on('click', function() {
+                    if(!body.hasClass('no-sidebar')) {
+                        body.addClass('no-sidebar');
+                    }
+                });
             }
             else {
                 body.removeClass('no-sidebar');

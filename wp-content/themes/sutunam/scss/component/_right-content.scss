@@ -7,7 +7,7 @@
     @include calc(width, '100% - 250px');
     @include transition();
     .no-sidebar & {
-        left: auto;
+        left: 0;
         width: 100%;
     }
     > .container {
@@ -34,7 +34,7 @@
     }
 
     @include bp(max-width, $desktop) {
-        left: auto;
+        left: 0;
         width: 100%;
         @include transform(translate3d($left-content-width,0,0));
         &:before {

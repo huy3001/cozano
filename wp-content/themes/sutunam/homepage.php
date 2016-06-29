@@ -31,21 +31,21 @@ $jk_options = get_option('redux_demo');
 		<div class="row">
 			<aside class="upsbar">
 				<ul class="upsbar-list">
-					<?php if(isset($jk_options['overview_content'])):?>
+					<?php if($jk_options['overview_content']):?>
 						<li class="upsbar-item">
 							<a class="upsbar-link" href="<?php echo $jk_options['overview_url'] ?>" target="_self">
 								<?php echo $jk_options['overview_content'] ?>
 							</a>
 						</li>
 					<?php endif;?>
-					<?php if(isset($jk_options['overview_content_2'])):?>
+					<?php if($jk_options['overview_content_2']):?>
 						<li class="upsbar-item">
 							<a class="upsbar-link" href="<?php echo $jk_options['overview_url_2'] ?>" target="_self">
 								<?php echo $jk_options['overview_content_2'] ?>
 							</a>
 						</li>
 					<?php endif;?>
-					<?php if(isset($jk_options['overview_content_3'])):?>
+					<?php if($jk_options['overview_content_3']):?>
 						<li class="upsbar-item">
 							<a class="upsbar-link" href="<?php echo $jk_options['overview_url_3'] ?>" target="_self">
 								<?php echo $jk_options['overview_content_3'] ?>

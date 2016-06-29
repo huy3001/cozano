@@ -2,6 +2,8 @@
 
 .upsbar {
     background: $white;
+    max-height: 40px;
+    overflow: hidden;
     .upsbar-list {
         margin: 0;
         padding: 0;
@@ -15,32 +17,6 @@
                 display: inline-block;
                 vertical-align: middle;
                 padding: 10px 30px;
-            }
-        }
-    }
-
-    @include bp(max-width, $tablet - 1) {
-        background: $body-bg;
-        .upsbar-list {
-            li {
-                &:first-child {
-                    background: $white;
-                    display: block;
-                }
-                &:first-child ~ li {
-                    @include calc(width, '50% - 15px');
-                    a {
-                        border: 2px solid $main-color;
-                        display: block;
-                        margin: 10px 2px;
-                        padding: 8px 10px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        .fa {
-                            display: none;
-                        }
-                    }
-                }
             }
         }
     }

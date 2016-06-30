@@ -801,7 +801,9 @@ h6 {
   padding-left: 15px;
 }
 
-.left-content .login {
+.left-content .left-logo,
+.left-content .left-search,
+.left-content .left-login {
   display: none;
 }
 
@@ -814,7 +816,7 @@ h6 {
     overflow-y: auto;
   }
 
-  .left-content .login {
+  .left-content .left-login {
     background: #303030;
     display: block;
     height: 54px;
@@ -824,16 +826,97 @@ h6 {
     bottom: 0;
   }
 
-  .left-content .login .login-button {
+  .left-content .left-login .login-button {
     color: #ffffff;
     display: block;
     text-align: center;
     padding: 17px;
   }
 
-  .left-content .login .login-button .fa {
+  .left-content .left-login .login-button .fa {
     font-size: 18px;
     margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .left-content {
+    top: 0;
+  }
+
+  .left-content .left-menu {
+    max-height: -moz-calc(100% - 162px);
+    max-height: -webkit-calc(100% - 162px);
+    max-height: calc(100% - 162px);
+  }
+
+  .left-content .left-logo,
+  .left-content .left-search {
+    display: block;
+  }
+
+  .left-content .left-logo {
+    background: #303030;
+    border-right: 1px solid #666666;
+    height: 54px;
+    width: 100%;
+    position: relative;
+  }
+
+  .left-content .left-logo .logo {
+    max-width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .left-content .left-search .form-search {
+    border-bottom: 1px solid #dcdcdc;
+    position: relative;
+  }
+
+  .left-content .left-search .form-search input {
+    background: none;
+    border: none;
+    color: #303030;
+    height: 54px;
+    width: 100%;
+    padding: 10px 15px 10px 35px;
+    outline: none;
+  }
+
+  .left-content .left-search .form-search input ::-webkit-input-placeholder {
+    color: #303030;
+  }
+
+  .left-content .left-search .form-search input :-moz-placeholder {
+    color: #303030;
+  }
+
+  .left-content .left-search .form-search input ::-moz-placeholder {
+    color: #303030;
+  }
+
+  .left-content .left-search .form-search input :-ms-input-placeholder {
+    color: #303030;
+  }
+
+  .left-content .left-search .form-search button {
+    background: none;
+    border: none;
+    color: #303030;
+    font-size: 18px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    outline: none;
   }
 }
 

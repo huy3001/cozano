@@ -239,6 +239,11 @@
     }
 
     @include bp(max-width, $tablet - 1) {
+        @include transition();
+        @include transform(translate3d($left-content-width,0,0));
+        .no-sidebar & {
+            @include transform(translate3d(0,0,0));
+        }
         .toggle-menu {
             width: 18px;
             height: 14px;

@@ -13,13 +13,32 @@
         position: relative;
     }
     .toggle-menu {
-        color: $white;
-        cursor: pointer;
-        font-size: 28px;
+        background: none;
+        border: none;
+        width: 24px;
+        height: 19px;
         position: absolute;
         left: 15px;
         top: 50%;
-        margin-top: -20px;
+        margin-top: -10px;
+        padding: 0;
+        outline: none;
+        .icon-bar {
+            background: $white;
+            display: block;
+            height: 3px;
+            width: 24px;
+            position: absolute;
+            &:first-child {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 8px;
+            }
+            &:last-child {
+                bottom: 0;
+            }
+        }
     }
     .top-menu {
         position: absolute;
@@ -137,15 +156,25 @@
 
     @include bp(max-width, $desktop) {
         .toggle-menu {
-            .fa {
-                &:before {
-                    content: "\f00d";
+            .icon-bar {
+                @include transition();
+                &:first-child {
+                    @include transform(translate(0,8px) rotate(45deg));
+                }
+                &:nth-child(2) {
+                    @include opacity(0);
+                }
+                &:last-child {
+                    @include transform(translate(0,-8px) rotate(-45deg));
                 }
             }
             .no-sidebar & {
-                .fa {
-                    &:before {
-                        content: "\f0c9";
+                .icon-bar {
+                    &:first-child,
+                    &:nth-child(2),
+                    &:last-child {
+                        @include opacity(1);
+                        @include transform(none);
                     }
                 }
             }
@@ -211,8 +240,24 @@
 
     @include bp(max-width, $tablet - 1) {
         .toggle-menu {
-            font-size: 22px;
-            margin-top: -16px;
+            width: 18px;
+            height: 14px;
+            margin-top: -7px;
+            .icon-bar {
+                height: 2px;
+                width: 18px;
+                @include transition();
+                &:first-child {
+                    @include transform(translate(0,6px) rotate(45deg));
+                }
+                &:nth-child(2) {
+                    top: 6px;
+                    @include opacity(0);
+                }
+                &:last-child {
+                    @include transform(translate(0,-6px) rotate(-45deg));
+                }
+            }
         }
         .top-menu,
         .login {

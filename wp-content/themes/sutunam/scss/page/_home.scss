@@ -25,4 +25,20 @@
             }
         }
     }
+
+    @include bp(max-width, $tablet - 1) {
+        .content-block {
+            .content-block-body {
+                bottom: 50px;
+            }
+        }
+    }
+
+    @include bp(max-width, $mobile) {
+        .content-block {
+            .content-block-body {
+                bottom: 30px;
+            }
+        }
+    }
 }

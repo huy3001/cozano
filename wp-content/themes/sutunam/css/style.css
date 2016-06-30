@@ -471,7 +471,7 @@ h6 {
   }
 
   #header .logo {
-    max-width: 140px;
+    max-width: 120px;
   }
 
   #header .search-form {
@@ -1026,6 +1026,24 @@ h6 {
 .page-template-shoes .content-block .content-block-body a:hover {
   background: #303030;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .home .content-block .content-block-body,
+  .page-template-men .content-block .content-block-body,
+  .page-template-women .content-block .content-block-body,
+  .page-template-shoes .content-block .content-block-body {
+    bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home .content-block .content-block-body,
+  .page-template-men .content-block .content-block-body,
+  .page-template-women .content-block .content-block-body,
+  .page-template-shoes .content-block .content-block-body {
+    bottom: 30px;
+  }
 }
 
 /* Men page style */

@@ -29,6 +29,25 @@ $jk_options = get_option('redux_demo');
 <div class="right-content">
 	<div class="container">
 		<div class="row">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'hoodies',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            if ($loop->have_posts()) :?>
+                <div class="feature-product">
+                    <?php while ($loop->have_posts()) : $loop->the_post();
+                        $product = new WC_product($loop->post->ID);
+                        ?>
+                        <?php echo $product->get_image('image');?>
+                    <?php endwhile;?>
+                </div>
+            <?php endif;?>
+            <?php wp_reset_postdata(); ?>
 			<div class="shoes-option content-block">
 				<img src="<?php echo $jk_options['shoes_img_option_1']['url'] ?>" alt="" />
 				<div class="content-block-body">
@@ -40,6 +59,25 @@ $jk_options = get_option('redux_demo');
 			</div>
 		</div>
         <div class="row">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'hoodies',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            if ($loop->have_posts()) :?>
+                <div class="feature-product">
+                    <?php while ($loop->have_posts()) : $loop->the_post();
+                        $product = new WC_product($loop->post->ID);
+                        ?>
+                        <?php echo $product->get_image('image');?>
+                    <?php endwhile;?>
+                </div>
+            <?php endif;?>
+            <?php wp_reset_postdata(); ?>
             <div class="shoes-option content-block">
                 <img src="<?php echo $jk_options['shoes_img_option_2']['url'] ?>" alt="" />
                 <div class="content-block-body">
@@ -51,6 +89,25 @@ $jk_options = get_option('redux_demo');
             </div>
         </div>
         <div class="row">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'hoodies',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            if ($loop->have_posts()) :?>
+                <div class="feature-product">
+                    <?php while ($loop->have_posts()) : $loop->the_post();
+                        $product = new WC_product($loop->post->ID);
+                        ?>
+                        <?php echo $product->get_image('image');?>
+                    <?php endwhile;?>
+                </div>
+            <?php endif;?>
+            <?php wp_reset_postdata(); ?>
             <div class="shoes-option content-block">
                 <img src="<?php echo $jk_options['shoes_img_option_3']['url'] ?>" alt="" />
                 <div class="content-block-body">

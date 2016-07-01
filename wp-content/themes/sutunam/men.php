@@ -28,6 +28,9 @@ $jk_options = get_option('redux_demo');
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $product = new WC_product($loop->post->ID);
                         ?>
+                        <?php echo $product->get_title();?>
+                        <?php echo $product->get_price_html();?>
+                        <?php echo '<a href="'.get_permalink($loop->post->ID).'">Shop</a>';?>
                         <?php echo $product->get_image('image');?>
                     <?php endwhile;?>
                 </div>
@@ -58,6 +61,9 @@ $jk_options = get_option('redux_demo');
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $product = new WC_product($loop->post->ID);
                         ?>
+                        <?php echo $product->get_title();?>
+                        <?php echo $product->get_price_html();?>
+                        <?php echo '<a href="'.get_permalink($loop->post->ID).'">Shop</a>';?>
                         <?php echo $product->get_image('image');?>
                     <?php endwhile;?>
                 </div>
@@ -88,6 +94,9 @@ $jk_options = get_option('redux_demo');
                     <?php while ($loop->have_posts()) : $loop->the_post();
                         $product = new WC_product($loop->post->ID);
                         ?>
+                        <?php echo $product->get_title();?>
+                        <?php echo $product->get_price_html();?>
+                        <?php echo '<a href="'.get_permalink($loop->post->ID).'">Shop</a>';?>
                         <?php echo $product->get_image('image');?>
                     <?php endwhile;?>
                 </div>

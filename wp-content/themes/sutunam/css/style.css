@@ -1312,6 +1312,9 @@ h6 {
 .page-template-men .feature-product .name {
   display: block;
   font-size: 30px;
+  line-height: normal;
+  white-space: normal;
+  margin-bottom: 10px;
 }
 
 .page-template-men .feature-product .price {
@@ -1437,6 +1440,9 @@ h6 {
 .page-template-women .feature-product .name {
   display: block;
   font-size: 30px;
+  line-height: normal;
+  white-space: normal;
+  margin-bottom: 10px;
 }
 
 .page-template-women .feature-product .price {
@@ -1564,6 +1570,9 @@ h6 {
 .page-template-shoes .feature-product .name {
   display: block;
   font-size: 30px;
+  line-height: normal;
+  white-space: normal;
+  margin-bottom: 10px;
 }
 
 .page-template-shoes .feature-product .price {

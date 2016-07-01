@@ -3,6 +3,9 @@
 .page-template-men {
     @extend .home;
     @import "../component/featured-product";
+    .content-block {
+        min-height: 550px;
+    }
     .content-block-img {
         img {
             position: absolute;

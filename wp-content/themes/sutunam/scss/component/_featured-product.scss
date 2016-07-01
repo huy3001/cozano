@@ -3,8 +3,8 @@
 .feature-product {
     height: auto;
     width: 33.333%;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    z-index: 1;
     a {
         color: $white;
         display: block;

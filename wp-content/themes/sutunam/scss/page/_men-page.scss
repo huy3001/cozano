@@ -3,15 +3,31 @@
 .page-template-men {
     @extend .home;
     @import "../component/featured-product";
+    .content-block-img {
+        img {
+            position: absolute;
+            top: 0;
+        }
+    }
     .men-option-1,
     .men-option-3 {
-        .feature-product {
-            left: 0;
+        .content-block-img {
+            img {
+                right: 0;
+            }
         }
     }
     .men-option-2 {
         .feature-product {
-            right: 0;
+            float: right;
+        }
+        .content-block-img {
+            img {
+                left: 0;
+            }
+        }
+        .content-block-body {
+            left: 12.5%;
         }
     }
 }

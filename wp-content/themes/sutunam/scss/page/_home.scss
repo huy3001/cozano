@@ -3,8 +3,11 @@
 .home {
     .content-block {
         position: relative;
-        > img {
-            width: 100%;
+        overflow: hidden;
+        .content-block-img {
+            img {
+                width: 100%;
+            }
         }
         .content-block-body {
             text-align: center;

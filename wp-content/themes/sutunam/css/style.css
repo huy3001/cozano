@@ -1177,12 +1177,13 @@ h6 {
 .page-template-women .content-block,
 .page-template-shoes .content-block {
   position: relative;
+  overflow: hidden;
 }
 
-.home .content-block > img,
-.page-template-men .content-block > img,
-.page-template-women .content-block > img,
-.page-template-shoes .content-block > img {
+.home .content-block .content-block-img img,
+.page-template-men .content-block .content-block-img img,
+.page-template-women .content-block .content-block-img img,
+.page-template-shoes .content-block .content-block-img img {
   width: 100%;
 }
 
@@ -1247,8 +1248,8 @@ h6 {
 .page-template-men .feature-product {
   height: auto;
   width: 33.333%;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .page-template-men .feature-product a {
@@ -1337,13 +1338,26 @@ h6 {
   color: #303030;
 }
 
-.page-template-men .men-option-1 .feature-product,
-.page-template-men .men-option-3 .feature-product {
-  left: 0;
+.page-template-men .content-block-img img {
+  position: absolute;
+  top: 0;
+}
+
+.page-template-men .men-option-1 .content-block-img img,
+.page-template-men .men-option-3 .content-block-img img {
+  right: 0;
 }
 
 .page-template-men .men-option-2 .feature-product {
-  right: 0;
+  float: right;
+}
+
+.page-template-men .men-option-2 .content-block-img img {
+  left: 0;
+}
+
+.page-template-men .men-option-2 .content-block-body {
+  left: 12.5%;
 }
 
 /* Women page style */

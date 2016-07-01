@@ -41,7 +41,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-				<img src="<?php echo $jk_options['men_img_option_1']['url'] ?>" alt="" />
+                <div class="content-block-img">
+				    <img src="<?php echo $jk_options['men_img_option_1']['url'] ?>" alt="" />
+                </div>
 				<div class="content-block-body">
 					<?php echo $jk_options['men_desc_option_1']?>
 					<a href="<?php echo $jk_options['men_url_option_1']?>" target="_self">
@@ -78,7 +80,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <img src="<?php echo $jk_options['men_img_option_2']['url'] ?>" alt="" />
+                <div class="content-block-img">
+                    <img src="<?php echo $jk_options['men_img_option_2']['url'] ?>" alt="" />
+                </div>
                 <div class="content-block-body">
                     <?php echo $jk_options['men_desc_option_2']?>
                     <a href="<?php echo $jk_options['men_url_option_2']?>" target="_self">
@@ -115,7 +119,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <img src="<?php echo $jk_options['men_img_option_3']['url'] ?>" alt="" />
+                <div class="content-block-img">
+                    <img src="<?php echo $jk_options['men_img_option_3']['url'] ?>" alt="" />
+                </div>
                 <div class="content-block-body">
                     <?php echo $jk_options['men_desc_option_3']?>
                     <a href="<?php echo $jk_options['men_url_option_3']?>" target="_self">

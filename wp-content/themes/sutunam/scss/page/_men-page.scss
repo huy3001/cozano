@@ -2,4 +2,16 @@
 
 .page-template-men {
     @extend .home;
+    @import "../component/featured-product";
+    .men-option-1,
+    .men-option-3 {
+        .feature-product {
+            left: 0;
+        }
+    }
+    .men-option-2 {
+        .feature-product {
+            right: 0;
+        }
+    }
 }

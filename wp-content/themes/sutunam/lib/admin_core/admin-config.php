@@ -449,6 +449,25 @@
                         'id'    => 'men_url',
                         'type'  => 'text',
                         'title' => 'Men Url',
+                    ),
+                    array(
+                        'id'    => 'men_button_title',
+                        'type'  => 'text',
+                        'title' => 'Button title',
+                    ),
+                    array(
+                        'id'       => 'men_button_position',
+                        'type'     => 'select',
+                        'title'    => __('Position of button'),
+                        'subtitle' => __('No validation can be done on this field type'),
+                        'desc'     => __('This is the description field, again good for additional info.'),
+                        // Must provide key => value pairs for select options
+                        'options'  => array(
+                            'left' => 'Left',
+                            'right' => 'Right',
+                            'center' => 'Center'
+                        ),
+                        'default'  => 'left',
                     )
                 ),
             ));
@@ -588,6 +607,25 @@
                             'id'    => 'women_url',
                             'type'  => 'text',
                             'title' => 'Women Url',
+                        ),
+                        array(
+                            'id'    => 'women_button_title',
+                            'type'  => 'text',
+                            'title' => 'Button title',
+                        ),
+                        array(
+                            'id'       => 'women_button_position',
+                            'type'     => 'select',
+                            'title'    => __('Position of button'),
+                            'subtitle' => __('No validation can be done on this field type'),
+                            'desc'     => __('This is the description field, again good for additional info.'),
+                            // Must provide key => value pairs for select options
+                            'options'  => array(
+                                'left' => 'Left',
+                                'right' => 'Right',
+                                'center' => 'Center'
+                            ),
+                            'default'  => 'left',
                         )
                     ),
                 ));
@@ -728,6 +766,25 @@ Redux::setSection( $opt_name,array(
                         'id'    => 'shoes_url',
                         'type'  => 'text',
                         'title' => 'Shoes Url',
+                    ),
+                    array(
+                        'id'    => 'shoes_button_title',
+                        'type'  => 'text',
+                        'title' => 'Button title',
+                    ),
+                    array(
+                        'id'       => 'shoes_button_position',
+                        'type'     => 'select',
+                        'title'    => __('Position of button'),
+                        'subtitle' => __('No validation can be done on this field type'),
+                        'desc'     => __('This is the description field, again good for additional info.'),
+                        // Must provide key => value pairs for select options
+                        'options'  => array(
+                            'left' => 'Left',
+                            'right' => 'Right',
+                            'center' => 'Center'
+                        ),
+                        'default'  => 'left',
                     )
                 ),
             ));
@@ -869,6 +926,25 @@ Redux::setSection( $opt_name,array(
                         'id'    => 'bigsize_url',
                         'type'  => 'text',
                         'title' => 'Bigsize Url',
+                    ),
+                    array(
+                        'id'    => 'bigsize_button_title',
+                        'type'  => 'text',
+                        'title' => 'Button title',
+                    ),
+                    array(
+                        'id'       => 'bigsize_button_position',
+                        'type'     => 'select',
+                        'title'    => __('Position of button'),
+                        'subtitle' => __('No validation can be done on this field type'),
+                        'desc'     => __('This is the description field, again good for additional info.'),
+                        // Must provide key => value pairs for select options
+                        'options'  => array(
+                            'left' => 'Left',
+                            'right' => 'Right',
+                            'center' => 'Center'
+                        ),
+                        'default'  => 'left',
                     )
                 ),
             ));
@@ -909,6 +985,25 @@ Redux::setSection( $opt_name,array(
                         'id'    => 'touch_url',
                         'type'  => 'text',
                         'title' => 'Touch Url',
+                    ),
+                    array(
+                        'id'    => 'touch_button_title',
+                        'type'  => 'text',
+                        'title' => 'Button title',
+                    ),
+                    array(
+                        'id'       => 'touch_button_position',
+                        'type'     => 'select',
+                        'title'    => __('Position of button'),
+                        'subtitle' => __('No validation can be done on this field type'),
+                        'desc'     => __('This is the description field, again good for additional info.'),
+                        // Must provide key => value pairs for select options
+                        'options'  => array(
+                            'left' => 'Left',
+                            'right' => 'Right',
+                            'center' => 'Center'
+                        ),
+                        'default'  => 'left',
                     )
                 ),
             ));

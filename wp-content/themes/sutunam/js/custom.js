@@ -111,6 +111,10 @@
                     $( '.woocommerce-main-image img' ).attr( 'srcset', photo_fullsize );
                 }
             );
+        },
+
+        filterProduct: function () {
+            $.filtrify("product-category", "placeHolder");
         }
     };
 
@@ -127,6 +131,9 @@
         
         // Hover product image
         customJS.hoverImageProduct();
+
+        //Filter product
+        customJS.filterProduct();
     });
 
     /* Window load function */

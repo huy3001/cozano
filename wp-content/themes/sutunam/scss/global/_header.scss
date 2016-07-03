@@ -74,12 +74,12 @@
     .search-form {
         position: absolute;
         top: 0;
-        right: 300px;
+        right: 110px;
         height: 100%;
         input {
             background: none;
             border: none;
-            color: $header-bg;
+            color: $white;
             height: $header-height;
             width: 170px;
             padding: 10px 15px 10px 35px;
@@ -90,6 +90,7 @@
             }
             &:focus {
                 background: $white;
+                color: $header-bg;
             }
             &:focus + button {
                 color: $header-bg;
@@ -125,6 +126,7 @@
         }
     }
     .login {
+        display: none;
         position: absolute;
         top: 50%;
         right: 110px;

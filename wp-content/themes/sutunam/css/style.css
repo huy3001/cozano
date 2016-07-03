@@ -288,14 +288,14 @@ h6 {
 #header .search-form {
   position: absolute;
   top: 0;
-  right: 300px;
+  right: 110px;
   height: 100%;
 }
 
 #header .search-form input {
   background: none;
   border: none;
-  color: #303030;
+  color: #ffffff;
   height: 54px;
   width: 170px;
   padding: 10px 15px 10px 35px;
@@ -324,6 +324,7 @@ h6 {
 
 #header .search-form input:focus {
   background: #ffffff;
+  color: #303030;
 }
 
 #header .search-form input:focus + button {
@@ -371,6 +372,7 @@ h6 {
 }
 
 #header .login {
+  display: none;
   position: absolute;
   top: 50%;
   right: 110px;
@@ -815,16 +817,13 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .left-content .left-menu {
-    max-height: -moz-calc(100% - 54px);
-    max-height: -webkit-calc(100% - 54px);
-    max-height: calc(100% - 54px);
+    max-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
   .left-content .left-login {
     background: #303030;
-    display: block;
     height: 54px;
     width: 100%;
     position: absolute;
@@ -851,9 +850,9 @@ h6 {
   }
 
   .left-content .left-menu {
-    max-height: -moz-calc(100% - 162px);
-    max-height: -webkit-calc(100% - 162px);
-    max-height: calc(100% - 162px);
+    max-height: -moz-calc(100% - 108px);
+    max-height: -webkit-calc(100% - 108px);
+    max-height: calc(100% - 108px);
   }
 
   .left-content .left-logo,
@@ -1225,12 +1224,52 @@ h6 {
   color: #ffffff;
 }
 
+.home .content-block .content-block-body.left,
+.page-template-men .content-block .content-block-body.left,
+.page-template-women .content-block .content-block-body.left,
+.page-template-shoes .content-block .content-block-body.left {
+  text-align: left;
+  left: 16.5%;
+}
+
+.home .content-block .content-block-body.right,
+.page-template-men .content-block .content-block-body.right,
+.page-template-women .content-block .content-block-body.right,
+.page-template-shoes .content-block .content-block-body.right {
+  text-align: right;
+  left: auto;
+  right: 16.5%;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
 @media only screen and (max-width: 767px) {
   .home .content-block .content-block-body,
   .page-template-men .content-block .content-block-body,
   .page-template-women .content-block .content-block-body,
   .page-template-shoes .content-block .content-block-body {
     bottom: 50px;
+  }
+
+  .home .content-block .content-block-body.left,
+  .page-template-men .content-block .content-block-body.left,
+  .page-template-women .content-block .content-block-body.left,
+  .page-template-shoes .content-block .content-block-body.left,
+  .home .content-block .content-block-body.right,
+  .page-template-men .content-block .content-block-body.right,
+  .page-template-women .content-block .content-block-body.right,
+  .page-template-shoes .content-block .content-block-body.right {
+    text-align: center;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 
@@ -1368,7 +1407,7 @@ h6 {
 }
 
 .page-template-men .men-option-2 .content-block-body {
-  left: 12.5%;
+  left: 16.5%;
 }
 
 /* Women page style */
@@ -1494,7 +1533,7 @@ h6 {
 
 .page-template-women .women-option-1 .content-block-body,
 .page-template-women .women-option-3 .content-block-body {
-  left: 12.5%;
+  left: 16.5%;
 }
 
 .page-template-women .women-option-2 .content-block-img img {

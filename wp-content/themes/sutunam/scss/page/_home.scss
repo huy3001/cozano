@@ -26,6 +26,16 @@
                     color: $white;
                 }
             }
+            &.left {
+                text-align: left;
+                left: 16.5%;
+            }
+            &.right {
+                text-align: right;
+                left: auto;
+                right: 16.5%;
+                @include transform(translateX(50%));
+            }
         }
     }
 
@@ -33,6 +43,13 @@
         .content-block {
             .content-block-body {
                 bottom: 50px;
+                &.left,
+                &.right {
+                    text-align: center;
+                    left: 50%;
+                    right: auto;
+                    @include transform(translateX(-50%));
+                }
             }
         }
     }

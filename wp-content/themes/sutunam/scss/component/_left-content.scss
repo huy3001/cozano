@@ -95,13 +95,12 @@
 
     @include bp(max-width, $desktop) {
         .left-menu {
-            @include calc(max-height, '100% - 54px');
+            max-height: 100%;
             overflow-x: hidden;
             overflow-y: auto;
         }
         .left-login {
             background: $header-bg;
-            display: block;
             height: $header-height;
             width: 100%;
             position: absolute;
@@ -123,7 +122,7 @@
     @include bp(max-width, $tablet - 1) {
         top: 0;
         .left-menu {
-            @include calc(max-height, '100% - 162px');
+            @include calc(max-height, '100% - 108px');
         }
         .left-logo,
         .left-search {

@@ -73,6 +73,7 @@
                 if(toggleSearch.length) {
                     toggleSearch.off('click').on('click', function() {
                         $(this).next('.search-item').slideToggle(300);
+                        $(this).next('.search-item').find('.form-text').focus();
                     });
                     setTimeout(function() {
                         var formClose = $('.form-close');

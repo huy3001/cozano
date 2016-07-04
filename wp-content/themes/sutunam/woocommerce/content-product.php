@@ -49,15 +49,15 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 }
 ?>
 <?php
-$categories = get_the_terms( $post->ID, 'product_cat' );
+$sizes = get_the_terms( $post->ID, 'size' );
 $cat = null;
 $i =0;
 ?>
-<?php foreach($categories as $category){
+<?php foreach($sizes as $size){
     if($i == 0)
-        $cat = $category->name;
+        $cat = $size->name;
     else
-        $cat .= ', '.$category->name;
+        $cat .= ', '.$size->name;
     $i++;
 }
 ?>

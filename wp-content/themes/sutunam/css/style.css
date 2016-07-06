@@ -1384,7 +1384,7 @@ h6 {
   color: #303030;
 }
 
-.page-template-men .content-block {
+.page-template-men .content-block.no-feature {
   min-height: 550px;
 }
 
@@ -1408,6 +1408,42 @@ h6 {
 
 .page-template-men .men-option-2 .content-block-body {
   left: 16.5%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-template-men .content-block.no-feature {
+    min-height: 315px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-template-men .content-block.no-feature {
+    min-height: 330px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .page-template-men .content-block.no-feature {
+    min-height: 255px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-template-men .content-block.no-feature {
+    min-height: inherit;
+  }
+
+  .page-template-men .feature-product {
+    display: none;
+  }
+
+  .page-template-men .content-block-img img {
+    position: static;
+  }
+
+  .page-template-men .men-option-2 .content-block-body {
+    left: 50%;
+  }
 }
 
 /* Women page style */
@@ -1512,7 +1548,7 @@ h6 {
   color: #303030;
 }
 
-.page-template-women .content-block {
+.page-template-women .content-block.no-feature {
   min-height: 550px;
 }
 
@@ -1538,6 +1574,43 @@ h6 {
 
 .page-template-women .women-option-2 .content-block-img img {
   right: 0;
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-template-women .content-block.no-feature {
+    min-height: 315px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-template-women .content-block.no-feature {
+    min-height: 330px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .page-template-women .content-block.no-feature {
+    min-height: 255px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-template-women .content-block.no-feature {
+    min-height: inherit;
+  }
+
+  .page-template-women .feature-product {
+    display: none;
+  }
+
+  .page-template-women .content-block-img img {
+    position: static;
+  }
+
+  .page-template-women .women-option-1 .content-block-body,
+  .page-template-women .women-option-3 .content-block-body {
+    left: 50%;
+  }
 }
 
 /* Shoes page style */
@@ -1642,13 +1715,45 @@ h6 {
   color: #303030;
 }
 
-.page-template-shoes .content-block {
+.page-template-shoes .content-block.no-feature {
   min-height: 550px;
 }
 
 .page-template-shoes .content-block-img img {
   position: absolute;
   top: 0;
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-template-shoes .content-block.no-feature {
+    min-height: 315px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-template-shoes .content-block.no-feature {
+    min-height: 330px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .page-template-shoes .content-block.no-feature {
+    min-height: 255px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-template-shoes .content-block.no-feature {
+    min-height: inherit;
+  }
+
+  .page-template-shoes .feature-product {
+    display: none;
+  }
+
+  .page-template-shoes .content-block-img img {
+    position: static;
+  }
 }
 
 /* Product category style */

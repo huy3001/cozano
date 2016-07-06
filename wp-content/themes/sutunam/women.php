@@ -14,16 +14,18 @@ $jk_options = get_option('redux_demo');
 <div class="right-content">
 	<div class="container">
 		<div class="row">
-			<div class="women-option-1 content-block">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'women-jeans',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            ?>
+			<div class="women-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
                 <?php
-                $args = array(
-                    'post_type' => 'product',
-                    'product_cat' =>'women-jeans',
-                    'meta_key' => '_featured',
-                    'meta_value' => 'yes',
-                    'posts_per_page' => 1
-                );
-                $loop = new WP_Query( $args );
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
                         <?php while ($loop->have_posts()) : $loop->the_post();
@@ -53,16 +55,18 @@ $jk_options = get_option('redux_demo');
 			</div>
 		</div>
         <div class="row">
-            <div class="women-option-2 content-block">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'women-shirts',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            ?>
+            <div class="women-option-2 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
                 <?php
-                $args = array(
-                    'post_type' => 'product',
-                    'product_cat' =>'women-shirts',
-                    'meta_key' => '_featured',
-                    'meta_value' => 'yes',
-                    'posts_per_page' => 1
-                );
-                $loop = new WP_Query( $args );
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
                         <?php while ($loop->have_posts()) : $loop->the_post();
@@ -92,16 +96,18 @@ $jk_options = get_option('redux_demo');
             </div>
         </div>
         <div class="row">
-            <div class="women-option-3 content-block">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'women-shorts',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            ?>
+            <div class="women-option-3 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
                 <?php
-                $args = array(
-                    'post_type' => 'product',
-                    'product_cat' =>'women-shorts',
-                    'meta_key' => '_featured',
-                    'meta_value' => 'yes',
-                    'posts_per_page' => 1
-                );
-                $loop = new WP_Query( $args );
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
                         <?php while ($loop->have_posts()) : $loop->the_post();

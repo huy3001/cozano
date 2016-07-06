@@ -1,5 +1,10 @@
 /* Custom js */
 (function($) {
+    // Global variables
+    var $desktop = 1200,
+        $tablet = 768;
+
+    // Global functions
     var customJS = {
         sidebarToggle: function () {
             var toggleBtn = $('.toggle-menu'),
@@ -69,7 +74,7 @@
         searchToggle: function() {
             var toggleSearch = $('.toggle-search'),
                 searchItem = $('.search-item');
-            if($(window).width() < 1201) {
+            if($(window).width() < $desktop + 1) {
                 if(toggleSearch.length) {
                     toggleSearch.off('click').on('click', function() {
                         $(this).next('.search-item').slideToggle(300);
@@ -93,7 +98,7 @@
         closeSidebar: function() {
             var body = $('body'),
                 rightContent = $('.right-content');
-            if($(window).width() < 1201) {
+            if($(window).width() < $desktop + 1) {
                 body.addClass('no-sidebar');
                 rightContent.off('lick').on('click', function() {
                     if(!body.hasClass('no-sidebar')) {
@@ -105,7 +110,7 @@
                 body.removeClass('no-sidebar');
             }
         },
-        
+
         hoverImageProduct: function () {
             $( '.thumbnails a img' ).on('mouseover', function() {
                     var photo_fullsize = $( this ).attr( 'srcset' );

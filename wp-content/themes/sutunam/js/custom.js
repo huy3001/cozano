@@ -111,10 +111,10 @@
             }
         },
 
-        hoverImageProduct: function () {
-            $( '.thumbnails a img' ).on('mouseover', function() {
-                    var photo_fullsize = $( this ).attr( 'srcset' );
-                    $( '.woocommerce-main-image img' ).attr( 'srcset', photo_fullsize );
+        moreImageProduct: function () {
+            $( '.thumbnails a img').off('click').on('click', function() {
+                    var photo_fullsize = $(this).attr('srcset');
+                    $('.woocommerce-main-image img').attr( 'srcset', photo_fullsize );
                 }
             );
         },
@@ -136,7 +136,7 @@
         customJS.bootstrapSelect();
         
         // Hover product image
-        customJS.hoverImageProduct();
+        customJS.moreImageProduct();
 
         //Filter product
         customJS.filterProduct();

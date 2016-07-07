@@ -10,7 +10,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<article id="post-<?php the_ID(); ?>" class="result-block">
     <header class="entry-header">
         <div class="img-wrapper">
             <img class="img-responsive" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>"

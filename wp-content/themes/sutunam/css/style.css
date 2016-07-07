@@ -2169,3 +2169,34 @@ h6 {
 }
 
 /* Search result style */
+
+.search-results .search-result-heading {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.search-results .search-result-content {
+  margin: 0 -1px;
+}
+
+.search-results .search-result-content .result-block {
+  float: left;
+  width: 25%;
+  padding: 0 1px;
+  margin: 0 0 35px;
+}
+
+.search-results .search-result-content .result-block .img-wrapper {
+  margin: 0 0 10px;
+}
+
+.search-results .search-result-content .result-block .entry-title {
+  color: #303030;
+  font-size: 13px;
+  margin: 0;
+  padding: 0 10px 10px;
+}
+
+.search-results .search-result-content .result-block .entry-title a {
+  color: #303030;
+}

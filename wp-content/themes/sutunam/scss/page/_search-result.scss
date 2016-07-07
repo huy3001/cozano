@@ -1,2 +1,29 @@
 /* Search result style */
 
+.search-results {
+    .search-result-heading {
+        text-align: center;
+        padding: 0 15px;
+    }
+    .search-result-content {
+        margin: 0 -1px;
+        .result-block {
+            float: left;
+            width: 25%;
+            padding: 0 1px;
+            margin: 0 0 35px;
+            .img-wrapper {
+                margin: 0 0 10px;
+            }
+            .entry-title {
+                color: $main-color;
+                font-size: 13px;
+                margin: 0;
+                padding: 0 10px 10px;
+                a {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

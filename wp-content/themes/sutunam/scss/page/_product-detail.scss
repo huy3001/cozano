@@ -182,8 +182,22 @@
                 width: 50%;
             }
             .desc-img {
+                position: relative;
                 img {
                     width: 100%;
+                }
+                &:before {
+                    content: "";
+                    display: block;
+                    height: 0;
+                    width: 0;
+                    background: none;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -20px;
+                    z-index: 1;
                 }
             }
             .desc-detail {
@@ -216,6 +230,10 @@
             &.contain-3 {
                 .desc-img {
                     float: right;
+                    &:before {
+                        border-left: 20px solid $body-bg;
+                        left: 0;
+                    }
                 }
                 .desc-detail {
                     float: left;
@@ -226,6 +244,10 @@
             &.contain-2 {
                 .desc-img {
                     float: left;
+                    &:before {
+                        border-right: 20px solid $body-bg;
+                        right: 0;
+                    }
                 }
                 .desc-detail {
                     float: right;

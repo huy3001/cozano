@@ -55,6 +55,7 @@ body,
 .page-template-men .feature-product .price del,
 .page-template-women .feature-product .price del,
 .page-template-shoes .feature-product .price del,
+.tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-menu > li > a,
 .tax-product_cat ul.products li.product .price del,
 .single-product div.product .summary div p,
 .single-product div.product .price del,
@@ -79,6 +80,7 @@ body,
 .page-template-men .feature-product .price del,
 .page-template-women .feature-product .price del,
 .page-template-shoes .feature-product .price del,
+.tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-menu > li > a,
 .tax-product_cat ul.products li.product .price del,
 .single-product div.product .summary div p,
 .single-product div.product .price del,
@@ -1757,6 +1759,46 @@ h6 {
 }
 
 /* Product category style */
+
+.tax-product_cat .woocommerce-ordering {
+  margin: 0 10px 10px;
+}
+
+.tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-toggle {
+  background: none;
+  border: 2px solid #dfdfdf;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #01385f;
+  font-size: 14px;
+  text-shadow: none;
+  padding: 9px 25px 9px 10px;
+  outline: none;
+}
+
+.tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-menu {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-menu > li > a {
+  color: #999999;
+  font-size: 14px;
+  padding: 3px 10px;
+}
 
 .tax-product_cat ul.products {
   margin: 0 -1px;

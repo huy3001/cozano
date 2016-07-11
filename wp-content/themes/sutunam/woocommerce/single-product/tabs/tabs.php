@@ -23,27 +23,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <div class="product-info-detail">
 	<div class="product-description contain-1">
+        <?php if(types_render_field("product-image-description-1", array())) { ?>
         <div class="desc-img">
             <?php echo types_render_field("product-image-description-1", array()); ?>
         </div>
+        <?php } ?>
+        <?php if(types_render_field("product-description-1", array())) { ?>
         <div class="desc-detail">
             <?php echo types_render_field("product-description-1", array()); ?>
         </div>
+        <?php } ?>
 	</div>
 	<div class="product-description contain-2">
+        <?php if(types_render_field("product-image-description-2", array())) { ?>
         <div class="desc-img">
             <?php echo types_render_field("product-image-description-2", array()); ?>
         </div>
+        <?php } ?>
+        <?php if(types_render_field("product-description-2", array())) { ?>
         <div class="desc-detail">
             <?php echo types_render_field("product-description-2", array()); ?>
         </div>
+        <?php } ?>
 	</div>
 	<div class="product-description contain-3">
+        <?php if(types_render_field("product-image-description-3", array())) { ?>
         <div class="desc-img">
             <?php echo types_render_field("product-image-description-3", array()); ?>
         </div>
+        <?php } ?>
+        <?php if(types_render_field("product-description-3", array())) { ?>
         <div class="desc-detail">
             <?php echo types_render_field("product-description-3", array()); ?>
         </div>
+        <?php } ?>
 	</div>
 </div>

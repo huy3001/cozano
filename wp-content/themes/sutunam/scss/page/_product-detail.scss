@@ -328,6 +328,7 @@
                     }
                 }
                 .desc-detail {
+                    max-width: 100%;
                     position: static;
                     padding: 15px 15px 30px;
                     @include transform(none);
@@ -342,6 +343,12 @@
                         float: none;
                         @include transform(none);
                     }
+                }
+            }
+            .related.products {
+                h2 {
+                    text-align: center;
+                    padding: 0 15px;
                 }
             }
         }

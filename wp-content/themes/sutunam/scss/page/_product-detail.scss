@@ -201,7 +201,8 @@
                 }
             }
             .desc-detail {
-                max-width: 420px;
+                width: 420px;
+                max-width: 50%;
                 position: absolute;
                 top: 50%;
                 h2 {
@@ -302,6 +303,44 @@
                     }
                     .button {
                         display: none;
+                    }
+                }
+            }
+        }
+
+        @include bp(max-width, $laptop - 1) {
+            .product-description {
+                .desc-detail {
+                    padding: 0 5%;
+                }
+            }
+        }
+
+        @include bp(max-width, $tablet - 1) {
+            .product-description {
+                .desc-img,
+                .desc-detail {
+                    width: 100%;
+                }
+                .desc-img {
+                    &:before {
+                        display: none;
+                    }
+                }
+                .desc-detail {
+                    position: static;
+                    padding: 15px 15px 30px;
+                    @include transform(none);
+                }
+                &.contain-1,
+                &.contain-2,
+                &.contain-3 {
+                    .desc-img {
+                        float: none;
+                    }
+                    .desc-detail {
+                        float: none;
+                        @include transform(none);
                     }
                 }
             }

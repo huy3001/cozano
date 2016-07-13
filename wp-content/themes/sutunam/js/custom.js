@@ -121,6 +121,12 @@
 
         filterProduct: function () {
             $.filtrify("product-category", "placeHolder");
+        },
+        
+        showAllProducts: function () {
+            $('.show-products').click(function () {
+                $('.product').removeClass('hide');
+            })
         }
     };
 
@@ -140,6 +146,9 @@
 
         //Filter product
         customJS.filterProduct();
+
+        //Show all products
+        customJS.showAllProducts();
     });
 
     /* Window load function */

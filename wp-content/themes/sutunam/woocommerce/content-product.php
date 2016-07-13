@@ -49,33 +49,83 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 }
 ?>
 <?php
+//Add size filter
 $sizes = get_the_terms( $post->ID, 'size' );
-$cat = null;
+$size = null;
 $i =0;
 ?>
-<?php foreach($sizes as $size){
+<?php foreach($sizes as $item){
     if($i == 0)
-        $cat = $size->name;
+		$size = $item->name;
     else
-        $cat .= ', '.$size->name;
+		$size .= ', '.$item->name;
     $i++;
 }
 ?>
 <?php
+//Add color filter
 $colors = get_the_terms( $post->ID, 'color' );
-$con = null;
-$j =0;
+$color = null;
+$i =0;
 ?>
-<?php foreach($colors as $category){
+<?php foreach($colors as $item){
     if($i == 0)
-        $con = $category->name;
+		$color = $item->name;
     else
-        $con .= ', '.$category->name;
-    $j++;
+		$color .= ', '.$item->name;
+    $i++;
 }
 ?>
-<?php// echo types_render_field("color", array()); ?>
-<li <?php post_class( $classes ); ?> data-category="<?php echo $cat;?>" data-color="<?php echo $con;?>">
+
+<?php
+//Add color filter
+$colors = get_the_terms( $post->ID, 'color' );
+$color = null;
+$i =0;
+?>
+<?php foreach($colors as $item){
+	if($i == 0)
+		$color = $item->name;
+	else
+		$color .= ', '.$item->name;
+	$i++;
+}
+?>
+
+<?php
+//Add brand filter
+$brands = get_the_terms( $post->ID, 'brand' );
+$brand = null;
+$i =0;
+?>
+<?php foreach($brands as $item){
+	if($i == 0)
+		$brand = $item->name;
+	else
+		$brand .= ', '.$item->name;
+	$i++;
+}
+?>
+
+<?php
+//Add style filter
+$styles = get_the_terms( $post->ID, 'style' );
+$style = null;
+$i =0;
+?>
+<?php foreach($styles as $item){
+	if($i == 0)
+		$style = $item->name;
+	else
+		$style .= ', '.$item->name;
+	$i++;
+}
+?>
+<?php
+if($woocommerce_loop['loop'] > 8)
+	$classes[] = 'hide';
+?>
+<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $style;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>" data-giá="">
 
 	<?php
 	/**

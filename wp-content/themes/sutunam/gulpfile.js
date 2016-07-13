@@ -6,6 +6,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     concatCss = require('gulp-concat-css'),
+    sourcemap = require('gulp-sourcemaps'),
     browserSync = require('browser-sync');
 
 // Create task for browser sync
@@ -18,8 +19,10 @@ gulp.task('browserSync', function() {
 // Create task for compile sass to css
 gulp.task('sass', function() {
     return gulp.src('scss/style.scss')
-        .pipe(sass())
+        .pipe(sourcemap.init({loadMaps: true}))
+        .pipe(sass().on('error', sass.logError))
         .pipe(concatCss('style.css'))
+        .pipe(sourcemap.write('.', {includeContent: false}))
         .pipe(gulp.dest('css/'))
         .pipe(browserSync.stream({
             match: '**/*.css'

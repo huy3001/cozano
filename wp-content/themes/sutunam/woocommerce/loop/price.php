@@ -39,5 +39,5 @@ $i =0;
 }
 ?>
 <div class="product-color">
-	<span>Mau sac:<?php echo $color;?></span>
+	<span>Color:<?php echo $color;?></span>
 </div>

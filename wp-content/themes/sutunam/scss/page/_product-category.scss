@@ -47,8 +47,10 @@
             h3 {
                 color: $main-color;
                 font-size: 13px;
+                line-height: 1.4;
                 float: left;
-                padding: 0 10px 10px;
+                width: 50%;
+                padding: 0 10px 5px;
             }
             .onsale {
                 background: $sale-tag-bg;
@@ -63,7 +65,7 @@
                 margin: 0;
                 top: auto;
                 right: auto;
-                bottom: 45px;
+                bottom: 60px;
                 left: 10px;
                 z-index: 1;
             }
@@ -80,19 +82,60 @@
                 margin: 0 10px;
                 del {
                     @include font('font-roboto-medium');
-                    margin-right: 5px;
+                    margin-bottom: 5px;
                 }
                 ins {
                     @include font('font-roboto-bold');
                     text-decoration: none;
                 }
-                del, ins {
-                    display: inline-block;
-                    vertical-align: top;
-                }
+            }
+            .product-color {
+                color: $left-menu-bg;
+                font-size: 13px;
+                @include font('font-roboto-medium');
+                clear: left;
+                float: left;
+                width: 50%;
+                padding: 0 10px;
             }
             .button {
                 display: none;
+            }
+        }
+    }
+
+    .show-products {
+        text-align: center;
+        span {
+            background: $white;
+            color: $left-menu-bg;
+            cursor: pointer;
+            font-size: 13px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px 10px 20px;
+            position: relative;
+            @include transition();
+            &:after {
+                content: "";
+                display: block;
+                height: 0;
+                width: 0;
+                background: none;
+                border-top: 6px solid $left-menu-bg;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                margin-left: -5px;
+                @include transition();
+            }
+            &:hover {
+                color: $main-color;
+                &:after {
+                    border-top-color: $main-color;
+                }
             }
         }
     }

@@ -38,7 +38,17 @@ get_header( 'shop' ); ?>
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
-
+		<?php
+		global $wp_query;
+		$cat = $wp_query->get_queried_object();
+		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+		$image = wp_get_attachment_url( $thumbnail_id );
+		if($image):
+		?>
+			<div id="category-image">
+				<img src="<?php echo $image;?>" />
+			</div>
+		<?php endif;?>
 		<?php
 			/**
 			 * woocommerce_archive_description hook.

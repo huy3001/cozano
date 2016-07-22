@@ -49,16 +49,16 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 }
 ?>
 <?php
-//Add size filter
-$sizes = get_the_terms( $post->ID, 'size' );
-$size = null;
+//Add fit filter
+$fits = get_the_terms( $post->ID, 'fit' );
+$fit = null;
 $i =0;
 ?>
-<?php foreach($sizes as $item){
+<?php foreach($fits as $item){
     if($i == 0)
-		$size = $item->name;
+		$fit = $item->name;
     else
-		$size .= ', '.$item->name;
+		$fit .= ', '.$item->name;
     $i++;
 }
 ?>
@@ -78,16 +78,16 @@ $i =0;
 ?>
 
 <?php
-//Add color filter
-$colors = get_the_terms( $post->ID, 'color' );
-$color = null;
+//Add fabric filter
+$fabrics = get_the_terms( $post->ID, 'fabric' );
+$fabric = null;
 $i =0;
 ?>
-<?php foreach($colors as $item){
+<?php foreach($fabrics as $item){
 	if($i == 0)
-		$color = $item->name;
+		$fabric = $item->name;
 	else
-		$color .= ', '.$item->name;
+		$fabric .= ', '.$item->name;
 	$i++;
 }
 ?>
@@ -108,16 +108,16 @@ $i =0;
 ?>
 
 <?php
-//Add style filter
-$styles = get_the_terms( $post->ID, 'style' );
-$style = null;
+//Add size filter
+$sizes = get_the_terms( $post->ID, 'size' );
+$size = null;
 $i =0;
 ?>
-<?php foreach($styles as $item){
+<?php foreach($sizes as $item){
 	if($i == 0)
-		$style = $item->name;
+		$size = $item->name;
 	else
-		$style .= ', '.$item->name;
+		$size .= ', '.$item->name;
 	$i++;
 }
 ?>
@@ -125,7 +125,7 @@ $i =0;
 if($woocommerce_loop['loop'] > 8)
 	$classes[] = 'hide';
 ?>
-<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $style;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>" data-giá="">
+<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $fit;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>"  data-chất-liệu="<?php echo $fabric;?>">
 
 	<?php
 	/**

@@ -136,5 +136,87 @@ $jk_options = get_option('redux_demo');
                 </div>
             </div>
         </div>
+        <div class="row">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'men-shorts',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            ?>
+            <div class="men-option-4 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+                <?php
+                if ($loop->have_posts()) :?>
+                    <div class="feature-product">
+                        <?php while ($loop->have_posts()) : $loop->the_post();
+                            $product = new WC_product($loop->post->ID);
+                            ?>
+                            <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
+                            <span class="info">
+                                    <span class="name"><?php echo $product->get_title();?></span>
+                                    <span class="price"><?php echo $product->get_price_html();?></span>
+                                    <span class="shop">Shop</span>
+                                </span>
+                            <?php echo $product->get_image('image');?>
+                            <?php echo '</a>';?>
+                        <?php endwhile;?>
+                    </div>
+                <?php endif;?>
+                <?php wp_reset_postdata(); ?>
+                <div class="content-block-img">
+                    <img src="<?php echo $jk_options['men_img_option_4']['url'] ?>" alt="" />
+                </div>
+                <div class="content-block-body">
+                    <?php echo $jk_options['men_desc_option_4']?>
+                    <a href="<?php echo $jk_options['men_url_option_4']?>" target="_self">
+                        <span>shopping</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <?php
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' =>'men-shorts',
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
+            ?>
+            <div class="men-option-5 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+                <?php
+                if ($loop->have_posts()) :?>
+                    <div class="feature-product">
+                        <?php while ($loop->have_posts()) : $loop->the_post();
+                            $product = new WC_product($loop->post->ID);
+                            ?>
+                            <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
+                            <span class="info">
+                                    <span class="name"><?php echo $product->get_title();?></span>
+                                    <span class="price"><?php echo $product->get_price_html();?></span>
+                                    <span class="shop">Shop</span>
+                                </span>
+                            <?php echo $product->get_image('image');?>
+                            <?php echo '</a>';?>
+                        <?php endwhile;?>
+                    </div>
+                <?php endif;?>
+                <?php wp_reset_postdata(); ?>
+                <div class="content-block-img">
+                    <img src="<?php echo $jk_options['men_img_option_5']['url'] ?>" alt="" />
+                </div>
+                <div class="content-block-body">
+                    <?php echo $jk_options['men_desc_option_5']?>
+                    <a href="<?php echo $jk_options['men_url_option_5']?>" target="_self">
+                        <span>shopping</span>
+                    </a>
+                </div>
+            </div>
+        </div>
 	</div>
     <?php get_footer(); ?>

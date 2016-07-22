@@ -5,6 +5,7 @@
  * Date: 30/06/2016
  * Time: 16:51
  */
+$jk_options = get_option('redux_demo');
 ?>
 <div class="left-content">
     <div class="left-logo">
@@ -17,8 +18,8 @@
                 <a href="<?php echo home_url(); ?>"> <img
                         src="<?php echo esc_url($jk_options['logo_img']['url']); ?>"
                         alt="<?php echo get_site_url() ?>"
-                        width="268"
-                        height="80"></a>
+                        width="160"
+                        height="30"></a>
             <?php endif ?>
         </div>
     </div>

@@ -107,6 +107,7 @@
                     fieldset {
                         &.ft-search {
                             background: none;
+                            display: none;
                             &:before {
                                 bottom: 17px;
                                 content: "\f002";
@@ -123,6 +124,7 @@
                     }
                     > ul.ft-selected {
                         background: none;
+                        padding: 10px;
                         > li {
                             @include border-radius(0);
                             @include box-shadow(none);
@@ -163,6 +165,7 @@
     ul.products {
         margin: 0 -1px;
         li.product {
+            clear: none;
             width: 25%;
             padding: 0 1px;
             margin: 0 0 35px;
@@ -268,6 +271,25 @@
                 &:after {
                     border-top-color: $main-color;
                 }
+            }
+        }
+    }
+
+    @include bp(max-width, $desktop) {
+        .cat-header {
+            .cat-image {
+                max-height: 300px;
+            }
+            .page-title {
+                font-size: 50px;
+            }
+        }
+    }
+
+    @include bp(max-width, $desktop - 1) {
+        ul.products {
+            li.product {
+                width: 33.333%;
             }
         }
     }

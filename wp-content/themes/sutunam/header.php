@@ -53,8 +53,8 @@ $jk_options = get_option('redux_demo');
                     <a href="<?php echo home_url(); ?>"> <img
                             src="<?php echo esc_url($jk_options['logo_img']['url']); ?>"
                             alt="<?php echo get_site_url() ?>"
-                            width="268"
-                            height="80"></a>
+                            width="160"
+                            height="30"></a>
                 <?php endif ?>
             </div>
 

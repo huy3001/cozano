@@ -307,6 +307,9 @@ h6 {
 }
 
 #header .search-form input {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   background: none;
   border: none;
   color: #ffffff;
@@ -1777,9 +1780,8 @@ h6 {
   position: relative;
 }
 
-.tax-product_cat .cat-header .page-title {
-  font-size: 60px;
-  margin: 0;
+.tax-product_cat .cat-header .cat-info {
+  width: 25%;
   position: absolute;
   left: 8.25%;
   top: 50%;
@@ -1788,6 +1790,16 @@ h6 {
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.tax-product_cat .cat-header .page-title {
+  font-size: 60px;
+  line-height: normal;
+  margin: 0;
+}
+
+.tax-product_cat .cat-header .term-description p {
+  margin: 0;
 }
 
 .tax-product_cat .cat-header .cat-image {
@@ -2005,17 +2017,16 @@ h6 {
   background: #00436d;
   width: 60px;
   height: 60px;
-  font-size: 22px;
+  font-size: 20px;
   line-height: normal;
   min-height: inherit;
   min-width: inherit;
   white-space: nowrap;
-  padding: 17px 0;
+  padding: 18px 0;
   margin: 0;
-  top: auto;
-  right: auto;
-  bottom: 60px;
+  top: 10px;
   left: 10px;
+  right: auto;
   z-index: 1;
 }
 

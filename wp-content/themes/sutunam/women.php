@@ -44,13 +44,17 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
+                    <?php if($jk_options['women_img_option_1']['url']): ?>
 				    <img src="<?php echo $jk_options['women_img_option_1']['url'] ?>" alt="" />
+                    <?php endif; ?>
                 </div>
 				<div class="content-block-body">
 					<?php echo $jk_options['women_desc_option_1']?>
+                    <?php if($jk_options['women_url_option_1']): ?>
 					<a href="<?php echo $jk_options['women_url_option_1']?>" target="_self">
 						<span>shopping</span>
 					</a>
+                    <?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -85,13 +89,17 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
+                    <?php if($jk_options['women_img_option_2']['url']): ?>
                     <img src="<?php echo $jk_options['women_img_option_2']['url'] ?>" alt="" />
+                    <?php endif; ?>
                 </div>
                 <div class="content-block-body">
                     <?php echo $jk_options['women_desc_option_2']?>
+                    <?php if($jk_options['women_url_option_2']): ?>
                     <a href="<?php echo $jk_options['women_url_option_2']?>" target="_self">
                         <span>shopping</span>
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -126,13 +134,17 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
+                    <?php if($jk_options['women_img_option_3']['url']): ?>
                     <img src="<?php echo $jk_options['women_img_option_3']['url'] ?>" alt="" />
+                    <?php endif; ?>
                 </div>
                 <div class="content-block-body">
                     <?php echo $jk_options['women_desc_option_3']?>
+                    <?php if($jk_options['women_url_option_3']): ?>
                     <a href="<?php echo $jk_options['women_url_option_3']?>" target="_self">
                         <span>shopping</span>
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -167,13 +179,17 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
+                    <?php if($jk_options['women_img_option_4']['url']): ?>
                     <img src="<?php echo $jk_options['women_img_option_4']['url'] ?>" alt="" />
+                    <?php endif; ?>
                 </div>
                 <div class="content-block-body">
                     <?php echo $jk_options['women_desc_option_4']?>
+                    <?php if($jk_options['women_url_option_4']): ?>
                     <a href="<?php echo $jk_options['women_url_option_4']?>" target="_self">
                         <span>shopping</span>
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -208,13 +224,17 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
+                    <?php if($jk_options['women_img_option_5']['url']): ?>
                     <img src="<?php echo $jk_options['women_img_option_5']['url'] ?>" alt="" />
+                    <?php endif; ?>
                 </div>
                 <div class="content-block-body">
                     <?php echo $jk_options['women_desc_option_5']?>
+                    <?php if($jk_options['women_url_option_5']): ?>
                     <a href="<?php echo $jk_options['women_url_option_5']?>" target="_self">
                         <span>shopping</span>
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

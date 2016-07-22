@@ -62,6 +62,13 @@
         @include font('font-roboto-medium');
         text-align: center;
     }
+    .informed {
+        text-align: center;
+        margin-top: 20px;
+        img {
+            max-width: 200px;
+        }
+    }
 
     @include bp(max-width, $laptop - 1) {
         .footer-content {

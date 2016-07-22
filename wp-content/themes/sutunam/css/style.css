@@ -699,6 +699,15 @@ h6 {
   text-align: center;
 }
 
+#footer .informed {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#footer .informed img {
+  max-width: 200px;
+}
+
 @media only screen and (max-width: 991px) {
   #footer .footer-content {
     padding: 0;
@@ -1411,19 +1420,23 @@ h6 {
 }
 
 .page-template-men .men-option-1 .content-block-img img,
-.page-template-men .men-option-3 .content-block-img img {
+.page-template-men .men-option-3 .content-block-img img,
+.page-template-men .men-option-5 .content-block-img img {
   right: 0;
 }
 
-.page-template-men .men-option-2 .feature-product {
+.page-template-men .men-option-2 .feature-product,
+.page-template-men .men-option-4 .feature-product {
   float: right;
 }
 
-.page-template-men .men-option-2 .content-block-img img {
+.page-template-men .men-option-2 .content-block-img img,
+.page-template-men .men-option-4 .content-block-img img {
   left: 0;
 }
 
-.page-template-men .men-option-2 .content-block-body {
+.page-template-men .men-option-2 .content-block-body,
+.page-template-men .men-option-4 .content-block-body {
   left: 16.5%;
 }
 
@@ -1458,7 +1471,8 @@ h6 {
     position: static;
   }
 
-  .page-template-men .men-option-2 .content-block-body {
+  .page-template-men .men-option-2 .content-block-body,
+  .page-template-men .men-option-4 .content-block-body {
     left: 50%;
   }
 }
@@ -1575,21 +1589,25 @@ h6 {
 }
 
 .page-template-women .women-option-1 .feature-product,
-.page-template-women .women-option-3 .feature-product {
+.page-template-women .women-option-3 .feature-product,
+.page-template-women .women-option-5 .feature-product {
   float: right;
 }
 
 .page-template-women .women-option-1 .content-block-img img,
-.page-template-women .women-option-3 .content-block-img img {
+.page-template-women .women-option-3 .content-block-img img,
+.page-template-women .women-option-5 .content-block-img img {
   left: 0;
 }
 
 .page-template-women .women-option-1 .content-block-body,
-.page-template-women .women-option-3 .content-block-body {
+.page-template-women .women-option-3 .content-block-body,
+.page-template-women .women-option-5 .content-block-body {
   left: 16.5%;
 }
 
-.page-template-women .women-option-2 .content-block-img img {
+.page-template-women .women-option-2 .content-block-img img,
+.page-template-women .women-option-4 .content-block-img img {
   right: 0;
 }
 
@@ -1625,7 +1643,8 @@ h6 {
   }
 
   .page-template-women .women-option-1 .content-block-body,
-  .page-template-women .women-option-3 .content-block-body {
+  .page-template-women .women-option-3 .content-block-body,
+  .page-template-women .women-option-5 .content-block-body {
     left: 50%;
   }
 }

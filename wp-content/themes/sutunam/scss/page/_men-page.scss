@@ -15,14 +15,16 @@
         }
     }
     .men-option-1,
-    .men-option-3 {
+    .men-option-3,
+    .men-option-5 {
         .content-block-img {
             img {
                 right: 0;
             }
         }
     }
-    .men-option-2 {
+    .men-option-2,
+    .men-option-4 {
         .feature-product {
             float: right;
         }
@@ -74,7 +76,8 @@
                 position: static;
             }
         }
-        .men-option-2 {
+        .men-option-2,
+        .men-option-4 {
             .content-block-body {
                 left: 50%;
             }

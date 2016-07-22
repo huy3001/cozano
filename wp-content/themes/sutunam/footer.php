@@ -9,7 +9,7 @@
 ?>
 <?php $jk_options = get_option('redux_demo');
 if (!isset($jk_options['copy_text'])) {
-    $copy_text = '© Copyright 2015 by Phucct. All rights reserved.';
+    $copy_text = '© Copyright 2016 by Phucct. All rights reserved.';
 } else
     $copy_text = $jk_options['copy_text'];
 ?>
@@ -82,6 +82,11 @@ if (!isset($jk_options['copy_text'])) {
 			<div class="copyright">
 				<div class="copy-title"><?php echo $copy_text;?></div>
 			</div>
+            <div class="informed">
+                <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=24676" target="_blank">
+                    <img src="http://online.gov.vn/PublicImages/2015/08/27/11/20150827110756-dathongbao.png" alt="Đã thông báo Bộ công thương"/>
+                </a>
+            </div>
 		</div>
 	</div>
 </footer>

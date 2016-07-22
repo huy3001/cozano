@@ -35,6 +35,7 @@
     .woocommerce-ordering {
         margin: 0 10px 10px;
         .bootstrap-select {
+            width: auto !important;
             .dropdown-toggle {
                 background: none;
                 border: 2px solid $product-select-bd;
@@ -52,6 +53,8 @@
             .dropdown-menu {
                 @include border-radius(0);
                 @include box-shadow(none);
+                left: auto;
+                right: 0;
                 margin: 0;
                 > li {
                     > a {

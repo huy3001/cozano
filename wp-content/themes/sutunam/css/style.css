@@ -1835,6 +1835,10 @@ h6 {
   margin: 0 10px 10px;
 }
 
+.tax-product_cat .woocommerce-ordering .bootstrap-select {
+  width: auto !important;
+}
+
 .tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-toggle {
   background: none;
   border: 2px solid #dfdfdf;
@@ -1862,6 +1866,8 @@ h6 {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  left: auto;
+  right: 0;
   margin: 0;
 }
 

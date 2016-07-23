@@ -568,6 +568,66 @@
                         'id'    => 'men_url_option_3',
                         'type'  => 'text',
                         'title' => 'Men Url Option 3',
+                    ),
+                    array(
+                        'id'        => 'men_des_option_4',
+                        'type'      => 'textarea',
+                        'title'     => __('Men option description 4'),
+                        'subtitle'  => __('HTML can be used', 'sutunam'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'men_img_option_4',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Men Option Image 4'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+                    ),
+                    array(
+                        'id'    => 'men_url_option_4',
+                        'type'  => 'text',
+                        'title' => 'Men Url Option 4',
+                    ),
+                    array(
+                        'id'        => 'men_des_option_5',
+                        'type'      => 'textarea',
+                        'title'     => __('Men option description 5'),
+                        'subtitle'  => __('HTML can be used', 'sutunam'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'        => 'men_img_option_5',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Men Option Image 5'),
+                        'compiler'  => 'true',
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+                        'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+                    ),
+                    array(
+                        'id'    => 'men_url_option_5',
+                        'type'  => 'text',
+                        'title' => 'Men Url Option 5',
                     )
                 ),
             ));
@@ -726,6 +786,66 @@ Redux::setSection( $opt_name,array(
             'id'    => 'women_url_option_3',
             'type'  => 'text',
             'title' => 'Women Url Option 3',
+        ),
+        array(
+            'id'        => 'women_des_option_4',
+            'type'      => 'textarea',
+            'title'     => __('Women option description 4'),
+            'subtitle'  => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id'        => 'women_img_option_4',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Women Option Image 4'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'women_url_option_4',
+            'type'  => 'text',
+            'title' => 'Women Url Option 4',
+        ),
+        array(
+            'id'        => 'women_des_option_5',
+            'type'      => 'textarea',
+            'title'     => __('Women option description 5'),
+            'subtitle'  => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id'        => 'women_img_option_5',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Women Option Image 5'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'women_url_option_5',
+            'type'  => 'text',
+            'title' => 'Women Url Option 5',
         )
     ),
 ));

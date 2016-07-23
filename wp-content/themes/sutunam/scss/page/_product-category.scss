@@ -1,9 +1,41 @@
 /* Product category style */
 
 .tax-product_cat {
+    .cat-header {
+        margin-bottom: 40px;
+        position: relative;
+        .cat-info {
+            width: 25%;
+            position: absolute;
+            left: 8.25%;
+            top: 50%;
+            @include transform(translateY(-50%));
+        }
+        .page-title {
+            font-size: 60px;
+            @include font('font-roboto-bold');
+            line-height: normal;
+            margin: 0;
+        }
+        .term-description {
+            p {
+                margin: 0;
+            }
+        }
+        .cat-image {
+            max-height: 400px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
     .woocommerce-ordering {
         margin: 0 10px 10px;
         .bootstrap-select {
+            width: auto !important;
             .dropdown-toggle {
                 background: none;
                 border: 2px solid $product-select-bd;
@@ -21,6 +53,8 @@
             .dropdown-menu {
                 @include border-radius(0);
                 @include box-shadow(none);
+                left: auto;
+                right: 0;
                 margin: 0;
                 > li {
                     > a {
@@ -28,14 +62,122 @@
                         font-size: 14px;
                         @include font('font-roboto-medium');
                         padding: 3px 10px;
+                        @include transition();
                     }
                 }
             }
         }
     }
+
+    #placeHolder {
+        float: left;
+        margin: 0 10px 10px;
+        ul.ft-menu {
+            > li.ft-field {
+                float: left;
+                margin-right: 12px;
+                > span.ft-label {
+                    border: 2px solid $product-select-bd;
+                    color: $product-select-color;
+                    display: block;
+                    padding: 11px 12px;
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 0;
+                        height: 0;
+                        width: 0;
+                        background: none;
+                        border-top: 4px solid;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        margin-left: 15px;
+                    }
+                    &.ft-opened {
+                        background: $white;
+                        border-color: $white;
+                        &:after {
+                            border-top: none;
+                            border-bottom: 4px solid;
+                        }
+                    }
+                }
+                > div.ft-panel {
+                    @include border-radius(0);
+                    @include box-shadow(none);
+                    background: $white;
+                    border: none;
+                    left: 0;
+                    margin: 0;
+                    &:before, &:after {
+                        display: none;
+                    }
+                    fieldset {
+                        &.ft-search {
+                            background: none;
+                            display: none;
+                            &:before {
+                                bottom: 17px;
+                                content: "\f002";
+                                @include font('font-awesome');
+                            }
+                            > input {
+                                @include border-radius(0);
+                                @include box-shadow(none);
+                                border: 1px solid $product-select-bd;
+                                font-size: 13px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    > ul.ft-selected {
+                        background: none;
+                        padding: 10px;
+                        > li {
+                            @include border-radius(0);
+                            @include box-shadow(none);
+                            background: $left-menu-bg;
+                            border-color: $product-select-bd;
+                            @include font('font-roboto-medium');
+                            text-shadow: none;
+                            padding: 1px 5px;
+                        }
+                    }
+                    > ul.ft-tags {
+                        border: none;
+                        > li {
+                            @include box-shadow(none);
+                            background: none;
+                            border: none;
+                            color: $left-menu-bg;
+                            font-size: 14px;
+                            @include font('font-roboto-medium');
+                            font-weight: normal;
+                            text-shadow: none;
+                            padding: 5px 30px 5px 10px;
+                            @include transition();
+                            &:after {
+                                background: $left-menu-bg;
+                                right: 10px;
+                            }
+                            &:hover {
+                                background: $filter-item-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     ul.products {
         margin: 0 -1px;
         li.product {
+            clear: none;
             width: 25%;
             padding: 0 1px;
             margin: 0 0 35px;
@@ -56,17 +198,16 @@
                 background: $sale-tag-bg;
                 width: 60px;
                 height: 60px;
-                font-size: 22px;
+                font-size: 20px;
                 line-height: normal;
                 min-height: inherit;
                 min-width: inherit;
                 white-space: nowrap;
-                padding: 17px 0;
+                padding: 18px 0;
                 margin: 0;
-                top: auto;
-                right: auto;
-                bottom: 60px;
+                top: 10px;
                 left: 10px;
+                right: auto;
                 z-index: 1;
             }
             .star-rating {
@@ -95,6 +236,7 @@
                 @include font('font-roboto-medium');
                 clear: left;
                 float: left;
+                min-height: 18px;
                 width: 50%;
                 padding: 0 10px;
             }
@@ -107,13 +249,17 @@
     .show-products {
         text-align: center;
         span {
+            @include border-radius(50%);
             background: $white;
             color: $left-menu-bg;
             cursor: pointer;
             font-size: 13px;
+            line-height: normal;
             display: inline-block;
             vertical-align: top;
-            padding: 10px 10px 20px;
+            width: 80px;
+            height: 80px;
+            padding: 20px 10px;
             position: relative;
             @include transition();
             &:after {
@@ -126,7 +272,7 @@
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;
                 position: absolute;
-                bottom: 10px;
+                bottom: 15px;
                 left: 50%;
                 margin-left: -5px;
                 @include transition();
@@ -136,6 +282,25 @@
                 &:after {
                     border-top-color: $main-color;
                 }
+            }
+        }
+    }
+
+    @include bp(max-width, $desktop) {
+        .cat-header {
+            .cat-image {
+                max-height: 300px;
+            }
+            .page-title {
+                font-size: 50px;
+            }
+        }
+    }
+
+    @include bp(max-width, $desktop - 1) {
+        ul.products {
+            li.product {
+                width: 33.333%;
             }
         }
     }

@@ -16103,7 +16103,7 @@ msgid "&nbsp;&ndash; Page %s"
 msgstr ""
 
 #: includes/wc-template-functions.php:771
-msgid "Default sorting"
+msgid "Sorting"
 msgstr ""
 
 #: includes/wc-template-functions.php:772

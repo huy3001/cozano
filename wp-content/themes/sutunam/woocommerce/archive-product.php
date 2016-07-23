@@ -32,24 +32,38 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+        <div class="cat-header">
+            <div class="cat-info">
+                <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+                    <h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+                <?php endif; ?>
+                <?php
+                /**
+                 * woocommerce_archive_description hook.
+                 *
+                 * @hooked woocommerce_taxonomy_archive_description - 10
+                 * @hooked woocommerce_product_archive_description - 10
+                 */
+                do_action( 'woocommerce_archive_description' );
+                ?>
 
-		<?php endif; ?>
+                <?php if ( have_posts() ) : ?>
+            </div>
 
-		<?php
-			/**
-			 * woocommerce_archive_description hook.
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
-
-		<?php if ( have_posts() ) : ?>
+            <?php
+            global $wp_query;
+            $cat = $wp_query->get_queried_object();
+            $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+            $image = wp_get_attachment_url( $thumbnail_id );
+            if($image):
+                ?>
+                <div class="cat-image">
+                    <img src="<?php echo $image;?>" />
+                </div>
+            <?php endif;?>
+        </div>
 
 			<?php
 				/**
@@ -73,7 +87,7 @@ get_header( 'shop' ); ?>
 
 			<?php woocommerce_product_loop_end(); ?>
 			<div class="show-products">
-				<span>Show all products</span>
+				<span>All products</span>
 			</div>
 			<?php
 				/**

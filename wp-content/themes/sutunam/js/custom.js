@@ -127,6 +127,19 @@
 
         filterProduct: function () {
             $.filtrify('product-category', 'placeHolder');
+            setTimeout(function() {
+                var ftMenu = $('.ft-menu'),
+                    ftLabel= $('.ft-label', ftMenu),
+                    ftPanel = $('.ft-panel', ftMenu);
+                if(ftMenu.length) {
+                    ftLabel.on('click', function() {
+                        ftLabel.removeClass('ft-opened');
+                        ftPanel.addClass('ft-hidden');
+                        $(this).addClass('ft-opened');
+                        $(this).parents('.ft-field').find('.ft-panel').removeClass('ft-hidden');
+                    });
+                }
+            }, 100);
         },
         
         showAllProducts: function () {

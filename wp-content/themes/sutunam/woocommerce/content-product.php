@@ -125,7 +125,7 @@ $i =0;
 if($woocommerce_loop['loop'] > 8)
 	$classes[] = 'hide';
 ?>
-<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $fit;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>"  data-chất-liệu="<?php echo $fabric;?>">
+<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $fit;?>" data-chất-liệu="<?php echo $fabric;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>">
 
 	<?php
 	/**

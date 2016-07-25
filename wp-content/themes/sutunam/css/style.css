@@ -1431,6 +1431,7 @@ h6 {
 }
 
 .page-template-men .content-block-desc .info {
+  color: #ffffff;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -1662,6 +1663,7 @@ h6 {
 }
 
 .page-template-women .content-block-desc .info {
+  color: #ffffff;
   text-align: center;
   position: absolute;
   top: 50%;

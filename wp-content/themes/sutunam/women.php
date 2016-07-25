@@ -240,9 +240,9 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <?php if($jk_options['women_desc_option_5']): ?>
-                    <div class="content-block-desc">
-                        <?php echo $jk_options['women_desc_option_5']?>
-                    </div>
+                <div class="content-block-desc">
+                    <?php echo $jk_options['women_desc_option_5']?>
+                </div>
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['women_img_option_5']['url']): ?>

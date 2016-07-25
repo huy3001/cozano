@@ -3,6 +3,7 @@
 .page-template-men {
     @extend .home;
     @import "../component/featured-product";
+    @import "../component/content-desc";
     .content-block {
         &.no-feature {
             min-height: 550px;
@@ -25,7 +26,8 @@
     }
     .men-option-2,
     .men-option-4 {
-        .feature-product {
+        .feature-product,
+        .content-block-desc {
             float: right;
         }
         .content-block-img {
@@ -68,7 +70,8 @@
                 min-height: inherit;
             }
         }
-        .feature-product {
+        .feature-product,
+        .content-block-desc {
             display: none;
         }
         .content-block-img {

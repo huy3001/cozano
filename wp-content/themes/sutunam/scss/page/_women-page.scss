@@ -3,6 +3,7 @@
 .page-template-women {
     @extend .home;
     @import "../component/featured-product";
+    @import "../component/content-desc";
     .content-block {
         &.no-feature {
             min-height: 550px;
@@ -17,7 +18,8 @@
     .women-option-1,
     .women-option-3,
     .women-option-5 {
-        .feature-product {
+        .feature-product,
+        .content-block-desc {
             float: right;
         }
         .content-block-img {
@@ -68,7 +70,8 @@
                 min-height: inherit;
             }
         }
-        .feature-product {
+        .feature-product,
+        .content-block-desc {
             display: none;
         }
         .content-block-img {

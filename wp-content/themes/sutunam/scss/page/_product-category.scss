@@ -69,6 +69,10 @@
         }
     }
 
+    .btn-filter {
+        display: none;
+    }
+
     #placeHolder {
         float: left;
         margin: 0 10px 10px;
@@ -301,6 +305,19 @@
         ul.products {
             li.product {
                 width: 33.333%;
+            }
+        }
+    }
+
+    @include bp(max-width, $laptop - 1) {
+        .cat-header {
+            margin-bottom: 10px;
+            .cat-info {
+                color: $white;
+                text-align: center;
+                left: 0;
+                width: 100%;
+                padding: 0 8.25%;
             }
         }
     }

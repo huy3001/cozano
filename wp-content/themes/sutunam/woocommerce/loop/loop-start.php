@@ -15,6 +15,8 @@
  * @version     2.0.0
  */
 ?>
+<button class="btn-filter" type="button"><?php echo __('Filter','sutunam') ?></button>
+
 <div id="placeHolder"></div>
 
 <ul class="products" id="product-category">

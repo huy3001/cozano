@@ -2049,6 +2049,10 @@ h6 {
   transition: all 0.3s ease;
 }
 
+.tax-product_cat .btn-filter {
+  display: none;
+}
+
 .tax-product_cat #placeHolder {
   float: left;
   margin: 0 10px 10px;
@@ -2324,6 +2328,20 @@ h6 {
 @media only screen and (max-width: 1199px) {
   .tax-product_cat ul.products li.product {
     width: 33.333%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .tax-product_cat .cat-header {
+    margin-bottom: 10px;
+  }
+
+  .tax-product_cat .cat-header .cat-info {
+    color: #ffffff;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    padding: 0 8.25%;
   }
 }
 

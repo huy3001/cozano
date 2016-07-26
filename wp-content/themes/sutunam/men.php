@@ -16,34 +16,36 @@ $jk_options = get_option('redux_demo');
 		<div class="row">
             <?php
             if($jk_options['men_category_1']):
-                $args = array(
-                    'post_type' => 'product',
-                    'product_cat' => $jk_options['men_category_1'],
-                    'meta_key' => '_featured',
-                    'meta_value' => 'yes',
-                    'posts_per_page' => 1
-                );
-                $loop = new WP_Query( $args );
+            $args = array(
+                'post_type' => 'product',
+                'product_cat' => $jk_options['men_category_1'],
+                'meta_key' => '_featured',
+                'meta_value' => 'yes',
+                'posts_per_page' => 1
+            );
+            $loop = new WP_Query( $args );
             ?>
-                <div class="men-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
-                    <?php
-                    if ($loop->have_posts()) :?>
-                        <div class="feature-product">
-                            <?php while ($loop->have_posts()) : $loop->the_post();
-                                $product = new WC_product($loop->post->ID);
-                                ?>
-                                <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
-                                    <span class="info">
-                                        <span class="name"><?php echo $product->get_title();?></span>
-                                        <span class="price"><?php echo $product->get_price_html();?></span>
-                                        <span class="shop">Shop</span>
-                                    </span>
-                                    <?php echo $product->get_image('image');?>
-                                <?php echo '</a>';?>
-                            <?php endwhile;?>
-                        </div>
-                    <?php endif;?>
-                    <?php wp_reset_postdata(); ?>
+            <div class="men-option-1 content-block <?php if(!$loop->have_posts()) echo 'no-feature'; ?>">
+                <?php
+                if ($loop->have_posts()) :?>
+                    <div class="feature-product">
+                        <?php while ($loop->have_posts()) : $loop->the_post();
+                            $product = new WC_product($loop->post->ID);
+                            ?>
+                            <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
+                                <span class="info">
+                                    <span class="name"><?php echo $product->get_title();?></span>
+                                    <span class="price"><?php echo $product->get_price_html();?></span>
+                                    <span class="shop">Shop</span>
+                                </span>
+                                <?php echo $product->get_image('image');?>
+                            <?php echo '</a>';?>
+                        <?php endwhile;?>
+                    </div>
+                <?php endif;?>
+                <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+            <div class="men-option-1 content-block <?php if(!$jk_options['men_des_option_1']) echo 'no-feature'; ?>">
             <?php endif;?>
                 <?php if($jk_options['men_des_option_1']): ?>
                 <div class="content-block-desc">
@@ -95,7 +97,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
+            <?php else: ?>
+            <div class="men-option-2 content-block <?php if(!$jk_options['men_des_option_2']) echo 'no-feature'; ?>">
+            <?php endif;?>
                 <?php if($jk_options['men_des_option_2']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_2']?>
@@ -146,7 +150,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
+            <?php else: ?>
+            <div class="men-option-3 content-block <?php if(!$jk_options['men_des_option_3']) echo 'no-feature'; ?>">
+            <?php endif;?>
                 <?php if($jk_options['men_des_option_3']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_3']?>
@@ -197,7 +203,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
+            <?php else: ?>
+            <div class="men-option-4 content-block <?php if(!$jk_options['men_des_option_4']) echo 'no-feature'; ?>">
+            <?php endif;?>
                 <?php if($jk_options['men_des_option_4']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_4']?>
@@ -248,7 +256,9 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
+            <?php else: ?>
+            <div class="men-option-5 content-block <?php if(!$jk_options['men_des_option_5']) echo 'no-feature'; ?>">
+            <?php endif;?>
                 <?php if($jk_options['men_des_option_5']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_5']?>

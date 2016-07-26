@@ -627,6 +627,15 @@
                         'title' => 'Men Url Option 4',
                     ),
                     array(
+                        'id'       => 'men_category_4',
+                        'type'     => 'select',
+                        'title'    => __('Select category to display feature product', 'redux-framework-demo'),
+                        'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
+                        'desc'     => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
+                        // Must provide key => value pairs for select options
+                        'data'     => 'product_cat'
+                    ),
+                    array(
                         'id'        => 'men_des_option_5',
                         'type'      => 'textarea',
                         'title'     => __('Men option description 5'),
@@ -640,15 +649,6 @@
                             'em' => array(),
                             'strong' => array()
                         )
-                    ),
-                    array(
-                        'id'       => 'men_category_4',
-                        'type'     => 'select',
-                        'title'    => __('Select category to display feature product', 'redux-framework-demo'),
-                        'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-                        'desc'     => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-                        // Must provide key => value pairs for select options
-                        'data'     => 'product_cat'
                     ),
                     array(
                         'id'        => 'men_img_option_5',

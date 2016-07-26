@@ -44,10 +44,12 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
-                <?php if($jk_options['women_desc_option_1']): ?>
+            <?php else: ?>
+            <div class="women-option-1 content-block <?php if (!$jk_options['women_des_option_1']) echo 'no-feature'; ?>">
+            <?php endif;?>
+                <?php if($jk_options['women_des_option_1']): ?>
                 <div class="content-block-desc">
-                    <?php echo $jk_options['women_desc_option_1']?>
+                    <?php echo $jk_options['women_des_option_1']?>
                 </div>
                 <?php endif;?>
                 <div class="content-block-img">
@@ -95,10 +97,12 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
-                <?php if($jk_options['women_desc_option_2']): ?>
+            <?php else: ?>
+            <div class="women-option-2 content-block <?php if (!$jk_options['women_des_option_2']) echo 'no-feature'; ?>">
+            <?php endif;?>
+                <?php if($jk_options['women_des_option_2']): ?>
                 <div class="content-block-desc">
-                    <?php echo $jk_options['women_desc_option_2']?>
+                    <?php echo $jk_options['women_des_option_2']?>
                 </div>
                 <?php endif;?>
                 <div class="content-block-img">
@@ -146,10 +150,12 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
-                <?php if($jk_options['women_desc_option_3']): ?>
+            <?php else: ?>
+            <div class="women-option-3 content-block <?php if (!$jk_options['women_des_option_3']) echo 'no-feature'; ?>">
+            <?php endif;?>
+                <?php if($jk_options['women_des_option_3']): ?>
                 <div class="content-block-desc">
-                    <?php echo $jk_options['women_desc_option_3']?>
+                    <?php echo $jk_options['women_des_option_3']?>
                 </div>
                 <?php endif;?>
                 <div class="content-block-img">
@@ -197,10 +203,12 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
-                <?php if($jk_options['women_desc_option_4']): ?>
+            <?php else: ?>
+            <div class="women-option-4 content-block <?php if (!$jk_options['women_des_option_4']) echo 'no-feature'; ?>">
+            <?php endif;?>
+                <?php if($jk_options['women_des_option_4']): ?>
                 <div class="content-block-desc">
-                    <?php echo $jk_options['women_desc_option_4']?>
+                    <?php echo $jk_options['women_des_option_4']?>
                 </div>
                 <?php endif;?>
                 <div class="content-block-img">
@@ -248,10 +256,12 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif;?>
-                <?php if($jk_options['women_desc_option_5']): ?>
+            <?php else: ?>
+            <div class="women-option-5 content-block <?php if (!$jk_options['women_des_option_5']) echo 'no-feature'; ?>">
+            <?php endif;?>
+                <?php if($jk_options['women_des_option_5']): ?>
                 <div class="content-block-desc">
-                    <?php echo $jk_options['women_desc_option_5']?>
+                    <?php echo $jk_options['women_des_option_5']?>
                 </div>
                 <?php endif;?>
                 <div class="content-block-img">

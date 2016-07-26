@@ -45,4 +45,20 @@
             }
         }
     }
+
+    @include bp(max-width, $large-desktop) {
+        .info {
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    @include bp(max-width, $laptop - 1) {
+        .info {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
 }

@@ -1272,6 +1272,24 @@ h6 {
   transform: translateX(50%);
 }
 
+@media only screen and (max-width: 1200px) {
+  .home .content-block .content-block-body,
+  .page-template-men .content-block .content-block-body,
+  .page-template-women .content-block .content-block-body,
+  .page-template-shoes .content-block .content-block-body {
+    bottom: 110px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .home .content-block .content-block-body,
+  .page-template-men .content-block .content-block-body,
+  .page-template-women .content-block .content-block-body,
+  .page-template-shoes .content-block .content-block-body {
+    bottom: 75px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .home .content-block .content-block-body,
   .page-template-men .content-block .content-block-body,
@@ -1468,6 +1486,18 @@ h6 {
 .page-template-men .content-block-desc .info a:hover {
   background: none;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-template-men .content-block-desc .info h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .page-template-men .content-block-desc .info h2 {
+    font-size: 30px;
+  }
 }
 
 .page-template-men .content-block.no-feature {
@@ -1700,6 +1730,18 @@ h6 {
 .page-template-women .content-block-desc .info a:hover {
   background: none;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-template-women .content-block-desc .info h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .page-template-women .content-block-desc .info h2 {
+    font-size: 30px;
+  }
 }
 
 .page-template-women .content-block.no-feature {

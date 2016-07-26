@@ -978,14 +978,23 @@
                                 }
                             }
                         } else if ( $type == "tags" || $type == "tag" ) { // NOT WORKING!
-                            $tags = get_tags( $args );
-                            if ( ! empty ( $tags ) ) {
-                                foreach ( $tags as $tag ) {
-                                    $data[ $tag->term_id ] = $tag->name;
+                            $tags = get_tags($args);
+                            if (!empty ($tags)) {
+                                foreach ($tags as $tag) {
+                                    $data[$tag->term_id] = $tag->name;
                                 }
                                 //foreach
                             }
                             //if
+                        }
+                            else if ($type == "product_cat" || $type == "product_cat") {
+                                // $terms = get_terms($args); // this will get nothing
+                                $terms = get_terms("product_cat");
+                                if (!empty($terms)) {
+                                    foreach ( $terms as $term ) {
+                                        $data[$term->slug] = $term->name;
+                                    }//foreach
+                                } // If
                         } else if ( $type == "menu_location" || $type == "menu_locations" ) {
                             global $_wp_registered_nav_menus;
 

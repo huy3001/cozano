@@ -39,6 +39,22 @@
         }
     }
 
+    @include bp(max-width, $desktop) {
+        .content-block {
+            .content-block-body {
+                bottom: 110px;
+            }
+        }
+    }
+
+    @include bp(max-width, $laptop) {
+        .content-block {
+            .content-block-body {
+                bottom: 75px;
+            }
+        }
+    }
+
     @include bp(max-width, $tablet - 1) {
         .content-block {
             .content-block-body {

@@ -15,34 +15,36 @@ $jk_options = get_option('redux_demo');
 	<div class="container">
 		<div class="row">
             <?php
-            $args = array(
-                'post_type' => 'product',
-                'product_cat' =>'men-jeans',
-                'meta_key' => '_featured',
-                'meta_value' => 'yes',
-                'posts_per_page' => 1
-            );
-            $loop = new WP_Query( $args );
+            if($jk_options['men_category_1']):
+                $args = array(
+                    'post_type' => 'product',
+                    'product_cat' => $jk_options['men_category_1'],
+                    'meta_key' => '_featured',
+                    'meta_value' => 'yes',
+                    'posts_per_page' => 1
+                );
+                $loop = new WP_Query( $args );
             ?>
-			<div class="men-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
-                <?php
-                if ($loop->have_posts()) :?>
-                    <div class="feature-product">
-                        <?php while ($loop->have_posts()) : $loop->the_post();
-                            $product = new WC_product($loop->post->ID);
-                            ?>
-                            <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
-                                <span class="info">
-                                    <span class="name"><?php echo $product->get_title();?></span>
-                                    <span class="price"><?php echo $product->get_price_html();?></span>
-                                    <span class="shop">Shop</span>
-                                </span>
-                                <?php echo $product->get_image('image');?>
-                            <?php echo '</a>';?>
-                        <?php endwhile;?>
-                    </div>
-                <?php endif;?>
-                <?php wp_reset_postdata(); ?>
+                <div class="men-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+                    <?php
+                    if ($loop->have_posts()) :?>
+                        <div class="feature-product">
+                            <?php while ($loop->have_posts()) : $loop->the_post();
+                                $product = new WC_product($loop->post->ID);
+                                ?>
+                                <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
+                                    <span class="info">
+                                        <span class="name"><?php echo $product->get_title();?></span>
+                                        <span class="price"><?php echo $product->get_price_html();?></span>
+                                        <span class="shop">Shop</span>
+                                    </span>
+                                    <?php echo $product->get_image('image');?>
+                                <?php echo '</a>';?>
+                            <?php endwhile;?>
+                        </div>
+                    <?php endif;?>
+                    <?php wp_reset_postdata(); ?>
+            <?php endif;?>
                 <?php if($jk_options['men_des_option_1']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_1']?>
@@ -64,9 +66,10 @@ $jk_options = get_option('redux_demo');
 		</div>
         <div class="row">
             <?php
+            if($jk_options['men_category_2']):
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'men-shirts',
+                'product_cat' => $jk_options['men_category_2'],
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
@@ -81,17 +84,18 @@ $jk_options = get_option('redux_demo');
                             $product = new WC_product($loop->post->ID);
                             ?>
                             <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
-                                <span class="info">
-                                    <span class="name"><?php echo $product->get_title();?></span>
-                                    <span class="price"><?php echo $product->get_price_html();?></span>
-                                    <span class="shop">Shop</span>
-                                </span>
-                                <?php echo $product->get_image('image');?>
+                            <span class="info">
+                                        <span class="name"><?php echo $product->get_title();?></span>
+                                        <span class="price"><?php echo $product->get_price_html();?></span>
+                                        <span class="shop">Shop</span>
+                                    </span>
+                            <?php echo $product->get_image('image');?>
                             <?php echo '</a>';?>
                         <?php endwhile;?>
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
+                <?php endif;?>
                 <?php if($jk_options['men_des_option_2']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_2']?>
@@ -113,9 +117,10 @@ $jk_options = get_option('redux_demo');
         </div>
         <div class="row">
             <?php
+            if($jk_options['men_category_3']):
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'men-shorts',
+                'product_cat' => $jk_options['men_category_3'],
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
@@ -130,17 +135,18 @@ $jk_options = get_option('redux_demo');
                             $product = new WC_product($loop->post->ID);
                             ?>
                             <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
-                                <span class="info">
-                                    <span class="name"><?php echo $product->get_title();?></span>
-                                    <span class="price"><?php echo $product->get_price_html();?></span>
-                                    <span class="shop">Shop</span>
-                                </span>
-                                <?php echo $product->get_image('image');?>
+                            <span class="info">
+                                        <span class="name"><?php echo $product->get_title();?></span>
+                                        <span class="price"><?php echo $product->get_price_html();?></span>
+                                        <span class="shop">Shop</span>
+                                    </span>
+                            <?php echo $product->get_image('image');?>
                             <?php echo '</a>';?>
                         <?php endwhile;?>
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
+                <?php endif;?>
                 <?php if($jk_options['men_des_option_3']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_3']?>
@@ -162,9 +168,10 @@ $jk_options = get_option('redux_demo');
         </div>
         <div class="row">
             <?php
+            if($jk_options['men_category_4']):
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'men-shorts',
+                'product_cat' => $jk_options['men_category_4'],
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
@@ -180,16 +187,17 @@ $jk_options = get_option('redux_demo');
                             ?>
                             <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
                             <span class="info">
-                                    <span class="name"><?php echo $product->get_title();?></span>
-                                    <span class="price"><?php echo $product->get_price_html();?></span>
-                                    <span class="shop">Shop</span>
-                                </span>
+                                        <span class="name"><?php echo $product->get_title();?></span>
+                                        <span class="price"><?php echo $product->get_price_html();?></span>
+                                        <span class="shop">Shop</span>
+                                    </span>
                             <?php echo $product->get_image('image');?>
                             <?php echo '</a>';?>
                         <?php endwhile;?>
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
+                <?php endif;?>
                 <?php if($jk_options['men_des_option_4']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_4']?>
@@ -211,9 +219,10 @@ $jk_options = get_option('redux_demo');
         </div>
         <div class="row">
             <?php
+            if($jk_options['men_category_5']):
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'men-shorts',
+                'product_cat' => $jk_options['men_category_5'],
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
@@ -229,16 +238,17 @@ $jk_options = get_option('redux_demo');
                             ?>
                             <?php echo '<a href="'.get_permalink($loop->post->ID).'">';?>
                             <span class="info">
-                                    <span class="name"><?php echo $product->get_title();?></span>
-                                    <span class="price"><?php echo $product->get_price_html();?></span>
-                                    <span class="shop">Shop</span>
-                                </span>
+                                        <span class="name"><?php echo $product->get_title();?></span>
+                                        <span class="price"><?php echo $product->get_price_html();?></span>
+                                        <span class="shop">Shop</span>
+                                    </span>
                             <?php echo $product->get_image('image');?>
                             <?php echo '</a>';?>
                         <?php endwhile;?>
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
+                <?php endif;?>
                 <?php if($jk_options['men_des_option_5']): ?>
                 <div class="content-block-desc">
                     <?php echo $jk_options['men_des_option_5']?>

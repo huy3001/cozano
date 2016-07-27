@@ -42,69 +42,89 @@ $jk_options = get_option('redux_demo');
 			</aside>
 		</div>
 		<div class="row">
+            <?php if($jk_options['men_img']['url']): ?>
 			<div class="men-block content-block">
                 <div class="content-block-img">
                     <img src="<?php echo $jk_options['men_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['men_button_position'];?>">
 					<?php echo $jk_options['men_desc']?>
+                    <?php if($jk_options['men_url'] && $jk_options['men_button_title']): ?>
 					<a href="<?php echo $jk_options['men_url']?>" target="_self">
 						<span><?php echo $jk_options['men_button_title']?></span>
 					</a>
+                    <?php endif; ?>
 				</div>
 			</div>
+            <?php endif; ?>
 		</div>
 		<div class="row">
+            <?php if($jk_options['women_img']['url']): ?>
 			<div class="women-block content-block">
                 <div class="content-block-img">
                     <img src="<?php echo $jk_options['women_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['women_button_position'];?>">
 					<?php echo $jk_options['women_desc']?>
+                    <?php if($jk_options['women_url'] && $jk_options['women_button_title']): ?>
 					<a href="<?php echo $jk_options['women_url']?>" target="_self">
 						<span><?php echo $jk_options['women_button_title']?></span>
 					</a>
+                    <?php endif; ?>
 				</div>
 			</div>
+            <?php endif; ?>
 		</div>
 		<div class="row">
+            <?php if($jk_options['shoes_img']['url']): ?>
 			<div class="shoes-block content-block">
                 <div class="content-block-img">
 				    <img src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['shoes_button_position'];?>">
 					<?php echo $jk_options['shoes_desc']?>
+                    <?php if($jk_options['shoes_url'] && $jk_options['shoes_button_title']): ?>
 					<a href="<?php echo $jk_options['shoes_url']?>" target="_self">
 						<span><?php echo $jk_options['shoes_button_title']?></span>
 					</a>
+                    <?php endif; ?>
 				</div>
 			</div>
+            <?php endif; ?>
 		</div>
 		<div class="row">
+            <?php if($jk_options['bigsize_img']['url']): ?>
 			<div class="bigsize-block content-block">
                 <div class="content-block-img">
 				    <img src="<?php echo $jk_options['bigsize_img']['url'] ?>" alt="" />
 				</div>
                 <div class="content-block-body <?php echo $jk_options['bigsize_button_position'];?>">
 					<?php echo $jk_options['bigsize_desc']?>
+                    <?php if($jk_options['bigsize_url'] && $jk_options['bigsize_button_title']): ?>
 					<a href="<?php echo $jk_options['bigsize_url']?>" target="_self">
 						<span><?php echo $jk_options['bigsize_button_title']?></span>
 					</a>
+                    <?php endif; ?>
 				</div>
 			</div>
+            <?php endif; ?>
 		</div>
 		<div class="row">
+            <?php if($jk_options['touch_img']['url']): ?>
 			<div class="touch-block content-block">
                 <div class="content-block-img">
                     <img src="<?php echo $jk_options['touch_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['touch_button_position'];?>">
 					<?php echo $jk_options['touch_desc']?>
+                    <?php if($jk_options['touch_url'] && $jk_options['touch_button_title']): ?>
 					<a href="<?php echo $jk_options['touch_url']?>" target="_self">
 						<span><?php echo $jk_options['touch_button_title']?></span>
 					</a>
+                    <?php endif; ?>
 				</div>
 			</div>
+            <?php endif; ?>
 		</div>
 	</div>
 	<?php get_footer(); ?>

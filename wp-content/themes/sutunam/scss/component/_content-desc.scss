@@ -14,7 +14,13 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        @include opacity(0.25);
+        @include opacity(0);
+        @include transition();
+    }
+    &:hover {
+        &:after {
+            @include opacity(0.25);
+        }
     }
     .info {
         color: $white;

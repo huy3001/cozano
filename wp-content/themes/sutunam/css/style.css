@@ -47,6 +47,10 @@
 /* Font */
 
 body,
+.home .content-block-info .info h2,
+.page-template-men .content-block-info .info h2,
+.page-template-women .content-block-info .info h2,
+.page-template-shoes .content-block-info .info h2,
 .tax-product_cat .cat-header .page-title,
 .tax-product_cat ul.products li.product .price ins,
 .single-product div.product .price ins,
@@ -72,6 +76,10 @@ body,
 }
 
 body,
+.home .content-block-info .info h2,
+.page-template-men .content-block-info .info h2,
+.page-template-women .content-block-info .info h2,
+.page-template-shoes .content-block-info .info h2,
 .tax-product_cat .cat-header .page-title,
 .tax-product_cat ul.products li.product .price ins,
 .single-product div.product .price ins {
@@ -1208,6 +1216,51 @@ h6 {
   /* Home info style */
 }
 
+.home .content-block-info .info p,
+.page-template-men .content-block-info .info p,
+.page-template-women .content-block-info .info p,
+.page-template-shoes .content-block-info .info p {
+  color: #303030;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.home .content-block-info .info h2,
+.page-template-men .content-block-info .info h2,
+.page-template-women .content-block-info .info h2,
+.page-template-shoes .content-block-info .info h2 {
+  font-size: 40px;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.home .content-block-info .info h2 + p,
+.page-template-men .content-block-info .info h2 + p,
+.page-template-women .content-block-info .info h2 + p,
+.page-template-shoes .content-block-info .info h2 + p {
+  color: #666666;
+  font-size: 13px;
+}
+
+.home .content-block-info .info a,
+.page-template-men .content-block-info .info a,
+.page-template-women .content-block-info .info a,
+.page-template-shoes .content-block-info .info a {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 4px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .home .content-block-info .info h2,
+  .page-template-men .content-block-info .info h2,
+  .page-template-women .content-block-info .info h2,
+  .page-template-shoes .content-block-info .info h2 {
+    font-size: 30px;
+  }
+}
+
 .home .content-block,
 .page-template-men .content-block,
 .page-template-women .content-block,
@@ -1295,6 +1348,20 @@ h6 {
   .page-template-shoes .content-block .content-block-body {
     bottom: 75px;
   }
+
+  .home .content-block .content-block-body.left,
+  .page-template-men .content-block .content-block-body.left,
+  .page-template-women .content-block .content-block-body.left,
+  .page-template-shoes .content-block .content-block-body.left {
+    left: 25%;
+  }
+
+  .home .content-block .content-block-body.right,
+  .page-template-men .content-block .content-block-body.right,
+  .page-template-women .content-block .content-block-body.right,
+  .page-template-shoes .content-block .content-block-body.right {
+    right: 25%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1330,6 +1397,7 @@ h6 {
   .page-template-women .content-block .content-block-body,
   .page-template-shoes .content-block .content-block-body {
     bottom: 30px;
+    width: 100%;
   }
 }
 
@@ -1451,6 +1519,15 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.page-template-men .content-block-desc:hover:after {
   opacity: 0.25;
   filter: alpha(opacity=25);
 }
@@ -1695,6 +1772,15 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.page-template-women .content-block-desc:hover:after {
   opacity: 0.25;
   filter: alpha(opacity=25);
 }

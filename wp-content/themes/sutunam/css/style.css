@@ -1201,6 +1201,13 @@ h6 {
 
 /* Home page style */
 
+.home,
+.page-template-men,
+.page-template-women,
+.page-template-shoes {
+  /* Home info style */
+}
+
 .home .content-block,
 .page-template-men .content-block,
 .page-template-women .content-block,

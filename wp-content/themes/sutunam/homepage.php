@@ -48,7 +48,9 @@ $jk_options = get_option('redux_demo');
                     <img src="<?php echo $jk_options['men_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['men_button_position'];?>">
-					<?php echo $jk_options['men_desc']?>
+                    <div class="content-block-info">
+                        <?php echo $jk_options['men_desc']?>
+                    </div>
                     <?php if($jk_options['men_url'] && $jk_options['men_button_title']): ?>
 					<a href="<?php echo $jk_options['men_url']?>" target="_self">
 						<span><?php echo $jk_options['men_button_title']?></span>
@@ -65,7 +67,9 @@ $jk_options = get_option('redux_demo');
                     <img src="<?php echo $jk_options['women_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['women_button_position'];?>">
-					<?php echo $jk_options['women_desc']?>
+                    <div class="content-block-info">
+                        <?php echo $jk_options['women_desc']?>
+                    </div>
                     <?php if($jk_options['women_url'] && $jk_options['women_button_title']): ?>
 					<a href="<?php echo $jk_options['women_url']?>" target="_self">
 						<span><?php echo $jk_options['women_button_title']?></span>
@@ -82,7 +86,9 @@ $jk_options = get_option('redux_demo');
 				    <img src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['shoes_button_position'];?>">
-					<?php echo $jk_options['shoes_desc']?>
+                    <div class="content-block-info">
+                        <?php echo $jk_options['shoes_desc']?>
+                    </div>
                     <?php if($jk_options['shoes_url'] && $jk_options['shoes_button_title']): ?>
 					<a href="<?php echo $jk_options['shoes_url']?>" target="_self">
 						<span><?php echo $jk_options['shoes_button_title']?></span>
@@ -99,7 +105,9 @@ $jk_options = get_option('redux_demo');
 				    <img src="<?php echo $jk_options['bigsize_img']['url'] ?>" alt="" />
 				</div>
                 <div class="content-block-body <?php echo $jk_options['bigsize_button_position'];?>">
-					<?php echo $jk_options['bigsize_desc']?>
+                    <div class="content-block-info">
+                        <?php echo $jk_options['bigsize_desc']?>
+                    </div>
                     <?php if($jk_options['bigsize_url'] && $jk_options['bigsize_button_title']): ?>
 					<a href="<?php echo $jk_options['bigsize_url']?>" target="_self">
 						<span><?php echo $jk_options['bigsize_button_title']?></span>
@@ -116,7 +124,9 @@ $jk_options = get_option('redux_demo');
                     <img src="<?php echo $jk_options['touch_img']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body <?php echo $jk_options['touch_button_position'];?>">
-					<?php echo $jk_options['touch_desc']?>
+                    <div class="content-block-info">
+                        <?php echo $jk_options['touch_desc']?>
+                    </div>
                     <?php if($jk_options['touch_url'] && $jk_options['touch_button_title']): ?>
 					<a href="<?php echo $jk_options['touch_url']?>" target="_self">
 						<span><?php echo $jk_options['touch_button_title']?></span>

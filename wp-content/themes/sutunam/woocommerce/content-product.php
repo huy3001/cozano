@@ -120,12 +120,26 @@ $i =0;
 		$size .= ', '.$item->name;
 	$i++;
 }
+$price = $product->price;
+if ($price <= 100000){
+	$filterPrice = '0 - 100.000 VND';
+}elseif($price > 100000 && $price <= 200000){
+	$filterPrice = '100.000 VND - 200.000 VND';
+}elseif($price > 200000 && $price <= 300000){
+	$filterPrice = '200.000 VND - 300.000 VND';
+}elseif($price > 300000 && $price <= 400000){
+	$filterPrice = '300.000 VND - 400.000 VND';
+}elseif($price > 400000 && $price <= 500000){
+	$filterPrice = '400.000 VND - 500.000 VND';
+}else{
+	$filterPrice = '500.000 VND trở lên';
+}
 ?>
 <?php
 if($woocommerce_loop['loop'] > 8)
 	$classes[] = 'hide';
 ?>
-<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $fit;?>" data-chất-liệu="<?php echo $fabric;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>">
+<li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $fit;?>" data-chất-liệu="<?php echo $fabric;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>" data-giá="<?php echo $filterPrice;?>">
 
 	<?php
 	/**
@@ -143,12 +157,12 @@ if($woocommerce_loop['loop'] > 8)
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 
-	/**
-	 * woocommerce_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
+	?>
+	<h3><?php echo $product->sku;?></h3>
+	<h3><?php echo get_the_title();?></h3>
+	
+	<?php
+
 
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.

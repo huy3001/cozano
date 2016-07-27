@@ -25,19 +25,4 @@ global $product;
 <?php if ( $price_html = $product->get_price_html() ) : ?>
 	<span class="price"><?php echo $price_html; ?></span>
 <?php endif; ?>
-<?php
-$colors = get_the_terms( $post->ID, 'color' );
-$color = null;
-$i =0;
-?>
-<?php foreach($colors as $item){
-	if($i == 0)
-		$color = $item->name;
-	else
-		$color .= ', '.$item->name;
-	$i++;
-}
-?>
-<div class="product-color">
-	<span><?php echo $color;?></span>
-</div>
+

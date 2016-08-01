@@ -60,12 +60,12 @@ $jk_options = get_option('redux_demo');
 				<div class="content-block-body <?php echo $jk_options['men_button_option_1'];?>">
                     <div class="content-block-info">
                         <?php echo $jk_options['men_content_option_1']?>
+	                    <?php if($jk_options['men_url_option_1']): ?>
+		                    <a href="<?php echo $jk_options['men_url_option_1']?>" target="_self">
+			                    <span>shopping</span>
+		                    </a>
+	                    <?php endif; ?>
                     </div>
-                    <?php if($jk_options['men_url_option_1']): ?>
-					<a href="<?php echo $jk_options['men_url_option_1']?>" target="_self">
-						<span>shopping</span>
-					</a>
-                    <?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -116,12 +116,12 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-body <?php echo $jk_options['men_button_option_2'];?>">
                     <div class="content-block-info">
                         <?php echo $jk_options['men_content_option_2']?>
+	                    <?php if($jk_options['men_url_option_2']): ?>
+		                    <a href="<?php echo $jk_options['men_url_option_2']?>" target="_self">
+			                    <span>shopping</span>
+		                    </a>
+	                    <?php endif; ?>
                     </div>
-                    <?php if($jk_options['men_url_option_2']): ?>
-                    <a href="<?php echo $jk_options['men_url_option_2']?>" target="_self">
-                        <span>shopping</span>
-                    </a>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -172,12 +172,12 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-body <?php echo $jk_options['men_button_option_3'];?>">
                     <div class="content-block-info">
                         <?php echo $jk_options['men_content_option_3']?>
+	                    <?php if($jk_options['men_url_option_3']): ?>
+		                    <a href="<?php echo $jk_options['men_url_option_3']?>" target="_self">
+			                    <span>shopping</span>
+		                    </a>
+	                    <?php endif; ?>
                     </div>
-                    <?php if($jk_options['men_url_option_3']): ?>
-                    <a href="<?php echo $jk_options['men_url_option_3']?>" target="_self">
-                        <span>shopping</span>
-                    </a>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -228,12 +228,12 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-body <?php echo $jk_options['men_button_option_4'];?>">
                     <div class="content-block-info">
                         <?php echo $jk_options['men_content_option_4']?>
+	                    <?php if($jk_options['men_url_option_4']): ?>
+		                    <a href="<?php echo $jk_options['men_url_option_4']?>" target="_self">
+			                    <span>shopping</span>
+		                    </a>
+	                    <?php endif; ?>
                     </div>
-                    <?php if($jk_options['men_url_option_4']): ?>
-                    <a href="<?php echo $jk_options['men_url_option_4']?>" target="_self">
-                        <span>shopping</span>
-                    </a>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -284,12 +284,12 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-body <?php echo $jk_options['men_button_option_5'];?>">
                     <div class="content-block-info">
                         <?php echo $jk_options['men_content_option_5']?>
+	                    <?php if($jk_options['men_url_option_5']): ?>
+		                    <a href="<?php echo $jk_options['men_url_option_5']?>" target="_self">
+			                    <span>shopping</span>
+		                    </a>
+	                    <?php endif; ?>
                     </div>
-                    <?php if($jk_options['men_url_option_5']): ?>
-                    <a href="<?php echo $jk_options['men_url_option_5']?>" target="_self">
-                        <span>shopping</span>
-                    </a>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>

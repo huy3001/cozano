@@ -1252,6 +1252,13 @@ h6 {
   margin: 20px 4px 0;
 }
 
+.home .content-block-info a,
+.page-template-men .content-block-info a,
+.page-template-women .content-block-info a,
+.page-template-shoes .content-block-info a {
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 992px) {
   .home .content-block-info .info h2,
   .page-template-men .content-block-info .info h2,
@@ -1298,7 +1305,9 @@ h6 {
   background: #ffffff;
   border: 2px solid #303030;
   color: #303030;
-  padding: 10px 20px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 20px;
   white-space: nowrap;
 }
 

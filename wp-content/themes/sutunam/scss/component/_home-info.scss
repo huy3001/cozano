@@ -25,6 +25,10 @@
         }
     }
 
+    a {
+        margin-top: 20px;
+    }
+
     @include bp(max-width, $laptop) {
         .info {
             h2 {

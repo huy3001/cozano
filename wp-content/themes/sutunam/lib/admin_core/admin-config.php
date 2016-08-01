@@ -518,6 +518,21 @@
                         // Must provide key => value pairs for select options
                         'data'     => 'product_cat'
                     ),
+	                array(
+		                'id'        => 'men_content_option_1',
+		                'type'      => 'textarea',
+		                'title'     => __('Men Content Option 1'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
                     array(
                         'id'       => 'men_button_option_1',
                         'type'     => 'select',
@@ -531,21 +546,6 @@
                             'center' => 'Center'
                         ),
                         'default'  => 'left',
-                    ),
-                    array(
-                        'id'        => 'men_content_option_1',
-                        'type'      => 'textarea',
-                        'title'     => __('Men Content Option 1'),
-                        'subtitle'  => __('HTML can be used', 'sutunam'),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                        )
                     ),
                     array(
                         'id'        => 'men_des_option_2',
@@ -586,6 +586,21 @@
                         // Must provide key => value pairs for select options
                         'data'     => 'product_cat'
                     ),
+	                array(
+		                'id'        => 'men_content_option_2',
+		                'type'      => 'textarea',
+		                'title'     => __('Men Content Option 2'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
                     array(
                         'id'       => 'men_button_option_2',
                         'type'     => 'select',
@@ -599,21 +614,6 @@
                             'center' => 'Center'
                         ),
                         'default'  => 'left',
-                    ),
-                    array(
-                        'id'        => 'men_content_option_2',
-                        'type'      => 'textarea',
-                        'title'     => __('Men Content Option 2'),
-                        'subtitle'  => __('HTML can be used', 'sutunam'),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                        )
                     ),
                     array(
                         'id'        => 'men_des_option_3',
@@ -654,6 +654,21 @@
                         // Must provide key => value pairs for select options
                         'data'     => 'product_cat'
                     ),
+	                array(
+		                'id'        => 'men_content_option_3',
+		                'type'      => 'textarea',
+		                'title'     => __('Men Content Option 3'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
                     array(
                         'id'       => 'men_button_option_3',
                         'type'     => 'select',
@@ -667,21 +682,6 @@
                             'center' => 'Center'
                         ),
                         'default'  => 'left',
-                    ),
-                    array(
-                        'id'        => 'men_content_option_3',
-                        'type'      => 'textarea',
-                        'title'     => __('Men Content Option 3'),
-                        'subtitle'  => __('HTML can be used', 'sutunam'),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                        )
                     ),
                     array(
                         'id'        => 'men_des_option_4',
@@ -722,6 +722,21 @@
                         // Must provide key => value pairs for select options
                         'data'     => 'product_cat'
                     ),
+	                array(
+		                'id'        => 'men_content_option_4',
+		                'type'      => 'textarea',
+		                'title'     => __('Men Content Option 4'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
                     array(
                         'id'       => 'men_button_option_4',
                         'type'     => 'select',
@@ -735,21 +750,6 @@
                             'center' => 'Center'
                         ),
                         'default'  => 'left',
-                    ),
-                    array(
-                        'id'        => 'men_content_option_4',
-                        'type'      => 'textarea',
-                        'title'     => __('Men Content Option 4'),
-                        'subtitle'  => __('HTML can be used', 'sutunam'),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                        )
                     ),
                     array(
                         'id'        => 'men_des_option_5',
@@ -790,6 +790,21 @@
                         // Must provide key => value pairs for select options
                         'data'     => 'product_cat'
                     ),
+	                array(
+		                'id'        => 'men_content_option_5',
+		                'type'      => 'textarea',
+		                'title'     => __('Men Content Option 5'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
                     array(
                         'id'       => 'men_button_option_5',
                         'type'     => 'select',
@@ -803,21 +818,6 @@
                             'center' => 'Center'
                         ),
                         'default'  => 'left',
-                    ),
-                    array(
-                        'id'        => 'men_content_option_5',
-                        'type'      => 'textarea',
-                        'title'     => __('Men Content Option 5'),
-                        'subtitle'  => __('HTML can be used', 'sutunam'),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                        )
                     )
                 ),
             ));

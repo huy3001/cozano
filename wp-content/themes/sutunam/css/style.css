@@ -63,6 +63,7 @@ body,
 .tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-menu > li > a,
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li,
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li,
+.tax-product_cat ul.products li.product .info h4,
 .tax-product_cat ul.products li.product .price del,
 .tax-product_cat ul.products li.product .product-color,
 .single-product div.product .summary div p,
@@ -96,6 +97,7 @@ body,
 .tax-product_cat .woocommerce-ordering .bootstrap-select .dropdown-menu > li > a,
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li,
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li,
+.tax-product_cat ul.products li.product .info h4,
 .tax-product_cat ul.products li.product .price del,
 .tax-product_cat ul.products li.product .product-color,
 .single-product div.product .summary div p,
@@ -2319,13 +2321,27 @@ h6 {
   margin: 0 0 10px;
 }
 
-.tax-product_cat ul.products li.product h3 {
+.tax-product_cat ul.products li.product .info {
+  float: left;
+  min-height: 35px;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.tax-product_cat ul.products li.product .info h3 {
   color: #303030;
   font-size: 13px;
-  line-height: 1.4;
-  float: left;
-  width: 50%;
-  padding: 0 10px 5px;
+  line-height: normal;
+  padding: 0 0 5px;
+}
+
+.tax-product_cat ul.products li.product .info h4 {
+  color: #303030;
+  font-size: 13px;
+  line-height: normal;
+  margin: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .tax-product_cat ul.products li.product .onsale {
@@ -2356,11 +2372,16 @@ h6 {
   font-size: 13px;
   font-weight: bold;
   float: right;
+  line-height: normal;
+  min-height: 35px;
   margin: 0 10px;
+  position: relative;
 }
 
 .tax-product_cat ul.products li.product .price del {
-  margin-bottom: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .tax-product_cat ul.products li.product .price ins {

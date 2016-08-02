@@ -54,7 +54,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['women_img_option_1']['url']): ?>
-				    <img src="<?php echo $jk_options['women_img_option_1']['url'] ?>" alt="" />
+				    <img class="hidden-xs" src="<?php echo $jk_options['women_img_option_1']['url'] ?>" alt="" />
+                    <?php
+                    $women_img_option_1_mobile = wp_get_attachment_image_src($jk_options['women_img_option_1']['id'],array(600,600))[0];
+                    ?>
+                    <img class="visible-xs" src="<?php echo $women_img_option_1_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
                 <div class="content-block-body <?php echo $jk_options['women_button_option_1'];?>">
@@ -110,7 +114,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['women_img_option_2']['url']): ?>
-                    <img src="<?php echo $jk_options['women_img_option_2']['url'] ?>" alt="" />
+                    <img class="hidden-xs" src="<?php echo $jk_options['women_img_option_2']['url'] ?>" alt="" />
+                    <?php
+                    $women_img_option_2_mobile = wp_get_attachment_image_src($jk_options['women_img_option_2']['id'],array(600,600))[0];
+                    ?>
+                    <img class="visible-xs" src="<?php echo $women_img_option_2_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
                 <div class="content-block-body <?php echo $jk_options['women_button_option_2'];?>">
@@ -166,7 +174,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['women_img_option_3']['url']): ?>
-                    <img src="<?php echo $jk_options['women_img_option_3']['url'] ?>" alt="" />
+                    <img class="hidden-xs" src="<?php echo $jk_options['women_img_option_3']['url'] ?>" alt="" />
+                    <?php
+                    $women_img_option_3_mobile = wp_get_attachment_image_src($jk_options['women_img_option_3']['id'],array(600,600))[0];
+                    ?>
+                    <img class="visible-xs" src="<?php echo $women_img_option_3_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
                 <div class="content-block-body <?php echo $jk_options['women_button_option_3'];?>">
@@ -222,7 +234,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['women_img_option_4']['url']): ?>
-                    <img src="<?php echo $jk_options['women_img_option_4']['url'] ?>" alt="" />
+                    <img class="hidden-xs" src="<?php echo $jk_options['women_img_option_4']['url'] ?>" alt="" />
+                    <?php
+                    $women_img_option_4_mobile = wp_get_attachment_image_src($jk_options['women_img_option_4']['id'],array(600,600))[0];
+                    ?>
+                    <img class="visible-xs" src="<?php echo $women_img_option_4_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
                 <div class="content-block-body <?php echo $jk_options['women_button_option_4'];?>">
@@ -278,7 +294,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['women_img_option_5']['url']): ?>
-                    <img src="<?php echo $jk_options['women_img_option_5']['url'] ?>" alt="" />
+                    <img class="hidden-xs" src="<?php echo $jk_options['women_img_option_5']['url'] ?>" alt="" />
+                    <?php
+                    $women_img_option_5_mobile = wp_get_attachment_image_src($jk_options['women_img_option_5']['id'],array(600,600))[0];
+                    ?>
+                    <img class="visible-xs" src="<?php echo $women_img_option_5_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
                 <div class="content-block-body <?php echo $jk_options['women_button_option_5'];?>">

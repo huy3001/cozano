@@ -1597,6 +1597,14 @@ h6 {
   min-height: 550px;
 }
 
+.page-template-men .content-block .content-block-body a {
+  border-color: #ffffff;
+}
+
+.page-template-men .content-block .content-block-body a:hover {
+  background: none;
+}
+
 .page-template-men .content-block-img img {
   position: absolute;
   top: 0;
@@ -1848,6 +1856,14 @@ h6 {
 
 .page-template-women .content-block.no-feature {
   min-height: 550px;
+}
+
+.page-template-women .content-block .content-block-body a {
+  border-color: #ffffff;
+}
+
+.page-template-women .content-block .content-block-body a:hover {
+  background: none;
 }
 
 .page-template-women .content-block-img img {

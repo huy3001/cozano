@@ -8,6 +8,14 @@
         &.no-feature {
             min-height: 550px;
         }
+        .content-block-body {
+            a {
+                border-color: $white;
+                &:hover {
+                    background: none;
+                }
+            }
+        }
     }
     .content-block-img {
         img {

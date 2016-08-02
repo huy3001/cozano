@@ -80,6 +80,9 @@
             > li.ft-field {
                 float: left;
                 margin-right: 12px;
+                &:last-child {
+                    margin-right: 0;
+                }
                 > span.ft-label {
                     border: 2px solid $product-select-bd;
                     color: $product-select-color;

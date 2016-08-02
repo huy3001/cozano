@@ -54,7 +54,15 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['men_img_option_1']['url']): ?>
-				    <img src="<?php echo $jk_options['men_img_option_1']['url'] ?>" alt="" />
+                    <img class="visible-lg" src="<?php echo $jk_options['men_img_option_1']['url'] ?>" alt="" />
+                    <?php
+                        $men_img_option_1_large = wp_get_attachment_image_src($jk_options['men_img_option_1']['id'],'large')[0];
+                        $men_img_option_1_medium = wp_get_attachment_image_src($jk_options['men_img_option_1']['id'],'medium')[0];
+                        $men_img_option_1_thumb = wp_get_attachment_image_src($jk_options['men_img_option_1']['id'],'thumbnail')[0];
+                    ?>
+                    <img class="visible-md" src="<?php echo $men_img_option_1_large ?>" alt="" />
+                    <img class="visible-sm" src="<?php echo $men_img_option_1_medium ?>" alt="" />
+                    <img class="visible-xs" src="<?php echo $men_img_option_1_thumb ?>" alt="" />
                     <?php endif; ?>
                 </div>
 				<div class="content-block-body <?php echo $jk_options['men_button_option_1'];?>">

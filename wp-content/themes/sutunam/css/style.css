@@ -2183,6 +2183,10 @@ h6 {
   margin-right: 12px;
 }
 
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field:last-child {
+  margin-right: 0;
+}
+
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > span.ft-label {
   border: 2px solid #dfdfdf;
   color: #01385f;

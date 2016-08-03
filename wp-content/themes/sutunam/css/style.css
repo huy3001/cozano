@@ -52,6 +52,7 @@ body,
 .page-template-women .content-block-info .info h2,
 .page-template-shoes .content-block-info .info h2,
 .tax-product_cat .cat-header .page-title,
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-hidden,
 .tax-product_cat ul.products li.product .price ins,
 .single-product div.product .price ins,
 #footer .footer-menu ul li a,
@@ -82,6 +83,7 @@ body,
 .page-template-women .content-block-info .info h2,
 .page-template-shoes .content-block-info .info h2,
 .tax-product_cat .cat-header .page-title,
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-hidden,
 .tax-product_cat ul.products li.product .price ins,
 .single-product div.product .price ins {
   font-family: 'Roboto', sans-serif;
@@ -2294,7 +2296,7 @@ h6 {
   font-size: 14px;
   font-weight: normal;
   text-shadow: none;
-  padding: 5px 30px 5px 10px;
+  padding: 10px 10px 10px 38px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -2302,12 +2304,41 @@ h6 {
 }
 
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li:after {
-  background: #999999;
-  right: 10px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: #e8e8e8;
+  content: "";
+  font-size: 0;
+  height: 18px;
+  width: 18px;
+  padding: 0;
+  left: 10px;
+  right: auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li:hover {
   background: #e8e8e8;
+}
+
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li:hover:after {
+  background: #999999;
+}
+
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-hidden {
+  color: #303030;
+  display: block !important;
+}
+
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-hidden:after {
+  background: #303030;
 }
 
 .tax-product_cat ul.products {

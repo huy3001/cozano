@@ -130,13 +130,21 @@
             setTimeout(function() {
                 var ftMenu = $('.ft-menu'),
                     ftLabel= $('.ft-label', ftMenu),
-                    ftPanel = $('.ft-panel', ftMenu);
+                    ftPanel = $('.ft-panel', ftMenu),
+                    sortingBtn = $('.woocommerce-ordering .dropdown-toggle');
                 if(ftMenu.length) {
                     ftLabel.on('click', function() {
                         ftLabel.removeClass('ft-opened');
                         ftPanel.addClass('ft-hidden');
                         $(this).addClass('ft-opened');
                         $(this).parents('.ft-field').find('.ft-panel').removeClass('ft-hidden');
+                        sortingBtn.parents('.bootstrap-select').removeClass('open');
+                    });
+                }
+                if(sortingBtn.length) {
+                    sortingBtn.on('click', function() {
+                        ftLabel.removeClass('ft-opened');
+                        ftPanel.addClass('ft-hidden');
                     });
                 }
             }, 100);

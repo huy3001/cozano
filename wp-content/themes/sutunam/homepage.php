@@ -47,7 +47,7 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-img">
                     <img class="hidden-xs" src="<?php echo $jk_options['men_img']['url'] ?>" alt="" />
                     <?php
-                    $men_img_mobile = wp_get_attachment_image_src($jk_options['men_img']['id'],array(600,600))[0];
+                    $men_img_mobile = wp_get_attachment_image_src($jk_options['men_img']['id'],array(768,768))[0];
                     ?>
                     <img class="visible-xs" src="<?php echo $men_img_mobile ?>" alt="" />
                 </div>
@@ -70,7 +70,7 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-img">
                     <img class="hidden-xs" src="<?php echo $jk_options['women_img']['url'] ?>" alt="" />
                     <?php
-                    $women_img_mobile = wp_get_attachment_image_src($jk_options['women_img']['id'],array(600,600))[0];
+                    $women_img_mobile = wp_get_attachment_image_src($jk_options['women_img']['id'],array(768,768))[0];
                     ?>
                     <img class="visible-xs" src="<?php echo $women_img_mobile ?>" alt="" />
                 </div>
@@ -93,7 +93,7 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-img">
 				    <img class="hidden-xs" src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
                     <?php
-                    $shoes_img_mobile = wp_get_attachment_image_src($jk_options['shoes_img']['id'],array(600,600))[0];
+                    $shoes_img_mobile = wp_get_attachment_image_src($jk_options['shoes_img']['id'],array(768,768))[0];
                     ?>
                     <img class="visible-xs" src="<?php echo $shoes_img_mobile ?>" alt="" />
                 </div>
@@ -116,7 +116,7 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-img">
 				    <img class="hidden-xs" src="<?php echo $jk_options['bigsize_img']['url'] ?>" alt="" />
                     <?php
-                    $bigsize_img_mobile = wp_get_attachment_image_src($jk_options['bigsize_img']['id'],array(600,600))[0];
+                    $bigsize_img_mobile = wp_get_attachment_image_src($jk_options['bigsize_img']['id'],array(768,768))[0];
                     ?>
                     <img class="visible-xs" src="<?php echo $bigsize_img_mobile ?>" alt="" />
 				</div>
@@ -139,7 +139,7 @@ $jk_options = get_option('redux_demo');
                 <div class="content-block-img">
                     <img class="hidden-xs" src="<?php echo $jk_options['touch_img']['url'] ?>" alt="" />
                     <?php
-                    $touch_img_mobile = wp_get_attachment_image_src($jk_options['touch_img']['id'],array(600,600))[0];
+                    $touch_img_mobile = wp_get_attachment_image_src($jk_options['touch_img']['id'],array(768,768))[0];
                     ?>
                     <img class="visible-xs" src="<?php echo $touch_img_mobile ?>" alt="" />
                 </div>

@@ -50,6 +50,7 @@
                 background: none;
                 color: $white;
             }
+            @extend .button-style;
         }
     }
 

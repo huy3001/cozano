@@ -75,3 +75,40 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+.button-style {
+    &.black {
+        background: $header-bg;
+        border-color: $header-bg;
+        color: $white;
+        &:hover {
+            background: transparent;
+            color: $main-color;
+        }
+        &.border {
+            background: $white;
+            color: $header-bg;
+            &:hover {
+                background: $header-bg;
+                color: $white;
+            }
+        }
+    }
+    &.white {
+        background: $white;
+        border-color: $white;
+        color: $main-color;
+        &:hover {
+            background: transparent;
+            color: $white;
+        }
+        &.border {
+            background: $header-bg;
+            color: $white;
+            &:hover {
+                background: $white;
+                color: $main-color;
+            }
+        }
+    }
+}

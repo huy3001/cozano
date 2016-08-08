@@ -54,10 +54,12 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['men_img_option_1']['url']): ?>
-                    <img class="hidden-xs" src="<?php echo $jk_options['men_img_option_1']['url'] ?>" alt="" />
+                    <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img_option_1']['url'] ?>" alt="" />
                     <?php
-                        $men_img_option_1_mobile = wp_get_attachment_image_src($jk_options['men_img_option_1']['id'],array(768,768))[0];
+                        $men_img_option_1_tablet = wp_get_attachment_image_src($jk_options['men_img_option_1']['id'],'medium')[0];
+                        $men_img_option_1_mobile = wp_get_attachment_image_src($jk_options['men_img_option_1']['id'],'thumbnail')[0];
                     ?>
+                    <img class="visible-sm" src="<?php echo $men_img_option_1_tablet ?>" alt="" />
                     <img class="visible-xs" src="<?php echo $men_img_option_1_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
@@ -114,10 +116,12 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['men_img_option_2']['url']): ?>
-                    <img class="hidden-xs" src="<?php echo $jk_options['men_img_option_2']['url'] ?>" alt="" />
+                    <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img_option_2']['url'] ?>" alt="" />
                     <?php
-                    $men_img_option_2_mobile = wp_get_attachment_image_src($jk_options['men_img_option_2']['id'],array(768,768))[0];
+                    $men_img_option_2_tablet = wp_get_attachment_image_src($jk_options['men_img_option_2']['id'],'medium')[0];
+                    $men_img_option_2_mobile = wp_get_attachment_image_src($jk_options['men_img_option_2']['id'],'thumbnail')[0];
                     ?>
+                    <img class="visible-sm" src="<?php echo $men_img_option_2_tablet ?>" alt="" />
                     <img class="visible-xs" src="<?php echo $men_img_option_2_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
@@ -174,10 +178,12 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['men_img_option_3']['url']): ?>
-                    <img class="hidden-xs" src="<?php echo $jk_options['men_img_option_3']['url'] ?>" alt="" />
+                    <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img_option_3']['url'] ?>" alt="" />
                     <?php
-                    $men_img_option_3_mobile = wp_get_attachment_image_src($jk_options['men_img_option_3']['id'],array(768,768))[0];
+                    $men_img_option_3_tablet = wp_get_attachment_image_src($jk_options['men_img_option_3']['id'],'medium')[0];
+                    $men_img_option_3_mobile = wp_get_attachment_image_src($jk_options['men_img_option_3']['id'],'thumbnail')[0];
                     ?>
+                    <img class="visible-sm" src="<?php echo $men_img_option_3_tablet ?>" alt="" />
                     <img class="visible-xs" src="<?php echo $men_img_option_3_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
@@ -234,10 +240,12 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['men_img_option_4']['url']): ?>
-                    <img class="hidden-xs" src="<?php echo $jk_options['men_img_option_4']['url'] ?>" alt="" />
+                    <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img_option_4']['url'] ?>" alt="" />
                     <?php
-                    $men_img_option_4_mobile = wp_get_attachment_image_src($jk_options['men_img_option_4']['id'],array(768,768))[0];
+                    $men_img_option_4_tablet = wp_get_attachment_image_src($jk_options['men_img_option_4']['id'],'medium')[0];
+                    $men_img_option_4_mobile = wp_get_attachment_image_src($jk_options['men_img_option_4']['id'],'thumbnail')[0];
                     ?>
+                    <img class="visible-sm" src="<?php echo $men_img_option_4_tablet ?>" alt="" />
                     <img class="visible-xs" src="<?php echo $men_img_option_4_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>
@@ -294,10 +302,12 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <div class="content-block-img">
                     <?php if($jk_options['men_img_option_5']['url']): ?>
-                    <img class="hidden-xs" src="<?php echo $jk_options['men_img_option_5']['url'] ?>" alt="" />
+                    <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img_option_5']['url'] ?>" alt="" />
                     <?php
-                    $men_img_option_5_mobile = wp_get_attachment_image_src($jk_options['men_img_option_5']['id'],array(768,768))[0];
+                    $men_img_option_5_tablet = wp_get_attachment_image_src($jk_options['men_img_option_5']['id'],'medium')[0];
+                    $men_img_option_5_mobile = wp_get_attachment_image_src($jk_options['men_img_option_5']['id'],'thumbnail')[0];
                     ?>
+                    <img class="visible-sm" src="<?php echo $men_img_option_5_tablet ?>" alt="" />
                     <img class="visible-xs" src="<?php echo $men_img_option_5_mobile ?>" alt="" />
                     <?php endif; ?>
                 </div>

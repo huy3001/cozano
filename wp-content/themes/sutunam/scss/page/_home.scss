@@ -54,11 +54,12 @@
         .content-block {
             .content-block-body {
                 bottom: 75px;
-                &.left {
-                    left: 25%;
-                }
+                &.left,
                 &.right {
-                    right: 25%;
+                    text-align: center;
+                    left: 50%;
+                    right: auto;
+                    @include transform(translateX(-50%));
                 }
             }
         }
@@ -68,13 +69,6 @@
         .content-block {
             .content-block-body {
                 bottom: 50px;
-                &.left,
-                &.right {
-                    text-align: center;
-                    left: 50%;
-                    right: auto;
-                    @include transform(translateX(-50%));
-                }
             }
         }
     }

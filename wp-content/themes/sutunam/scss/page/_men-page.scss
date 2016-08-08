@@ -43,9 +43,6 @@
                 left: 0;
             }
         }
-        .content-block-body {
-            left: 16.5%;
-        }
     }
 
     @include bp(max-width, $large-desktop) {
@@ -67,14 +64,6 @@
     @include bp(max-width, $laptop) {
         .content-block {
             &.no-feature {
-                min-height: 255px;
-            }
-        }
-    }
-
-    @include bp(max-width, $tablet - 1) {
-        .content-block {
-            &.no-feature {
                 min-height: inherit;
             }
         }
@@ -85,12 +74,6 @@
         .content-block-img {
             img {
                 position: static;
-            }
-        }
-        .men-option-2,
-        .men-option-4 {
-            .content-block-body {
-                left: 50%;
             }
         }
     }

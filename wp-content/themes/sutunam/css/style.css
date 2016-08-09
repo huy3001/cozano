@@ -251,7 +251,7 @@ h6 {
 .page-template-shoes .content-block .content-block-body a.black.border,
 .page-template-men .content-block-desc .info a.black.border,
 .page-template-women .content-block-desc .info a.black.border {
-  background: #ffffff;
+  background: transparent;
   color: #303030;
 }
 
@@ -296,7 +296,7 @@ h6 {
 .page-template-shoes .content-block .content-block-body a.white.border,
 .page-template-men .content-block-desc .info a.white.border,
 .page-template-women .content-block-desc .info a.white.border {
-  background: #303030;
+  background: transparent;
   color: #ffffff;
 }
 
@@ -309,6 +309,24 @@ h6 {
 .page-template-women .content-block-desc .info a.white.border:hover {
   background: #ffffff;
   color: #303030;
+}
+
+@media (max-width: 991px) and (min-width: 481px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .visible-xs {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .visible-xs {
+    display: block !important;
+  }
 }
 
 /* Header style */
@@ -1362,6 +1380,22 @@ h6 {
   .page-template-shoes .content-block-info .info h2 {
     font-size: 30px;
     font-size: 2.08vw;
+  }
+
+  .home .content-block-info .info a + a,
+  .page-template-men .content-block-info .info a + a,
+  .page-template-women .content-block-info .info a + a,
+  .page-template-shoes .content-block-info .info a + a {
+    margin-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home .content-block-info .info a + a,
+  .page-template-men .content-block-info .info a + a,
+  .page-template-women .content-block-info .info a + a,
+  .page-template-shoes .content-block-info .info a + a {
+    margin-top: 20px;
   }
 }
 

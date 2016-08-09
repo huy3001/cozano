@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
             color: $main-color;
         }
         &.border {
-            background: $white;
+            background: transparent;
             color: $header-bg;
             &:hover {
                 background: $header-bg;
@@ -103,12 +103,30 @@ h1, h2, h3, h4, h5, h6 {
             color: $white;
         }
         &.border {
-            background: $header-bg;
+            background: transparent;
             color: $white;
             &:hover {
                 background: $white;
                 color: $main-color;
             }
         }
+    }
+}
+
+@media (max-width: $laptop - 1) and (min-width: $mobile + 1) {
+    .visible-sm {
+        display: block !important;
+    }
+}
+
+@media (max-width: $tablet - 1){
+    .visible-xs {
+        display: none !important;
+    }
+}
+
+@media (max-width: $mobile){
+    .visible-xs {
+        display: block !important;
     }
 }

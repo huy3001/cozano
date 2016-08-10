@@ -6,8 +6,19 @@
     width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 111;
+    @include bp(min-width, $full-desktop) {
+        max-width: $full-desktop;
+    }
+    @include bp(max-width, $full-desktop) {
+        max-width: $huge-desktop;
+    }
+    @include bp(max-width, $huge-desktop) {
+        max-width: $desktop;
+    }
+    @include bp(max-width, $desktop) {
+        max-width: 100%;
+    }
     .nav-menu {
         height: 100%;
         position: relative;

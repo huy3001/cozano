@@ -160,6 +160,7 @@ h6 {
 
 #wrapper {
   min-height: 100%;
+  margin: 0 auto;
   padding-top: 54px;
   overflow-x: hidden;
 }
@@ -169,9 +170,28 @@ h6 {
   display: block;
 }
 
+@media only screen and (min-width: 1920px) {
+  #wrapper {
+    max-width: 1920px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  #wrapper {
+    max-width: 1600px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #wrapper {
+    max-width: 1200px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   #wrapper {
     height: 100%;
+    max-width: 100%;
     overflow-y: hidden;
   }
 
@@ -337,8 +357,31 @@ h6 {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 111;
+}
+
+@media only screen and (min-width: 1920px) {
+  #header {
+    max-width: 1920px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  #header {
+    max-width: 1600px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #header {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #header {
+    max-width: 100%;
+  }
 }
 
 #header .nav-menu {
@@ -860,7 +903,6 @@ h6 {
   width: 250px;
   overflow: hidden;
   position: fixed;
-  left: 0;
   bottom: 0;
   top: 54px;
   z-index: 11;

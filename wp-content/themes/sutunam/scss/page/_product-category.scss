@@ -351,5 +351,41 @@
             margin: 0 10px 10px;
             padding: 10px 12px;
         }
+        #placeHolder {
+            background: $white;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 111;
+            ul.ft-menu {
+                > li.ft-field {
+                    border-bottom: 1px solid $product-select-bd;
+                    display: block;
+                    float: none;
+                    margin: 0;
+                    &:last-child {
+                        border: none;
+                    }
+                    > span.ft-label {
+                        border: none;
+                        color: $left-menu-bg;
+                        font-weight: normal;
+                        padding: 16px 12px;
+                        &:after {
+                            margin: -2px 0 0;
+                            position: absolute;
+                            top: 50%;
+                            right: 12px;
+                        }
+                    }
+                    > div.ft-panel {
+                        position: static;
+                    }
+                }
+            }
+        }
     }
 }

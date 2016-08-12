@@ -251,8 +251,9 @@ ul.ft-menu > li.ft-field > div.ft-panel > div.ft-mismatch {
 }
 
 /* REQUIRED! */
-.ft-hidden { display: none !important; }
-
+.ft-hidden {
+    display: none;
+}
 
 /* Custom webkit scrollbars */
 ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags::-webkit-scrollbar {

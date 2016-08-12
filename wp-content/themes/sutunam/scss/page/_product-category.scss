@@ -63,6 +63,7 @@
                         font-size: 14px;
                         @include font('font-roboto-medium');
                         padding: 3px 10px;
+                        outline: none;
                         @include transition();
                     }
                 }
@@ -70,7 +71,8 @@
         }
     }
 
-    .btn-filter {
+    .btn-filter,
+    .btn-close {
         display: none;
     }
 
@@ -350,16 +352,35 @@
             line-height: normal;
             margin: 0 10px 10px;
             padding: 10px 12px;
+            outline: none;
+        }
+        .btn-close {
+            background: $black;
+            border: none;
+            color: $white;
+            font-size: 25px;
+            height: 40px;
+            width: 40px;
+            margin-left: -20px;
+            outline: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1111;
         }
         #placeHolder {
             background: $white;
+            display: none;
             width: 100%;
             height: 100%;
             margin: 0;
+            padding-top: 40px;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 111;
+            overflow-x: hidden;
+            overflow-y: auto;
             ul.ft-menu {
                 > li.ft-field {
                     border-bottom: 1px solid $product-select-bd;
@@ -380,11 +401,38 @@
                             top: 50%;
                             right: 12px;
                         }
+                        &.ft-clicked {
+                            color: $main-color;
+                            font-weight: bold;
+                            &:after {
+                                border-top: none;
+                                border-bottom: 4px solid;
+                            }
+                        }
                     }
                     > div.ft-panel {
                         position: static;
                     }
                 }
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        ul.products {
+            li.product {
+                width: 50%;
+            }
+        }
+    }
+
+    @include bp(max-width, $mobile) {
+        ul.products {
+            margin: 0;
+            li.product {
+                width: 100%;
+                padding: 0;
+                margin: 0 0 10px;
             }
         }
     }

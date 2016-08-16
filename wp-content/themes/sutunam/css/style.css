@@ -2732,7 +2732,9 @@ h6 {
 .single-product div.product .product-container {
   float: left;
   width: 100%;
+  max-height: 768px;
   position: relative;
+  overflow: hidden;
 }
 
 .single-product div.product .onsale {

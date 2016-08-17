@@ -163,6 +163,7 @@
         }
         .product_meta {
             color: $header-bg;
+            display: none;
             a {
                 color: $search-input-bd;
                 @include font('font-roboto-medium');
@@ -268,6 +269,11 @@
                 margin: 25px 0;
                 padding: 0 40px;
             }
+            .btn-filter,
+            .btn-close,
+            #placeHolder {
+                display: none;
+            }
             ul.products {
                 li.product {
                     width: 25%;
@@ -277,34 +283,92 @@
                             margin: 0 0 10px;
                         }
                     }
-                    h3 {
-                        color: $header-bg;
-                        font-size: 13px;
+                    .info {
                         float: left;
-                        padding: 0 10px 10px;
+                        min-height: 35px;
+                        width: 50%;
+                        padding: 0 10px;
+                        h3 {
+                            color: $main-color;
+                            font-size: 13px;
+                            line-height: normal;
+                            padding: 0 0 5px;
+                        }
+                        h4 {
+                            color: $main-color;
+                            font-size: 13px;
+                            @include font('font-roboto-medium');
+                            line-height: normal;
+                            margin: 0;
+                            @include opacity(0.5);
+                        }
                     }
                     .onsale {
-                        top: auto;
-                        right: auto;
-                        bottom: 45px;
+                        top: 10px;
                         left: 10px;
+                        right: auto;
                         margin: 0;
                     }
                     .star-rating {
-                        color: $header-bg;
+                        color: $main-color;
                         display: none;
                         margin: 0 10px;
                     }
                     .price {
+                        color: $main-color;
+                        font-size: 13px;
+                        font-weight: bold;
                         float: right;
+                        line-height: normal;
+                        min-height: 35px;
                         margin: 0 10px;
-                        del, ins {
-                            display: inline-block;
-                            vertical-align: top;
+                        position: relative;
+                        del {
+                            @include font('font-roboto-medium');
+                            margin: 0;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                        }
+                        ins {
+                            @include font('font-roboto-bold');
+                            text-decoration: none;
                         }
                     }
                     .button {
                         display: none;
+                    }
+                }
+                .slick-prev, .slick-next {
+                    background: $black;
+                    height: 40px;
+                    width: 40px;
+                    &:before {
+                        font-size: 25px;
+                        @include font('font-awesome');
+                        @include opacity(1);
+                    }
+                }
+                .slick-prev {
+                    left: 0;
+                    &:before {
+                        content: "\f104";
+                    }
+                }
+                .slick-next {
+                    right: 0;
+                    &:before {
+                        content: "\f105";
+                    }
+                }
+            }
+        }
+
+        @include bp(max-width, $desktop - 1) {
+            .related.products {
+                ul.products {
+                    li.product {
+                        width: 33.333%;
                     }
                 }
             }
@@ -351,6 +415,21 @@
                 h2 {
                     text-align: center;
                     padding: 0 15px;
+                }
+                ul.products {
+                    li.product {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        @include bp(max-width, $mobile) {
+            .related.products {
+                ul.products {
+                    li.product {
+                        width: 100%;
+                    }
                 }
             }
         }

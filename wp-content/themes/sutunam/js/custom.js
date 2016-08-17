@@ -188,6 +188,41 @@
                 $('.product').removeClass('hide');
                 $(this).hide();
             })
+        },
+
+        relateProductSlider: function() {
+            var relateProduct = $('.related .products');
+            if(relateProduct.length) {
+                relateProduct.slick({
+                    slide: 'li',
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    responsive: [
+                        {
+                            breakpoint: $desktop - 1,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: $tablet - 1,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            };
         }
     };
 
@@ -222,6 +257,9 @@
 
         // Search toggle
         customJS.searchToggle();
+
+        // Relate product slider
+        customJS.relateProductSlider();
     });
 
     /* Window resize function */

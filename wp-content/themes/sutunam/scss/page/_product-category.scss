@@ -41,10 +41,11 @@
                 border: 2px solid $product-select-bd;
                 @include border-radius(0);
                 @include box-shadow(none);
-                color: $product-select-color;
+                color: $main-color;
                 font-size: 14px;
+                font-weight: bold;
                 text-shadow: none;
-                padding: 9px 25px 9px 10px;
+                padding: 8px 25px 8px 10px;
                 outline: none;
                 &:focus {
                     outline: none !important;
@@ -62,6 +63,7 @@
                         font-size: 14px;
                         @include font('font-roboto-medium');
                         padding: 3px 10px;
+                        outline: none;
                         @include transition();
                     }
                 }
@@ -69,7 +71,8 @@
         }
     }
 
-    .btn-filter {
+    .btn-filter,
+    .btn-close {
         display: none;
     }
 
@@ -80,11 +83,15 @@
             > li.ft-field {
                 float: left;
                 margin-right: 12px;
+                &:last-child {
+                    margin-right: 0;
+                }
                 > span.ft-label {
                     border: 2px solid $product-select-bd;
-                    color: $product-select-color;
+                    color: $main-color;
+                    font-weight: bold;
                     display: block;
-                    padding: 11px 12px;
+                    padding: 10px 12px;
                     &:before {
                         display: none;
                     }
@@ -162,14 +169,34 @@
                             @include font('font-roboto-medium');
                             font-weight: normal;
                             text-shadow: none;
-                            padding: 5px 30px 5px 10px;
+                            padding: 10px 10px 10px 38px;
                             @include transition();
                             &:after {
-                                background: $left-menu-bg;
-                                right: 10px;
+                                @include border-radius(0);
+                                @include box-shadow(none);
+                                background: $filter-item-bg;
+                                content: "";
+                                font-size: 0;
+                                height: 18px;
+                                width: 18px;
+                                padding: 0;
+                                left: 10px;
+                                right: auto;
+                                @include transition();
                             }
                             &:hover {
                                 background: $filter-item-bg;
+                                &:after {
+                                    background: $left-menu-bg;
+                                }
+                            }
+                            &.ft-hidden {
+                                color: $main-color;
+                                display: block !important;
+                                @include font('font-roboto-bold');
+                                &:after {
+                                    background: $main-color;
+                                }
                             }
                         }
                     }
@@ -190,13 +217,25 @@
                     margin: 0 0 10px;
                 }
             }
-            h3 {
-                color: $main-color;
-                font-size: 13px;
-                line-height: 1.4;
+            .info {
                 float: left;
+                min-height: 35px;
                 width: 50%;
-                padding: 0 10px 5px;
+                padding: 0 10px;
+                h3 {
+                    color: $main-color;
+                    font-size: 13px;
+                    line-height: normal;
+                    padding: 0 0 5px;
+                }
+                h4 {
+                    color: $main-color;
+                    font-size: 13px;
+                    @include font('font-roboto-medium');
+                    line-height: normal;
+                    margin: 0;
+                    @include opacity(0.5);
+                }
             }
             .onsale {
                 background: $sale-tag-bg;
@@ -224,10 +263,15 @@
                 font-size: 13px;
                 font-weight: bold;
                 float: right;
+                line-height: normal;
+                min-height: 35px;
                 margin: 0 10px;
+                position: relative;
                 del {
                     @include font('font-roboto-medium');
-                    margin-bottom: 5px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
                 }
                 ins {
                     @include font('font-roboto-bold');
@@ -253,7 +297,6 @@
     .show-products {
         text-align: center;
         span {
-            @include border-radius(50%);
             background: $white;
             color: $left-menu-bg;
             cursor: pointer;
@@ -261,31 +304,10 @@
             line-height: normal;
             display: inline-block;
             vertical-align: top;
-            width: 80px;
-            height: 80px;
-            padding: 20px 10px;
-            position: relative;
+            padding: 10px 20px;
             @include transition();
-            &:after {
-                content: "";
-                display: block;
-                height: 0;
-                width: 0;
-                background: none;
-                border-top: 6px solid $left-menu-bg;
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-                position: absolute;
-                bottom: 15px;
-                left: 50%;
-                margin-left: -5px;
-                @include transition();
-            }
             &:hover {
                 color: $main-color;
-                &:after {
-                    border-top-color: $main-color;
-                }
             }
         }
     }
@@ -318,6 +340,99 @@
                 left: 0;
                 width: 100%;
                 padding: 0 8.25%;
+            }
+        }
+        .btn-filter {
+            background: none;
+            border: 2px solid $product-select-bd;
+            display: inline-block;
+            vertical-align: middle;
+            color: $main-color;
+            font-weight: bold;
+            line-height: normal;
+            margin: 0 10px 10px;
+            padding: 10px 12px;
+            outline: none;
+        }
+        .btn-close {
+            background: $black;
+            border: none;
+            color: $white;
+            font-size: 25px;
+            height: 40px;
+            width: 40px;
+            margin-left: -20px;
+            outline: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1111;
+        }
+        #placeHolder {
+            background: $white;
+            display: none;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding-top: 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 111;
+            overflow-x: hidden;
+            overflow-y: auto;
+            ul.ft-menu {
+                > li.ft-field {
+                    border-bottom: 1px solid $product-select-bd;
+                    display: block;
+                    float: none;
+                    margin: 0;
+                    &:last-child {
+                        border: none;
+                    }
+                    > span.ft-label {
+                        border: none;
+                        color: $left-menu-bg;
+                        font-weight: normal;
+                        padding: 16px 12px;
+                        &:after {
+                            margin: -2px 0 0;
+                            position: absolute;
+                            top: 50%;
+                            right: 12px;
+                        }
+                        &.ft-clicked {
+                            color: $main-color;
+                            font-weight: bold;
+                            &:after {
+                                border-top: none;
+                                border-bottom: 4px solid;
+                            }
+                        }
+                    }
+                    > div.ft-panel {
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        ul.products {
+            li.product {
+                width: 50%;
+            }
+        }
+    }
+
+    @include bp(max-width, $mobile) {
+        ul.products {
+            margin: 0;
+            li.product {
+                width: 100%;
+                padding: 0;
+                margin: 0 0 10px;
             }
         }
     }

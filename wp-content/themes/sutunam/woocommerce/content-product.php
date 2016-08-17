@@ -122,17 +122,17 @@ $i =0;
 }
 $price = $product->price;
 if ($price <= 100000){
-	$filterPrice = '0 - 100.000 VND';
+	$filterPrice = '< 100.000 VND';
 }elseif($price > 100000 && $price <= 200000){
-	$filterPrice = '100.000 VND - 200.000 VND';
+	$filterPrice = '> 100.000 VND';
 }elseif($price > 200000 && $price <= 300000){
-	$filterPrice = '200.000 VND - 300.000 VND';
+	$filterPrice = '> 200.000 VND';
 }elseif($price > 300000 && $price <= 400000){
-	$filterPrice = '300.000 VND - 400.000 VND';
+	$filterPrice = '> 300.000 VND';
 }elseif($price > 400000 && $price <= 500000){
-	$filterPrice = '400.000 VND - 500.000 VND';
+	$filterPrice = '> 400.000 VND';
 }else{
-	$filterPrice = '500.000 VND trở lên';
+	$filterPrice = '> 500.000 VND';
 }
 ?>
 <?php
@@ -158,9 +158,12 @@ if($woocommerce_loop['loop'] > 8)
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 
 	?>
-	<h3><?php echo $product->sku;?></h3>
-	<h3><?php echo get_the_title();?></h3>
-	
+    <div class="info">
+        <?php if($product->sku): ?>
+        <h3><?php echo $product->sku; ?></h3>
+        <?php endif; ?>
+        <h4><?php echo get_the_title();?></h4>
+    </div>
 	<?php
 
 

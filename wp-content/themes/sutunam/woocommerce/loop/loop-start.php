@@ -16,6 +16,7 @@
  */
 ?>
 <button class="btn-filter" type="button"><?php echo __('Filter','sutunam') ?></button>
+<button class="btn-close" type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
 
 <div id="placeHolder"></div>
 

@@ -8,6 +8,14 @@
         &.no-feature {
             min-height: 550px;
         }
+        .content-block-body {
+            a {
+                border-color: $white;
+                &:hover {
+                    background: none;
+                }
+            }
+        }
     }
     .content-block-img {
         img {
@@ -26,9 +34,6 @@
             img {
                 left: 0;
             }
-        }
-        .content-block-body {
-            left: 16.5%;
         }
     }
     .women-option-2,
@@ -59,14 +64,6 @@
     @include bp(max-width, $laptop) {
         .content-block {
             &.no-feature {
-                min-height: 255px;
-            }
-        }
-    }
-
-    @include bp(max-width, $tablet - 1) {
-        .content-block {
-            &.no-feature {
                 min-height: inherit;
             }
         }
@@ -77,13 +74,6 @@
         .content-block-img {
             img {
                 position: static;
-            }
-        }
-        .women-option-1,
-        .women-option-3,
-        .women-option-5 {
-            .content-block-body {
-                left: 50%;
             }
         }
     }

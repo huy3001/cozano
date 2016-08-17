@@ -28,14 +28,25 @@ h1, h2, h3, h4, h5, h6 {
 
 #wrapper {
     min-height: 100%;
+    margin: 0 auto;
     padding-top: $header-height;
     overflow-x: hidden;
     &:after {
         content: "";
         display: block;
     }
+    @include bp(min-width, $full-desktop) {
+        max-width: $full-desktop;
+    }
+    @include bp(max-width, $full-desktop) {
+        max-width: $huge-desktop;
+    }
+    @include bp(max-width, $huge-desktop) {
+        max-width: $desktop;
+    }
     @include bp(max-width, $desktop) {
         height: 100%;
+        max-width: 100%;
         overflow-y: hidden;
         .no-sidebar & {
             height: auto;
@@ -47,8 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 .back-top {
     background: $white;
     color: $left-menu-bg;
+    font-size: 13px;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 30px 10px 20px;
     position: fixed;
     bottom: -40px;
     right: 0;
@@ -72,5 +84,60 @@ h1, h2, h3, h4, h5, h6 {
         &:after {
             border-bottom-color: $header-bg;
         }
+    }
+}
+
+.button-style {
+    &.black {
+        background: $header-bg;
+        border-color: $header-bg;
+        color: $white;
+        &:hover {
+            background: transparent;
+            color: $main-color;
+        }
+        &.border {
+            background: transparent;
+            color: $header-bg;
+            &:hover {
+                background: $header-bg;
+                color: $white;
+            }
+        }
+    }
+    &.white {
+        background: $white;
+        border-color: $white;
+        color: $main-color;
+        &:hover {
+            background: transparent;
+            color: $white;
+        }
+        &.border {
+            background: transparent;
+            color: $white;
+            &:hover {
+                background: $white;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+@media (max-width: $laptop - 1) and (min-width: $mobile + 1) {
+    .visible-sm {
+        display: block !important;
+    }
+}
+
+@media (max-width: $tablet - 1){
+    .visible-xs {
+        display: none !important;
+    }
+}
+
+@media (max-width: $mobile){
+    .visible-xs {
+        display: block !important;
     }
 }

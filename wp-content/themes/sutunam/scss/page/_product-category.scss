@@ -108,7 +108,7 @@
                         border-right: 4px solid transparent;
                         margin-left: 15px;
                     }
-                    &.ft-opened {
+                    &.ft-clicked {
                         background: $white;
                         border-color: $white;
                         &:after {
@@ -402,12 +402,10 @@
                             right: 12px;
                         }
                         &.ft-clicked {
+                            background: none;
+                            border: none;
                             color: $main-color;
                             font-weight: bold;
-                            &:after {
-                                border-top: none;
-                                border-bottom: 4px solid;
-                            }
                         }
                     }
                     > div.ft-panel {
@@ -427,6 +425,11 @@
     }
 
     @include bp(max-width, $mobile) {
+        .cat-header {
+            .page-title {
+                font-size: 40px;
+            }
+        }
         ul.products {
             margin: 0;
             li.product {

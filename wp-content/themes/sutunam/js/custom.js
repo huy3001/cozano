@@ -135,49 +135,45 @@
                     ftPanel = $('.ft-panel', ftMenu),
                     sortingBtn = $('.woocommerce-ordering .dropdown-toggle');
                 if(ftMenu.length) {
-                    if($(window).width() > $laptop - 1) {
-                        filterPanel.removeAttr('style');
-                        ftLabel.on('click', function() {
-                            ftLabel.removeClass('ft-opened');
-                            ftPanel.addClass('ft-hidden');
-                            $(this).addClass('ft-opened');
-                            $(this).parents('.ft-field').find('.ft-panel').removeClass('ft-hidden');
-                            sortingBtn.parents('.bootstrap-select').removeClass('open');
-                        });
-                    }
-                    else {
-                        var closeBtn = $('.btn-close'),
-                            filterBtn = $('.btn-filter');
-                        filterBtn.off('click').on('click', function() {
-                            closeBtn.fadeIn(300);
-                            filterPanel.fadeIn(300);
-                            $('body').css('overflow-y', 'hidden');
-                        });
-                        closeBtn.off('click').on('click', function() {
-                            $(this).fadeOut(300);
-                            filterPanel.fadeOut(300);
-                            $('body').css('overflow-y', 'auto');
-                        });
-                        ftLabel.off('click').on('click', function() {
-                            if($(this).hasClass('ft-clicked')) {
-                                $(this).removeClass('ft-clicked');
-                            }
-                            else {
-                                $(this).addClass('ft-clicked');
-                            }
-                            $(this).parent().siblings().find('.ft-clicked').removeClass('ft-clicked');
-                            $(this).parent().siblings().find('.ft-panel').slideUp(300);
-                            $(this).parent().find('.ft-panel').slideUp(300);
-                            if(!$(this).next('.ft-panel').is(':visible')) {
-                                $(this).next('.ft-panel').slideDown(300);
-                            }
-                        });
-                    }
+                    ftLabel.off('click').on('click', function() {
+                        if($(this).hasClass('ft-clicked')) {
+                            $(this).removeClass('ft-clicked');
+                        }
+                        else {
+                            $(this).addClass('ft-clicked');
+                        }
+                        $(this).parent().siblings().find('.ft-clicked').removeClass('ft-clicked');
+                        $(this).parent().siblings().find('.ft-panel').slideUp(300);
+                        $(this).parent().find('.ft-panel').slideUp(300);
+                        if(!$(this).next('.ft-panel').is(':visible')) {
+                            $(this).next('.ft-panel').slideDown(300);
+                        }
+                        sortingBtn.parents('.bootstrap-select').removeClass('open');
+                    });
                 }
+
                 if(sortingBtn.length) {
                     sortingBtn.on('click', function() {
-                        ftLabel.removeClass('ft-opened');
-                        ftPanel.addClass('ft-hidden');
+                        ftLabel.removeClass('ft-clicked');
+                        ftPanel.slideUp(300);
+                    });
+                }
+
+                if($(window).width() > $laptop - 1) {
+                    filterPanel.removeAttr('style');
+                }
+                else {
+                    var closeBtn = $('.btn-close'),
+                        filterBtn = $('.btn-filter');
+                    filterBtn.off('click').on('click', function() {
+                        closeBtn.fadeIn(300);
+                        filterPanel.fadeIn(300);
+                        $('body').css('overflow-y', 'hidden');
+                    });
+                    closeBtn.off('click').on('click', function() {
+                        $(this).fadeOut(300);
+                        filterPanel.fadeOut(300);
+                        $('body').css('overflow-y', 'auto');
                     });
                 }
             }, 100);

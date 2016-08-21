@@ -196,14 +196,14 @@
                     infinite: false,
                     responsive: [
                         {
-                            breakpoint: $desktop - 1,
+                            breakpoint: $desktop,
                             settings: {
                                 slidesToShow: 3,
                                 slidesToScroll: 1
                             }
                         },
                         {
-                            breakpoint: $tablet - 1,
+                            breakpoint: $tablet,
                             settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1

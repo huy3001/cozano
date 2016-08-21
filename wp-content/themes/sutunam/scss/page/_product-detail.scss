@@ -279,6 +279,7 @@
                     width: 25%;
                     margin: 0;
                     a {
+                        outline: none;
                         img {
                             margin: 0 0 10px;
                         }
@@ -343,10 +344,14 @@
                     background: $black;
                     height: 40px;
                     width: 40px;
+                    z-index: 1;
                     &:before {
                         font-size: 25px;
                         @include font('font-awesome');
                         @include opacity(1);
+                    }
+                    &.slick-disabled {
+                        z-index: -1 !important;
                     }
                 }
                 .slick-prev {
@@ -378,6 +383,17 @@
             .product-description {
                 .desc-detail {
                     padding: 0 5%;
+                }
+            }
+            .related.products {
+                ul.products {
+                    li.product {
+                        clear: inherit;
+                        &:nth-child(2n) {
+                            clear: inherit !important;
+                            float: left;
+                        }
+                    }
                 }
             }
         }

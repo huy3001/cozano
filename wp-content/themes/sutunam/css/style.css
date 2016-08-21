@@ -2623,8 +2623,13 @@ h6 {
   border: 2px solid #dfdfdf;
   color: #303030;
   font-weight: bold;
+  text-transform: capitalize;
   display: block;
   padding: 10px 12px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > span.ft-label:before {
@@ -2715,6 +2720,7 @@ h6 {
 
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags {
   border: none;
+  max-height: inherit !important;
 }
 
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li {

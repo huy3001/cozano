@@ -90,8 +90,10 @@
                     border: 2px solid $product-select-bd;
                     color: $main-color;
                     font-weight: bold;
+                    text-transform: capitalize;
                     display: block;
                     padding: 10px 12px;
+                    @include transition();
                     &:before {
                         display: none;
                     }
@@ -160,6 +162,7 @@
                     }
                     > ul.ft-tags {
                         border: none;
+                        max-height: inherit !important;
                         > li {
                             @include box-shadow(none);
                             background: none;

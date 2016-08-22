@@ -23,6 +23,7 @@ global $post, $woocommerce, $product;
 
 ?>
 <div class="images">
+    <ul class="image-list">
 	<?php
 		if ( has_post_thumbnail() ) {
 			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
@@ -39,14 +40,14 @@ global $post, $woocommerce, $product;
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_caption, $image ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s">%s</a></li>', $image_link, $image_caption, $image ), $post->ID );
 			$attachment_ids = $product->get_gallery_attachment_ids();
 			if ( $attachment_ids ) {
 				foreach ( $attachment_ids as $attachment_id ) {
 					$image_link    = wp_get_attachment_url( $attachment_id );
 					$img = wp_get_attachment_image_src($attachment_id,'large')[0];
 
-					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '"><img src="%s" /></a>', $image_link, '', $img ), $attachment_id );
+					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s"><img src="%s" /></a></li>', $image_link, '', $img ), $attachment_id );
 				}
 			}
 		} else {
@@ -55,6 +56,7 @@ global $post, $woocommerce, $product;
 
 		}
 	?>
+    </ul>
 
 	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 </div>

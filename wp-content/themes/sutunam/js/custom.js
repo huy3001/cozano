@@ -219,6 +219,49 @@
                     ]
                 });
             };
+        },
+
+        productDetailSlider: function() {
+            var imageList = $('.image-list'),
+                thumbList = $('.thumb-list'),
+                thumbCount = $('li', thumbList).length;
+            console.log(thumbCount);
+            if(imageList.length) {
+                imageList.slick({
+                    arrows: false,
+                    asNavFor: '.thumb-list',
+                    fade: false,
+                    slide: 'li',
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    swipe: false,
+                    responsive: [
+                        {
+                            breakpoint: $tablet,
+                            settings: {
+                                arrows: true,
+                                asNavFor: '',
+                                dots: true,
+                                swipe: true
+                            }
+                        }
+                    ]
+                });
+                thumbList.slick({
+                    arrows: false,
+                    asNavFor: '.image-list',
+                    focusOnSelect: true,
+                    slide: 'li',
+                    slidesToShow: thumbCount,
+                    slidesToScroll: 0,
+                    swipe: false,
+                    vertical: true
+                });
+            };
+
+            $('li a', thumbList).on('click', function(e) {
+                e.preventDefault();
+            });
         }
     };
 
@@ -256,6 +299,9 @@
 
         // Relate product slider
         customJS.relateProductSlider();
+
+        // Product detail slider
+        customJS.productDetailSlider();
     });
 
     /* Window resize function */

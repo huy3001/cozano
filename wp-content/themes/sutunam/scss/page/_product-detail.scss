@@ -56,6 +56,7 @@
                     border: 1px solid $search-input-bd;
                     float: left;
                     margin-bottom: 10px;
+                    width: auto !important;
                     &:last-child {
                         margin-bottom: 0;
                     }
@@ -83,6 +84,7 @@
             font-size: 30px;
         }
         .woocommerce-product-rating {
+            display: none;
             margin-bottom: 10px;
             .star-rating {
                 margin: 6px 5px 0 0;
@@ -401,6 +403,25 @@
         }
 
         @include bp(max-width, $laptop - 1) {
+            .product-container {
+                max-height: inherit;
+            }
+            .images {
+                position: relative;
+                .thumbnails {
+                    bottom: 20px;
+                    left: 20px;
+                    a {
+                        width: 52px !important;
+                        height: 52px !important;
+                    }
+                }
+            }
+            .summary {
+                width: 100% !important;
+                position: static;
+                @include transform(none);
+            }
             .product-description {
                 .desc-detail {
                     padding: 0 5%;
@@ -420,7 +441,66 @@
         }
 
         @include bp(max-width, $tablet - 1) {
+            .onsale {
+                left: auto;
+                right: 10px;
+            }
             .images {
+                .image-list {
+                    .slick-prev, .slick-next {
+                        height: 40px;
+                        width: 40px;
+                        z-index: 1;
+                        &:before {
+                            color: $left-menu-bg;
+                            font-size: 25px;
+                            @include font('font-awesome');
+                            @include opacity(1);
+                        }
+                        &.slick-disabled {
+                            z-index: -1 !important;
+                        }
+                    }
+                    .slick-prev {
+                        left: 0;
+                        &:before {
+                            content: "\f104";
+                        }
+                    }
+                    .slick-next {
+                        right: 0;
+                        &:before {
+                            content: "\f105";
+                        }
+                    }
+                    .slick-dots {
+                        text-align: left;
+                        width: auto;
+                        bottom: auto;
+                        left: 7px;
+                        top: 0;
+                        li {
+                            height: 6px;
+                            width: 6px;
+                            margin: 0 3px;
+                            button {
+                                @include border-radius(50%);
+                                background: $product-slider-dot;
+                                height: 6px;
+                                width: 6px;
+                                padding: 0;
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                            &.slick-active {
+                                button {
+                                    background: $left-menu-bg;
+                                }
+                            }
+                        }
+                    }
+                }
                 .thumbnails {
                     display: none;
                 }

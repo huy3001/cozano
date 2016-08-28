@@ -218,7 +218,7 @@
                         }
                     ]
                 });
-            };
+            }
         },
 
         productDetailSlider: function() {
@@ -257,7 +257,7 @@
                     swipe: false,
                     vertical: true
                 });
-            };
+            }
 
             $('li a', thumbList).on('click', function(e) {
                 e.preventDefault();

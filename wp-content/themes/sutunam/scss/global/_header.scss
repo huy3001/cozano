@@ -85,7 +85,7 @@
     .search-form {
         position: absolute;
         top: 0;
-        right: 110px;
+        right: 80px;
         height: 100%;
         input {
             @include border-radius(0);
@@ -208,7 +208,6 @@
             right: 140px;
         }
         .search-form {
-            right: 190px;
             .search-item {
                 display: none;
                 position: fixed;

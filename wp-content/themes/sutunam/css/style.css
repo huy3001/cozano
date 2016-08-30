@@ -762,7 +762,7 @@ h6 {
 #header .search-form {
   position: absolute;
   top: 0;
-  right: 110px;
+  right: 80px;
   height: 100%;
 }
 
@@ -948,10 +948,6 @@ h6 {
 
   #header .language {
     right: 140px;
-  }
-
-  #header .search-form {
-    right: 190px;
   }
 
   #header .search-form .search-item {
@@ -2519,6 +2515,7 @@ h6 {
 }
 
 .tax-product_cat .cat-header .cat-info {
+  display: none;
   width: 25%;
   position: absolute;
   left: 8.25%;

@@ -74,7 +74,8 @@
 
         searchToggle: function() {
             var toggleSearch = $('.search-form .toggle-search'),
-                searchItem = $('.search-form .search-item');
+                searchItem = $('.search-form .search-item'),
+                searchTarget = $('.search-form .toggle-search, .search-form .search-item');
             if($(window).width() < $desktop + 1) {
                 if(toggleSearch.length) {
                     toggleSearch.off('click').on('click', function() {
@@ -92,7 +93,7 @@
                 }
                 $(document).on('click', function(e) {
                     var target = e.target;
-                    if (!$(target).is(toggleSearch, searchItem) && !$(target).parents().is(toggleSearch, searchItem)) {
+                    if (!$(target).is(searchTarget) && !$(target).parents().is(searchTarget)) {
                         searchItem.slideUp(300);
                     }
                 });
@@ -225,7 +226,6 @@
             var imageList = $('.image-list'),
                 thumbList = $('.thumb-list'),
                 thumbCount = $('li', thumbList).length;
-            console.log(thumbCount);
             if(imageList.length) {
                 imageList.slick({
                     arrows: false,

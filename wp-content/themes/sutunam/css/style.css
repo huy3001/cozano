@@ -3436,6 +3436,28 @@ h6 {
   margin: 0 0 10px;
 }
 
+.single-product div.product .related.products ul.products li.product .image {
+  height: 550px;
+  height: 38.2vh;
+  width: 100%;
+  margin: 0 0 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-product div.product .related.products ul.products li.product .image img {
+  height: 100%;
+  width: auto;
+  max-width: inherit;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .single-product div.product .related.products ul.products li.product .info {
   float: left;
   min-height: 35px;

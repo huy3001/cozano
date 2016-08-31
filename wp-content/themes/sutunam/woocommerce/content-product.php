@@ -148,7 +148,10 @@ if($woocommerce_loop['loop'] > 8)
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
 	do_action( 'woocommerce_before_shop_loop_item' );
+	?>
 
+	<div class="image">
+	<?php
 	/**
 	 * woocommerce_before_shop_loop_item_title hook.
 	 *
@@ -156,17 +159,17 @@ if($woocommerce_loop['loop'] > 8)
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
-
 	?>
-    <div class="info">
+	</div>
+
+	<div class="info">
         <?php if($product->sku): ?>
         <h3><?php echo $product->sku; ?></h3>
         <?php endif; ?>
         <h4><?php echo get_the_title();?></h4>
     </div>
+
 	<?php
-
-
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
 	 *

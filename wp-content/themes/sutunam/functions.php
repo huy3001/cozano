@@ -321,8 +321,7 @@ add_action( 'woocommerce_before_add_to_cart_button', 'add_content_before_addtoca
 
 function add_content_before_addtocart_button_func() {
     global $product;
-    $sizes = get_the_terms( get_the_ID(), 'size' );
-    var_dump($sizes);die;
+    $sizes = get_the_terms( get_the_ID(), 'color' );
     echo '<select>';
     echo '<option value="">size</option>';
     foreach ($sizes as $size){

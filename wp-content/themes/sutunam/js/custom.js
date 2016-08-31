@@ -128,7 +128,20 @@
         },
 
         filterProduct: function () {
-            $.filtrify('product-category', 'placeHolder');
+            var ft = $.filtrify('product-category', 'placeHolder', {
+                close : true,
+                callback : function( query, match, mismatch ) {
+                    if ( mismatch.length )
+                        $("div.reset-filter").show();
+                    else
+                        $("div.reset-filter").hide();
+                }
+            });
+
+            $("div.reset-filter").click(function() {
+                ft.reset();
+            });
+            
             setTimeout(function() {
                 var filterPanel = $('#placeHolder'),
                     ftMenu = $('.ft-menu'),

@@ -70,9 +70,9 @@ $i =0;
 ?>
 <?php foreach($colors as $item){
     if($i == 0)
-		$color = $item->name;
+		$color = $item->name.'-'.get_term_meta($item->term_id, 'color', true);
     else
-		$color .= ', '.$item->name;
+		$color .= ', '.$item->name.'-'.get_term_meta($item->term_id, 'color', true);
     $i++;
 }
 ?>

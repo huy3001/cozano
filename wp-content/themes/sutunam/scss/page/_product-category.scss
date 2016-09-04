@@ -202,10 +202,41 @@
                                     background: $main-color;
                                 }
                             }
+                            &.filter-color {
+                                i {
+                                    content: "";
+                                    display: block;
+                                    height: 18px;
+                                    width: 18px;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 10px;
+                                    margin-top: -9px;
+                                    @include transition();
+                                }
+                                &:after {
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }
             }
+        }
+    }
+
+    .reset-filter {
+        background: $black;
+        cursor: pointer;
+        color: $white;
+        font-size: 25px;
+        float: left;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        margin: 0 10px 10px 0;
+        i {
+            vertical-align: middle;
         }
     }
 

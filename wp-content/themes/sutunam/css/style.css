@@ -2777,6 +2777,41 @@ h6 {
   background: #303030;
 }
 
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.filter-color i {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -9px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.filter-color:after {
+  display: none;
+}
+
+.tax-product_cat .reset-filter {
+  background: #000000;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 25px;
+  float: left;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+}
+
+.tax-product_cat .reset-filter i {
+  vertical-align: middle;
+}
+
 .tax-product_cat ul.products {
   margin: 0 -1px;
 }

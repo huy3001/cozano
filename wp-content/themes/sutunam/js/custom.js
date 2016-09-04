@@ -138,7 +138,7 @@
                 }
             });
 
-            $("div.reset-filter").click(function() {
+            $('div.reset-filter').on('click', function() {
                 ft.reset();
             });
             
@@ -147,6 +147,7 @@
                     ftMenu = $('.ft-menu'),
                     ftLabel= $('.ft-label', ftMenu),
                     ftPanel = $('.ft-panel', ftMenu),
+                    ftTarget = $('.ft-label, .ft-panel', ftMenu),
                     sortingBtn = $('.woocommerce-ordering .dropdown-toggle');
                 if(ftMenu.length) {
                     ftLabel.off('click').on('click', function() {
@@ -190,6 +191,14 @@
                         $('body').css('overflow-y', 'auto');
                     });
                 }
+
+                $(document).on('click', function(e) {
+                    var target = e.target;
+                    if (!$(target).is(ftTarget) && !$(target).parents().is(ftTarget)) {
+                        ftLabel.removeClass('ft-clicked');
+                        ftPanel.slideUp(300);
+                    }
+                });
             }, 100);
         },
         

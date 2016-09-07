@@ -80,6 +80,27 @@
         }
     }
 
+    .btn-filter {
+        background: none;
+        border: 2px solid $product-select-bd;
+        color: $main-color;
+        font-weight: bold;
+        line-height: normal;
+        margin: 0 10px 10px;
+        padding: 10px 12px;
+        outline: none;
+    }
+    .btn-close {
+        background: none;
+        border: none;
+        color: $left-menu-bg;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        outline: none;
+    }
+
     .btn-filter,
     .btn-close {
         display: none;
@@ -246,6 +267,9 @@
         i {
             vertical-align: middle;
         }
+        span {
+            display: none;
+        }
     }
 
     ul.products {
@@ -411,45 +435,30 @@
             }
         }
         .btn-filter {
-            background: none;
-            border: 2px solid $product-select-bd;
             display: inline-block;
             vertical-align: middle;
-            color: $main-color;
-            font-weight: bold;
-            line-height: normal;
-            margin: 0 10px 10px;
-            padding: 10px 12px;
-            outline: none;
         }
         .btn-close {
-            background: none;
-            border: none;
-            color: $left-menu-bg;
-            font-size: 14px;
-            height: 40px;
-            line-height: 40px;
-            padding: 0 10px;
-            outline: none;
+            width: 45%;
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 80%;
+            left: 12px;
             z-index: 1111;
         }
         #placeHolder {
-            background: $white;
+            background: rgba(255,255,255,0.95);
             display: none;
             width: 100%;
             height: 100%;
             margin: 0;
-            padding-top: 40px;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 111;
-            overflow-x: hidden;
-            overflow-y: auto;
             ul.ft-menu {
+                max-height: 80%;
+                overflow-x: hidden;
+                overflow-y: auto;
                 > li.ft-field {
                     border-bottom: 1px solid $product-select-bd;
                     display: block;
@@ -483,11 +492,21 @@
             }
         }
         .reset-filter {
+            font-size: 14px;
+            line-height: 40px;
+            width: 45%;
             margin: 0;
+            padding: 0 10px;
             position: fixed;
-            top: 0;
-            right: 0;
+            top: 80%;
+            right: 12px;
             z-index: 1111;
+            i {
+                display: none;
+            }
+            span {
+                display: block;
+            }
         }
         ul.products {
             li.product {
@@ -515,6 +534,15 @@
             .page-title {
                 font-size: 40px;
             }
+        }
+        #placeHolder {
+            ul.ft-menu {
+                max-height: 90%;
+            }
+        }
+        .btn-close,
+        .reset-filter {
+            top: 90%;
         }
         ul.products {
             li.product {

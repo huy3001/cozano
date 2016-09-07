@@ -8,6 +8,12 @@ body {
     background: $body-bg;
     color: $header-bg;
     @include font('font-roboto-bold');
+    @include bp(max-width, $desktop) {
+        overflow-y: hidden;
+        &.no-sidebar {
+            overflow-y: auto;
+        }
+    }
 }
 
 img {
@@ -45,13 +51,7 @@ h1, h2, h3, h4, h5, h6 {
         max-width: $desktop;
     }
     @include bp(max-width, $desktop) {
-        height: 100%;
         max-width: 100%;
-        overflow-y: hidden;
-        .no-sidebar & {
-            height: auto;
-            overflow-y: auto;
-        }
     }
 }
 

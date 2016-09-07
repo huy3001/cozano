@@ -428,6 +428,16 @@ body {
   color: #303030;
 }
 
+@media only screen and (max-width: 1200px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  body.no-sidebar {
+    overflow-y: auto;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -486,14 +496,7 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   #wrapper {
-    height: 100%;
     max-width: 100%;
-    overflow-y: hidden;
-  }
-
-  .no-sidebar #wrapper {
-    height: auto;
-    overflow-y: auto;
   }
 }
 
@@ -677,6 +680,11 @@ h6 {
 @media only screen and (max-width: 1200px) {
   #header {
     max-width: 100%;
+    z-index: 1111;
+  }
+
+  .no-sidebar #header {
+    z-index: 111;
   }
 }
 
@@ -1297,6 +1305,10 @@ h6 {
 }
 
 @media only screen and (max-width: 1200px) {
+  .left-content {
+    left: 0;
+  }
+
   .left-content .left-menu {
     max-height: 100%;
     overflow-x: hidden;
@@ -1451,13 +1463,7 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .right-content {
-    left: 0;
     width: 100%;
-    -webkit-transform: translate3d(250px, 0, 0);
-    -moz-transform: translate3d(250px, 0, 0);
-    -o-transform: translate3d(250px, 0, 0);
-    -ms-transform: translate3d(250px, 0, 0);
-    transform: translate3d(250px, 0, 0);
   }
 
   .right-content:before {
@@ -1469,21 +1475,13 @@ h6 {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 11;
+    z-index: 999;
     opacity: 0.5;
     filter: alpha(opacity=50);
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
-  }
-
-  .no-sidebar .right-content {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
 
   .no-sidebar .right-content:before {
@@ -2552,7 +2550,7 @@ h6 {
   float: left;
   width: 100%;
   padding-top: 10px;
-  z-index: 11;
+  z-index: 111;
 }
 
 .tax-product_cat .woocommerce-ordering {
@@ -3013,17 +3011,17 @@ h6 {
   }
 
   .tax-product_cat .btn-close {
-    background: #000000;
+    background: none;
     border: none;
-    color: #ffffff;
-    font-size: 25px;
+    color: #999999;
+    font-size: 14px;
     height: 40px;
-    width: 40px;
-    margin-left: -20px;
+    line-height: 40px;
+    padding: 0 10px;
     outline: none;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1111;
   }
 
@@ -3076,6 +3074,14 @@ h6 {
 
   .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel {
     position: static;
+  }
+
+  .tax-product_cat .reset-filter {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1111;
   }
 
   .tax-product_cat ul.products li.product {

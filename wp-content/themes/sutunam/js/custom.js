@@ -132,7 +132,7 @@
             if(filterBar.length) {
                 filterBar.sticky({
                     topSpacing: 54,
-                    zIndex: 11
+                    zIndex: 111
                 });
             }
         },
@@ -198,7 +198,7 @@
                     closeBtn.off('click').on('click', function() {
                         $(this).fadeOut(300);
                         filterPanel.fadeOut(300);
-                        $('body').css('overflow-y', 'auto');
+                        $('body').removeAttr('style');
                     });
                 }
 

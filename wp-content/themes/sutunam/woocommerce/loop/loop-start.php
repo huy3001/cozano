@@ -16,10 +16,10 @@
  */
 ?>
 <button class="btn-filter" type="button"><?php echo __('Filter','sutunam') ?></button>
-<button class="btn-close" type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+<button class="btn-close" type="button"><?php echo __('Close','sutunam') ?></button>
 
 <div id="placeHolder"></div>
-<div class="reset-filter" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i></div>
+<div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i></div>
 </div><!-- End filter bar -->
 
 <ul class="products" id="product-category">

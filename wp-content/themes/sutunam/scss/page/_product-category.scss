@@ -38,7 +38,7 @@
         float: left;
         width: 100%;
         padding-top: 10px;
-        z-index: 11;
+        z-index: 111;
     }
 
     .woocommerce-ordering {
@@ -423,17 +423,17 @@
             outline: none;
         }
         .btn-close {
-            background: $black;
+            background: none;
             border: none;
-            color: $white;
-            font-size: 25px;
+            color: $left-menu-bg;
+            font-size: 14px;
             height: 40px;
-            width: 40px;
-            margin-left: -20px;
+            line-height: 40px;
+            padding: 0 10px;
             outline: none;
             position: fixed;
             top: 0;
-            right: 0;
+            left: 0;
             z-index: 1111;
         }
         #placeHolder {
@@ -481,6 +481,13 @@
                     }
                 }
             }
+        }
+        .reset-filter {
+            margin: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1111;
         }
         ul.products {
             li.product {

@@ -18,6 +18,10 @@
     }
     @include bp(max-width, $desktop) {
         max-width: 100%;
+        z-index: 1111;
+        .no-sidebar & {
+            z-index: 111;
+        }
     }
     .nav-menu {
         height: 100%;

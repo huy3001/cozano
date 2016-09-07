@@ -34,9 +34,7 @@
     }
 
     @include bp(max-width, $desktop) {
-        left: 0;
         width: 100%;
-        @include transform(translate3d($left-content-width,0,0));
         &:before {
             content: "";
             display: block;
@@ -46,12 +44,11 @@
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 11;
+            z-index: 999;
             @include opacity(0.5);
             @include transition(opacity 0.3s ease);
         }
         .no-sidebar & {
-            @include transform(translate3d(0,0,0));
             &:before {
                 z-index: -1;
                 @include opacity(0);

@@ -20,4 +20,6 @@
 
 <div id="placeHolder"></div>
 <div class="reset-filter" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i></div>
+</div><!-- End filter bar -->
+
 <ul class="products" id="product-category">

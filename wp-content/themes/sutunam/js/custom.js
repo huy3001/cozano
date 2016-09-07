@@ -127,6 +127,16 @@
             );
         },
 
+        filterBarFixed: function() {
+            var filterBar = $('.filter-bar');
+            if(filterBar.length) {
+                filterBar.sticky({
+                    topSpacing: 54,
+                    zIndex: 11
+                });
+            }
+        },
+
         filterProduct: function () {
             var ft = $.filtrify('product-category', 'placeHolder', {
                 close : true,
@@ -300,6 +310,9 @@
         
         // Hover product image
         customJS.moreImageProduct();
+
+        // Filter bar fixed
+        customJS.filterBarFixed();
 
         // Filter product
         customJS.filterProduct();

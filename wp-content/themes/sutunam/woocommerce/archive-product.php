@@ -63,8 +63,10 @@ get_header( 'shop' ); ?>
                     <img src="<?php echo $image;?>" />
                 </div>
             <?php endif;?>
-        </div>
+        </div><!-- End cat header -->
 
+        <!-- Filter bar -->
+        <div class="filter-bar">
 			<?php
 				/**
 				 * woocommerce_before_shop_loop hook.

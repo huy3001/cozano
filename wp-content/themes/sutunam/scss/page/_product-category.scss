@@ -193,6 +193,7 @@
                     }
                     > ul.ft-tags {
                         border: none;
+                        padding: 10px 0;
                         max-height: inherit !important;
                         > li {
                             @include box-shadow(none);
@@ -498,6 +499,9 @@
                     > div.ft-panel {
                         background: none;
                         position: static;
+                        > ul.ft-tags {
+                            padding: 0;
+                        }
                     }
                 }
             }

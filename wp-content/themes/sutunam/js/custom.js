@@ -138,17 +138,18 @@
         },
 
         filterProduct: function () {
+            var resetFilter = $('div.reset-filter');
             var ft = $.filtrify('product-category', 'placeHolder', {
                 close : true,
                 callback : function( query, match, mismatch ) {
                     if ( mismatch.length )
-                        $("div.reset-filter").show();
+                        resetFilter.show();
                     else
-                        $("div.reset-filter").hide();
+                        resetFilter.hide();
                 }
             });
 
-            $('div.reset-filter').on('click', function() {
+            resetFilter.on('click', function() {
                 ft.reset();
             });
             
@@ -157,6 +158,7 @@
                     ftMenu = $('.ft-menu'),
                     ftLabel= $('.ft-label', ftMenu),
                     ftPanel = $('.ft-panel', ftMenu),
+                    ftTags = $('.ft-tags', ftPanel),
                     ftTarget = $('.ft-label, .ft-panel', ftMenu),
                     sortingBtn = $('.woocommerce-ordering .dropdown-toggle');
                 if(ftMenu.length) {
@@ -174,6 +176,12 @@
                             $(this).next('.ft-panel').slideDown(300);
                         }
                         sortingBtn.parents('.bootstrap-select').removeClass('open');
+                    });
+
+                    ftTags.each(function() {
+                        if($(this).find('li').length > 10) {
+                            $(this).addClass('ft-columns');
+                        }
                     });
                 }
 
@@ -198,6 +206,7 @@
                     closeBtn.off('click').on('click', function() {
                         $(this).fadeOut(300);
                         filterPanel.fadeOut(300);
+                        resetFilter.hide();
                         $('body').removeAttr('style');
                     });
                 }

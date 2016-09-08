@@ -179,6 +179,7 @@
                     }
                     > ul.ft-selected {
                         background: none;
+                        display: none !important;
                         padding: 10px;
                         > li {
                             @include border-radius(0);
@@ -203,6 +204,9 @@
                             font-weight: normal;
                             text-shadow: none;
                             padding: 10px 10px 10px 38px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
                             @include transition();
                             &:after {
                                 @include border-radius(0);
@@ -246,6 +250,12 @@
                                 &:after {
                                     display: none;
                                 }
+                            }
+                        }
+                        &.ft-columns {
+                            > li {
+                                float: left;
+                                width: 50%;
                             }
                         }
                     }
@@ -486,6 +496,7 @@
                         }
                     }
                     > div.ft-panel {
+                        background: none;
                         position: static;
                     }
                 }

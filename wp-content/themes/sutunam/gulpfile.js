@@ -19,10 +19,10 @@ gulp.task('browserSync', function() {
 // Create task for compile sass to css
 gulp.task('sass', function() {
     return gulp.src('scss/style.scss')
-        .pipe(sourcemap.init({loadMaps: true}))
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemap.init())
+        .pipe(sass({sourceComments: 'map'}).on('error', sass.logError))
         .pipe(concatCss('style.css'))
-        .pipe(sourcemap.write('.', {includeContent: false}))
+        .pipe(sourcemap.write())
         .pipe(gulp.dest('css/'))
         .pipe(browserSync.stream({
             match: '**/*.css'

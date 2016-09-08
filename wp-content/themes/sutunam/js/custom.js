@@ -229,7 +229,7 @@
         },
 
         relateProductSlider: function() {
-            var relateProduct = $('.related .products');
+            var relateProduct = $('.single-product ul.products');
             if(relateProduct.length) {
                 relateProduct.slick({
                     slide: 'li',
@@ -238,7 +238,7 @@
                     infinite: false,
                     responsive: [
                         {
-                            breakpoint: $desktop,
+                            breakpoint: $laptop,
                             settings: {
                                 slidesToShow: 3,
                                 slidesToScroll: 1
@@ -248,13 +248,6 @@
                             breakpoint: $tablet,
                             settings: {
                                 slidesToShow: 2,
-                                slidesToScroll: 1
-                            }
-                        },
-                        {
-                            breakpoint: 480,
-                            settings: {
-                                slidesToShow: 1,
                                 slidesToScroll: 1
                             }
                         }

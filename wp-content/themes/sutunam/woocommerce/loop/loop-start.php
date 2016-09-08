@@ -19,7 +19,7 @@
 <button class="btn-close" type="button"><?php echo __('Close','sutunam') ?></button>
 
 <div id="placeHolder"></div>
-<div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i></div>
+<div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i><span><?php echo __('Clear','sutunam') ?></span></div>
 </div><!-- End filter bar -->
 
 <ul class="products" id="product-category">

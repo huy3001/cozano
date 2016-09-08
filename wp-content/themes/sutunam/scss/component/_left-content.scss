@@ -7,7 +7,7 @@
     position: fixed;
     bottom: 0;
     top: $header-height;
-    z-index: 11;
+    z-index: 111;
     @include transition();
     .no-sidebar & {
         left: -$left-content-width;

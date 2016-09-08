@@ -296,6 +296,15 @@
             $('li a', thumbList).on('click', function(e) {
                 e.preventDefault();
             });
+
+            $('li a', imageList).on('click', function(e) {
+                e.preventDefault();
+            });
+
+            $('li a', imageList).elevateZoom({
+                zoomType: 'inner',
+                cursor: 'crosshair'
+            });
         }
     };
 

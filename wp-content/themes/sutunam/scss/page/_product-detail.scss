@@ -586,7 +586,6 @@
             }
             ul.products {
                 li.product {
-                    width: 50%;
                     .image {
                         height: 92.2vh;
                     }
@@ -597,6 +596,7 @@
         @include bp(max-width, $mobile) {
             ul.products {
                 li.product {
+                    width: 50%;
                     .onsale {
                         height: 40px;
                         width: 40px;

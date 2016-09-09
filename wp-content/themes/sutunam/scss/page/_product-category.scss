@@ -536,7 +536,6 @@
     @include bp(max-width, $tablet - 1) {
         ul.products {
             li.product {
-                width: 50%;
                 .image {
                     height: 92.2vh;
                 }
@@ -561,6 +560,7 @@
         }
         ul.products {
             li.product {
+                width: 50%;
                 margin: 0 0 20px;
                 .onsale {
                     height: 40px;

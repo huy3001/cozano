@@ -3,7 +3,8 @@
     // Global variables
     var $desktop = 1200,
         $laptop = 992,
-        $tablet = 768;
+        $tablet = 768,
+        $mobile = 480;
 
     // Global functions
     var customJS = {
@@ -245,7 +246,7 @@
                             }
                         },
                         {
-                            breakpoint: $tablet,
+                            breakpoint: $mobile + 1,
                             settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1

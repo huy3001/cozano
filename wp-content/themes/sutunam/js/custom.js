@@ -272,6 +272,13 @@
                     swipe: false,
                     responsive: [
                         {
+                            breakpoint: $desktop,
+                            settings: {
+                                arrows: true,
+                                swipe: true
+                            }
+                        },
+                        {
                             breakpoint: $tablet,
                             settings: {
                                 arrows: true,

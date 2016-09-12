@@ -410,6 +410,34 @@
 
         @include bp(max-width, $desktop - 1) {
             .images {
+                .image-list {
+                    .slick-prev, .slick-next {
+                        height: 40px;
+                        width: 40px;
+                        z-index: 1;
+                        &:before {
+                            color: $left-menu-bg;
+                            font-size: 25px;
+                            @include font('font-awesome');
+                            @include opacity(1);
+                        }
+                        &.slick-disabled {
+                            z-index: -1 !important;
+                        }
+                    }
+                    .slick-prev {
+                        left: 0;
+                        &:before {
+                            content: "\f104";
+                        }
+                    }
+                    .slick-next {
+                        right: 0;
+                        &:before {
+                            content: "\f105";
+                        }
+                    }
+                }
                 .thumbnails {
                     a {
                         width: 52px !important;
@@ -484,32 +512,6 @@
             }
             .images {
                 .image-list {
-                    .slick-prev, .slick-next {
-                        height: 40px;
-                        width: 40px;
-                        z-index: 1;
-                        &:before {
-                            color: $left-menu-bg;
-                            font-size: 25px;
-                            @include font('font-awesome');
-                            @include opacity(1);
-                        }
-                        &.slick-disabled {
-                            z-index: -1 !important;
-                        }
-                    }
-                    .slick-prev {
-                        left: 0;
-                        &:before {
-                            content: "\f104";
-                        }
-                    }
-                    .slick-next {
-                        right: 0;
-                        &:before {
-                            content: "\f105";
-                        }
-                    }
                     .slick-dots {
                         text-align: left;
                         width: auto;

@@ -140,13 +140,62 @@
 
         filterProduct: function () {
             var resetFilter = $('div.reset-filter');
+            var brand = [];
+            var style = [];
+            var size = [];
+            var material = [];
+            var color = [];
+            var price = [];
+            $("#legend p").each(function(){
+                if($(this).attr('data-title') == 'nhãn hiệu'){
+                    brand.push($(this).text());
+                }
+                if($(this).attr('data-title') == 'kiểu dáng'){
+                    style.push($(this).text());
+                }
+                if($(this).attr('data-title') == 'chất liệu'){
+                    material.push($(this).text());
+                }
+                if($(this).attr('data-title') == 'màu sắc'){
+                    color.push($(this).text());
+                }
+                if($(this).attr('data-title') == 'size'){
+                    size.push($(this).text());
+                }
+                if($(this).attr('data-title') == 'giá'){
+                    price.push($(this).text());
+                }
+            })
             var ft = $.filtrify('product-category', 'placeHolder', {
                 close : true,
+                query : {
+                    "nhãn hiệu" : brand,
+                    "kiểu dáng" : style,
+                    "chất liệu" : material,
+                    "màu sắc" : color,
+                    "size" : size,
+                    "giá" : price
+                },
                 callback : function( query, match, mismatch ) {
-                    if ( mismatch.length )
+                    if ( mismatch.length ) {
                         resetFilter.show();
-                    else
+                        var category, tags, i, tag, legend = "";
+                        for (category in query) {
+                            tags = query[category];
+                            if (tags.length) {
+                                for (i = 0; i < tags.length; i++) {
+                                    tag = tags[i];
+                                    legend += "<p data-title='"+category +"'>" + tag + "</p>";
+                                }
+                            }
+                        }
+                        legend = legend.substring(0,legend.length -1);
+                        $("#legend").html(legend);
+                    }
+                    else{
+                        $("#legend").html("");
                         resetFilter.hide();
+                    }
                 }
             });
 

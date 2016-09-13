@@ -316,11 +316,6 @@
                 min-height: 35px;
                 width: 70%;
                 padding: 0 10px;
-                h3, h4 {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
                 h3 {
                     color: $main-color;
                     font-size: 13px;
@@ -574,6 +569,11 @@
                 }
                 .info {
                     width: 60%;
+                    h3, h4 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
             }
         }

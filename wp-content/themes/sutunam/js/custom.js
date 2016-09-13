@@ -128,6 +128,16 @@
             );
         },
 
+        productMatchHeight: function() {
+            var productItem = $('.tax-product_cat #product-category li.product');
+            if($(window).width() > $tablet - 1) {
+                productItem.matchHeight();
+            }
+            else {
+                productItem.removeAttr('style');
+            }
+        },
+
         filterBarFixed: function() {
             var filterBar = $('.filter-bar');
             if(filterBar.length) {
@@ -400,6 +410,9 @@
         // Search toggle
         customJS.searchToggle();
 
+        // Product match height
+        customJS.productMatchHeight();
+
         // Relate product slider
         customJS.relateProductSlider();
 
@@ -414,6 +427,9 @@
 
         // Search toggle
         customJS.searchToggle();
+
+        // Product match height
+        customJS.productMatchHeight();
 
         // Filter product
         customJS.filterProduct();

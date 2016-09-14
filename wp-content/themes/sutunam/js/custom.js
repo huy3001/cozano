@@ -211,6 +211,7 @@
 
             resetFilter.on('click', function() {
                 ft.reset();
+                customJS.productMatchHeight();
             });
             
             setTimeout(function() {

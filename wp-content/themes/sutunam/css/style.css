@@ -3303,8 +3303,8 @@ h6 {
 
 .tax-product_cat .btn-close {
   background: none;
-  border: none;
-  color: #999999;
+  border: 2px solid #000000;
+  color: #000000;
   font-size: 14px;
   height: 40px;
   line-height: 40px;

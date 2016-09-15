@@ -359,6 +359,32 @@
                     swipe: false,
                     vertical: true
                 });
+
+                setTimeout(function() {
+                    var activeImg = imageList.find('.slick-active img'),
+                        zoomOption = {
+                            zoomType: 'inner',
+                            cursor: 'crosshair'
+                        };
+                    activeImg.on('click', function() {
+                        if(!$('.zoomContainer').length) {
+                            $(this).elevateZoom(zoomOption); // init zoom
+                        }
+                    });
+                    setTimeout(function() {
+                        $('.zoomWindow').on('click', function() {
+                            $.removeData(activeImg, 'elevateZoom'); // remove zoom instance from image
+                            $(this).remove(); // remove zoom container from DOM
+                        });
+                    }, 100);
+
+                    //imageList.on('afterChange', function(event, slick, currentSlide){
+                    //    imageList.find('li[data-slick-index="'+ currentSlide +'"] img').elevateZoom({
+                    //        zoomType: 'inner',
+                    //        cursor: 'crosshair'
+                    //    });
+                    //});
+                }, 100);
             }
 
             $('li a', thumbList).on('click', function(e) {
@@ -367,11 +393,6 @@
 
             $('li a', imageList).on('click', function(e) {
                 e.preventDefault();
-            });
-
-            $('li img', imageList).elevateZoom({
-                zoomType: 'inner',
-                cursor: 'crosshair'
             });
         }
     };

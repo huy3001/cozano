@@ -370,7 +370,7 @@
                         };
 
                     function makeZoom(image) {
-                        image.on('click', function() {
+                        image.off('click').on('click', function() {
                             if($(this).hasClass('zoomed')) {
                                 $(this).removeClass('zoomed');
                                 $(this).removeData('elevateZoom'); // remove zoom instance from image
@@ -389,7 +389,6 @@
 
                     // Remove zoom before slide change
                     imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                        console.log(currentSlide);
                         var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
                         currentImg.removeClass('zoomed');
                         currentImg.removeData('elevateZoom'); // remove zoom instance from image
@@ -398,7 +397,6 @@
 
                     // Zoom after slide change
                     imageList.on('afterChange', function(event, slick, currentSlide) {
-                        console.log(currentSlide);
                         var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
                         makeZoom(currentImg);
                     });

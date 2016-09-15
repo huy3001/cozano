@@ -5,7 +5,7 @@
         .product-container {
             float: left;
             width: 100%;
-            max-height: 768px;
+            max-height: $product-img-height;
             position: relative;
             overflow: hidden;
         }
@@ -32,7 +32,6 @@
                 position: absolute;
                 bottom: 40px;
                 left: 40px;
-                z-index: 1;
                 a {
                     width: 78px !important;
                     height: 78px !important;
@@ -46,7 +45,18 @@
                 margin: 0;
                 padding: 0;
                 a {
+                    background-size: cover;
+                    display: block;
+                    max-height: $product-img-height;
+                    width: 100%;
                     outline: none;
+                    &:hover {
+                        cursor: url("../images/zoom-in-cursor.png"), zoom-in;
+                    }
+                    img {
+                        max-height: $product-img-height;
+                        @include opacity(0);
+                    }
                 }
             }
             .thumb-list {
@@ -616,6 +626,13 @@
                     }
                 }
             }
+        }
+    }
+
+    .zoomContainer {
+        .zoomWindow {
+            cursor: url("../images/zoom-out-cursor.png"), zoom-out !important;
+            max-height: $product-img-height;
         }
     }
 }

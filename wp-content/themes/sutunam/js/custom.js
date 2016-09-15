@@ -369,7 +369,7 @@
                 e.preventDefault();
             });
 
-            $('li a', imageList).elevateZoom({
+            $('li img', imageList).elevateZoom({
                 zoomType: 'inner',
                 cursor: 'crosshair'
             });

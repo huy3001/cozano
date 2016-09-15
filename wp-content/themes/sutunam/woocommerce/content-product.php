@@ -135,10 +135,6 @@ if ($price <= 100000){
 	$filterPrice = '> 500.000 VND';
 }
 ?>
-<?php
-if($woocommerce_loop['loop'] > 8)
-	$classes[] = 'hide';
-?>
 <li <?php post_class( $classes ); ?> data-nhãn-hiệu="<?php echo $brand;?>" data-kiểu-dáng="<?php echo $fit;?>" data-chất-liệu="<?php echo $fabric;?>" data-màu-sắc="<?php echo $color;?>" data-size="<?php echo $size;?>" data-giá="<?php echo $filterPrice;?>">
 
 	<?php

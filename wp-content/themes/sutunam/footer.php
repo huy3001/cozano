@@ -60,7 +60,7 @@ if (!isset($jk_options['copy_text'])) {
 				<?php endif;?>
 				<?php if($jk_options['google_link']):?>
 					<a href="<?php echo $jk_options['google_link']?>">
-						<i class="fa fa-google-plus-official" aria-hidden="true"></i>
+						<i class="fa fa-google-plus" aria-hidden="true"></i>
 					</a>
 				<?php endif;?>
 				<?php if($jk_options['linkin_link']):?>

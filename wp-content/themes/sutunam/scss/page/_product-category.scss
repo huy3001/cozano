@@ -538,6 +538,14 @@
                 .image {
                     height: 92.2vh;
                 }
+                .info {
+                    width: 60%;
+                    h3, h4 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
             }
         }
     }
@@ -572,12 +580,7 @@
                     height: 38.2vh;
                 }
                 .info {
-                    width: 60%;
-                    h3, h4 {
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
+                    width: 50%;
                 }
             }
         }

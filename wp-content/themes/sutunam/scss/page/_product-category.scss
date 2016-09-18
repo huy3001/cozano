@@ -364,13 +364,14 @@
                 float: right;
                 line-height: normal;
                 min-height: 35px;
-                margin: 0 10px;
+                margin: 0;
+                padding: 0 10px;
                 position: relative;
                 del {
                     @include font('font-roboto-medium');
                     position: absolute;
                     bottom: 0;
-                    right: 0;
+                    right: 10px;
                 }
                 ins {
                     @include font('font-roboto-bold');
@@ -539,12 +540,16 @@
                     height: 92.2vh;
                 }
                 .info {
-                    width: 60%;
+                    width: 100%;
                     h3, h4 {
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
                     }
+                }
+                .price {
+                    width: 100%;
+                    min-height: inherit;
                 }
             }
         }
@@ -578,9 +583,6 @@
                 .image {
                     height: 250px;
                     height: 38.2vh;
-                }
-                .info {
-                    width: 50%;
                 }
             }
         }

@@ -130,11 +130,8 @@
 
         productMatchHeight: function() {
             var productItem = $('.tax-product_cat #product-category li.product');
-            if($(window).width() > $tablet - 1) {
+            if(productItem.length) {
                 productItem.matchHeight();
-            }
-            else {
-                productItem.removeAttr('style');
             }
         },
 

@@ -48,7 +48,7 @@ global $post, $woocommerce, $product;
 					$image_link    = wp_get_attachment_url( $attachment_id );
 					$img = wp_get_attachment_image_src($attachment_id,'large')[0];
 
-					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s" style="background-image: url(%s);"><img src="%s" data-zoom-image="%s" /></a></li>', $image_link, '', $image_link, $img, $img ), $attachment_id );
+					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s" style="background-image: url(%s);"><img src="%s" data-zoom-image="%s" /></a></li>', $image_link, '', $image_link, $img, $image_link ), $attachment_id );
 				}
 			}
 		} else {

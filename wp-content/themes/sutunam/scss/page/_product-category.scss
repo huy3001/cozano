@@ -529,16 +529,6 @@
                 .image {
                     height: 33.2vh;
                 }
-            }
-        }
-    }
-
-    @include bp(max-width, $tablet - 1) {
-        ul.products {
-            li.product {
-                .image {
-                    height: 92.2vh;
-                }
                 .info {
                     width: 100%;
                     min-height: inherit;
@@ -552,6 +542,16 @@
                     width: 100%;
                     min-height: inherit;
                     margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        ul.products {
+            li.product {
+                .image {
+                    height: 92.2vh;
                 }
             }
         }

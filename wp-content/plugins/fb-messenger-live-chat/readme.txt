@@ -1,4 +1,4 @@
-﻿=== Facebook Live Chat ===
+﻿=== Facebook Messenger Live Chat ===
 Contributors: Zotabox
 Donate link: 
 Tags: chat online, chat software, customer feedback, customer help, customer service, customer support, customer support software, Facebook, facebook chat, Facebook customer service, Facebook customer support, facebook fan box, Facebook help desk, Facebook helpdesk, facebook like box, facebook live chat, facebook live chat for business, Facebook marketing, Facebook Message, facebook messenger, facebook messenger live chat, facebook send message, facebook support, facebook support widget, free chat, free live chat, help desk, help desk integration, help desk software, helpdesk, live chat, live chat customer, live chat helper, live chat software, live chat support, live help, live help software, live online support, live support, live support software, messenger, Messenger chat, Messenger Customer Service, Messenger Customer Support, Messenger help desk, Messenger helpdesk, messenger live chat, online chat, online chat support, online live chat, online support, sales chat, support, support messages, support request, Support Ticket, support ticketing, Zotabox
@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Support your customers via <strong>Facebook Live Chat</strong> conveniently from your own website. 10+ more popular marketing tools also included.
+Support your customers via <strong>Facebook Live Chat</strong> conveniently from your own website. Free Chat Plugin.
 
 == Description ==
 

@@ -45,8 +45,10 @@
                 margin: 0;
                 padding: 0;
                 a {
-                    background-position: center;
-                    background-size: cover;
+                    background-color: $white;
+                    background-position: 160px center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
                     display: block;
                     max-height: $product-img-height;
                     width: 100%;
@@ -90,10 +92,26 @@
                     @include font('font-roboto-medium');
                 }
             }
+            .price {
+                font-size: 20px !important;
+                ins {
+                    float: left;
+                    margin-right: 15px;
+                }
+            }
         }
         .product_title {
             color: $header-bg;
             font-size: 30px;
+            text-transform: uppercase;
+            .product-id {
+                display: block;
+            }
+            .product-name {
+                display: block;
+                color: $left-menu-bg;
+                font-size: 20px;
+            }
         }
         .woocommerce-product-rating {
             display: none;

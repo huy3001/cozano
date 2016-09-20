@@ -324,21 +324,59 @@ add_action( 'woocommerce_before_add_to_cart_button', 'add_content_before_addtoca
 function add_content_before_addtocart_button_func() {
     global $product;
 
-    //Color
-    $colors = get_the_terms( get_the_ID(), 'color' );
-    echo '<select>';
-    echo '<option value="">color</option>';
-    foreach ($colors as $color){
-        echo '<option value="'.$color->slug.'">'.$color->name .'</option>';
+    //style
+    $fits = get_the_terms( get_the_ID(), 'fit' );
+    $fit = null;
+    $i =0;
+    foreach($fits as $item){
+        if($i == 0)
+            $fit = $item->name;
+        else
+            $fit .= ', '.$item->name;
+        $i++;
     }
-    echo '</select>';
 
+    //color
+    $colors = get_the_terms( get_the_ID(), 'color' );
+    $color = null;
+    $i =0;
+    foreach($colors as $item){
+        if($i == 0)
+            $color = $item->name;
+        else
+            $color .= ', '.$item->name;
+        $i++;
+    }
+
+    //fabric
+    $fabrics = get_the_terms( get_the_ID(), 'fabric' );
+    $fabric = null;
+    $i =0;
+    ?>
+    <?php foreach($fabrics as $item){
+        if($i == 0)
+            $fabric = $item->name;
+        else
+            $fabric .= ', '.$item->name;
+        $i++;
+    }
+    if($fits){
+        echo '<p>Kiểu dáng: ';
+        echo '<strong>'. $fit. '</strong></p>';
+    }
+    if($fabrics){
+        echo '<p>Chất liệu: ';
+        echo '<strong>'. $fabric. '</strong></p>';
+    }
+    if($colors){
+        echo '<p>Màu sắc: ';
+        echo '<strong>'. $color. '</strong></p>';
+    }
+    echo '<p>Chọn size: ';
     //Size
     $sizes = get_the_terms( get_the_ID(), 'size' );
-    echo '<select>';
-    echo '<option value="">size</option>';
     foreach ($sizes as $size){
-        echo '<option value="'.$size->slug.'">'.$size->name .'</option>';
+        echo '<input type="checkbox" name="size" value="'.$size->slug.'">'.$size->name .'</input>';
     }
     echo '</select>';
 }

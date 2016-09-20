@@ -82,7 +82,7 @@
             font-size: 14px;
             width: 28% !important;
             padding: 50px 90px 50px 10px;
-            margin: 0;
+            margin: 0 !important;
             position: absolute;
             top: 50%;
             right: 0;
@@ -525,18 +525,13 @@
                 }
             }
             .summary {
-                width: 100% !important;
+                width: 50% !important;
                 padding: 20px 30px;
                 position: static;
-                @include transform(none);
+                @include transform(translateX(-50%));
             }
-            .product_title, .price {
+            .product_title {
                 text-align: center;
-            }
-            .cart {
-                float: right;
-                width: 50%;
-                padding-left: 15px;
             }
             ul.products {
                 li.product {
@@ -549,6 +544,19 @@
         }
 
         @include bp(max-width, $laptop - 1) {
+            .images {
+                .image-list {
+                    a {
+                        background: none !important;
+                        img {
+                            @include opacity(1);
+                        }
+                    }
+                }
+            }
+            .summary {
+                @include transform(translateX(50%));
+            }
             .product-description {
                 .desc-detail {
                     padding: 0 5%;
@@ -624,7 +632,18 @@
                 }
             }
             .summary {
+                width: 100% !important;
                 padding: 20px 15px;
+                @include transform(none);
+                .price {
+                    font-size: 18px !important;
+                }
+            }
+            .product_title {
+                font-size: 25px;
+                .product-name {
+                    font-size: 18px;
+                }
             }
             .cart, div[itemprop="description"] {
                 float: none;
@@ -646,6 +665,9 @@
                     position: static;
                     padding: 15px 15px 30px;
                     @include transform(none);
+                    h2 {
+                        font-size: 20px;
+                    }
                 }
                 &.contain-1,
                 &.contain-2,

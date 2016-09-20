@@ -79,7 +79,7 @@
         }
         .summary {
             color: $search-input-bd;
-            font-size: 13px;
+            font-size: 14px;
             width: 28% !important;
             padding: 50px 90px 50px 10px;
             margin: 0;
@@ -94,6 +94,7 @@
             }
             .price {
                 font-size: 20px !important;
+                margin-bottom: 10px;
                 ins {
                     float: left;
                     margin-right: 15px;
@@ -106,6 +107,7 @@
             text-transform: uppercase;
             .product-id {
                 display: block;
+                margin-bottom: 10px;
             }
             .product-name {
                 display: block;
@@ -142,6 +144,41 @@
         }
         .cart {
             margin-bottom: 10px !important;
+            p {
+                color: $black;
+                @include font('font-roboto-medium');
+                margin: 0 0 5px;
+                &.size {
+                    font-size: 0;
+                    span {
+                        &:first-child {
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                span {
+                    font-size: 14px;
+                }
+                input[type=checkbox] {
+                    display: none;
+                }
+                label {
+                    background: $product-select-bd;
+                    cursor: pointer;
+                    font-size: 14px;
+                    margin: 0 3px 3px 0;
+                    padding: 2px 4px;
+                    @include transition();
+                    &:hover {
+                        background: $product-slider-dot;
+                    }
+                }
+                input[type=checkbox]:checked + label {
+                    background: $black;
+                    color: $white;
+                }
+            }
             .quantity {
                 display: none !important;
             }
@@ -222,6 +259,7 @@
                 @include font('font-roboto-medium');
             }
         }
+        div[itemprop="description"],
         .woocommerce-tabs {
             display: none;
         }
@@ -444,7 +482,11 @@
         }
 
         @include bp(max-width, $desktop - 1) {
+            .product-container {
+                max-height: inherit;
+            }
             .images {
+                position: relative;
                 .image-list {
                     .slick-prev, .slick-next {
                         height: 40px;
@@ -474,31 +516,12 @@
                     }
                 }
                 .thumbnails {
+                    bottom: 20px;
+                    left: 20px;
                     a {
                         width: 52px !important;
                         height: 52px !important;
                     }
-                }
-            }
-            ul.products {
-                li.product {
-                    .image {
-                        height: 340px;
-                        height: 44.2vh;
-                    }
-                }
-            }
-        }
-
-        @include bp(max-width, $laptop - 1) {
-            .product-container {
-                max-height: inherit;
-            }
-            .images {
-                position: relative;
-                .thumbnails {
-                    bottom: 20px;
-                    left: 20px;
                 }
             }
             .summary {
@@ -515,11 +538,17 @@
                 width: 50%;
                 padding-left: 15px;
             }
-            div[itemprop="description"] {
-                float: left;
-                width: 50%;
-                padding-right: 15px;
+            ul.products {
+                li.product {
+                    .image {
+                        height: 340px;
+                        height: 44.2vh;
+                    }
+                }
             }
+        }
+
+        @include bp(max-width, $laptop - 1) {
             .product-description {
                 .desc-detail {
                     padding: 0 5%;

@@ -361,22 +361,22 @@ function add_content_before_addtocart_button_func() {
         $i++;
     }
     if($fits){
-        echo '<p>Kiểu dáng: ';
+        echo '<p class="fit"><span>Kiểu dáng: </span>';
         echo '<strong>'. $fit. '</strong></p>';
     }
     if($fabrics){
-        echo '<p>Chất liệu: ';
+        echo '<p class="fabric"><span>Chất liệu: </span>';
         echo '<strong>'. $fabric. '</strong></p>';
     }
     if($colors){
-        echo '<p>Màu sắc: ';
+        echo '<p class="color"><span>Màu sắc: </span>';
         echo '<strong>'. $color. '</strong></p>';
     }
-    echo '<p>Chọn size: ';
+    echo '<p class="size"><span>Chọn size: </span>';
     //Size
     $sizes = get_the_terms( get_the_ID(), 'size' );
     foreach ($sizes as $size){
-        echo '<input type="checkbox" name="size" value="'.$size->slug.'">'.$size->name .'</input>';
+        echo '<span><input type="checkbox" name="size" id="'.$size->slug.'" value="'.$size->slug.'"><label for="'.$size->slug.'">'.$size->name .'</label></span>';
     }
     echo '</select>';
 }

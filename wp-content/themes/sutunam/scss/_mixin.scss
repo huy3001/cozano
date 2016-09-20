@@ -19,11 +19,32 @@
     box-sizing: $box-model;
 }
 
+/* backface visibility */
+@mixin backface-visibility ($value) {
+    -webkit-backface-visibility: $value;
+    -moz-backface-visibility: $value;
+    -ms-backface-visibility: $value;
+    -o-backface-visibility: $value;
+    backface-visibility: $value;
+}
+
 /* calculate */
 @mixin calc($property, $expression) {
     #{$property}: -moz-calc(#{$expression});
     #{$property}: -webkit-calc(#{$expression});
     #{$property}: calc(#{$expression});
+}
+
+/* font smoothing */
+@mixin font-smoothing($value: antialiased) {
+    @if $value == antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
 }
 
 /* transform */

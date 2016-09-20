@@ -146,18 +146,21 @@
                 display: none !important;
             }
             .button {
-                background: $cart-btn-bg;
-                border: 2px solid $cart-btn-bg;
+                background: $black;
+                border: 2px solid $black;
                 @include border-radius(0);
-                font-size: 13px;
+                color: $white;
+                font-size: 14px;
                 text-align: center;
+                text-transform: uppercase;
                 width: 100%;
-                padding: 10px;
+                margin-top: 30px;
+                padding: 11px 10px;
                 outline: none;
                 @include transition();
                 &:hover {
                     background: transparent;
-                    color: $cart-btn-bg;
+                    color: $black;
                 }
             }
             .variations {

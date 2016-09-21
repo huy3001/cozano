@@ -124,8 +124,6 @@
             setTimeout(function() {
                 // Call slider init
                 productDetail.sliderInit(imageList, thumbList);
-                // Call zoom function
-                productDetail.addZoom(imageList);
             }, 300);
         }
     };

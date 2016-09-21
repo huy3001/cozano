@@ -380,3 +380,11 @@ function add_content_before_addtocart_button_func() {
     }
     echo '</select>';
 }
+
+function searchfilter($query) {
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type',array('product'));
+    }
+    return $query;
+}
+add_filter('pre_get_posts','searchfilter');

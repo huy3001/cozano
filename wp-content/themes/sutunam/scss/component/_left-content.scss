@@ -92,8 +92,11 @@
         display: none;
     }
 
-    @include bp(max-width, $desktop) {
+    @include bp(max-width, $huge-desktop) {
         left: 0;
+    }
+
+    @include bp(max-width, $desktop) {
         .left-menu {
             max-height: 100%;
             overflow-x: hidden;

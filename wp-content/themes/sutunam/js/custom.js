@@ -6,6 +6,130 @@
         $tablet = 768,
         $mobile = 480;
 
+    // Product detail functions
+    var imageList = $('.image-list'),
+        thumbList = $('.thumb-list');
+    var productDetail = {
+        // Add zoom to product slider
+        addZoom: function(imageList) {
+            setTimeout(function() {
+                var activeImg = imageList.find('.slick-active img'),
+                    zoomOption = {
+                        zoomType: 'inner',
+                        cursor: 'crosshair',
+                        easing: true,
+                        easingType: 'linear'
+                    };
+
+                function makeZoom(image) {
+                    image.off('click').on('click', function() {
+                        if($(this).hasClass('zoomed')) {
+                            $(this).removeClass('zoomed');
+                            $(this).removeData('elevateZoom'); // remove zoom instance from image
+                            $('.zoomContainer').remove(); // remove zoom container from DOM
+                        }
+                        else {
+                            $(this).addClass('zoomed');
+                            $('.zoomContainer').show();
+                            image.elevateZoom(zoomOption); // init zoom
+                        }
+                    });
+                }
+
+                // First active image zoom
+                makeZoom(activeImg);
+
+                // Remove zoom before slide change
+                imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                    var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
+                    currentImg.removeClass('zoomed');
+                    currentImg.removeData('elevateZoom'); // remove zoom instance from image
+                    $('.zoomContainer').remove(); // remove zoom container from DOM
+                });
+
+                // Zoom after slide change
+                imageList.on('afterChange', function(event, slick, currentSlide) {
+                    var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
+                    makeZoom(currentImg);
+                });
+            }, 100);
+        },
+
+        // Init product slider
+        sliderInit: function(imageList, thumbList) {
+            var thumbCount = thumbList.find('li').length;
+            if(imageList.length) {
+                imageList.slick({
+                    arrows: false,
+                    asNavFor: '.thumb-list',
+                    fade: false,
+                    slide: 'li',
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    swipe: false,
+                    responsive: [
+                        {
+                            breakpoint: $desktop,
+                            settings: {
+                                arrows: true,
+                                swipe: true
+                            }
+                        },
+                        {
+                            breakpoint: $tablet,
+                            settings: {
+                                arrows: true,
+                                asNavFor: '',
+                                dots: true,
+                                swipe: true
+                            }
+                        }
+                    ]
+                });
+                $('li a', imageList).on('click', function(e) {
+                    e.preventDefault();
+                });
+            }
+
+            if(thumbList.length) {
+                thumbList.slick({
+                    arrows: false,
+                    asNavFor: '.image-list',
+                    focusOnSelect: true,
+                    slide: 'li',
+                    slidesToShow: thumbCount,
+                    slidesToScroll: 0,
+                    swipe: false,
+                    vertical: true
+                });
+                $('li a', thumbList).on('click', function(e) {
+                    e.preventDefault();
+                });
+            }
+
+            // Call zoom function
+            productDetail.addZoom(imageList);
+        },
+
+        // Reinit product slider
+        sliderReinit: function(imageList, thumbList) {
+            if(imageList.length) {
+                imageList.slick('unslick');
+            }
+
+            if(thumbList.length) {
+                thumbList.slick('unslick')
+            }
+
+            setTimeout(function() {
+                // Call slider init
+                productDetail.sliderInit(imageList, thumbList);
+                // Call zoom function
+                productDetail.addZoom(imageList);
+            }, 300);
+        }
+    };
+
     // Global functions
     var customJS = {
         sidebarToggle: function () {
@@ -16,9 +140,11 @@
                 toggleBtn.off('click').on('click', function() {
                     if(body.hasClass('no-sidebar')) {
                         body.removeClass('no-sidebar');
+                        productDetail.sliderReinit(imageList, thumbList);
                     }
                     else {
                         body.addClass('no-sidebar');
+                        productDetail.sliderReinit(imageList, thumbList);
                     }
                 });
             }
@@ -312,101 +438,6 @@
                     ]
                 });
             }
-        },
-
-        productDetailSlider: function() {
-            var imageList = $('.image-list'),
-                thumbList = $('.thumb-list'),
-                thumbCount = $('li', thumbList).length;
-            if(imageList.length) {
-                imageList.slick({
-                    arrows: false,
-                    asNavFor: '.thumb-list',
-                    fade: false,
-                    slide: 'li',
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    swipe: false,
-                    responsive: [
-                        {
-                            breakpoint: $desktop,
-                            settings: {
-                                arrows: true,
-                                swipe: true
-                            }
-                        },
-                        {
-                            breakpoint: $tablet,
-                            settings: {
-                                arrows: true,
-                                asNavFor: '',
-                                dots: true,
-                                swipe: true
-                            }
-                        }
-                    ]
-                });
-                thumbList.slick({
-                    arrows: false,
-                    asNavFor: '.image-list',
-                    focusOnSelect: true,
-                    slide: 'li',
-                    slidesToShow: thumbCount,
-                    slidesToScroll: 0,
-                    swipe: false,
-                    vertical: true
-                });
-
-                setTimeout(function() {
-                    var activeImg = imageList.find('.slick-active img'),
-                        zoomOption = {
-                            zoomType: 'inner',
-                            cursor: 'crosshair',
-                            easing: true,
-                            easingType: 'linear'
-                        };
-
-                    function makeZoom(image) {
-                        image.off('click').on('click', function() {
-                            if($(this).hasClass('zoomed')) {
-                                $(this).removeClass('zoomed');
-                                $(this).removeData('elevateZoom'); // remove zoom instance from image
-                                $('.zoomContainer').remove(); // remove zoom container from DOM
-                            }
-                            else {
-                                $(this).addClass('zoomed');
-                                $('.zoomContainer').show();
-                                image.elevateZoom(zoomOption); // init zoom
-                            }
-                        });
-                    }
-
-                    // First active image zoom
-                    makeZoom(activeImg);
-
-                    // Remove zoom before slide change
-                    imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                        var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
-                        currentImg.removeClass('zoomed');
-                        currentImg.removeData('elevateZoom'); // remove zoom instance from image
-                        $('.zoomContainer').remove(); // remove zoom container from DOM
-                    });
-
-                    // Zoom after slide change
-                    imageList.on('afterChange', function(event, slick, currentSlide) {
-                        var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
-                        makeZoom(currentImg);
-                    });
-                }, 100);
-            }
-
-            $('li a', thumbList).on('click', function(e) {
-                e.preventDefault();
-            });
-
-            $('li a', imageList).on('click', function(e) {
-                e.preventDefault();
-            });
         }
     };
 
@@ -452,7 +483,7 @@
         customJS.relateProductSlider();
 
         // Product detail slider
-        customJS.productDetailSlider();
+        productDetail.sliderInit(imageList, thumbList);
     });
 
     /* Window resize function */

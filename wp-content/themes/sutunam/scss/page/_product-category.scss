@@ -301,7 +301,7 @@
             }
             .image {
                 height: 550px;
-                height: 38.2vh;
+                height: 23.5vw;
                 width: 100%;
                 margin: 0 0 10px;
                 overflow: hidden;
@@ -412,6 +412,28 @@
         }
     }
 
+    @include bp(max-width, $huge-desktop) {
+        ul.products {
+            li.product {
+                .image {
+                    height: 440px;
+                    height: 27.5vw;
+                }
+            }
+        }
+    }
+
+    @include bp(max-width, $large-desktop) {
+        ul.products {
+            li.product {
+                .image {
+                    height: 395px;
+                    height: 27.5vw;
+                }
+            }
+        }
+    }
+
     @include bp(max-width, $desktop) {
         .cat-header {
             .cat-image {
@@ -428,7 +450,7 @@
             li.product {
                 .image {
                     height: 340px;
-                    height: 44.2vh;
+                    height: 33.5vw;
                 }
             }
         }
@@ -527,7 +549,8 @@
             li.product {
                 width: 33.333%;
                 .image {
-                    height: 33.2vh;
+                    height: 340px;
+                    height: 44.5vw;
                 }
                 .info {
                     width: 100%;
@@ -584,7 +607,7 @@
                 }
                 .image {
                     height: 250px;
-                    height: 38.2vh;
+                    height: 67vw;
                 }
             }
         }

@@ -82,11 +82,10 @@
             font-size: 14px;
             width: 28% !important;
             padding: 50px 90px 50px 10px;
-            margin: 0 !important;
+            margin-bottom: 0 !important;
             position: absolute;
             top: 50%;
             right: 0;
-            @include transform(translateY(-50%));
             div {
                 p {
                     @include font('font-roboto-medium');
@@ -143,7 +142,7 @@
             }
         }
         .cart {
-            margin-bottom: 10px !important;
+            margin-bottom: 30px !important;
             p {
                 color: $black;
                 @include font('font-roboto-medium');
@@ -167,8 +166,11 @@
                     background: $product-select-bd;
                     cursor: pointer;
                     font-size: 14px;
+                    text-align: center;
+                    width: 35px;
+                    height: 35px;
                     margin: 0 3px 3px 0;
-                    padding: 2px 4px;
+                    padding: 8px 4px;
                     @include transition();
                     &:hover {
                         background: $product-slider-dot;
@@ -259,7 +261,6 @@
                 @include font('font-roboto-medium');
             }
         }
-        div[itemprop="description"],
         .woocommerce-tabs {
             display: none;
         }

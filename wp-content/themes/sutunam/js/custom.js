@@ -125,6 +125,19 @@
                 // Call slider init
                 productDetail.sliderInit(imageList, thumbList);
             }, 300);
+        },
+
+        // Summary centering
+        summaryCenter: function() {
+            var summary = $('.product .summary');
+            if(summary.length) {
+                if ($(window).width() > 1024) {
+                    summary.css('margin-top', -summary.outerHeight()/2);
+                }
+                else {
+                    summary.removeAttr('style');
+                }
+            }
         }
     };
 
@@ -484,6 +497,9 @@
 
         // Product detail slider
         productDetail.sliderInit(imageList, thumbList);
+
+        // Product summary centering
+        productDetail.summaryCenter();
     });
 
     /* Window resize function */
@@ -499,5 +515,8 @@
 
         // Filter product
         customJS.filterProduct();
+
+        // Product summary centering
+        productDetail.summaryCenter();
     });
 })(jQuery);

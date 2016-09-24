@@ -291,7 +291,7 @@
         margin: 0 -1px;
         li.product {
             clear: none;
-            width: 25%;
+            width: 20%;
             padding: 0 1px;
             margin: 0 0 35px;
             a {
@@ -408,6 +408,14 @@
             @include transition();
             &:hover {
                 color: $main-color;
+            }
+        }
+    }
+
+    @include bp(max-width, $full-desktop) {
+        ul.products {
+            li.product {
+                width: 25%;
             }
         }
     }

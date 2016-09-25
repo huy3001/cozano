@@ -254,6 +254,15 @@
             }
         },
 
+        productImageHeight: function() {
+            var productImage = $('#product-category li.product .image');
+            if(productImage.length) {
+                productImage.each(function() {
+                    $(this).height($(this).width()*1.3);
+                });
+            }
+        },
+
         filterBarFixed: function() {
             var filterBar = $('.filter-bar');
             if(filterBar.length) {
@@ -291,7 +300,7 @@
                 if($(this).attr('data-title') == 'giá'){
                     price.push($(this).text());
                 }
-            })
+            });
             var ft = $.filtrify('product-category', 'placeHolder', {
                 close : true,
                 query : {
@@ -492,6 +501,9 @@
         // Product match height
         customJS.productMatchHeight();
 
+        // Product image height
+        customJS.productImageHeight();
+
         // Relate product slider
         customJS.relateProductSlider();
 
@@ -512,6 +524,9 @@
 
         // Product match height
         customJS.productMatchHeight();
+
+        // Product image height
+        customJS.productImageHeight();
 
         // Filter product
         customJS.filterProduct();

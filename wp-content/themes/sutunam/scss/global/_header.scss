@@ -10,12 +10,6 @@
     @include bp(min-width, $full-desktop) {
         max-width: $full-desktop;
     }
-    @include bp(max-width, $full-desktop) {
-        max-width: $huge-desktop;
-    }
-    @include bp(max-width, $huge-desktop) {
-        max-width: 100%;
-    }
     @include bp(max-width, $desktop) {
         z-index: 1111;
         .no-sidebar & {

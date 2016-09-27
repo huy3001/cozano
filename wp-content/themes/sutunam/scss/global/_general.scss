@@ -45,12 +45,6 @@ h1, h2, h3, h4, h5, h6 {
     @include bp(min-width, $full-desktop) {
         max-width: $full-desktop;
     }
-    @include bp(max-width, $full-desktop) {
-        max-width: $huge-desktop;
-    }
-    @include bp(max-width, $huge-desktop) {
-        max-width: 100%;
-    }
 }
 
 .back-top {

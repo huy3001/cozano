@@ -46,7 +46,7 @@
                 padding: 0;
                 a {
                     background-color: $white;
-                    background-position: 160px center;
+                    background-position: 28% center;
                     background-repeat: no-repeat;
                     background-size: contain;
                     display: block;
@@ -482,14 +482,15 @@
         }
 
         @include bp(max-width, $desktop - 1) {
-            .product-container {
-                max-height: inherit;
-            }
             .images {
                 position: relative;
                 .image-list {
                     a {
-                        background-position: center;
+                        background-position: 25% center;
+                        max-height: $tablet-img-height;
+                        img {
+                            max-height: $tablet-img-height;
+                        }
                     }
                     .slick-prev, .slick-next {
                         height: 40px;
@@ -519,11 +520,44 @@
                     }
                 }
                 .thumbnails {
-                    bottom: 20px;
-                    left: 20px;
                     a {
                         width: 52px !important;
                         height: 52px !important;
+                    }
+                }
+            }
+            .summary {
+                width: 35% !important;
+                padding: 50px 50px 50px 10px;
+            }
+            .cart {
+                margin-bottom: 15px !important;
+                .button {
+                    margin-top: 10px;
+                }
+            }
+            ul.products {
+                li.product {
+                    .image {
+                        height: 340px;
+                    }
+                }
+            }
+        }
+
+        @include bp(max-width, $laptop - 1) {
+            .product-container {
+                max-height: inherit;
+            }
+            .images {
+                .image-list {
+                    a {
+                        background: none !important;
+                        max-height: inherit;
+                        img {
+                            max-height: inherit;
+                            @include opacity(1);
+                        }
                     }
                 }
             }
@@ -540,9 +574,9 @@
                 text-align: center;
             }
             .cart {
-                float: right;
+                float: left;
                 width: 50%;
-                padding-left: 15px;
+                padding-right: 15px;
                 .button {
                     margin-top: 10px;
                 }
@@ -551,29 +585,9 @@
                 text-align: center;
             }
             div[itemprop="description"] {
-                float: left;
+                float: right;
                 width: 50%;
-                padding-right: 15px;
-            }
-            ul.products {
-                li.product {
-                    .image {
-                        height: 340px;
-                    }
-                }
-            }
-        }
-
-        @include bp(max-width, $laptop - 1) {
-            .images {
-                .image-list {
-                    a {
-                        background: none !important;
-                        img {
-                            @include opacity(1);
-                        }
-                    }
-                }
+                padding-left: 15px;
             }
             .product-description {
                 .desc-detail {

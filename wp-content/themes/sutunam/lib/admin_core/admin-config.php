@@ -1508,6 +1508,105 @@ Redux::setSection( $opt_name,array(
                 ),
             ));
 
+Redux::setSection( $opt_name,array(
+    'title'   => 'Promotion Overview',
+    'icon'    => 'el-icon-eye-open',
+    'heading' => 'Promotion Overview',
+    'desc'    => '<br />Promotion overview can be edited from here.<br />',
+    'fields'  => array(
+        array(
+            'id'        => 'promotion_img_1',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Promotion Image 1'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'promotion_url_1',
+            'type'  => 'text',
+            'title' => 'Promotion Url 1',
+        ),
+        array(
+            'id'        => 'promotion_img_2',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Promotion Image 2'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'promotion_url_2',
+            'type'  => 'text',
+            'title' => 'Promotion Url 2',
+        ),
+        array(
+            'id'        => 'promotion_img_3',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Promotion Image 3'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'promotion_url_3',
+            'type'  => 'text',
+            'title' => 'Promotion Url 3',
+        ),
+        array(
+            'id'        => 'promotion_img_4',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Promotion Image 4'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'promotion_url_4',
+            'type'  => 'text',
+            'title' => 'Promotion Url 4',
+        ),
+        array(
+            'id'        => 'promotion_img_5',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Promotion Image 5'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'promotion_url_5',
+            'type'  => 'text',
+            'title' => 'Promotion Url 5',
+        ),
+        array(
+            'id'        => 'promotion_img_6',
+            'type'      => 'media',
+            'url'       => true,
+            'title'     => __('Promotion Image 6'),
+            'compiler'  => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'desc'      => __('Basic media uploader with disabled URL input field.', 'sutunam'),
+            'subtitle'  => __('Upload any media using the WordPress native uploader', 'sutunam')
+        ),
+        array(
+            'id'    => 'promotion_url_6',
+            'type'  => 'text',
+            'title' => 'Promotion Url 6',
+        ),
+    ),
+));
+
                Redux::setSection( $opt_name,array(
                 'icon'      => 'el-icon-map-marker-alt',
                 'title'     => __('Contact', 'sutunam'),

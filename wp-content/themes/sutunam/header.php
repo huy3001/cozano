@@ -33,7 +33,7 @@ $jk_options = get_option('redux_demo');
     <?php wp_head(); ?>
 
 </head>
-<body <?php body_class(); ?> <?php language_attributes(); ?>>
+<body <?php body_class('no-sidebar'); ?> <?php language_attributes(); ?>>
 <div id="wrapper">
 <header id="header">
     <div class="menu nav-menu">

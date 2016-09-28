@@ -7,9 +7,6 @@
     position: fixed;
     top: 0;
     z-index: 111;
-    @include bp(min-width, $full-desktop) {
-        max-width: $full-desktop;
-    }
     @include bp(max-width, $desktop) {
         z-index: 1111;
         .no-sidebar & {
@@ -23,6 +20,7 @@
     .toggle-menu {
         background: none;
         border: none;
+        display: none;
         width: 24px;
         height: 19px;
         position: absolute;
@@ -49,9 +47,8 @@
         }
     }
     .top-menu {
-        position: absolute;
-        left: 70px;
-        top: 0;
+        float: right;
+        margin-right: 15px;
         ul {
             float: left;
             list-style: none;
@@ -73,29 +70,34 @@
         }
     }
     .logo {
+        float: left;
         max-width: 160px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include transform(translate(-50%, -50%));
+        a {
+            display: block;
+            padding: 12px 0;
+        }
     }
     .search-form {
-        position: absolute;
-        top: 0;
-        right: 80px;
+        float: right;
         height: 100%;
+        margin-right: 30px;
+        position: relative;
         input {
             @include border-radius(0);
             background: none;
             border: none;
             color: $white;
             height: $header-height;
-            width: 170px;
-            padding: 10px 15px 10px 35px;
+            width: 0;
+            padding: 10px 35px 10px 0;
             outline: none;
             @include transition();
             @include input-placeholder() {
                 color: $white;
+            }
+            &.expand {
+                width: 170px;
+                padding-left: 15px;
             }
             &:focus {
                 background: $white;
@@ -112,13 +114,13 @@
             font-size: 18px;
             height: 100%;
             position: absolute;
-            left: 0;
+            right: 0;
             top: 0;
             padding: 10px;
             outline: none;
             @include transition();
             &.toggle-search {
-                display: none;
+                z-index: 1;
             }
         }
         .form-close {
@@ -152,13 +154,12 @@
         }
     }
     .shopping-cart {
-        position: absolute;
-        top: 50%;
-        right: 35px;
-        @include transform(translateY(-50%));
+        float: right;
         .cart-icon {
             color: $white;
             font-size: 18px;
+            display: block;
+            padding: 14px 0;
             &:hover {
                 color: $header-link-hover;
             }

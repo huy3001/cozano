@@ -23,7 +23,7 @@ $jk_options = get_option('redux_demo');
     Mobile Specific Meta
     ======================================================================= -->
     <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"/>
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
     <link rel="profile" href="http://gmgp.org/xfn/11"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
@@ -43,7 +43,7 @@ $jk_options = get_option('redux_demo');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <?php sutunam_menu('top-menu'); ?>
+
             <div class="logo">
                 <?php if (!$jk_options['logo_img']['url']): ?>
                     <i class="rombust d-bg-c d-border-c"><i
@@ -58,8 +58,24 @@ $jk_options = get_option('redux_demo');
                 <?php endif ?>
             </div>
 
-            <div class="search-form">
-                <?php get_search_form(); ?>
+            <div class="shopping-cart">
+                <a class="cart-icon" href="#">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="login">
+                <?php if (is_user_logged_in()) { ?>
+                    <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span><?php echo __('logout', 'sutunam') ?></span>
+                    </a>
+                <?php } else { ?>
+                    <a class="login-button show-login" id="show-login" href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span><?php echo __('login', 'sutunam') ?></span>
+                    </a>
+                <?php } ?>
             </div>
 
             <?php /*
@@ -76,25 +92,11 @@ $jk_options = get_option('redux_demo');
             </div>
             */?>
 
-            <div class="login">
-                <?php if (is_user_logged_in()) { ?>
-                    <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <span><?php echo __('logout', 'sutunam') ?></span>
-                    </a>
-                <?php } else { ?>
-                    <a class="login-button show-login" id="show-login" href="#">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <span><?php echo __('login', 'sutunam') ?></span>
-                    </a>
-                <?php } ?>
+            <div class="search-form">
+                <?php get_search_form(); ?>
             </div>
 
-            <div class="shopping-cart">
-                <a class="cart-icon" href="#">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-            </div>
+            <?php sutunam_menu('top-menu'); ?>
         </div>
     </div>
 

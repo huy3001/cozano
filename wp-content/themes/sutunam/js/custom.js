@@ -196,8 +196,8 @@
             var toggleSearch = $('.search-form .toggle-search'),
                 searchItem = $('.search-form .search-item'),
                 searchTarget = $('.search-form .toggle-search, .search-form .search-item');
-            if($(window).width() < $desktop + 1) {
-                if(toggleSearch.length) {
+            if(toggleSearch.length) {
+                if($(window).width() < $desktop - 1) {
                     toggleSearch.off('click').on('click', function() {
                         $(this).next('.search-item').slideToggle(300);
                         $(this).next('.search-item').find('.form-text').focus();
@@ -210,32 +210,32 @@
                             });
                         }
                     }, 300);
+                    $(document).on('click', function(e) {
+                        var target = e.target;
+                        if (!$(target).is(searchTarget) && !$(target).parents().is(searchTarget)) {
+                            searchItem.slideUp(300);
+                        }
+                    });
                 }
-                $(document).on('click', function(e) {
-                    var target = e.target;
-                    if (!$(target).is(searchTarget) && !$(target).parents().is(searchTarget)) {
-                        searchItem.slideUp(300);
-                    }
-                });
-            }
-            else {
-                searchItem.show();
+                else {
+                    searchItem.removeAttr('style');
+                    toggleSearch.off('click').on('click', function() {
+                        $(this).fadeOut(300);
+                        $(this).next('.search-item').find('.form-text').addClass('expand').focus();
+                    });
+                }
             }
         },
 
         closeSidebar: function() {
             var body = $('body'),
                 rightContent = $('.right-content');
-            if($(window).width() < $desktop + 1) {
-                body.addClass('no-sidebar');
+            if($(window).width() < $tablet - 1) {
                 rightContent.off('lick').on('click', function() {
                     if(!body.hasClass('no-sidebar')) {
                         body.addClass('no-sidebar');
                     }
                 });
-            }
-            else {
-                body.removeClass('no-sidebar');
             }
         },
 

@@ -31,7 +31,32 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
+	<?php
+	global $product;
+	//Display sub-category
+	echo '<div class="sub-category-block">';
+	$cats = get_the_terms( $product->ID, 'product_cat' );
+	foreach ($cats as $cat){
+		if($cat->parent == 0){
+			$parent = $cat->term_id;
+		}
+	}
+	$args = array(
+		'hierarchical' => 1,
+		'show_option_none' => '',
+		'hide_empty' => 0,
+		'parent' => $parent,
+		'taxonomy' => 'product_cat'
+	);
+	$categories = get_categories( $args );
+	echo '<ul class="wooc_sclist">';
+	foreach($categories as $category){
+		$link = get_term_link( $category->slug, $category->taxonomy );
+		$thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+		$image_sub = wp_get_attachment_url( $thumbnail );
+		echo '<li><a href="'. $link .'"><img src="'. $image_sub .'" /></a></li>';
+	}
+	?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>

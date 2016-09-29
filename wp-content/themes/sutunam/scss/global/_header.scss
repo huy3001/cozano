@@ -258,6 +258,7 @@
             @include transform(translate3d(0,0,0));
         }
         .toggle-menu {
+            display: block;
             width: 18px;
             height: 14px;
             margin-top: -7px;
@@ -283,18 +284,16 @@
         }
         .logo {
             max-width: 120px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -60px;
+            a {
+                padding: 16px 0;
+            }
         }
         .search-form {
-            right: 35px;
-            button {
-                font-size: 15px;
-            }
-        }
-        .shopping-cart {
-            right: 15px;
-            .cart-icon {
-                font-size: 15px;
-            }
+            margin-right: 5px;
         }
     }
 }

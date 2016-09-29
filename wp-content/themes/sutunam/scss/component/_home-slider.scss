@@ -58,4 +58,20 @@
             right: 20px;
         }
     }
+
+    @include bp(max-width, $laptop - 1) {
+        .slick-prev, .slick-next {
+            height: 60px;
+            width: 60px;
+            &:before {
+                font-size: 50px;
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        .slick-dots {
+            bottom: 10px;
+        }
+    }
 }

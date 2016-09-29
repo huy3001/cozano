@@ -30,7 +30,7 @@
         margin-top: 20px;
     }
 
-    @include bp(max-width, $laptop) {
+    @include bp(max-width, $laptop - 1) {
         .info {
             h2 {
                 font-size: 30px;
@@ -38,6 +38,15 @@
             }
             a + a {
                 margin-top: 8px;
+            }
+        }
+    }
+
+    @include bp(max-width, $tablet - 1) {
+        .info {
+            h2 {
+                font-size: 15px;
+                font-size: 4.08vw;
             }
         }
     }

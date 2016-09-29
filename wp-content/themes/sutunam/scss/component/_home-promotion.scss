@@ -23,4 +23,10 @@
             width: 50%;
         }
     }
+
+    @include bp(max-width, $mobile) {
+        a {
+            width: 100%;
+        }
+    }
 }

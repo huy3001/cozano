@@ -22,12 +22,12 @@
     }
 
     @include bp(max-width, $tablet - 1) {
-        height: auto;
         .upsbar-list {
             max-height: 40px;
             overflow: hidden;
         }
         .top-menu {
+            display: none;
             ul {
                 margin: 0;
                 padding: 0;

@@ -410,6 +410,26 @@
                         'id'    => 'overview_url_3',
                         'type'  => 'text',
                         'title' => 'Overview Url 3',
+                    ),
+                    array(
+                        'id'        => 'overview_content_4',
+                        'type'      => 'textarea',
+                        'title'     => __('Overview Content 4'),
+                        'subtitle'  => __('HTML can be used', 'sutunam'),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                        )
+                    ),
+                    array(
+                        'id'    => 'overview_url_4',
+                        'type'  => 'text',
+                        'title' => 'Overview Url 4',
                     )
                 )
             ));

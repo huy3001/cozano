@@ -510,21 +510,26 @@
         footerMobileMenu: function() {
             var footerTitle = $('.footer-title');
             if(footerTitle.length) {
-                footerTitle.off('click').on('click', function(e) {
-                    e.preventDefault();
-                    if($(this).hasClass('open-menu')) {
-                        $(this).removeClass('open-menu');
-                    }
-                    else {
-                        $(this).addClass('open-menu');
-                    }
-                    $(this).parent().siblings().find('.open-menu').removeClass('open-menu');
-                    $(this).parent().siblings().find('.menu').slideUp(300);
-                    $(this).parent().find('.menu').slideUp(300);
-                    if(!$(this).parent().find('.menu').is(':visible')) {
-                        $(this).parent().find('.menu').slideDown(300);
-                    }
-                });
+                if($(window).width() < $tablet) {
+                    footerTitle.off('click').on('click', function(e) {
+                        e.preventDefault();
+                        if($(this).hasClass('open-menu')) {
+                            $(this).removeClass('open-menu');
+                        }
+                        else {
+                            $(this).addClass('open-menu');
+                        }
+                        $(this).parent().siblings().find('.open-menu').removeClass('open-menu');
+                        $(this).parent().siblings().find('.menu').slideUp(300);
+                        $(this).parent().find('.menu').slideUp(300);
+                        if(!$(this).parent().find('.menu').is(':visible')) {
+                            $(this).parent().find('.menu').slideDown(300);
+                        }
+                    });
+                }
+                else {
+                    footerTitle.parent().find('.menu').removeAttr('style');
+                }
             }
         },
 
@@ -634,6 +639,9 @@
 
         // Filter product
         customJS.filterProduct();
+
+        // Footer mobile menu
+        customJS.footerMobileMenu();
 
         // Product summary centering
         productDetail.summaryCenter();

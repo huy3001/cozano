@@ -2,12 +2,19 @@
 
 #footer {
     padding: 0 0 50px;
-    .footer-content {
-        padding: 0 50px;
-    }
     .footer-menu {
+        text-align: center;
+        margin-top: 30px;
         .footer-title {
-            display: none;
+            color: $black;
+            font-size: 14px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        .widget_nav_menu {
+            display: inline-block;
+            vertical-align: top;
+            width: 30%;
         }
         li {
             list-style: none;
@@ -15,20 +22,21 @@
         ul {
             margin: 0;
             padding: 0;
-            font-size: 0;
-            li {
-                display: inline-block;
-                vertical-align: top;
-                width: 25%;
-                a {
+            &.menu {
+                li {
                     color: $left-menu-bg;
                     font-size: 13px;
                     @include font('font-roboto-medium');
-                    text-align: justify;
-                    display: inline-block;
-                    padding: 8px 10px;
+                    text-align: left;
+                    padding: 8px 0;
                     &:hover {
                         color: $header-bg;
+                    }
+                    a {
+                        color: $left-menu-bg;
+                        &:hover {
+                            color: $header-bg;
+                        }
                     }
                 }
             }
@@ -36,7 +44,7 @@
     }
     .social-block {
         text-align: center;
-        margin: 50px 0;
+        margin: 40px 0;
         a {
             background: $left-menu-bg;
             @include border-radius(50%);

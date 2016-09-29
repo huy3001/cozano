@@ -1,0 +1,19 @@
+/* Home promotion style */
+
+.promotion-block {
+    font-size: 0;
+    text-align: center;
+    margin-top: 2px;
+    a {
+        border: 1px solid $white;
+        display: inline-block;
+        vertical-align: top;
+        height: 200px;
+        width: 25%;
+        overflow: hidden;
+    }
+    img {
+        height: 100%;
+        width: auto;
+    }
+}

@@ -255,6 +255,15 @@
             }
         },
 
+        homePromotion: function() {
+            var promotionImg = $('.promotion-block img');
+            if(promotionImg.length) {
+                promotionImg.imgCentering({
+                    'forceSmart': true
+                });
+            }
+        },
+
         moreImageProduct: function () {
             $( '.thumbnails a img').off('click').on('click', function() {
                     var photo_fullsize = $(this).attr('srcset');
@@ -516,6 +525,9 @@
 
         // Home main slider
         customJS.homeMainSlider();
+
+        // Home promotion
+        customJS.homePromotion();
 
         // Product match height
         customJS.productMatchHeight();

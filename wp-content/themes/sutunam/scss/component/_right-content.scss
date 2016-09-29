@@ -26,15 +26,7 @@
         }
     }
 
-    @include bp(max-width, $large-desktop - 1) {
-        * {
-            .container {
-                width: 940px;
-            }
-        }
-    }
-
-    @include bp(max-width, $desktop) {
+    @include bp(max-width, $tablet - 1) {
         width: 100%;
         &:before {
             content: "";
@@ -53,27 +45,6 @@
             &:before {
                 z-index: -1;
                 @include opacity(0);
-            }
-        }
-        * {
-            .container {
-                width: 960px;
-            }
-        }
-    }
-
-    @include bp(max-width, $laptop - 1) {
-        * {
-            .container {
-                width: 750px;
-            }
-        }
-    }
-
-    @include bp(max-width, $tablet - 1) {
-        * {
-            .container {
-                width: 100%;
             }
         }
     }

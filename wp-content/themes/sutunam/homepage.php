@@ -37,6 +37,13 @@ $jk_options = get_option('redux_demo');
 							</a>
 						</li>
 					<?php endif;?>
+                    <?php if($jk_options['overview_content_4']):?>
+                        <li class="upsbar-item">
+                            <a class="upsbar-link" href="<?php echo $jk_options['overview_url_4'] ?>" target="_self">
+                                <?php echo $jk_options['overview_content_4'] ?>
+                            </a>
+                        </li>
+                    <?php endif;?>
 				</ul>
                 <?php sutunam_menu('top-menu'); ?>
 			</aside>

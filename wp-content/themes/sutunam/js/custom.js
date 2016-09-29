@@ -239,6 +239,22 @@
             }
         },
 
+        homeMainSlider: function() {
+            var sliderBlock = $('.slider-block');
+            if(sliderBlock.length) {
+                sliderBlock.slick({
+                    dots: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            }
+        },
+
         moreImageProduct: function () {
             $( '.thumbnails a img').off('click').on('click', function() {
                     var photo_fullsize = $(this).attr('srcset');
@@ -497,6 +513,9 @@
 
         // Search toggle
         customJS.searchToggle();
+
+        // Home main slider
+        customJS.homeMainSlider();
 
         // Product match height
         customJS.productMatchHeight();

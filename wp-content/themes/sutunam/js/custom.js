@@ -304,9 +304,7 @@
         homePromotion: function() {
             var promotionImg = $('.promotion-block img');
             if(promotionImg.length) {
-                promotionImg.imgCentering({
-                    'forceSmart': true
-                });
+                promotionImg.imgCentering();
             }
         },
 

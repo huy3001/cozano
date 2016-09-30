@@ -198,6 +198,7 @@
                 searchTarget = $('.search-form .toggle-search, .search-form .search-item');
             if(toggleSearch.length) {
                 if($(window).width() < $desktop - 1) {
+                    toggleSearch.removeAttr('style');
                     toggleSearch.off('click').on('click', function() {
                         $(this).next('.search-item').slideToggle(300);
                         $(this).next('.search-item').find('.form-text').focus();
@@ -222,6 +223,13 @@
                     toggleSearch.off('click').on('click', function() {
                         $(this).fadeOut(300);
                         $(this).next('.search-item').find('.form-text').addClass('expand').focus();
+                    });
+                    $(document).on('click', function(e) {
+                        var target = e.target;
+                        if (!$(target).is(searchTarget) && !$(target).parents().is(searchTarget)) {
+                            toggleSearch.fadeIn(300);
+                            searchItem.find('.form-text').removeClass('expand');
+                        }
                     });
                 }
             }
@@ -276,9 +284,7 @@
             if(sliderBlock.length) {
                 sliderBlock.slick({
                     dots: true,
-                    speed: 500,
-                    fade: true,
-                    cssEase: 'linear',
+                    speed: 1000,
                     autoplay: true,
                     autoplaySpeed: 5000,
                     slidesToShow: 1,

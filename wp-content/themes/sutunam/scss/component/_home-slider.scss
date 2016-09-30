@@ -3,16 +3,24 @@
 .slider-block {
     margin-bottom: 0;
     .slick-prev, .slick-next {
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.2);
         @include border-radius(50%);
         height: 80px;
         width: 80px;
         z-index: 1;
+        @include transition();
         &:before {
             font-size: 60px;
             font-weight: 100;
             @include font('font-awesome');
-            @include opacity(1);
+            @include opacity(0.5);
+            @include transition();
+        }
+        &:hover {
+            background: rgba(0,0,0,0.5);
+            &:before {
+                @include opacity(1);
+            }
         }
     }
     .slick-prev {

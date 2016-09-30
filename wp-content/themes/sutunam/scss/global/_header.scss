@@ -66,6 +66,11 @@
                         text-decoration: underline;
                     }
                 }
+                &.current-menu-item {
+                    a {
+                        color: $header-link-hover;
+                    }
+                }
             }
         }
     }
@@ -220,6 +225,10 @@
                 padding: 10px 40px;
                 &:focus + button {
                     color: $header-bg;
+                }
+                &.expand {
+                    width: 100%;
+                    padding: 10px 40px;
                 }
             }
             button {

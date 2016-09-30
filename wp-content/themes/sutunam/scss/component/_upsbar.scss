@@ -17,6 +17,9 @@
                 display: inline-block;
                 vertical-align: middle;
                 padding: 10px 30px;
+                &:hover {
+                    @include opacity(0.5);
+                }
             }
         }
     }

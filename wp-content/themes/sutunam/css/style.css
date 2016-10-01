@@ -2434,7 +2434,7 @@ h6 {
   .page-template-men .slider-block .slick-dots,
   .page-template-women .slider-block .slick-dots,
   .page-template-shoes .slider-block .slick-dots {
-    bottom: 10px;
+    bottom: 0;
   }
 }
 
@@ -2629,7 +2629,7 @@ h6 {
   transform: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   /* line 52, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
 
   .home .content-block .content-block-body,
@@ -2640,7 +2640,7 @@ h6 {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
   /* line 60, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
 
   .home .content-block .content-block-body,
@@ -2648,9 +2648,10 @@ h6 {
   .page-template-women .content-block .content-block-body,
   .page-template-shoes .content-block .content-block-body {
     bottom: 75px;
+    width: 50%;
   }
 
-  /* line 62, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
+  /* line 63, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
 
   .home .content-block .content-block-body.left,
   .page-template-men .content-block .content-block-body.left,
@@ -2672,7 +2673,7 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 75, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
+  /* line 76, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
 
   .home .content-block .content-block-body,
   .page-template-men .content-block .content-block-body,
@@ -2680,17 +2681,6 @@ h6 {
   .page-template-shoes .content-block .content-block-body {
     bottom: 50px;
     width: 95%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  /* line 84, e:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_home.scss */
-
-  .home .content-block .content-block-body,
-  .page-template-men .content-block .content-block-body,
-  .page-template-women .content-block .content-block-body,
-  .page-template-shoes .content-block .content-block-body {
-    bottom: 30px;
   }
 }
 

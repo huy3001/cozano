@@ -79,7 +79,7 @@
 
     @include bp(max-width, $tablet - 1) {
         .slick-dots {
-            bottom: 10px;
+            bottom: 0;
         }
     }
 }

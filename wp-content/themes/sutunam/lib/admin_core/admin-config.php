@@ -430,7 +430,47 @@
                         'id'    => 'overview_url_4',
                         'type'  => 'text',
                         'title' => 'Overview Url 4',
-                    )
+                    ),
+	                array(
+		                'id'        => 'overview_content_5',
+		                'type'      => 'textarea',
+		                'title'     => __('Overview Content 5'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
+	                array(
+		                'id'    => 'overview_url_5',
+		                'type'  => 'text',
+		                'title' => 'Overview Url 5',
+	                ),
+	                array(
+		                'id'        => 'overview_content_6',
+		                'type'      => 'textarea',
+		                'title'     => __('Overview Content 6'),
+		                'subtitle'  => __('HTML can be used', 'sutunam'),
+		                'allowed_html' => array(
+			                'a' => array(
+				                'href' => array(),
+				                'title' => array()
+			                ),
+			                'br' => array(),
+			                'em' => array(),
+			                'strong' => array()
+		                )
+	                ),
+	                array(
+		                'id'    => 'overview_url_6',
+		                'type'  => 'text',
+		                'title' => 'Overview Url 6',
+	                )
                 )
             ));
             Redux::setSection( $opt_name,array(

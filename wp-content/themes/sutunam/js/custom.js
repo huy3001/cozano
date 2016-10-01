@@ -250,18 +250,31 @@
         homeUpbarSlider: function() {
             var upbarList = $('.upsbar-list');
             if(upbarList.length) {
-                if($(window).width() < $laptop) {
+                if($(window).width() < $desktop) {
                     if(!upbarList.hasClass('slick-slider')) {
                         upbarList.slick({
                             arrows: false,
-                            speed: 500,
                             autoplay: true,
                             autoplaySpeed: 5000,
-                            slidesToShow: 2,
+                            slidesToShow: 4,
                             slidesToScroll: 1,
                             responsive: [
                                 {
+                                    breakpoint: $laptop,
+                                    settings: {
+                                        slidesToShow: 3,
+                                        slidesToScroll: 1
+                                    }
+                                },
+                                {
                                     breakpoint: $tablet,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        slidesToScroll: 1
+                                    }
+                                },
+                                {
+                                    breakpoint: $mobile,
                                     settings: {
                                         slidesToShow: 1,
                                         slidesToScroll: 1
@@ -284,7 +297,6 @@
             if(sliderBlock.length) {
                 sliderBlock.slick({
                     dots: true,
-                    speed: 1000,
                     autoplay: true,
                     autoplaySpeed: 5000,
                     slidesToShow: 1,
@@ -500,7 +512,7 @@
                             }
                         },
                         {
-                            breakpoint: $mobile + 1,
+                            breakpoint: $mobile,
                             settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1
@@ -600,7 +612,7 @@
         customJS.homeMainSlider();
 
         // Home promotion
-        customJS.homePromotion();
+        //customJS.homePromotion();
 
         // Product match height
         customJS.productMatchHeight();
@@ -633,7 +645,7 @@
         customJS.homeUpbarSlider();
 
         // Home promotion
-        customJS.homePromotion();
+        //customJS.homePromotion();
 
         // Product match height
         customJS.productMatchHeight();

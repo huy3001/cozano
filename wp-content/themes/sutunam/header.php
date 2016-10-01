@@ -58,12 +58,6 @@ $jk_options = get_option('redux_demo');
                 <?php endif ?>
             </div>
 
-            <div class="shopping-cart">
-                <a class="cart-icon" href="#">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-            </div>
-
             <div class="login">
                 <?php if (is_user_logged_in()) { ?>
                     <a class="login-button" href="<?php echo wp_logout_url(home_url()); ?>">
@@ -95,6 +89,12 @@ $jk_options = get_option('redux_demo');
             <div class="search-form">
                 <?php get_search_form(); ?>
             </div>
+
+	        <div class="shopping-cart">
+		        <a class="cart-icon" href="#">
+			        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+		        </a>
+	        </div>
 
             <?php sutunam_menu('top-menu'); ?>
         </div>

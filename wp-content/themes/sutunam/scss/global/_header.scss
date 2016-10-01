@@ -5,6 +5,7 @@
     height: $header-height;
     width: 100%;
     position: fixed;
+    left: 0;
     top: 0;
     z-index: 111;
     @include bp(max-width, $desktop) {
@@ -48,7 +49,7 @@
     }
     .top-menu {
         float: right;
-        margin-right: 15px;
+        margin-right: 20px;
         ul {
             float: left;
             list-style: none;
@@ -85,7 +86,6 @@
     .search-form {
         float: right;
         height: 100%;
-        margin-right: 30px;
         position: relative;
         input {
             @include border-radius(0);
@@ -160,6 +160,7 @@
     }
     .shopping-cart {
         float: right;
+        margin-right: 30px;
         .cart-icon {
             color: $white;
             font-size: 18px;
@@ -261,10 +262,10 @@
     }
 
     @include bp(max-width, $tablet - 1) {
+        left: $left-content-width;
         @include transition();
-        @include transform(translate3d($left-content-width,0,0));
         .no-sidebar & {
-            @include transform(translate3d(0,0,0));
+            left: 0;
         }
         .toggle-menu {
             display: block;
@@ -302,6 +303,13 @@
             }
         }
         .search-form {
+            button {
+                &.toggle-search {
+                    padding-right: 0;
+                }
+            }
+        }
+        .shopping-cart {
             margin-right: 5px;
         }
     }

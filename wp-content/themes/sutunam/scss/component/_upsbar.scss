@@ -24,6 +24,16 @@
         }
     }
 
+    @include bp(max-width, $desktop - 1) {
+        .upsbar-list {
+            li {
+                a {
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+
     @include bp(max-width, $tablet - 1) {
         .upsbar-list {
             max-height: 40px;

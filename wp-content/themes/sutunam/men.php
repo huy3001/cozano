@@ -12,6 +12,31 @@ $jk_options = get_option('redux_demo');
 ?>
 <?php include (TEMPLATEPATH . '/left-content.php'); ?>
 <div class="right-content">
+    <?php
+    global $wp_query;
+    echo '<div class="cat-sub-list">';
+    $cat = get_term_by('slug','men','product_cat');
+    $args = array(
+        'hierarchical' => 1,
+        'show_option_none' => '',
+        'hide_empty' => 0,
+        'parent' => $cat->term_id,
+        'taxonomy' => 'product_cat'
+    );
+    $categories = get_categories( $args );
+    echo '<ul class="cat-list">';
+    foreach($categories as $category){
+        $link = get_term_link( $category->slug, $category->taxonomy );
+        $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+        $image_sub = wp_get_attachment_url( $thumbnail );
+        if($category->term_id == $cat->term_id)
+            echo '<li class="active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
+        else
+            echo '<li><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
+    }
+    echo '</ul></div>';
+    ?>
+
 	<div class="container">
 		<div class="row">
             <?php

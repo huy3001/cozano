@@ -58,7 +58,7 @@ get_header( 'shop' ); ?>
                 $link = get_term_link( $category->slug, $category->taxonomy );
                 $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
                 $image_sub = wp_get_attachment_url( $thumbnail );
-                echo '<li><a href="'. $link .'"><img src="'. $image_sub .'" /><p>'. $category->name .'</p></a></li>';
+                echo '<li><a href="'. $link .'"><img src="'. $image_sub .'" /><span>'. $category->name .'</span></a></li>';
             }
             echo '</ul></div>';
             ?>

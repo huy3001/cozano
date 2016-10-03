@@ -3518,7 +3518,52 @@ h6 {
 
 .tax-product_cat .cat-sub-list {
   background: #999999;
-  padding: 20px 20px 0;
+  padding: 20px 10px 0;
+}
+
+/* line 6, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.tax-product_cat .cat-sub-list ul.cat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.tax-product_cat .cat-sub-list ul.cat-list li {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 14, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.tax-product_cat .cat-sub-list ul.cat-list li a {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+/* line 21, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.tax-product_cat .cat-sub-list ul.cat-list li img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 25, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.tax-product_cat .cat-sub-list ul.cat-list li span {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
 }
 
 /* line 5, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */

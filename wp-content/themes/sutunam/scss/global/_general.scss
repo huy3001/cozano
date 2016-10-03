@@ -4,12 +4,22 @@ html, body {
     height: 100%;
 }
 
+html {
+    @include bp(max-width, $tablet - 1) {
+        &.overflow {
+            position: relative;
+            overflow-y: hidden;
+        }
+    }
+}
+
 body {
     background: $body-bg;
     color: $header-bg;
     @include font('font-roboto-bold');
     @include font-smoothing(antialiased);
-    @include bp(max-width, $desktop) {
+    @include bp(max-width, $tablet - 1) {
+        position: relative;
         overflow-y: hidden;
         &.no-sidebar {
             overflow-y: auto;

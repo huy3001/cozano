@@ -552,15 +552,18 @@
         sidebarToggle: function () {
             var toggleBtn = $('.toggle-menu'),
                 sidebar = $('.left-content'),
+                html = $('html'),
                 body = $('body');
             if(toggleBtn.length) {
                 toggleBtn.off('click').on('click', function() {
                     if(body.hasClass('no-sidebar')) {
+                        html.addClass('overflow');
                         body.removeClass('no-sidebar');
                         customJS.productMatchHeight();
                         productDetail.sliderReinit(imageList, thumbList);
                     }
                     else {
+                        html.removeClass('overflow');
                         body.addClass('no-sidebar');
                         customJS.productMatchHeight();
                         productDetail.sliderReinit(imageList, thumbList);

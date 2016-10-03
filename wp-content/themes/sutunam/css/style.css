@@ -2699,8 +2699,138 @@ h6 {
 /* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men {
+  /* Sub category style */
   /* Featured product style */
   /* Content block description style */
+}
+
+/* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list {
+  background: #999999;
+  padding: 0 10px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+/* line 8, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+/* line 15, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list.rightIn {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 18, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 22, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li a {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  padding: 20px 10px 0;
+}
+
+/* line 28, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li figure {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+/* line 33, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li img {
+  max-width: inherit;
+  width: auto;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  -moz-transform: translate3d(-50%, 0, 0);
+  -o-transform: translate3d(-50%, 0, 0);
+  -ms-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 44, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li span {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 55, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li:hover a,
+.page-template-men .cat-sub-list ul.cat-list li.active a {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 58, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li:hover img,
+.page-template-men .cat-sub-list ul.cat-list li.active img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 61, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list li:hover span,
+.page-template-men .cat-sub-list ul.cat-list li.active span {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* line 67, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-men .cat-sub-list ul.cat-list .slick-track {
+  margin: 0 auto;
 }
 
 /* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_featured-product.scss */
@@ -2922,32 +3052,32 @@ h6 {
   }
 }
 
-/* line 8, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 9, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .content-block.no-feature {
   min-height: 550px;
 }
 
-/* line 12, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 13, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .content-block .content-block-body a {
   border-color: #ffffff;
 }
 
-/* line 14, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 15, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .content-block .content-block-body a:hover {
   background: none;
 }
 
-/* line 21, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 22, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .content-block-img img {
   position: absolute;
   top: 0;
 }
 
-/* line 30, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 31, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .men-option-1 .content-block-img img,
 .page-template-men .men-option-3 .content-block-img img,
@@ -2955,7 +3085,7 @@ h6 {
   right: 0;
 }
 
-/* line 37, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 38, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .men-option-2 .feature-product,
 .page-template-men .men-option-2 .content-block-desc,
@@ -2964,7 +3094,7 @@ h6 {
   float: right;
 }
 
-/* line 42, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+/* line 43, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
 .page-template-men .men-option-2 .content-block-img img,
 .page-template-men .men-option-4 .content-block-img img {
@@ -2972,7 +3102,7 @@ h6 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 50, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+  /* line 51, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
   .page-template-men .content-block.no-feature {
     min-height: 315px;
@@ -2980,7 +3110,7 @@ h6 {
 }
 
 @media only screen and (max-width: 1200px) {
-  /* line 58, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+  /* line 59, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
   .page-template-men .content-block.no-feature {
     min-height: 330px;
@@ -2988,20 +3118,20 @@ h6 {
 }
 
 @media only screen and (max-width: 992px) {
-  /* line 66, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+  /* line 67, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
   .page-template-men .content-block.no-feature {
     min-height: inherit;
   }
 
-  /* line 70, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+  /* line 71, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
   .page-template-men .feature-product,
   .page-template-men .content-block-desc {
     display: none;
   }
 
-  /* line 75, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
+  /* line 76, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_men-page.scss */
 
   .page-template-men .content-block-img img {
     position: static;
@@ -3013,8 +3143,138 @@ h6 {
 /* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women {
+  /* Sub category style */
   /* Featured product style */
   /* Content block description style */
+}
+
+/* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list {
+  background: #999999;
+  padding: 0 10px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+/* line 8, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+/* line 15, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list.rightIn {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 18, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 22, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li a {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  padding: 20px 10px 0;
+}
+
+/* line 28, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li figure {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+/* line 33, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li img {
+  max-width: inherit;
+  width: auto;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  -moz-transform: translate3d(-50%, 0, 0);
+  -o-transform: translate3d(-50%, 0, 0);
+  -ms-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 44, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li span {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 55, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li:hover a,
+.page-template-women .cat-sub-list ul.cat-list li.active a {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 58, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li:hover img,
+.page-template-women .cat-sub-list ul.cat-list li.active img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 61, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list li:hover span,
+.page-template-women .cat-sub-list ul.cat-list li.active span {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* line 67, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_sub-category.scss */
+
+.page-template-women .cat-sub-list ul.cat-list .slick-track {
+  margin: 0 auto;
 }
 
 /* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_featured-product.scss */
@@ -3236,32 +3496,32 @@ h6 {
   }
 }
 
-/* line 8, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 9, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .content-block.no-feature {
   min-height: 550px;
 }
 
-/* line 12, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 13, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .content-block .content-block-body a {
   border-color: #ffffff;
 }
 
-/* line 14, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 15, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .content-block .content-block-body a:hover {
   background: none;
 }
 
-/* line 21, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 22, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .content-block-img img {
   position: absolute;
   top: 0;
 }
 
-/* line 29, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 30, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .women-option-1 .feature-product,
 .page-template-women .women-option-1 .content-block-desc,
@@ -3272,7 +3532,7 @@ h6 {
   float: right;
 }
 
-/* line 34, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 35, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .women-option-1 .content-block-img img,
 .page-template-women .women-option-3 .content-block-img img,
@@ -3280,7 +3540,7 @@ h6 {
   left: 0;
 }
 
-/* line 42, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+/* line 43, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
 .page-template-women .women-option-2 .content-block-img img,
 .page-template-women .women-option-4 .content-block-img img {
@@ -3288,7 +3548,7 @@ h6 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 50, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+  /* line 51, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
   .page-template-women .content-block.no-feature {
     min-height: 315px;
@@ -3296,7 +3556,7 @@ h6 {
 }
 
 @media only screen and (max-width: 1200px) {
-  /* line 58, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+  /* line 59, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
   .page-template-women .content-block.no-feature {
     min-height: 330px;
@@ -3304,20 +3564,20 @@ h6 {
 }
 
 @media only screen and (max-width: 992px) {
-  /* line 66, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+  /* line 67, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
   .page-template-women .content-block.no-feature {
     min-height: inherit;
   }
 
-  /* line 70, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+  /* line 71, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
   .page-template-women .feature-product,
   .page-template-women .content-block-desc {
     display: none;
   }
 
-  /* line 75, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
+  /* line 76, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_women-page.scss */
 
   .page-template-women .content-block-img img {
     position: static;

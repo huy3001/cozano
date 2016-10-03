@@ -2,6 +2,7 @@
 
 .page-template-women {
     @extend .home;
+    @import "../component/sub-category";
     @import "../component/featured-product";
     @import "../component/content-desc";
     .content-block {

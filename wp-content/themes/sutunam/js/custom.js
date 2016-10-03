@@ -556,26 +556,26 @@
                 windowWidth = $(window).width();
             if(catList.length) {
                 catList.addClass('rightIn');
-                var sumCatList = catItem.length * catItemWidth,
-                    itemCount = Math.floor(windowWidth/catItemWidth);
-                if(sumCatList > windowWidth) {
-                    if(!catList.hasClass('slick-slider')) {
-                        catList.slick({
-                            arrows: false,
-                            autoplay: true,
-                            autoplaySpeed: 5000,
-                            slidesToShow: itemCount,
-                            slidesToScroll: 1
-                        });
-                    }
-                    catList.width(itemCount*catItemWidth);
-                }
-                else {
-                    if(catList.hasClass('slick-slider')) {
-                        catList.slick('unslick');
-                    }
-                    catList.width('auto');
-                }
+                //var sumCatList = catItem.length * catItemWidth,
+                //    itemCount = Math.floor(windowWidth/catItemWidth);
+                //if(sumCatList > windowWidth) {
+                //    if(!catList.hasClass('slick-slider')) {
+                //        catList.slick({
+                //            arrows: false,
+                //            autoplay: true,
+                //            autoplaySpeed: 5000,
+                //            slidesToShow: itemCount,
+                //            slidesToScroll: 1
+                //        });
+                //    }
+                //    catList.width(itemCount*catItemWidth);
+                //}
+                //else {
+                //    if(catList.hasClass('slick-slider')) {
+                //        catList.slick('unslick');
+                //    }
+                //    catList.width('auto');
+                //}
             }
         },
 

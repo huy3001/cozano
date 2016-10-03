@@ -1,6 +1,7 @@
 /* Product category style */
 
 .tax-product_cat {
+    @import "../component/sub-category";
     .cat-header {
         margin-bottom: 30px;
         position: relative;

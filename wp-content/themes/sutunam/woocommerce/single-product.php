@@ -55,9 +55,9 @@ get_header( 'shop' ); ?>
 		$thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
 		$image_sub = wp_get_attachment_url( $thumbnail );
         if($category->term_id == $cat->term_id)
-            echo '<li class="active"><a href="'. $link .'"><img src="'. $image_sub .'" /><span>'. $category->name .'</span></a></li>';
+            echo '<li class="active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
         else
-            echo '<li><a href="'. $link .'"><img src="'. $image_sub .'" /><span>'. $category->name .'</span></a></li>';
+            echo '<li><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
 	}
     echo '</ul></div>';
 	?>

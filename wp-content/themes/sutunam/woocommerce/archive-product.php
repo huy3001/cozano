@@ -33,6 +33,35 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
         <div class="cat-header">
+            <?php
+            global $wp_query;
+            $cat = $wp_query->get_queried_object();
+            ?>
+            <?php
+            //Display sub-category
+            echo '<div class="cat-sub-list">';
+            if($cat->parent == 0){
+                $parent = $cat->term_id;
+            }else{
+                $parent = $cat->parent;
+            }
+            $args = array(
+                'hierarchical' => 1,
+                'show_option_none' => '',
+                'hide_empty' => 0,
+                'parent' => $parent,
+                'taxonomy' => 'product_cat'
+            );
+            $categories = get_categories( $args );
+            echo '<ul class="cat-list">';
+            foreach($categories as $category){
+                $link = get_term_link( $category->slug, $category->taxonomy );
+                $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+                $image_sub = wp_get_attachment_url( $thumbnail );
+                echo '<li><a href="'. $link .'"><img src="'. $image_sub .'" /></a></li>';
+            }
+            echo '</ul></div>';
+            ?>
             <div class="cat-info">
                 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
@@ -52,34 +81,6 @@ get_header( 'shop' ); ?>
                 <?php if ( have_posts() ) : ?>
             </div>
 
-            <?php
-            global $wp_query;
-            $cat = $wp_query->get_queried_object();
-			?>
-			<?php
-			//Display sub-category
-			echo '<div class="sub-category-block">';
-			if($cat->parent == 0){
-				$parent = $cat->term_id;
-			}else{
-				$parent = $cat->parent;
-			}
-			$args = array(
-				'hierarchical' => 1,
-				'show_option_none' => '',
-				'hide_empty' => 0,
-				'parent' => $parent,
-				'taxonomy' => 'product_cat'
-			);
-			$categories = get_categories( $args );
-			echo '<ul class="wooc_sclist">';
-			foreach($categories as $category){
-				$link = get_term_link( $category->slug, $category->taxonomy );
-				$thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
-				$image_sub = wp_get_attachment_url( $thumbnail );
-				echo '<li><a href="'. $link .'"><img src="'. $image_sub .'" /></a></li>';
-			}
-			?>
 			<?php
 			//Display category image
             $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );

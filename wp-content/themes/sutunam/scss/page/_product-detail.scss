@@ -1,6 +1,7 @@
 /* Product detail style */
 
 .single-product {
+    @import "../component/sub-category";
     div.product {
         .product-container {
             float: left;

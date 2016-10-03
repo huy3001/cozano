@@ -2,11 +2,12 @@
 
 .cat-sub-list {
     background: $left-menu-bg;
-    padding: 20px 10px 0;
+    padding: 0 10px;
     ul.cat-list {
         list-style: none;
         margin: 0;
         padding: 0;
+        text-align: center;
         li {
             font-size: 0;
             display: inline-block;
@@ -15,12 +16,15 @@
                 display: inline-block;
                 vertical-align: top;
                 width: 160px;
-                padding: 0 10px;
+                padding: 20px 10px 0;
                 overflow: hidden;
             }
             img {
                 width: 100%;
-                height: auto;
+                height: auto;-webkit-backface-visibility: hidden;
+                @include transform(translate3d(0,0,0));
+                @include opacity(0.8);
+                @include transition();
             }
             span {
                 color: $white;
@@ -30,6 +34,19 @@
                 text-align: center;
                 text-transform: uppercase;
                 padding: 10px;
+                @include transition();
+            }
+            &:hover, &.active {
+                a {
+                    background: rgba(255,255,255,0.2);
+                }
+                img {
+                    @include opacity(1);
+                }
+                span {
+                    color: $black;
+                    font-weight: bold;
+                }
             }
         }
     }

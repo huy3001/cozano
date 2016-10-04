@@ -2,18 +2,13 @@
 
 .cat-sub-list {
     background: $left-menu-bg;
-    padding: 0 10px;
     max-height: 200px;
     overflow: hidden;
     ul.cat-list {
         list-style: none;
         margin: 0 auto;
-        padding: 0 0 20px;
+        padding: 0;
         text-align: center;
-        max-height: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         @include transition();
@@ -44,7 +39,7 @@
                 left: 50%;
                 -webkit-backface-visibility: hidden;
                 @include transform(translate3d(-50%,0,0));
-                @include opacity(0.8);
+//                @include opacity(0.8);
                 @include transition();
             }
             span {
@@ -57,21 +52,29 @@
                 padding: 10px;
                 @include transition();
             }
-            &:hover, &.active {
-                a {
-                    background: rgba(255,255,255,0.2);
-                }
-                img {
-                    @include opacity(1);
-                }
-                span {
-                    color: $black;
-                    font-weight: bold;
-                }
-            }
+//            &:hover, &.active {
+//                a {
+//                    background: rgba(255,255,255,0.2);
+//                }
+//                img {
+//                    @include opacity(1);
+//                }
+//                span {
+//                    color: $black;
+//                    font-weight: bold;
+//                }
+//            }
         }
         .slick-track {
             margin: 0 auto;
+        }
+
+        @include bp(max-width, $desktop - 1) {
+            padding: 0 0 20px;
+            max-height: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
     }
 }

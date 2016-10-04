@@ -14,11 +14,11 @@ get_header(); ?>
         <section id="primary" class="search-result-wrapper">
             <div class="row">
                 <div class="search-result-heading">
-                    <h1 class="txt-title"><?php echo __('Search result', 'sutunam') ?></h1>
+                    <!--<h1 class="txt-title"><?php echo __('Search result', 'sutunam') ?></h1>-->
                     <?php if (have_posts()) : ?>
-                        <h2><?php printf(__('Results for: %s', 'sutunam'), get_search_query()); ?></h2>
+                        <h1><?php printf(__('Results for: %s', 'sutunam'), get_search_query()); ?></h1>
                     <?php else: ?>
-                        <h2><?php echo __("There's no matched result for ", 'sutunam') . get_search_query() ?></h2>
+                        <h1><?php echo __("There's no matched result for ", 'sutunam') . get_search_query() ?></h1>
                     <?php endif ?>
                 </div>
                 <!-- search-result-heading -->

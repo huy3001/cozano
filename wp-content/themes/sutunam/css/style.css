@@ -2854,8 +2854,9 @@ h6 {
 
   .page-template-men .cat-sub-list ul.cat-list li span {
     font-size: 12px;
-    padding: 5px;
+    padding: 5px 0;
     line-height: normal;
+    text-transform: none;
   }
 }
 
@@ -3315,8 +3316,9 @@ h6 {
 
   .page-template-women .cat-sub-list ul.cat-list li span {
     font-size: 12px;
-    padding: 5px;
+    padding: 5px 0;
     line-height: normal;
+    text-transform: none;
   }
 }
 
@@ -3958,8 +3960,9 @@ h6 {
 
   .tax-product_cat .cat-sub-list ul.cat-list li span {
     font-size: 12px;
-    padding: 5px;
+    padding: 5px 0;
     line-height: normal;
+    text-transform: none;
   }
 }
 
@@ -4986,8 +4989,9 @@ h6 {
 
   .single-product .cat-sub-list ul.cat-list li span {
     font-size: 12px;
-    padding: 5px;
+    padding: 5px 0;
     line-height: normal;
+    text-transform: none;
   }
 }
 

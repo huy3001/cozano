@@ -3,7 +3,6 @@
 .tax-product_cat {
     @import "../component/sub-category";
     .cat-header {
-//        margin-bottom: 30px;
         position: relative;
         .cat-info {
             display: none;
@@ -570,6 +569,11 @@
                 .image {
                     height: 300px;
                 }
+            }
+        }
+        .is-sticky {
+            .filter-bar {
+                margin-top: -$header-height;
             }
         }
     }

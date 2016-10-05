@@ -262,6 +262,7 @@
     }
 
     @include bp(max-width, $tablet - 1) {
+        position: relative;
         left: $left-content-width;
         @include transition();
         .no-sidebar & {

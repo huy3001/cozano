@@ -12,13 +12,16 @@
     <div class="content">
         <section id="main-content">
             <div class="container">
-                <?php if (have_posts()) : while (have_posts()) :the_post(); ?>
-                    <?php get_template_part('content', get_post_format())?>
-                <?php endwhile; ?>
-                    <?php sutunam_pagination(); ?>
-                <?php else: ?>
-                    <?php get_template_part('content','none'); ?>
-                <?php endif; ?>
+                <h1 class="page-title"><?php wp_title(''); ?></h1>
+                <div class="page-content">
+                    <?php if (have_posts()) : while (have_posts()) :the_post(); ?>
+                        <?php get_template_part('content', get_post_format())?>
+                    <?php endwhile; ?>
+                        <?php sutunam_pagination(); ?>
+                    <?php else: ?>
+                        <?php get_template_part('content','none'); ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </section>
         <section id="sidebar">

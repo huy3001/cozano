@@ -255,10 +255,16 @@ if (!function_exists('sutunam_entry_meta')) {
  */
 function sutunam_readmore()
 {
-    return '...<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read More', 'sutunam') . '</a>';
+    return '<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read more', 'sutunam') . '</a>';
 }
 
 add_filter('excerpt_more', 'sutunam_readmore');
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 10;
+}
+
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 /**
  * Display content of post

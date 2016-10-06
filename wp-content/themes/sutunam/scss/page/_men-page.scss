@@ -5,10 +5,8 @@
     @import "../component/sub-category";
     @import "../component/featured-product";
     @import "../component/content-desc";
+    @import "../component/content-image";
     .content-block {
-        &.no-feature {
-            min-height: 550px;
-        }
         .content-block-body {
             a {
                 border-color: $white;
@@ -16,12 +14,6 @@
                     background: none;
                 }
             }
-        }
-    }
-    .content-block-img {
-        img {
-            position: absolute;
-            top: 0;
         }
     }
     .men-option-1,
@@ -48,25 +40,19 @@
 
     @include bp(max-width, $large-desktop) {
         .content-block {
-            &.no-feature {
-                min-height: 315px;
-            }
+
         }
     }
 
     @include bp(max-width, $desktop) {
         .content-block {
-            &.no-feature {
-                min-height: 330px;
-            }
+
         }
     }
 
     @include bp(max-width, $laptop) {
         .content-block {
-            &.no-feature {
-                min-height: inherit;
-            }
+
         }
         .feature-product,
         .content-block-desc {

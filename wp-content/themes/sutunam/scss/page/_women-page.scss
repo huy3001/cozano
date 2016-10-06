@@ -5,6 +5,7 @@
     @import "../component/sub-category";
     @import "../component/featured-product";
     @import "../component/content-desc";
+    @import "../component/content-image";
     .content-block {
         &.no-feature {
             min-height: 550px;
@@ -16,12 +17,6 @@
                     background: none;
                 }
             }
-        }
-    }
-    .content-block-img {
-        img {
-            position: absolute;
-            top: 0;
         }
     }
     .women-option-1,

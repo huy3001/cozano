@@ -49,7 +49,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="women-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="women-option-1 content-block <?php if ($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -69,7 +69,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>
-            <div class="women-option-1 content-block <?php if (!$jk_options['women_des_option_1']) echo 'no-feature'; ?>">
+            <div class="women-option-1 content-block <?php if ($jk_options['women_des_option_1']) echo 'has-feature'; ?>">
             <?php endif;?>
                 <?php if($jk_options['women_des_option_1']): ?>
                 <div class="content-block-desc">
@@ -111,7 +111,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="women-option-2 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="women-option-2 content-block <?php if ($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -131,7 +131,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>
-            <div class="women-option-2 content-block <?php if (!$jk_options['women_des_option_2']) echo 'no-feature'; ?>">
+            <div class="women-option-2 content-block <?php if ($jk_options['women_des_option_2']) echo 'has-feature'; ?>">
             <?php endif;?>
                 <?php if($jk_options['women_des_option_2']): ?>
                 <div class="content-block-desc">
@@ -173,7 +173,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="women-option-3 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="women-option-3 content-block <?php if ($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -193,7 +193,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>
-            <div class="women-option-3 content-block <?php if (!$jk_options['women_des_option_3']) echo 'no-feature'; ?>">
+            <div class="women-option-3 content-block <?php if ($jk_options['women_des_option_3']) echo 'has-feature'; ?>">
             <?php endif;?>
                 <?php if($jk_options['women_des_option_3']): ?>
                 <div class="content-block-desc">
@@ -235,7 +235,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="women-option-4 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="women-option-4 content-block <?php if ($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -255,7 +255,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>
-            <div class="women-option-4 content-block <?php if (!$jk_options['women_des_option_4']) echo 'no-feature'; ?>">
+            <div class="women-option-4 content-block <?php if ($jk_options['women_des_option_4']) echo 'has-feature'; ?>">
             <?php endif;?>
                 <?php if($jk_options['women_des_option_4']): ?>
                 <div class="content-block-desc">
@@ -297,7 +297,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="women-option-5 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="women-option-5 content-block <?php if ($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -317,7 +317,7 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>
-            <div class="women-option-5 content-block <?php if (!$jk_options['women_des_option_5']) echo 'no-feature'; ?>">
+            <div class="women-option-5 content-block <?php if ($jk_options['women_des_option_5']) echo 'has-feature'; ?>">
             <?php endif;?>
                 <?php if($jk_options['women_des_option_5']): ?>
                 <div class="content-block-desc">

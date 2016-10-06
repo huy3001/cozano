@@ -1,0 +1,16 @@
+/* Content block image style */
+
+.has-feature {
+    .content-block-img {
+        height: 100%;
+        width: 66.666%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        img {
+            height: 100%;
+            width: auto;
+            max-width: inherit;
+        }
+    }
+}

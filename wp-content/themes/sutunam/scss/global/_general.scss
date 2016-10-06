@@ -1,16 +1,11 @@
 /* General style */
 
-html, body {
-    height: 100%;
+* {
+    -webkit-tap-highlight-color: transparent;
 }
 
-html {
-    @include bp(max-width, $tablet - 1) {
-        &.overflow {
-            position: relative;
-            overflow-y: hidden;
-        }
-    }
+html, body {
+    height: 100%;
 }
 
 body {
@@ -18,13 +13,6 @@ body {
     color: $header-bg;
     @include font('font-roboto-bold');
     @include font-smoothing(antialiased);
-    @include bp(max-width, $tablet - 1) {
-        position: relative;
-        overflow-y: hidden;
-        &.no-sidebar {
-            overflow-y: auto;
-        }
-    }
 }
 
 img {

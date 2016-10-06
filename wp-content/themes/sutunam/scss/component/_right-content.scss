@@ -28,6 +28,7 @@
 
     @include bp(max-width, $tablet - 1) {
         width: 100%;
+        position: fixed;
         &:before {
             content: "";
             display: block;
@@ -42,6 +43,7 @@
             @include transition(opacity 0.3s ease);
         }
         .no-sidebar & {
+            position: relative;
             &:before {
                 z-index: -1;
                 @include opacity(0);

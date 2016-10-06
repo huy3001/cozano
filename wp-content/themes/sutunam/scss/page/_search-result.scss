@@ -29,4 +29,13 @@
             }
         }
     }
+
+    @include bp(max-width, $tablet - 1) {
+        .search-result-heading {
+            h1 {
+                font-size: 20px;
+                margin: 20px auto;
+            }
+        }
+    }
 }

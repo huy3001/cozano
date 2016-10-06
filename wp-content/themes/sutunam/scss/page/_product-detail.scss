@@ -3,6 +3,8 @@
 .single-product {
     @import "../component/sub-category";
     div.product {
+        max-width: $full-desktop;
+        margin: 0 auto;
         .product-container {
             float: left;
             width: 100%;

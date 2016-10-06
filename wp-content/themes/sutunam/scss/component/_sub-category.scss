@@ -1,7 +1,7 @@
 /* Sub category style */
 
 .cat-sub-list {
-    background: $left-menu-bg;
+    background: $search-input-bd;
     max-height: 200px;
     overflow: hidden;
     ul.cat-list {
@@ -68,15 +68,15 @@
     }
 
     @include bp(max-width, $tablet - 1) {
-        max-height: 120px;
+        max-height: 150px;
         ul.cat-list {
             li {
                 a {
-                    width: 95px;
+                    width: 125px;
                     padding: 10px 5px 0;
                 }
                 figure {
-                    height: 85px;
+                    height:115px;
                 }
                 span {
                     font-size: 12px;

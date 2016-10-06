@@ -262,10 +262,10 @@
     }
 
     @include bp(max-width, $tablet - 1) {
-        position: relative;
         left: $left-content-width;
         @include transition();
         .no-sidebar & {
+            position: relative;
             left: 0;
         }
         .toggle-menu {

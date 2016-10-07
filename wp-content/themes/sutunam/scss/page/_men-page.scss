@@ -20,9 +20,7 @@
     .men-option-3,
     .men-option-5 {
         .content-block-img {
-            img {
-                right: 0;
-            }
+            right: 0;
         }
     }
     .men-option-2,
@@ -32,9 +30,8 @@
             float: right;
         }
         .content-block-img {
-            img {
-                left: 0;
-            }
+            right: auto;
+            left: 0;
         }
     }
 

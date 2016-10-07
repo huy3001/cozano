@@ -987,20 +987,6 @@ Redux::setSection( $opt_name,array(
             'data'     => 'product_cat'
         ),
         array(
-            'id'       => 'women_button_option_1',
-            'type'     => 'select',
-            'title'    => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc'     => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options'  => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default'  => 'left',
-        ),
-        array(
             'id'        => 'women_content_option_1',
             'type'      => 'textarea',
             'title'     => __('Women Content Option 1'),
@@ -1014,6 +1000,20 @@ Redux::setSection( $opt_name,array(
                 'em' => array(),
                 'strong' => array()
             )
+        ),
+        array(
+            'id'       => 'women_button_option_1',
+            'type'     => 'select',
+            'title'    => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc'     => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options'  => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default'  => 'left',
         ),
         array(
             'id'        => 'women_des_option_2',
@@ -1055,20 +1055,6 @@ Redux::setSection( $opt_name,array(
             'data'     => 'product_cat'
         ),
         array(
-            'id'       => 'women_button_option_2',
-            'type'     => 'select',
-            'title'    => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc'     => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options'  => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default'  => 'left',
-        ),
-        array(
             'id'        => 'women_content_option_2',
             'type'      => 'textarea',
             'title'     => __('Women Content Option 2'),
@@ -1082,6 +1068,20 @@ Redux::setSection( $opt_name,array(
                 'em' => array(),
                 'strong' => array()
             )
+        ),
+        array(
+            'id'       => 'women_button_option_2',
+            'type'     => 'select',
+            'title'    => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc'     => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options'  => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default'  => 'left',
         ),
         array(
             'id'        => 'women_des_option_3',
@@ -1123,20 +1123,6 @@ Redux::setSection( $opt_name,array(
             'data'     => 'product_cat'
         ),
         array(
-            'id'       => 'women_button_option_3',
-            'type'     => 'select',
-            'title'    => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc'     => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options'  => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default'  => 'left',
-        ),
-        array(
             'id'        => 'women_content_option_3',
             'type'      => 'textarea',
             'title'     => __('Women Content Option 3'),
@@ -1150,6 +1136,20 @@ Redux::setSection( $opt_name,array(
                 'em' => array(),
                 'strong' => array()
             )
+        ),
+        array(
+            'id'       => 'women_button_option_3',
+            'type'     => 'select',
+            'title'    => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc'     => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options'  => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default'  => 'left',
         ),
         array(
             'id'        => 'women_des_option_4',
@@ -1191,20 +1191,6 @@ Redux::setSection( $opt_name,array(
             'data'     => 'product_cat'
         ),
         array(
-            'id'       => 'women_button_option_4',
-            'type'     => 'select',
-            'title'    => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc'     => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options'  => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default'  => 'left',
-        ),
-        array(
             'id'        => 'women_content_option_4',
             'type'      => 'textarea',
             'title'     => __('Women Content Option 4'),
@@ -1218,6 +1204,20 @@ Redux::setSection( $opt_name,array(
                 'em' => array(),
                 'strong' => array()
             )
+        ),
+        array(
+            'id'       => 'women_button_option_4',
+            'type'     => 'select',
+            'title'    => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc'     => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options'  => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default'  => 'left',
         ),
         array(
             'id'        => 'women_des_option_5',
@@ -1259,20 +1259,6 @@ Redux::setSection( $opt_name,array(
             'data'     => 'product_cat'
         ),
         array(
-            'id'       => 'women_button_option_5',
-            'type'     => 'select',
-            'title'    => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc'     => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options'  => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default'  => 'left',
-        ),
-        array(
             'id'        => 'women_content_option_5',
             'type'      => 'textarea',
             'title'     => __('Women Content Option 5'),
@@ -1286,6 +1272,20 @@ Redux::setSection( $opt_name,array(
                 'em' => array(),
                 'strong' => array()
             )
+        ),
+        array(
+            'id'       => 'women_button_option_5',
+            'type'     => 'select',
+            'title'    => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc'     => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options'  => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default'  => 'left',
         )
     ),
 ));

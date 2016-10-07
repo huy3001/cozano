@@ -3,12 +3,12 @@
 .single-product {
     @import "../component/sub-category";
     div.product {
-        max-width: $full-desktop;
-        margin: 0 auto;
         .product-container {
-            float: left;
+            clear: both;
             width: 100%;
+            max-width: $full-desktop;
             max-height: $product-img-height;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
         }
@@ -272,6 +272,7 @@
             width: 100%;
         }
         .product-description {
+            background: $white;
             float: left;
             width: 100%;
             position: relative;
@@ -330,7 +331,7 @@
                 .desc-img {
                     float: right;
                     &:before {
-                        border-left: 20px solid $body-bg;
+                        border-left: 20px solid $white;
                         left: 0;
                     }
                 }
@@ -344,7 +345,7 @@
                 .desc-img {
                     float: left;
                     &:before {
-                        border-right: 20px solid $body-bg;
+                        border-right: 20px solid $white;
                         right: 0;
                     }
                 }

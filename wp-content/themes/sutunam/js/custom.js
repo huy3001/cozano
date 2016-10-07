@@ -1,7 +1,8 @@
 /* Custom js */
 (function($) {
     // Global variables
-    var $desktop = 1200,
+    var $fullDesktop = 1920,
+        $desktop = 1200,
         $laptop = 992,
         $tablet = 768,
         $mobile = 480;
@@ -500,10 +501,24 @@
             if(relateProduct.length) {
                 relateProduct.slick({
                     slide: 'li',
-                    slidesToShow: 4,
+                    slidesToShow: 6,
                     slidesToScroll: 1,
                     infinite: false,
                     responsive: [
+                        {
+                            breakpoint: $fullDesktop + 1,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: $desktop + 1,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1
+                            }
+                        },
                         {
                             breakpoint: $laptop,
                             settings: {

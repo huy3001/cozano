@@ -16,4 +16,19 @@
             @include transform(translateX(-50%));
         }
     }
+
+    @include bp(max-width, $laptop - 1) {
+        .content-block-img {
+            height: auto;
+            width: 100%;
+            position: static;
+            img {
+                height: auto;
+                width: 100%;
+                max-width: 100%;
+                position: static;
+                @include transform(none);
+            }
+        }
+    }
 }

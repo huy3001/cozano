@@ -47,18 +47,13 @@
         }
     }
 
-    @include bp(max-width, $laptop) {
+    @include bp(max-width, $laptop - 1) {
         .content-block {
 
         }
         .feature-product,
         .content-block-desc {
             display: none;
-        }
-        .content-block-img {
-            img {
-                position: static;
-            }
         }
     }
 }

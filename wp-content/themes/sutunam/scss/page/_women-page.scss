@@ -7,9 +7,6 @@
     @import "../component/content-desc";
     @import "../component/content-image";
     .content-block {
-        &.no-feature {
-            min-height: 550px;
-        }
         .content-block-body {
             a {
                 border-color: $white;
@@ -27,50 +24,36 @@
             float: right;
         }
         .content-block-img {
-            img {
-                left: 0;
-            }
+            right: auto;
+            left: 0;
         }
     }
     .women-option-2,
     .women-option-4 {
         .content-block-img {
-            img {
-                right: 0;
-            }
+            right: 0;
         }
     }
 
     @include bp(max-width, $large-desktop) {
         .content-block {
-            &.no-feature {
-                min-height: 315px;
-            }
+
         }
     }
 
     @include bp(max-width, $desktop) {
         .content-block {
-            &.no-feature {
-                min-height: 330px;
-            }
+
         }
     }
 
-    @include bp(max-width, $laptop) {
+    @include bp(max-width, $laptop - 1) {
         .content-block {
-            &.no-feature {
-                min-height: inherit;
-            }
+
         }
         .feature-product,
         .content-block-desc {
             display: none;
-        }
-        .content-block-img {
-            img {
-                position: static;
-            }
         }
     }
 }

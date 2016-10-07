@@ -657,8 +657,8 @@ h6 {
 .page-template-shoes .content-block .content-block-body a.black,
 .page-template-men .content-block-desc .info a.black,
 .page-template-women .content-block-desc .info a.black {
-  background: #303030;
-  border-color: #303030;
+  background: #000000;
+  border-color: #000000;
   color: #ffffff;
 }
 
@@ -672,7 +672,7 @@ h6 {
 .page-template-men .content-block-desc .info a.black:hover,
 .page-template-women .content-block-desc .info a.black:hover {
   background: transparent;
-  color: #303030;
+  color: #000000;
 }
 
 /* line 90, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
@@ -685,7 +685,7 @@ h6 {
 .page-template-men .content-block-desc .info a.black.border,
 .page-template-women .content-block-desc .info a.black.border {
   background: transparent;
-  color: #303030;
+  color: #000000;
 }
 
 /* line 93, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
@@ -697,7 +697,7 @@ h6 {
 .page-template-shoes .content-block .content-block-body a.black.border:hover,
 .page-template-men .content-block-desc .info a.black.border:hover,
 .page-template-women .content-block-desc .info a.black.border:hover {
-  background: #303030;
+  background: #000000;
   color: #ffffff;
 }
 
@@ -712,7 +712,7 @@ h6 {
 .page-template-women .content-block-desc .info a.white {
   background: #ffffff;
   border-color: #ffffff;
-  color: #303030;
+  color: #000000;
 }
 
 /* line 103, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
@@ -751,11 +751,117 @@ h6 {
 .page-template-men .content-block-desc .info a.white.border:hover,
 .page-template-women .content-block-desc .info a.white.border:hover {
   background: #ffffff;
-  color: #303030;
+  color: #000000;
+}
+
+/* line 116, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.grey,
+.home .content-block .content-block-body a.grey,
+.page-template-men .content-block .content-block-body a.grey,
+.page-template-women .content-block .content-block-body a.grey,
+.page-template-shoes .content-block .content-block-body a.grey,
+.page-template-men .content-block-desc .info a.grey,
+.page-template-women .content-block-desc .info a.grey {
+  background: #505050;
+  border-color: #505050;
+  color: #ffffff;
+}
+
+/* line 120, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.grey:hover,
+.home .content-block .content-block-body a.grey:hover,
+.page-template-men .content-block .content-block-body a.grey:hover,
+.page-template-women .content-block .content-block-body a.grey:hover,
+.page-template-shoes .content-block .content-block-body a.grey:hover,
+.page-template-men .content-block-desc .info a.grey:hover,
+.page-template-women .content-block-desc .info a.grey:hover {
+  background: transparent;
+  color: #505050;
+}
+
+/* line 124, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.grey.border,
+.home .content-block .content-block-body a.grey.border,
+.page-template-men .content-block .content-block-body a.grey.border,
+.page-template-women .content-block .content-block-body a.grey.border,
+.page-template-shoes .content-block .content-block-body a.grey.border,
+.page-template-men .content-block-desc .info a.grey.border,
+.page-template-women .content-block-desc .info a.grey.border {
+  background: transparent;
+  color: #505050;
+}
+
+/* line 127, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.grey.border:hover,
+.home .content-block .content-block-body a.grey.border:hover,
+.page-template-men .content-block .content-block-body a.grey.border:hover,
+.page-template-women .content-block .content-block-body a.grey.border:hover,
+.page-template-shoes .content-block .content-block-body a.grey.border:hover,
+.page-template-men .content-block-desc .info a.grey.border:hover,
+.page-template-women .content-block-desc .info a.grey.border:hover {
+  background: #505050;
+  color: #ffffff;
+}
+
+/* line 133, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.red,
+.home .content-block .content-block-body a.red,
+.page-template-men .content-block .content-block-body a.red,
+.page-template-women .content-block .content-block-body a.red,
+.page-template-shoes .content-block .content-block-body a.red,
+.page-template-men .content-block-desc .info a.red,
+.page-template-women .content-block-desc .info a.red {
+  background: #ff0000;
+  border-color: #ff0000;
+  color: #ffffff;
+}
+
+/* line 137, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.red:hover,
+.home .content-block .content-block-body a.red:hover,
+.page-template-men .content-block .content-block-body a.red:hover,
+.page-template-women .content-block .content-block-body a.red:hover,
+.page-template-shoes .content-block .content-block-body a.red:hover,
+.page-template-men .content-block-desc .info a.red:hover,
+.page-template-women .content-block-desc .info a.red:hover {
+  background: transparent;
+  color: #ff0000;
+}
+
+/* line 141, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.red.border,
+.home .content-block .content-block-body a.red.border,
+.page-template-men .content-block .content-block-body a.red.border,
+.page-template-women .content-block .content-block-body a.red.border,
+.page-template-shoes .content-block .content-block-body a.red.border,
+.page-template-men .content-block-desc .info a.red.border,
+.page-template-women .content-block-desc .info a.red.border {
+  background: transparent;
+  color: #ff0000;
+}
+
+/* line 144, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+
+.button-style.red.border:hover,
+.home .content-block .content-block-body a.red.border:hover,
+.page-template-men .content-block .content-block-body a.red.border:hover,
+.page-template-women .content-block .content-block-body a.red.border:hover,
+.page-template-shoes .content-block .content-block-body a.red.border:hover,
+.page-template-men .content-block-desc .info a.red.border:hover,
+.page-template-women .content-block-desc .info a.red.border:hover {
+  background: #ff0000;
+  color: #ffffff;
 }
 
 @media (max-width: 991px) and (min-width: 481px) {
-  /* line 119, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+  /* line 153, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
 
   .visible-sm {
     display: block !important;
@@ -763,7 +869,7 @@ h6 {
 }
 
 @media (max-width: 767px) {
-  /* line 125, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+  /* line 159, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
 
   .visible-xs {
     display: none !important;
@@ -771,7 +877,7 @@ h6 {
 }
 
 @media (max-width: 480px) {
-  /* line 131, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
+  /* line 165, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/global/_general.scss */
 
   .visible-xs {
     display: block !important;

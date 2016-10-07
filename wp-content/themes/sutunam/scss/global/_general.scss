@@ -80,18 +80,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .button-style {
     &.black {
-        background: $header-bg;
-        border-color: $header-bg;
+        background: $black;
+        border-color: $black;
         color: $white;
         &:hover {
             background: transparent;
-            color: $main-color;
+            color: $black;
         }
         &.border {
             background: transparent;
-            color: $header-bg;
+            color: $black;
             &:hover {
-                background: $header-bg;
+                background: $black;
                 color: $white;
             }
         }
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     &.white {
         background: $white;
         border-color: $white;
-        color: $main-color;
+        color: $black;
         &:hover {
             background: transparent;
             color: $white;
@@ -109,7 +109,41 @@ h1, h2, h3, h4, h5, h6 {
             color: $white;
             &:hover {
                 background: $white;
-                color: $main-color;
+                color: $black;
+            }
+        }
+    }
+    &.grey {
+        background: $grey;
+        border-color: $grey;
+        color: $white;
+        &:hover {
+            background: transparent;
+            color: $grey;
+        }
+        &.border {
+            background: transparent;
+            color: $grey;
+            &:hover {
+                background: $grey;
+                color: $white;
+            }
+        }
+    }
+    &.red {
+        background: $red;
+        border-color: $red;
+        color: $white;
+        &:hover {
+            background: transparent;
+            color: $red;
+        }
+        &.border {
+            background: transparent;
+            color: $red;
+            &:hover {
+                background: $red;
+                color: $white;
             }
         }
     }

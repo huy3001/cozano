@@ -2,6 +2,7 @@
 (function($) {
     // Global variables
     var $fullDesktop = 1920,
+        $hugeDesktop = 1600,
         $desktop = 1200,
         $laptop = 992,
         $tablet = 768,
@@ -509,7 +510,6 @@
                     slide: 'li',
                     slidesToShow: 6,
                     slidesToScroll: 1,
-                    infinite: false,
                     responsive: [
                         {
                             breakpoint: $fullDesktop + 1,
@@ -519,7 +519,7 @@
                             }
                         },
                         {
-                            breakpoint: $desktop + 1,
+                            breakpoint: $hugeDesktop + 1,
                             settings: {
                                 slidesToShow: 4,
                                 slidesToScroll: 1

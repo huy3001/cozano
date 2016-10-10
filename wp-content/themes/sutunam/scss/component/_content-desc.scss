@@ -5,6 +5,7 @@
     width: 33.333%;
     position: relative;
     z-index: 1;
+    @include transform-style(preserve-3d);
     &:after {
         content: "";
         display: block;
@@ -29,6 +30,8 @@
         top: 50%;
         left: 50%;
         z-index: 2;
+        @include filter(blur(0));
+        @include backface-visibility(hidden);
         @include transform(translate3d(-50%,-50%,0));
         h2 {
             color: $white;

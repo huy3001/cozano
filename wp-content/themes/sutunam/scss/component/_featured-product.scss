@@ -5,6 +5,7 @@
     width: 33.333%;
     position: relative;
     z-index: 1;
+    @include transform-style(preserve-3d);
     a {
         color: $white;
         display: block;
@@ -38,6 +39,8 @@
         z-index: 2;
         @include opacity(0);
         @include transition();
+        @include filter(blur(0));
+        @include backface-visibility(hidden);
         @include transform(translate3d(-50%,-50%,0));
     }
     .name {

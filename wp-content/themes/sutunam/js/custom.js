@@ -58,7 +58,13 @@
 
         // Init product slider
         sliderInit: function(imageList, thumbList) {
-            var thumbCount = thumbList.find('li').length;
+            var thumbCount = thumbList.find('li').length,
+                slideToScroll = 0,
+                arrow = false;
+            if(thumbCount > 8) {
+                arrow = true;
+                slideToScroll = 1;
+            }
             if(imageList.length) {
                 imageList.slick({
                     arrows: false,
@@ -94,12 +100,12 @@
 
             if(thumbList.length) {
                 thumbList.slick({
-                    arrows: false,
+                    arrows: arrow,
                     asNavFor: '.image-list',
                     focusOnSelect: true,
                     slide: 'li',
                     slidesToShow: thumbCount,
-                    slidesToScroll: 0,
+                    slidesToScroll: slideToScroll,
                     swipe: false,
                     vertical: true
                 });

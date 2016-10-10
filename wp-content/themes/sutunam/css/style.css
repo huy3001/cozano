@@ -5135,7 +5135,7 @@ h6 {
   width: 100%;
   max-width: 1920px;
   max-height: 768px;
-  margin: 0 auto;
+  margin: 40px auto;
   position: relative;
   overflow: hidden;
 }
@@ -5232,7 +5232,7 @@ h6 {
 .single-product div.product .images .thumb-list li {
   border: 1px solid #666666;
   float: left;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: auto !important;
 }
 

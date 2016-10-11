@@ -78,6 +78,33 @@
                         margin-bottom: 0;
                     }
                 }
+                .slick-prev, .slick-next {
+                    height: 25px;
+                    width: 25px;
+                    left: 28px;
+                    top: auto;
+                    right: auto;
+                    z-index: 1;
+                    @include transform(rotate(90deg));
+                    &:before {
+                        color: $black;
+                        font-size: 25px;
+                        @include font('font-awesome');
+                        @include opacity(1);
+                    }
+                }
+                .slick-prev {
+                    top: -25px;
+                    &:before {
+                        content: "\f104";
+                    }
+                }
+                .slick-next {
+                    bottom: -20px;
+                    &:before {
+                        content: "\f105";
+                    }
+                }
             }
         }
         .summary {
@@ -546,6 +573,11 @@
                     a {
                         width: 52px !important;
                         height: 52px !important;
+                    }
+                }
+                .thumb-list {
+                    .slick-prev, .slick-next {
+                        left: 15px;
                     }
                 }
             }

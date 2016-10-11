@@ -65,6 +65,7 @@
             if(thumbCount > 8) {
                 arrow = true;
                 slideToScroll = 1;
+                thumbCount = thumbCount - 1;
             }
             if(imageList.length) {
                 imageList.slick({

@@ -43,7 +43,7 @@ if (have_posts()) :
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="news-list news-detail col-lg-9 col-md-9 col-xs-12 col-sm-12">
+                    <div class="news-list news-detail col-xs-12 col-sm-12">
                         <div class="news-item">
                             <div class="news-image">
                                 <img src="<?php echo esc_url($image[0]) ?>" alt="<?php echo get_the_title() ?>"/>
@@ -77,39 +77,41 @@ if (have_posts()) :
                                     <li class="page-prev"><?php previous_post_link('%link', __('&larr; Prev')); ?></li>
                                     <li class="clearfix"></li>
                                 </ul>
-                                <div class="related-products">
-                                    <h4><?php echo __('Related posts') ?></h4>
-                                    <div class="row">
-                                        <?php
-                                        $args = array(
-                                            'showposts'	=> 3,
-                                            'post_type' => 'post',
-                                            'post__not_in' => array($post->ID)
-                                        );
+                            </div>
+                            <div class="related-news">
+                                <h4><?php echo __('Related posts') ?></h4>
+                                <div class="row">
+                                    <?php
+                                    $args = array(
+                                        'showposts'	=> 3,
+                                        'post_type' => 'post',
+                                        'post__not_in' => array($post->ID)
+                                    );
 
-                                        $my_query = null;
-                                        $my_query = new WP_Query($args);
-                                        if( $my_query->have_posts() ) :
-                                            while ($my_query->have_posts()) : $my_query->the_post();
-                                                $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false);
-                                                ?>
-                                                <div class="col-sm-4 col-xs-12 related-item">
-                                                    <a href="<?php echo get_the_permalink()?>">
-                                                        <div class="related-img">
-                                                            <img src="<?php echo esc_url($img[0])?>"/>
-                                                        </div>
+                                    $my_query = null;
+                                    $my_query = new WP_Query($args);
+                                    if( $my_query->have_posts() ) :
+                                        while ($my_query->have_posts()) : $my_query->the_post();
+                                            $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false);
+                                            ?>
+                                            <div class="col-sm-4 col-xs-12 related-item">
+                                                <a href="<?php echo get_the_permalink()?>">
+                                                    <div class="related-img">
+                                                        <img src="<?php echo esc_url($img[0])?>"/>
+                                                    </div>
+                                                    <div class="related-info">
                                                         <div class="related-title">
                                                             <?php echo get_the_title()?>
                                                         </div>
                                                         <div class="related-date">
                                                             <?php echo get_the_date();?>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            <?php endwhile;
-                                        endif;
-                                        ?>
-                                    </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        <?php endwhile;
+                                    endif;
+                                    ?>
                                 </div>
                             </div>
                         </div>

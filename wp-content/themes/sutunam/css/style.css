@@ -6700,3 +6700,229 @@ h6 {
     height: 200px;
   }
 }
+
+/* line 118, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .breadcrumbs {
+  background: #ffffff;
+  color: #303030;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: none;
+  padding: 10px;
+  margin: 0;
+}
+
+/* line 126, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .breadcrumbs a {
+  color: #999999;
+}
+
+/* line 130, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-heading,
+.single-post .right-sidebar {
+  display: none;
+}
+
+/* line 134, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-item {
+  position: relative;
+}
+
+/* line 138, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-image img {
+  width: 100%;
+}
+
+/* line 142, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content {
+  background: #ffffff;
+  padding: 10px;
+}
+
+/* line 145, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .timestamp {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+}
+
+/* line 155, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .news-title,
+.single-post .news-content .category-list {
+  color: #303030;
+}
+
+/* line 158, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .news-title a,
+.single-post .news-content .category-list a {
+  color: #303030;
+}
+
+/* line 160, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .news-title a:hover,
+.single-post .news-content .category-list a:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 165, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .entry-content {
+  color: #a2a2a2;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+/* line 170, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .page-selection {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+/* line 174, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .page-selection a {
+  color: #303030;
+}
+
+/* line 176, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .page-selection a:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 180, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .page-selection .page-prev {
+  float: left;
+}
+
+/* line 183, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .news-content .page-selection .page-next {
+  float: right;
+}
+
+/* line 189, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news h4 {
+  margin-top: 20px;
+}
+
+/* line 195, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news a:hover .related-img:after {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+/* line 199, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news a:hover .related-title,
+.single-post .related-news a:hover .related-date {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 205, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news .related-img {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 209, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news .related-img:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 221, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news .related-img img {
+  height: 100%;
+  width: auto;
+  max-width: inherit;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 230, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news .related-info {
+  background: #ffffff;
+  padding: 10px;
+}
+
+/* line 234, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news .related-title {
+  color: #303030;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 238, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+.single-post .related-news .related-date {
+  color: #a2a2a2;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 991px) {
+  /* line 246, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+  .single-post .related-news .related-img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 253, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_blog-page.scss */
+
+  .single-post .related-item {
+    margin-bottom: 20px;
+  }
+}

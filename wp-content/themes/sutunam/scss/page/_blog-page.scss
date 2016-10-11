@@ -166,6 +166,14 @@
             color: $submenu-item-color;
             font-weight: normal;
             margin-top: 20px;
+            h1, h2, h3, h4, h5, h6, a {
+                color: $main-color;
+            }
+            a {
+                &:hover {
+                    @include opacity(0.5);
+                }
+            }
         }
         .page-selection {
             list-style: none;

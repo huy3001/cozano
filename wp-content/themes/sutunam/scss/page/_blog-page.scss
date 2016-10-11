@@ -34,9 +34,12 @@
             height: 250px;
             overflow: hidden;
             img {
+                height: 100%;
+                width: auto;
+                max-width: inherit;
                 position: relative;
-                top: 50%;
-                @include transform(translateY(-50%));
+                left: 50%;
+                @include transform(translateX(-50%));
             }
         }
         .entry-info {
@@ -50,6 +53,7 @@
             color: $main-color;
             font-size: 20px;
             text-transform: none;
+            margin-top: 10px;
             a {
                 color: $main-color;
                 &:hover {
@@ -74,6 +78,37 @@
                 &:hover {
                     @include opacity(0.5);
                 }
+            }
+        }
+    }
+
+    @include bp(max-width, $laptop - 1) {
+        .post {
+            width: 48%;
+            margin-right: 4%;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            &:nth-child(2n + 1) {
+                margin-right: 4%;
+            }
+        }
+    }
+
+    @include bp(max-width, $mobile) {
+        .page-title {
+            font-size: 20px;
+            margin: 20px auto;
+        }
+        .post {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:nth-child(2n + 1) {
+                margin-right: 0;
+            }
+            .post-thumbnail {
+                height: 200px;
             }
         }
     }

@@ -89,9 +89,12 @@ $jk_options = get_option('redux_demo');
             <div class="search-form">
                 <?php get_search_form(); ?>
             </div>
-
+            <?php
+            global $woocommerce;
+            $cart_url = $woocommerce->cart->get_cart_url();
+            ?>
 	        <div class="shopping-cart">
-		        <a class="cart-icon" href="#">
+		        <a class="cart-icon" href="<?php echo $cart_url;?>">
 			        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
 		        </a>
 	        </div>

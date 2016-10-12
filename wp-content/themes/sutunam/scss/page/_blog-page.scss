@@ -13,6 +13,19 @@
         &:nth-child(3n) {
             margin-right: 0;
         }
+        a {
+            &:hover {
+                .post-thumbnail {
+                    &:after {
+                        @include opacity(0.2);
+                    }
+                }
+                .entry-title,
+                .read-more {
+                    @include opacity(0.5);
+                }
+            }
+        }
         .entry-thumbnail {
             position: relative;
         }
@@ -25,20 +38,37 @@
             position: absolute;
             left: 15px;
             top: 0;
-            .year {
+            span {
                 display: block;
+            }
+            .year {
+                display: none;
                 font-size: 20px;
             }
         }
         .post-thumbnail {
             height: 250px;
             overflow: hidden;
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: $black;
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include opacity(0);
+                @include transition();
+            }
             img {
                 height: 100%;
                 width: auto;
                 max-width: inherit;
                 position: relative;
                 left: 50%;
+                @include backface-visibility(hidden);
                 @include transform(translateX(-50%));
             }
         }
@@ -54,12 +84,7 @@
             font-size: 20px;
             text-transform: none;
             margin-top: 10px;
-            a {
-                color: $main-color;
-                &:hover {
-                    @include opacity(0.5);
-                }
-            }
+            @include transition();
         }
         .entry-meta {
             display: none;
@@ -69,15 +94,13 @@
                 color: $grey;
                 font-weight: normal;
             }
-            a {
+            .read-more {
                 clear: both;
                 color: $main-color;
                 display: block;
                 font-weight: bold;
                 margin-top: 20px;
-                &:hover {
-                    @include opacity(0.5);
-                }
+                @include transition();
             }
         }
     }
@@ -237,6 +260,7 @@
                 max-width: inherit;
                 position: relative;
                 left: 50%;
+                @include backface-visibility(hidden);
                 @include transform(translateX(-50%));
             }
         }
@@ -266,8 +290,13 @@
         .breadcrumbs {
             display: none;
         }
-        .news-item {
-            margin-top: 15px;
+        .news-image {
+            margin: 0 -15px;
+        }
+        .news-content {
+            .timestamp {
+                left: 0;
+            }
         }
         .related-item {
             margin-bottom: 20px;

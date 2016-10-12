@@ -7,23 +7,25 @@
  */?>
 
 <article id="post-<?php the_ID();?>" <?php post_class();?>>
-    <?php if(!is_single() && has_post_thumbnail()): ?>
-    <div class="entry-thumbnail">
-        <?php sutunam_thumbnail('thumbnail')?>
-        <div class="timestamp">
-            <span class="date"><?php echo get_the_date('d') ?></span>
-            <span class="month"><?php echo get_the_date('M') ?></span>
-            <span class="year"><?php echo get_the_date('Y') ?></span>
+    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>">
+        <?php if(!is_single() && has_post_thumbnail()): ?>
+        <div class="entry-thumbnail">
+            <?php sutunam_thumbnail('thumbnail')?>
+            <div class="timestamp">
+                <span class="date"><?php echo get_the_date('d') ?></span>
+                <span class="month"><?php echo get_the_date('M') ?></span>
+                <span class="year"><?php echo get_the_date('Y') ?></span>
+            </div>
         </div>
-    </div>
-    <?php endif; ?>
-    <div class="entry-info">
-        <div class="entry-header">
-            <?php sutunam_entry_header();?>
-            <?php sutunam_entry_meta();?>
+        <?php endif; ?>
+        <div class="entry-info">
+            <div class="entry-header">
+                <?php sutunam_entry_header();?>
+                <?php /*sutunam_entry_meta();*/?>
+            </div>
+            <div class="entry-content">
+                <?php sutunam_entry_content(); ?>
+            </div>
         </div>
-        <div class="entry-content">
-            <?php sutunam_entry_content(); ?>
-        </div>
-    </div>
+    </a>
 </article>

@@ -204,15 +204,11 @@ if (!function_exists('sutunam_entry_header')) {
     {
         if (is_single()): ?>
             <h1 class="entry-title">
-                <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute() ?>">
-                    <?php the_title() ?>
-                </a>
+                <?php the_title() ?>
             </h1>
         <?php else: ?>
             <h2 class="entry-title">
-                <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute() ?>">
-                    <?php the_title() ?>
-                </a>
+                <?php the_title() ?>
             </h2>
         <?php endif;
     }
@@ -255,7 +251,7 @@ if (!function_exists('sutunam_entry_meta')) {
  */
 function sutunam_readmore()
 {
-    return '<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read more', 'sutunam') . '</a>';
+    return '<span class="read-more">' . __('Read more', 'sutunam') . '</span>';
 }
 
 add_filter('excerpt_more', 'sutunam_readmore');

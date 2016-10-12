@@ -66,7 +66,7 @@
         }
         .entry-content {
             p {
-                color: $submenu-item-color;
+                color: $grey;
                 font-weight: normal;
             }
             a {
@@ -163,7 +163,7 @@
             }
         }
         .entry-content {
-            color: $submenu-item-color;
+            color: $grey;
             font-weight: normal;
             margin-top: 20px;
             h1, h2, h3, h4, h5, h6, a {
@@ -244,7 +244,7 @@
             @include transition();
         }
         .related-date {
-            color: $submenu-item-color;
+            color: $grey;
             @include transition();
         }
     }
@@ -258,6 +258,12 @@
     }
 
     @include bp(max-width, $tablet - 1) {
+        .breadcrumbs {
+            display: none;
+        }
+        .news-item {
+            margin-top: 15px;
+        }
         .related-item {
             margin-bottom: 20px;
         }

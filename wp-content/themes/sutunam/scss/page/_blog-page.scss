@@ -162,6 +162,11 @@
                 }
             }
         }
+        .category-list {
+            span {
+                margin: 0 5px;
+            }
+        }
         .entry-content {
             color: $grey;
             font-weight: normal;

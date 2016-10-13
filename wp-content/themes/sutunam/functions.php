@@ -389,3 +389,8 @@ function searchfilter($query) {
     return $query;
 }
 add_filter('pre_get_posts','searchfilter');
+
+function disable_srcset( $sources ) {
+    return false;
+}
+add_filter( 'wp_calculate_image_srcset', 'disable_srcset' );

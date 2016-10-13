@@ -140,7 +140,7 @@
         summaryCenter: function() {
             var summary = $('.product .summary');
             if(summary.length) {
-                if ($(window).width() > $laptop - 1) {
+                if ($(window).width() > $desktop - 1) {
                     summary.css('margin-top', -summary.outerHeight()/2);
                 }
                 else {

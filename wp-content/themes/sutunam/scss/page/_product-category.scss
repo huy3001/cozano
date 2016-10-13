@@ -207,7 +207,6 @@
                     }
                     > ul.ft-tags {
                         border: none;
-                        padding: 10px 0;
                         max-height: inherit !important;
                         > li {
                             @include box-shadow(none);
@@ -465,6 +464,20 @@
                 .image {
                     height: 340px;
                 }
+                .info {
+                    width: 100%;
+                    min-height: inherit;
+                    h3, h4 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+                .price {
+                    width: 100%;
+                    min-height: inherit;
+                    margin-top: 5px;
+                }
             }
         }
     }
@@ -560,20 +573,6 @@
                 width: 33.333%;
                 .image {
                     height: 340px;
-                }
-                .info {
-                    width: 100%;
-                    min-height: inherit;
-                    h3, h4 {
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                }
-                .price {
-                    width: 100%;
-                    min-height: inherit;
-                    margin-top: 5px;
                 }
             }
         }

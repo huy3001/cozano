@@ -290,12 +290,13 @@
         .breadcrumbs {
             display: none;
         }
-        .news-image {
-            margin: 0 -15px;
+        .news-list {
+            padding: 0;
         }
-        .news-content {
-            .timestamp {
-                left: 0;
+        .related-news {
+            h4 {
+                text-align: center;
+                padding: 0 15px;
             }
         }
         .related-item {

@@ -191,7 +191,7 @@ if (!function_exists('sutunam_thumbnail')) {
     function sutunam_thumbnail($size)
     {
         if (!is_single() && has_post_thumbnail() && !post_password_required() || has_post_format('image')): ?>
-            <figure class="post-thumbnail"><?php the_post_thumbnail($size) ?></figure>
+            <figure class="post-thumbnail"><?php the_post_thumbnail('large') ?></figure>
         <?php endif;
     }
 }

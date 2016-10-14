@@ -20,7 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-</div>
+    </div><!-- End product container -->
+</div><!-- End product content detail -->
 <div class="product-info-detail">
 	<div class="product-description contain-1">
         <?php if(types_render_field("product-image-description-1", array())) { ?>

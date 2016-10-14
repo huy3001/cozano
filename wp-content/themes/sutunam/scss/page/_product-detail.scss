@@ -3,12 +3,16 @@
 .single-product {
     @import "../component/sub-category";
     div.product {
+        .product-content-detail {
+            background: $white;
+            margin: 40px auto;
+        }
         .product-container {
             clear: both;
             width: 100%;
             max-width: $full-desktop;
             max-height: $product-img-height;
-            margin: 40px auto;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
         }

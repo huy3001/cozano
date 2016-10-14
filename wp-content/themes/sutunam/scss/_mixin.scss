@@ -56,6 +56,11 @@
     filter: $value;
 }
 
+/* text stroke */
+@mixin text-stroke($style) {
+    -webkit-text-stroke: $style;
+}
+
 /* transform */
 @mixin transform($transforms) {
     -webkit-transform: $transforms;

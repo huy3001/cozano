@@ -126,6 +126,9 @@
             @include transition();
             &.toggle-search {
                 z-index: 1;
+                &:hover {
+                    color: $header-link-hover;
+                }
             }
         }
         .form-close {
@@ -257,6 +260,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
+                @include text-stroke(2px $white);
             }
         }
     }

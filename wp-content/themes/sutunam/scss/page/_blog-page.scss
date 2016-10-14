@@ -32,6 +32,7 @@
         .timestamp {
             background: $black;
             color: $white;
+            display: none;
             text-align: center;
             text-transform: uppercase;
             padding: 10px;
@@ -84,6 +85,9 @@
             font-size: 20px;
             text-transform: none;
             margin-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             @include transition();
         }
         .entry-meta {
@@ -93,6 +97,9 @@
             p {
                 color: $grey;
                 font-weight: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             .read-more {
                 clear: both;
@@ -103,6 +110,10 @@
                 @include transition();
             }
         }
+    }
+
+    @include bp(max-width, $desktop - 1) {
+
     }
 
     @include bp(max-width, $laptop - 1) {
@@ -144,7 +155,7 @@
         font-size: 13px;
         line-height: 20px;
         text-transform: none;
-        padding: 10px;
+        padding: 10px 0;
         margin: 0;
         a {
             color: $left-menu-bg;
@@ -164,15 +175,16 @@
     }
     .news-content {
         background: $white;
-        padding: 10px;
+        padding: 15px;
         .timestamp {
             background: $black;
             color: $white;
+            display: none;
             text-align: center;
             text-transform: uppercase;
             padding: 10px;
             position: absolute;
-            left: 15px;
+            left: 30px;
             top: 0;
         }
         .news-title,
@@ -225,6 +237,9 @@
         h4 {
             margin-top: 20px;
         }
+        .related-item {
+            margin-bottom: 30px;
+        }
         a {
             &:hover {
                 .related-img {
@@ -266,7 +281,7 @@
         }
         .related-info {
             background: $white;
-            padding: 10px;
+            padding: 15px;
         }
         .related-title {
             color: $main-color;
@@ -290,17 +305,20 @@
         .breadcrumbs {
             display: none;
         }
-        .news-list {
-            padding: 0;
+        .news-list,
+        .related-news {
+            .container {
+                padding: 0;
+            }
         }
         .related-news {
             h4 {
                 text-align: center;
                 padding: 0 15px;
             }
-        }
-        .related-item {
-            margin-bottom: 20px;
+            .related-item {
+                margin-bottom: 20px;
+            }
         }
     }
 }

@@ -20,9 +20,18 @@
                         @include opacity(0.2);
                     }
                 }
+                .entry-info {
+                    background: $grey;
+                }
                 .entry-title,
                 .read-more {
-                    @include opacity(0.5);
+                    color: $white;
+                }
+                .entry-content {
+                    color: $white;
+                    p {
+                        color: $white;
+                    }
                 }
             }
         }
@@ -79,6 +88,7 @@
             height: 150px;
             width: 100%;
             padding: 15px;
+            @include transition();
         }
         .entry-title {
             color: $main-color;
@@ -92,12 +102,16 @@
             display: none;
         }
         .entry-content {
+            color: $grey;
+            font-weight: normal;
+            @include transition();
             p {
                 color: $grey;
                 font-weight: normal;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+                @include transition();
             }
             .read-more {
                 clear: both;
@@ -212,6 +226,12 @@
                     @include opacity(0.5);
                 }
             }
+            img {
+                &.aligncenter {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
         }
         .page-selection {
             list-style: none;
@@ -245,9 +265,12 @@
                         @include opacity(0.2);
                     }
                 }
+                .related-info {
+                    background: $grey;
+                }
                 .related-title,
                 .related-date {
-                    @include opacity(0.5);
+                    color: $white;
                 }
             }
         }
@@ -281,6 +304,7 @@
             background: $white;
             text-align: center;
             padding: 15px;
+            @include transition();
         }
         .related-title {
             color: $main-color;

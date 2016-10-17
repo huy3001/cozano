@@ -41,7 +41,7 @@
         bottom: 20px;
         li {
             background: $white;
-            height: 4px;
+            height: 2px;
             width: 50px;
             margin: 0 3px;
             button {
@@ -65,6 +65,9 @@
         .slick-next {
             right: 20px;
         }
+        .slick-dots {
+            bottom: 0;
+        }
     }
 
     @include bp(max-width, $laptop - 1) {
@@ -78,8 +81,6 @@
     }
 
     @include bp(max-width, $tablet - 1) {
-        .slick-dots {
-            bottom: 0;
-        }
+
     }
 }

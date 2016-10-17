@@ -217,6 +217,7 @@
                         if(formClose.length) {
                             formClose.off('click').on('click', function() {
                                 $(this).parents('.search-item').slideUp(300);
+                                $(this).parents('.search-item').find('.form-text').val('');
                             });
                         }
                     }, 300);
@@ -224,6 +225,7 @@
                         var target = e.target;
                         if (!$(target).is(searchTarget) && !$(target).parents().is(searchTarget)) {
                             searchItem.slideUp(300);
+                            searchItem.find('.form-text').val('');
                         }
                     });
                 }
@@ -238,6 +240,7 @@
                         if (!$(target).is(searchTarget) && !$(target).parents().is(searchTarget)) {
                             toggleSearch.fadeIn(300);
                             searchItem.find('.form-text').removeClass('expand');
+                            searchItem.find('.form-text').val('');
                         }
                     });
                 }

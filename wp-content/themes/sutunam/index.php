@@ -8,7 +8,8 @@
  */
 ?>
 <?php get_header(); ?>
-
+<?php include (TEMPLATEPATH . '/left-content.php'); ?>
+<div class="right-content">
     <div class="content">
         <section id="main-content">
             <div class="container">

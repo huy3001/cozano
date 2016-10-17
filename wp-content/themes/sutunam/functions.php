@@ -208,7 +208,8 @@ if (!function_exists('sutunam_entry_header')) {
             </h1>
         <?php else: ?>
             <h2 class="entry-title">
-                <?php the_title() ?>
+                <?php $title = get_the_title();?>
+                <?php echo wp_trim_words( $title,$num_words = 10, $more = ' ...' ); ?>
             </h2>
         <?php endif;
     }

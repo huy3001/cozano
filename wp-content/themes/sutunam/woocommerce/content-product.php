@@ -109,7 +109,13 @@ $i =0;
 
 <?php
 //Add size filter
-$sizes = get_the_terms( $post->ID, 'size' );
+$sizes = wp_get_post_terms(
+	$post->ID,
+	'size',
+	array(
+		'orderby' => 'date',
+		'order' => 'DESC'
+	));
 $size = null;
 $i =0;
 ?>
@@ -120,6 +126,7 @@ $i =0;
 		$size .= ', '.$item->name;
 	$i++;
 }
+var_dump($size);
 $price = $product->price;
 if ($price <= 100000){
 	$filterPrice = '< 100.000 VND';

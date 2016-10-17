@@ -8,9 +8,10 @@
  */
 
 get_header(); ?>
-<div class="archive tax-product_cat term-t-shirts term-14 woocommerce woocommerce-page">
-    <?php include(TEMPLATEPATH . '/left-content.php'); ?>
-    <div class="right-content">
+
+<?php include(TEMPLATEPATH . '/left-content.php'); ?>
+<div class="right-content">
+    <div class="archive tax-product_cat woocommerce">
         <section id="primary" class="search-result-wrapper">
             <div class="row">
                 <div class="search-result-heading">
@@ -39,5 +40,5 @@ get_header(); ?>
             <?php endif ?>
         </div>
     </div>
-</div>
-<?php get_footer(); ?>
+
+    <?php get_footer(); ?>

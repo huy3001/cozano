@@ -20,7 +20,8 @@
 
 <div id="placeHolder"></div>
 <div id="legend" style="display:none;"></div>
-<div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;"><span><?php echo __('Reset','sutunam') ?></span></div>
+<div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;">
+    <span><?php echo __('Reset','sutunam') ?></span>
 </div><!-- End filter bar -->
 
 <ul class="products" id="product-category">

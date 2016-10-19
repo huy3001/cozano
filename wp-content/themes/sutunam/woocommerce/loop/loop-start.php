@@ -23,6 +23,7 @@
 <div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;">
     <span><?php echo __('Reset','sutunam') ?></span>
 </div><!-- End reset filter -->
-</div><!-- End filter bar -->
-
+<?php if(is_product_category()):?>
+    </div><!-- End filter bar -->
+<?php endif;?>
 <ul class="products" id="product-category">

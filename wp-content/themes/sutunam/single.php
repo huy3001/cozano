@@ -62,7 +62,7 @@ include (TEMPLATEPATH . '/left-content.php');
                                         <div class="month"><?php echo get_the_date('M') ?></div>
                                     </div>
                                     <div class="news-title">
-                                        <h3><a href="<?php echo get_permalink(); ?>"><?php echo __(get_the_title()); ?></a></h3>
+                                        <h3><a href="<?php echo get_permalink(); ?>"><?php echo __(get_the_title()) ?></a></h3>
                                     </div>
                                     <div class="category-list">
                                         <?php echo get_the_category_list('<span>|</span>'); ?>
@@ -97,7 +97,7 @@ include (TEMPLATEPATH . '/left-content.php');
                 <div class="related-news">
                     <div class="container">
                         <h4><?php echo __('Related posts') ?></h4>
-                        <div class="row">
+                        <article class="row">
                             <?php
                             $args = array(
                                 'showposts'	=> 6,
@@ -108,24 +108,30 @@ include (TEMPLATEPATH . '/left-content.php');
                             $my_query = null;
                             $my_query = new WP_Query($args);
                             if( $my_query->have_posts() ) :
-                                while ($my_query->have_posts()) : $my_query->the_post();
-                                    $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false);
-                                    ?>
-                                    <div class="col-lg-4 col-sm-6 col-xs-12 related-item">
+                                while ($my_query->have_posts()) : $my_query->the_post();?>
+                                <article id="post-<?php the_ID();?>" <?php post_class();?>>
                                         <a href="<?php echo get_the_permalink()?>">
-                                            <div class="related-img">
-                                                <img src="<?php echo esc_url($img[0])?>"/>
-                                            </div>
-                                            <div class="related-info">
-                                                <div class="related-title">
-                                                    <?php echo get_the_title()?>
+                                            <div class="entry-thumbnail">
+                                                <figure class="post-thumbnail"><?php the_post_thumbnail('large') ?></figure>
+                                                <div class="timestamp">
+                                                    <span class="date"><?php echo get_the_date('d') ?></span>
+                                                    <span class="month"><?php echo get_the_date('M') ?></span>
+                                                    <span class="year"><?php echo get_the_date('Y') ?></span>
                                                 </div>
-                                                <div class="related-date">
-                                                    <?php echo get_the_date();?>
+                                            </div>
+                                            <div class="entry-info">
+                                                <div class="entry-header">
+                                                    <h2 class="entry-title">
+                                                        <?php $title = get_the_title();?>
+                                                        <?php echo wp_trim_words( $title,$num_words = 10, $more = ' ...' ); ?>
+                                                    </h2>
+                                                </div>
+                                                <div class="entry-content">
+                                                    <?php the_excerpt(); ?>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
+                                    </article>
                                 <?php endwhile;
                             endif;
                             ?>

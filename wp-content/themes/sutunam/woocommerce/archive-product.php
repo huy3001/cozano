@@ -38,7 +38,8 @@ get_header( 'shop' ); ?>
             $cat = $wp_query->get_queried_object();
             ?>
             <?php
-            //Display sub-category
+
+            // Display sub-category
             echo '<div class="cat-sub-list">';
             if($cat->parent == 0){
                 $parent = $cat->term_id;
@@ -85,7 +86,7 @@ get_header( 'shop' ); ?>
             </div>
 
 			<?php
-			//Display category image
+			// Display category image
             $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
             $image = wp_get_attachment_url( $thumbnail_id );
             if($image):
@@ -108,9 +109,9 @@ get_header( 'shop' ); ?>
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
 
-			<?php woocommerce_product_loop_start(); ?>
+            <?php woocommerce_product_loop_start(); ?>
 
-				<?php woocommerce_product_subcategories(); ?>
+            <?php woocommerce_product_subcategories(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -153,5 +154,5 @@ get_header( 'shop' ); ?>
 	?>
 
     <?php get_footer( 'shop' ); ?>
-</div>
+
 

@@ -72,7 +72,7 @@
                     arrows: false,
                     asNavFor: '.thumb-list',
                     fade: true,
-                    speed: 500,
+                    speed: 1000,
                     slide: 'li',
                     slidesToShow: 1,
                     slidesToScroll: 1,

@@ -538,6 +538,37 @@
             }
         }
 
+        @include small-bp($desktop, $medium-desktop) {
+            .product-container {
+                max-height: $desktop-img-height;
+            }
+            .images {
+                .image-list {
+                    a {
+                        max-height: $desktop-img-height;
+                        img {
+                            max-height: $desktop-img-height;
+                        }
+                    }
+                }
+                .thumbnails {
+                    a {
+                        width: 60px !important;
+                        height: 60px !important;
+                    }
+                }
+                .thumb-list {
+                    .slick-prev,
+                    .slick-next {
+                        left: 18px;
+                    }
+                }
+            }
+            .summary {
+                padding-right: 50px;
+            }
+        }
+
         @include bp(max-width, $desktop - 1) {
             .product-container {
                 max-height: inherit;
@@ -799,6 +830,7 @@
     }
 
     .zoomContainer {
+        z-index: 1;
         .zoomWindow {
             cursor: url("../images/zoom-out-cursor.png"), zoom-out !important;
             max-height: $product-img-height;

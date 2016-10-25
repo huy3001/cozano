@@ -124,10 +124,6 @@
         }
     }
 
-    @include bp(max-width, $desktop - 1) {
-
-    }
-
     @include bp(max-width, $laptop - 1) {
         .post {
             width: 48%;

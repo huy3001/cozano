@@ -71,7 +71,8 @@
                 imageList.slick({
                     arrows: false,
                     asNavFor: '.thumb-list',
-                    fade: false,
+                    fade: true,
+                    speed: 500,
                     slide: 'li',
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -81,6 +82,7 @@
                             breakpoint: $desktop,
                             settings: {
                                 arrows: true,
+                                fade: false,
                                 swipe: true
                             }
                         },
@@ -90,6 +92,7 @@
                                 arrows: true,
                                 asNavFor: '',
                                 dots: true,
+                                fade: false,
                                 swipe: true
                             }
                         }
@@ -102,6 +105,7 @@
 
             if(thumbList.length) {
                 thumbList.slick({
+                    accessibility: false,
                     arrows: arrow,
                     asNavFor: '.image-list',
                     focusOnSelect: true,

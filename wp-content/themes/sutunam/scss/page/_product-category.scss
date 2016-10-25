@@ -571,6 +571,9 @@
         ul.products {
             li.product {
                 width: 33.333%;
+                &:nth-child(2n) {
+                    float: left;
+                }
                 .image {
                     height: 340px;
                 }

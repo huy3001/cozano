@@ -265,6 +265,15 @@
         }
     }
 
+    @include bp(max-width, $laptop - 1) {
+        .logo {
+            max-width: 120px;
+            a {
+                padding: 16px 0;
+            }
+        }
+    }
+
     @include bp(max-width, $tablet - 1) {
         left: $left-content-width;
         @include transition();
@@ -298,14 +307,10 @@
             display: none;
         }
         .logo {
-            max-width: 120px;
             position: absolute;
             top: 0;
             left: 50%;
             margin-left: -60px;
-            a {
-                padding: 16px 0;
-            }
         }
         .search-form {
             button {

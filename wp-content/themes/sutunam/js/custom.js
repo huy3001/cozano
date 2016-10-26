@@ -160,11 +160,12 @@
     var customJS = {
         customScrollbar: function() {
             $('body').niceScroll({
-                cursorcolor: '#01385f',
+                cursorcolor: '#00a2ff',
                 cursorborder: 'none',
                 cursorborderradius: '0px',
                 mousescrollstep: 60,
-                scrollspeed: 60
+                scrollspeed: 60,
+                zindex: 999
             });
         },
 
@@ -612,6 +613,8 @@
                                 arrows: false,
                                 autoplay: true,
                                 autoplaySpeed: 5000,
+                                easing: 'ease',
+                                infinite: false,
                                 slidesToShow: itemCount,
                                 slidesToScroll: 1,
                                 swipeToSlide: true

@@ -83,6 +83,7 @@
                             settings: {
                                 arrows: true,
                                 fade: false,
+                                speed: 500,
                                 swipe: true
                             }
                         },
@@ -93,6 +94,7 @@
                                 asNavFor: '',
                                 dots: true,
                                 fade: false,
+                                speed: 500,
                                 swipe: true
                             }
                         }
@@ -156,6 +158,16 @@
 
     // Global functions
     var customJS = {
+        customScrollbar: function() {
+            $('body').niceScroll({
+                cursorcolor: '#01385f',
+                cursorborder: 'none',
+                cursorborderradius: '0px',
+                mousescrollstep: 60,
+                scrollspeed: 60
+            });
+        },
+
         accordionMenu: function() {
             var itemHasChild = $('.menu-item-has-children > a');
             if(itemHasChild.length) {
@@ -601,7 +613,8 @@
                                 autoplay: true,
                                 autoplaySpeed: 5000,
                                 slidesToShow: itemCount,
-                                slidesToScroll: 1
+                                slidesToScroll: 1,
+                                swipeToSlide: true
                             });
                         }
                         catList.width(itemCount*catItemWidth);
@@ -639,6 +652,9 @@
 
     /* Window ready function */
     $(window).ready(function () {
+        // Custom scrollbar
+        customJS.customScrollbar();
+
         // Close sidebar
         customJS.closeSidebar();
 

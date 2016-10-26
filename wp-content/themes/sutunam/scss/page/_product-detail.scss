@@ -5,7 +5,7 @@
     div.product {
         .product-content-detail {
             background: $white;
-            margin: 40px auto;
+            margin: 40px auto 0;
         }
         .product-container {
             clear: both;
@@ -360,18 +360,15 @@
                     }
                 }
             }
-            &.contain-1,
-            &.contain-3 {
+            &.contain-1 {
                 .desc-img {
-                    float: right;
+                    width: 100%;
                     &:before {
-                        border-left: 20px solid $white;
-                        left: 0;
+                        display: none;
                     }
                 }
                 .desc-detail {
-                    float: left;
-                    left: 25%;
+                    left: 50%;
                     @include transform(translate(-50%, -50%));
                 }
             }
@@ -387,6 +384,20 @@
                     float: right;
                     right: 25%;
                     @include transform(translate(50%, -50%));
+                }
+            }
+            &.contain-3 {
+                .desc-img {
+                    float: right;
+                    &:before {
+                        border-left: 20px solid $white;
+                        left: 0;
+                    }
+                }
+                .desc-detail {
+                    float: left;
+                    left: 25%;
+                    @include transform(translate(-50%, -50%));
                 }
             }
         }

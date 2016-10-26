@@ -1,6 +1,7 @@
 /* Blog page style */
 
-.blog {
+.blog,
+.single {
     .page-title {
         margin: 30px auto;
         text-align: center;
@@ -184,19 +185,12 @@
     .news-content {
         background: $white;
         padding: 15px;
-        .timestamp {
-            background: $black;
-            color: $white;
-            display: none;
-            text-align: center;
-            text-transform: uppercase;
-            padding: 10px;
-            position: absolute;
-            left: 30px;
-            top: 0;
+        .timestamp,
+        .news-author {
+            display: inline-block;
+            vertical-align: top;
         }
-        .news-title,
-        .category-list {
+        .news-title {
             color: $main-color;
             a {
                 color: $main-color;
@@ -206,6 +200,13 @@
             }
         }
         .category-list {
+            color: $grey;
+            a {
+                color: $grey;
+                &:hover {
+                    @include opacity(0.5);
+                }
+            }
             span {
                 margin: 0 5px;
             }

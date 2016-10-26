@@ -7,14 +7,14 @@
  */
 
 get_header();
-include (TEMPLATEPATH . '/left-content.php');
+include(TEMPLATEPATH . '/left-content.php');
 ?>
 <div class="right-content">
 <?php
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-            $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false);
-            ?>
+if (have_posts()) :
+    while (have_posts()) : the_post();
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false);
+        ?>
             <section class="news-wrapper news-detail-wrapper">
                 <div id="breadcrumbs" class="breadcrumbs">
                     <div class="container">
@@ -26,8 +26,8 @@ include (TEMPLATEPATH . '/left-content.php');
                                 <i class="fa fa-home"></i>
                             </a> / <a
                                 class="breadcrumb_parent"
-                                href="<?php echo get_site_url() . __('/news','sutunam')?>">
-                                <span><?php echo __('News','sutunam') ?></span>
+                                href="<?php echo get_site_url() . __('/news', 'sutunam') ?>">
+                                <span><?php echo __('News', 'sutunam') ?></span>
                             </a>
                             </span> /
                             <span
@@ -40,7 +40,7 @@ include (TEMPLATEPATH . '/left-content.php');
                 <div class="news-heading">
                     <div class="container">
                         <h1 class="txt-title news-title">
-                            <?php echo __('Latest News','sutunam') ?>
+                            <?php echo __('Latest News', 'sutunam') ?>
                         </h1>
 
                         <div class="txt-description news-desc text-center">
@@ -57,18 +57,24 @@ include (TEMPLATEPATH . '/left-content.php');
                                     <img src="<?php echo esc_url($image[0]) ?>" alt="<?php echo get_the_title() ?>"/>
                                 </div>
                                 <div class="news-content">
-                                    <div class="timestamp">
-                                        <div class="date"><?php echo get_the_date('d') ?></div>
-                                        <div class="month"><?php echo get_the_date('M') ?></div>
+                                    <div class="category-list">
+                                        <?php echo get_the_category_list('<span>|</span>'); ?>
                                     </div>
                                     <div class="news-title">
                                         <h3><a href="<?php echo get_permalink(); ?>"><?php echo __(get_the_title()) ?></a></h3>
                                     </div>
-                                    <div class="category-list">
-                                        <?php echo get_the_category_list('<span>|</span>'); ?>
+                                    <div class="timestamp">
+                                        <span class="date"><?php echo get_the_date('d') ?></span>
+                                        <span class="month"><?php echo get_the_date('M') ?></span>
+                                        <span class="year"><?php echo get_the_date('Y') ?></span>
+                                        <span class="divider">|</span>
                                     </div>
+                                    <div class="news-author">
+                                        <?php printf(__('<span class="author">Posted by %1$s</span>', 'sutunam'), get_the_author()); ?>
+                                    </div>
+
                                     <div class="entry-content">
-                                        <?php sutunam_entry_content();?>
+                                        <?php sutunam_entry_content(); ?>
                                     </div>
                                     <div class="social-share">
                                         <span class='st_facebook_large' displayText='Facebook'></span>
@@ -97,20 +103,20 @@ include (TEMPLATEPATH . '/left-content.php');
                 <div class="related-news">
                     <div class="container">
                         <h4><?php echo __('Related posts') ?></h4>
-                        <article class="row">
+                        <div class="related-list">
                             <?php
                             $args = array(
-                                'showposts'	=> 6,
+                                'showposts' => 6,
                                 'post_type' => 'post',
                                 'post__not_in' => array($post->ID)
                             );
 
                             $my_query = null;
                             $my_query = new WP_Query($args);
-                            if( $my_query->have_posts() ) :
-                                while ($my_query->have_posts()) : $my_query->the_post();?>
-                                <article id="post-<?php the_ID();?>" <?php post_class();?>>
-                                        <a href="<?php echo get_the_permalink()?>">
+                            if ($my_query->have_posts()) :
+                                while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                        <a href="<?php echo get_the_permalink() ?>">
                                             <div class="entry-thumbnail">
                                                 <figure class="post-thumbnail"><?php the_post_thumbnail('large') ?></figure>
                                                 <div class="timestamp">
@@ -122,8 +128,8 @@ include (TEMPLATEPATH . '/left-content.php');
                                             <div class="entry-info">
                                                 <div class="entry-header">
                                                     <h2 class="entry-title">
-                                                        <?php $title = get_the_title();?>
-                                                        <?php echo wp_trim_words( $title,$num_words = 10, $more = ' ...' ); ?>
+                                                        <?php $title = get_the_title(); ?>
+                                                        <?php echo wp_trim_words($title, $num_words = 10, $more = ' ...'); ?>
                                                     </h2>
                                                 </div>
                                                 <div class="entry-content">
@@ -141,7 +147,7 @@ include (TEMPLATEPATH . '/left-content.php');
             </section>
         <?php
     endwhile;
-    endif;
+endif;
 ?>
 
 <?php

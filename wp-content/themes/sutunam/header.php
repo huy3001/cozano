@@ -19,6 +19,15 @@ $jk_options = get_option('redux_demo');
 <html <?php language_attributes(); ?>> <![endif]-->
 <head>
     <meta charset="<?php bloginfo('charset'); ?>"/>
+    <meta http-equiv="content-language" content="<?php bloginfo('language'); ?>" />
+    <meta name="contact" content="<?php bloginfo('admin_email'); ?>" />
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta name="keywords" content="" />
+
+    <!-- Global Facebook Open Graph tags -->
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+    <!-- End Global Facebook Open Graph tags -->
+
     <!-- ======================================================================
     Mobile Specific Meta
     ======================================================================= -->

@@ -204,12 +204,17 @@ if (!function_exists('sutunam_entry_header')) {
     {
         if (is_single()): ?>
             <h1 class="entry-title">
-                <?php the_title() ?>
+                <?php
+                $title = get_the_title();
+                echo wp_trim_words( $title, $num_words = 10, $more = '...' );
+                ?>
             </h1>
         <?php else: ?>
             <h2 class="entry-title">
-                <?php $title = get_the_title();?>
-                <?php echo wp_trim_words( $title,$num_words = 10, $more = ' ...' ); ?>
+                <?php
+                $title = get_the_title();
+                echo wp_trim_words( $title, $num_words = 10, $more = '...' );
+                ?>
             </h2>
         <?php endif;
     }

@@ -72,7 +72,7 @@
                     arrows: false,
                     asNavFor: '.thumb-list',
                     fade: true,
-                    speed: 1000,
+                    speed: 500,
                     slide: 'li',
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -83,7 +83,6 @@
                             settings: {
                                 arrows: true,
                                 fade: false,
-                                speed: 500,
                                 swipe: true
                             }
                         },
@@ -94,7 +93,6 @@
                                 asNavFor: '',
                                 dots: true,
                                 fade: false,
-                                speed: 500,
                                 swipe: true
                             }
                         }
@@ -148,9 +146,28 @@
             if(summary.length) {
                 if ($(window).width() > $desktop - 1) {
                     summary.css('margin-top', -summary.outerHeight()/2);
+                    setTimeout(function() {
+                        summary.css('opacity', 1);
+                    }, 300);
                 }
                 else {
                     summary.removeAttr('style');
+                }
+            }
+        },
+
+        // Thumbnail centering
+        thumbnailCenter: function() {
+            var thumbnail = $('.product .thumbnails');
+            if(thumbnail.length) {
+                if ($(window).width() > $tablet - 1) {
+                    thumbnail.css('margin-top', -thumbnail.outerHeight()/2);
+                    setTimeout(function() {
+                        thumbnail.css('opacity', 1);
+                    }, 300);
+                }
+                else {
+                    thumbnail.removeAttr('style');
                 }
             }
         }
@@ -720,6 +737,9 @@
 
         // Product summary centering
         productDetail.summaryCenter();
+
+        // Product thumbnail centering
+        productDetail.thumbnailCenter();
     });
 
     /* Window resize function */
@@ -753,5 +773,8 @@
 
         // Product summary centering
         productDetail.summaryCenter();
+
+        // Product thumbnail centering
+        productDetail.thumbnailCenter();
     });
 })(jQuery);

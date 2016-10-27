@@ -371,6 +371,9 @@
                     }
                 }
                 .desc-detail {
+                    width: 80%;
+                    max-width: 80%;
+                    text-align: center;
                     left: 50%;
                     @include transform(translate(-50%, -50%));
                 }
@@ -733,6 +736,12 @@
                     .desc-detail {
                         float: none;
                         @include transform(none);
+                    }
+                }
+                &.contain-1 {
+                    .desc-detail {
+                        width: 100%;
+                        max-width: 100%;
                     }
                 }
             }

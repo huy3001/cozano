@@ -1,0 +1,53 @@
+/* Cart page style */
+
+.woocommerce-cart {
+    #content {
+        padding-top: 30px;
+    }
+    table.shop_table {
+        background: $white;
+        @include border-radius(0);
+        th {
+            background: $filter-item-bg;
+        }
+        td {
+            &.actions {
+                .input-text {
+                    font-weight: normal;
+                    width: auto !important;
+                }
+                .button {
+                    @include border-radius(0);
+                    @include transition();
+                    &:hover {
+                        background: $grey;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .product-name {
+            a {
+                color: $main-color;
+            }
+        }
+    }
+    .wc-proceed-to-checkout {
+        a.checkout-button {
+            background: $black;
+            border: 2px solid $black;
+            @include border-radius(0);
+            color: $white;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 11px 10px;
+            outline: none;
+            @include transition();
+            &:hover {
+                background: transparent;
+                color: $black;
+            }
+        }
+    }
+}

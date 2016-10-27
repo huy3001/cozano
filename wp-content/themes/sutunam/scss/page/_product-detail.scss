@@ -75,12 +75,15 @@
                 margin: 0;
                 padding: 0;
                 li {
-                    border: 1px solid $search-input-bd;
+                    border: 1px solid $product-select-bd;
                     float: left;
                     margin-bottom: 5px;
                     width: auto !important;
                     &:last-child {
                         margin-bottom: 0;
+                    }
+                    &.slick-current {
+                        border-color: $search-input-bd;
                     }
                 }
                 .slick-prev, .slick-next {

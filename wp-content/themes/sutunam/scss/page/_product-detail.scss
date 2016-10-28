@@ -319,16 +319,12 @@
             width: 100%;
             position: relative;
             .desc-img {
+                position: absolute;
+                left: 0;
+                top: 0;
                 width: 60%;
-            }
-            .desc-detail {
-                width: 40%;
-            }
-            .desc-img {
-                position: relative;
-                img {
-                    width: 100%;
-                }
+                height: 100%;
+                overflow: hidden;
                 &:before {
                     content: "";
                     display: block;
@@ -342,12 +338,29 @@
                     margin-top: -20px;
                     z-index: 1;
                 }
+                img {
+                    height: 100%;
+                    width: auto;
+                    max-width: inherit;
+                    position: relative;
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                }
             }
             .desc-detail {
-                width: 420px;
-                max-width: 40%;
-                position: absolute;
-                top: 50%;
+                width: 40%;
+                min-height: 600px;
+                text-align: center;
+                padding: 30px 0;
+                position: relative;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    min-height: 600px;
+                    height: 100%;
+                    width: 1%;
+                }
                 h2 {
                     font-size: 30px;
                     margin: 0 0 10px;
@@ -370,33 +383,37 @@
                     }
                 }
             }
+            .desc-content {
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                width: 420px;
+                max-width: 80%;
+            }
             &.contain-1 {
                 .desc-img {
                     width: 100%;
-                    height: 400px;
                     &:before {
                         display: none;
-                    }
-                    img {
-                        height: 100%;
-                        width: auto;
-                        max-width: inherit;
-                        position: relative;
-                        left: 50%;
-                        @include transform(translateX(-50%));
                     }
                 }
                 .desc-detail {
                     width: 80%;
                     max-width: 80%;
+                    min-height: 400px;
                     text-align: center;
-                    left: 50%;
-                    @include transform(translate(-50%, -50%));
+                    margin: 0 auto;
+                    &:before {
+                        min-height: 340px;
+                    }
+                }
+                .desc-content {
+                    width: 80%;
+                    text-align: center;
                 }
             }
             &.contain-2 {
                 .desc-img {
-                    float: left;
                     &:before {
                         border-right: 20px solid $white;
                         right: 0;
@@ -404,13 +421,12 @@
                 }
                 .desc-detail {
                     float: right;
-                    right: 25%;
-                    @include transform(translate(50%, -50%));
                 }
             }
             &.contain-3 {
                 .desc-img {
-                    float: right;
+                    left: auto;
+                    right: 0;
                     &:before {
                         border-left: 20px solid $white;
                         left: 0;
@@ -418,8 +434,6 @@
                 }
                 .desc-detail {
                     float: left;
-                    left: 25%;
-                    @include transform(translate(-50%, -50%));
                 }
             }
         }
@@ -690,19 +704,8 @@
             }
             .product-description {
                 .desc-detail {
-                    max-width: 35%;
                     h2 {
                         font-size: 25px;
-                    }
-                }
-                &.contain-2 {
-                    .desc-detail {
-                        right: 20%;
-                    }
-                }
-                &.contain-3 {
-                    .desc-detail {
-                        left: 20%;
                     }
                 }
             }
@@ -760,21 +763,34 @@
                         font-size: 20px;
                     }
                 }
-                &.contain-2,
-                &.contain-3 {
-                    .desc-img {
-                        float: none;
-                    }
-                    .desc-detail {
-                        float: none;
-                        position: static;
-                        @include transform(none);
-                    }
+                .desc-content {
+                    width: 100%;
+                    max-width: 100%;
                 }
                 &.contain-1 {
                     .desc-detail {
                         width: 100%;
                         max-width: 100%;
+                    }
+                }
+                &.contain-2,
+                &.contain-3 {
+                    .desc-img {
+                        position: static;
+                        height: auto;
+                        img {
+                            height: auto;
+                            width: 100%;
+                            max-width: 100%;
+                            left: auto;
+                            @include transform(none);
+                        }
+                    }
+                    .desc-detail {
+                        min-height: inherit;
+                        &:before {
+                            display: none;
+                        }
                     }
                 }
             }

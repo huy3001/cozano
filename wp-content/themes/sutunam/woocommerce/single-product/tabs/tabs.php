@@ -31,7 +31,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php } ?>
         <?php if(types_render_field("product-description-1", array())) { ?>
         <div class="desc-detail">
-            <?php echo types_render_field("product-description-1", array()); ?>
+            <div class="desc-content">
+                <?php echo types_render_field("product-description-1", array()); ?>
+            </div>
         </div>
         <?php } ?>
 	</div>
@@ -43,7 +45,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php } ?>
         <?php if(types_render_field("product-description-2", array())) { ?>
         <div class="desc-detail">
-            <?php echo types_render_field("product-description-2", array()); ?>
+            <div class="desc-content">
+                <?php echo types_render_field("product-description-2", array()); ?>
+            </div>
         </div>
         <?php } ?>
 	</div>
@@ -55,7 +59,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php } ?>
         <?php if(types_render_field("product-description-3", array())) { ?>
         <div class="desc-detail">
-            <?php echo types_render_field("product-description-3", array()); ?>
+            <div class="desc-content">
+                <?php echo types_render_field("product-description-3", array()); ?>
+            </div>
         </div>
         <?php } ?>
 	</div>

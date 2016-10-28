@@ -29,3 +29,12 @@ global $post, $product;
         <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
 
     <?php endif; ?>
+
+<?php
+//Type display
+echo types_render_field("type-display", array());
+// Ma mau
+echo types_render_field("color", array());
+//Upload image
+echo types_render_field("upload-image", array('url'=>true));
+?>

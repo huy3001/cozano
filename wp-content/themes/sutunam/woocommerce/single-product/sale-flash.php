@@ -21,20 +21,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 
+// Background image
+$bgImage = types_render_field("upload-image", array('url'=>true));
+// Background type
+$bgType = types_render_field("type-display", array('raw'=>true));
+// Color
+$bgColor = types_render_field("color", array());
+
+
 ?>
-<div class="product-content-detail">
+<div class="product-content-detail" style="
+    <?php
+    if($bgImage) {
+        echo 'background-image:url('.$bgImage.');';
+    }
+    if($bgType) {
+        if($bgType == 'no-repeat') {
+            echo 'background-size:cover;';
+        }
+        echo 'background-repeat:'.$bgType.';';
+    }
+    if($bgColor) {
+        echo 'background-color:'.$bgColor.';';
+    }
+    ?>;">
     <div class="product-container">
     <?php if ( $product->is_on_sale() ) : ?>
 
         <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
 
     <?php endif; ?>
-
-<?php
-//Type display
-echo types_render_field("type-display", array());
-// Ma mau
-echo types_render_field("color", array());
-//Upload image
-echo types_render_field("upload-image", array('url'=>true));
-?>

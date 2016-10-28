@@ -5361,7 +5361,7 @@ h6 {
 /* line 6, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
 .single-product div.product .product-content-detail {
-  background: #ffffff;
+  background-color: #ffffff;
   margin: 40px auto 0;
 }
 
@@ -5439,7 +5439,7 @@ h6 {
 /* line 57, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
 .single-product div.product .images .image-list a {
-  background-color: #ffffff;
+  background-color: transparent;
   background-position: 28% center;
   background-repeat: no-repeat;
   background-size: contain;

@@ -4,7 +4,7 @@
     @import "../component/sub-category";
     div.product {
         .product-content-detail {
-            background: $white;
+            background-color: $white;
             margin: 40px auto 0;
         }
         .product-container {
@@ -55,7 +55,7 @@
                 margin: 0;
                 padding: 0;
                 a {
-                    background-color: $white;
+                    background-color: transparent;
                     background-position: 28% center;
                     background-repeat: no-repeat;
                     background-size: contain;

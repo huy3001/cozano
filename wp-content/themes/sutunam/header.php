@@ -101,12 +101,14 @@ $jk_options = get_option('redux_demo');
             <?php
             global $woocommerce;
             $cart_url = $woocommerce->cart->get_cart_url();
+            $cart_count = $woocommerce->cart->cart_contents_count;
             ?>
-	        <div class="shopping-cart">
-		        <a class="cart-icon" href="<?php echo $cart_url;?>">
-			        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-		        </a>
-	        </div>
+            <div class="shopping-cart">
+                <div class="cart_count"><?php echo esc_html($cart_count); ?></div>
+                <a class="cart-icon" href="<?php echo $cart_url;?>">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+            </div>
 
             <?php sutunam_menu('top-menu'); ?>
         </div>

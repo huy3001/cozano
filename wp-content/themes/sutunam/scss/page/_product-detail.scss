@@ -443,8 +443,9 @@
             }
         }
         .upsells.products {
-            display: none;
+//            display: none;
         }
+        .upsells.products,
         .related.products {
             float: left;
             width: 100%;

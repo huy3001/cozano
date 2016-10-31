@@ -319,6 +319,10 @@
             width: 100%;
             position: relative;
             .desc-img {
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -345,6 +349,7 @@
                     position: relative;
                     left: 50%;
                     @include transform(translateX(-50%));
+                    @include opacity(0);
                 }
             }
             .desc-detail {
@@ -752,8 +757,12 @@
                     width: 100%;
                 }
                 .desc-img {
+                    background: none !important;
                     &:before {
                         display: none;
+                    }
+                    img {
+                        @include opacity(1);
                     }
                 }
                 .desc-detail {

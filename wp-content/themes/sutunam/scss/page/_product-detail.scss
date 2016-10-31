@@ -942,7 +942,12 @@
             overflow: auto;
             img {
                 width: auto;
-                max-width: inherit;
+                max-width: $desktop - 1;
+            }
+        }
+        @include bp(max-width, $tablet - 1) {
+            img {
+                max-width: $tablet - 1;
             }
         }
     }

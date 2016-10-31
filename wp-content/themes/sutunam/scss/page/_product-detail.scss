@@ -621,7 +621,16 @@
             }
         }
 
+        @include bp(min-width, $desktop) {
+            .images {
+                background: none !important;
+            }
+        }
+
         @include bp(max-width, $desktop - 1) {
+            .product-content-detail {
+                background: $white !important;
+            }
             .product-container {
                 max-height: inherit;
             }

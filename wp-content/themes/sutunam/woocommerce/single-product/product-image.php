@@ -21,8 +21,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $woocommerce, $product;
 
+// Background image
+$bgImage = types_render_field("upload-image", array('url'=>true));
+// Background type
+$bgType = types_render_field("type-display", array('raw'=>true));
+// Color
+$bgColor = types_render_field("color", array());
+
 ?>
-<div class="images">
+<div class="images" style="
+<?php
+if($bgImage) {
+    echo 'background-image:url('.$bgImage.');';
+}
+if($bgType) {
+    if($bgType == 'no-repeat') {
+        echo 'background-size:cover;';
+    }
+    echo 'background-repeat:'.$bgType.';';
+}
+if($bgColor) {
+    echo 'background-color:'.$bgColor.';';
+}
+?>;">
     <ul class="image-list">
 	<?php
 		if ( has_post_thumbnail() ) {

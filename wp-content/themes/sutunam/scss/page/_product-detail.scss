@@ -926,7 +926,7 @@
     }
 
     .zoomContainer {
-        z-index: 1;
+        z-index: 111;
         .zoomWindow {
             background-color: $white;
             cursor: url("../images/zoom-out-cursor.png"), zoom-out !important;

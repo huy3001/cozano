@@ -149,12 +149,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.slick-slider {
-    .slick-track {
-        @include transition(all 0.5s ease);
-    }
-}
-
 @media (max-width: $laptop - 1) and (min-width: $mobile + 1) {
     .visible-sm {
         display: block !important;

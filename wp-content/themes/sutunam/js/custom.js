@@ -33,7 +33,20 @@
                         else {
                             $(this).addClass('zoomed');
                             $('.zoomContainer').show();
-                            image.elevateZoom(zoomOption); // init zoom
+                            if($(window).width() < $desktop) {
+                                $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
+                                $('body').css('overflow', 'hidden');
+                                setTimeout(function() {
+                                    $('.zoomContainer img').on('click', function() {
+                                        image.removeClass('zoomed');
+                                        $('.zoomContainer').remove(); // remove zoom container from DOM
+                                        $('body').removeAttr('style');
+                                    });
+                                }, 100);
+                            }
+                            else {
+                                image.elevateZoom(zoomOption); // init zoom
+                            }
                         }
                     });
                 }

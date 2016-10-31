@@ -445,6 +445,9 @@
         .upsells.products {
 //            display: none;
         }
+        .related.products {
+            display: none;
+        }
         .upsells.products,
         .related.products {
             float: left;
@@ -925,8 +928,22 @@
     .zoomContainer {
         z-index: 1;
         .zoomWindow {
+            background-color: $white;
             cursor: url("../images/zoom-out-cursor.png"), zoom-out !important;
             max-height: $product-img-height;
+        }
+        @include bp(max-width, $desktop - 1) {
+            background: $white;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow: auto;
+            img {
+                width: auto;
+                max-width: inherit;
+            }
         }
     }
 }

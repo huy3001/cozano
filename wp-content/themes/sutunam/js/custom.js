@@ -35,7 +35,7 @@
                             $('.zoomContainer').show();
                             if($(window).width() < $desktop) {
                                 $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
-                                $('body').css('overflow', 'hidden');
+                                $('body').css('position', 'fixed');
                                 setTimeout(function() {
                                     $('.zoomContainer img').on('click', function() {
                                         image.removeClass('zoomed');

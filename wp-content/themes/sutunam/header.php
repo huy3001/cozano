@@ -32,7 +32,7 @@ $jk_options = get_option('redux_demo');
     Mobile Specific Meta
     ======================================================================= -->
     <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"/>
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
     <link rel="profile" href="http://gmgp.org/xfn/11"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>

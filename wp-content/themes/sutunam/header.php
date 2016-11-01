@@ -32,7 +32,7 @@ $jk_options = get_option('redux_demo');
     Mobile Specific Meta
     ======================================================================= -->
     <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+          content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
     <link rel="profile" href="http://gmgp.org/xfn/11"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
@@ -104,8 +104,8 @@ $jk_options = get_option('redux_demo');
             $cart_count = $woocommerce->cart->cart_contents_count;
             ?>
             <div class="shopping-cart">
-                <div class="cart_count"><?php echo esc_html($cart_count); ?></div>
                 <a class="cart-icon" href="<?php echo $cart_url;?>">
+                    <span class="cart-count"><?php echo esc_html($cart_count); ?></span>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
             </div>

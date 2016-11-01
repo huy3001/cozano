@@ -558,9 +558,12 @@
             var relateProduct = $('.single-product ul.products');
             if(relateProduct.length) {
                 relateProduct.slick({
+                    easing: 'ease',
+                    infinite: false,
                     slide: 'li',
                     slidesToShow: 6,
                     slidesToScroll: 1,
+                    swipeToSlide: true,
                     responsive: [
                         {
                             breakpoint: $fullDesktop + 1,

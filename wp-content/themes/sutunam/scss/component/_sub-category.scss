@@ -62,8 +62,13 @@
             }
         }
         .slick-track {
+            cursor: move; /* fallback if grab cursor is unsupported */
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
             margin: 0 auto;
-            @include transition(all 0.5s ease);
+            touch-action: pan-y;
+            @include transition(transform 0.5s ease !important);
         }
     }
 

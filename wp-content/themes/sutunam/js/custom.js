@@ -38,10 +38,6 @@
                                     imgZoom = $('.zoomContainer img'),
                                     offsetLeft = $(window).width()/2,
                                     offsetTop = $(window).height()/2;
-                                zoomContainer.animate({
-                                    scrollLeft: offsetLeft,
-                                    scrollTop: offsetTop
-                                });
                                 imgZoom.panzoom({
                                     contain: 'invert',
                                     minScale: 1,
@@ -49,6 +45,10 @@
                                     increment: 0.5,
                                     startTransform: 'scale(1,1)',
                                     transition: true
+                                });
+                                zoomContainer.animate({
+                                    scrollLeft: '50%',
+                                    scrollTop: '50%'
                                 });
                                 zoomContainer.animate({
                                     opacity: 1

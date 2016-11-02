@@ -899,6 +899,7 @@
                 width: 100%;
                 padding: 0;
             }
+            .upsells.products,
             .related.products {
                 h2 {
                     text-align: center;
@@ -965,6 +966,11 @@
         @include bp(max-width, $tablet - 1) {
             img {
                 max-width: $tablet - 1;
+            }
+        }
+        @include bp(max-width, $mobile) {
+            img {
+                height: 100%;
             }
         }
     }

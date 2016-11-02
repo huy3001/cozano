@@ -36,7 +36,7 @@
                                 $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
                                 var zoomContainer = $('.zoomContainer'),
                                     imgZoom = $('.zoomContainer img'),
-                                    offsetLeft = $(window).width()/ 2,
+                                    offsetLeft = $(window).width()/2,
                                     offsetTop = $(window).height()/2;
                                 zoomContainer.animate({
                                     scrollLeft: offsetLeft,
@@ -45,6 +45,7 @@
                                 imgZoom.panzoom({
                                     contain: 'invert',
                                     minScale: 1,
+                                    maxScale: 3,
                                     increment: 0.5,
                                     startTransform: 'scale(1,1)',
                                     transition: true

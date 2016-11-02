@@ -38,17 +38,23 @@
                                     imgZoom = $('.zoomContainer img'),
                                     offsetLeft = $(window).width()/ 2,
                                     offsetTop = $(window).height()/2;
-                                imgZoom.panzoom();
                                 zoomContainer.animate({
                                     scrollLeft: offsetLeft,
                                     scrollTop: offsetTop
+                                });
+                                imgZoom.panzoom({
+                                    contain: 'invert',
+                                    minScale: 1,
+                                    increment: 0.5,
+                                    startTransform: 'scale(1,1)',
+                                    transition: true
                                 });
                                 zoomContainer.animate({
                                     opacity: 1
                                 }, 300);
                                 setTimeout(function() {
                                     $('body').css('position', 'fixed');
-                                    imgZoom.on('click', function() {
+                                    imgZoom.on('tap', function() {
                                         image.removeClass('zoomed');
                                         zoomContainer.remove(); // remove zoom container from DOM
                                         $('body').removeAttr('style');

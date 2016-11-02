@@ -947,7 +947,9 @@
             position: fixed;
             left: 0;
             top: 0;
-            overflow: auto;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+            @include opacity(0);
             img {
                 width: auto;
                 max-width: $desktop - 1;

@@ -32,19 +32,30 @@
                         }
                         else {
                             $(this).addClass('zoomed');
-                            $('.zoomContainer').show();
                             if($(window).width() < $desktop) {
                                 $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
-                                $('body').css('position', 'fixed');
+                                var zoomContainer = $('.zoomContainer'),
+                                    imgZoom = $('.zoomContainer img'),
+                                    offsetLeft = $(window).width()/ 2,
+                                    offsetTop = $(window).height()/2;
+                                zoomContainer.animate({
+                                    scrollLeft: offsetLeft,
+                                    scrollTop: offsetTop
+                                });
+                                zoomContainer.animate({
+                                    opacity: 1
+                                }, 300);
                                 setTimeout(function() {
-                                    $('.zoomContainer img').on('click', function() {
+                                    $('body').css('position', 'fixed');
+                                    imgZoom.on('click', function() {
                                         image.removeClass('zoomed');
-                                        $('.zoomContainer').remove(); // remove zoom container from DOM
+                                        zoomContainer.remove(); // remove zoom container from DOM
                                         $('body').removeAttr('style');
                                     });
-                                }, 100);
+                                }, 500);
                             }
                             else {
+                                $('.zoomContainer').show();
                                 image.elevateZoom(zoomOption); // init zoom
                             }
                         }

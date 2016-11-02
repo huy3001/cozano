@@ -38,6 +38,7 @@
                                     imgZoom = $('.zoomContainer img'),
                                     offsetLeft = $(window).width()/ 2,
                                     offsetTop = $(window).height()/2;
+                                imgZoom.panzoom();
                                 zoomContainer.animate({
                                     scrollLeft: offsetLeft,
                                     scrollTop: offsetTop

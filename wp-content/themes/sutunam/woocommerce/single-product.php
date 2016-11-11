@@ -39,7 +39,9 @@ get_header( 'shop' ); ?>
 	foreach ($cats as $cat){
 		if($cat->parent == 0){
 			$parent = $cat->term_id;
-		}
+		}else{
+            $parent = $cat->parent;
+        }
 	}
 	$args = array(
 		'hierarchical' => 1,

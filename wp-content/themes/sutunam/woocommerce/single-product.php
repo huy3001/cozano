@@ -34,7 +34,7 @@ get_header( 'shop' ); ?>
 	<?php
 	global $product;
 	//Display sub-category
-	echo '<div class="cat-sub-list">';
+	echo '<div class="cat-sub-list swiper-container">';
 	$cats = get_the_terms( $product->ID, 'product_cat' );
 	foreach ($cats as $cat){
 		if($cat->parent == 0){
@@ -51,17 +51,17 @@ get_header( 'shop' ); ?>
 		'taxonomy' => 'product_cat'
 	);
 	$categories = get_categories( $args );
-	echo '<ul class="cat-list">';
+	echo '<div class="cat-list swiper-wrapper">';
 	foreach($categories as $category){
 		$link = get_term_link( $category->slug, $category->taxonomy );
 		$thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
 		$image_sub = wp_get_attachment_url( $thumbnail );
         if($category->term_id == $cat->term_id)
-            echo '<li class="active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
+            echo '<div class="swiper-slide active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
         else
-            echo '<li><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
+            echo '<div class="swiper-slide"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
 	}
-    echo '</ul></div>';
+    echo '</div></div>';
 	?>
 		<?php while ( have_posts() ) : the_post(); ?>
 

@@ -14,7 +14,7 @@ $jk_options = get_option('redux_demo');
 <div class="right-content">
     <?php
     global $wp_query;
-    echo '<div class="cat-sub-list">';
+    echo '<div class="cat-sub-list swiper-container">';
     $cat = get_term_by('slug','men','product_cat');
     $args = array(
         'hierarchical' => 1,
@@ -24,17 +24,17 @@ $jk_options = get_option('redux_demo');
         'taxonomy' => 'product_cat'
     );
     $categories = get_categories( $args );
-    echo '<ul class="cat-list">';
+    echo '<div class="cat-list swiper-wrapper">';
     foreach($categories as $category){
         $link = get_term_link( $category->slug, $category->taxonomy );
         $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
         $image_sub = wp_get_attachment_url( $thumbnail );
         if($category->term_id == $cat->term_id)
-            echo '<li class="active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
+            echo '<div class="swiper-slide active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
         else
-            echo '<li><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></li>';
+            echo '<div class="swiper-slide"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
     }
-    echo '</ul></div>';
+    echo '</div></div>';
     ?>
 
 	<div class="container">

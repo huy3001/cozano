@@ -645,40 +645,32 @@
 
         subCategory: function() {
             var catList = $('.cat-sub-list .cat-list'),
-                catItem = $('li', catList),
-                catItemWidth = catItem.width(),
+                catItem = $('div', catList),
+                catLink = $('a', catItem),
+                catItemWidth = catLink.outerWidth(),
                 windowWidth = $(window).width();
             if(catList.length) {
                 catList.addClass('rightIn');
-                if($(window).width() < $desktop) {
-                    catList.removeAttr('style');
-                    if(catList.hasClass('slick-slider')) {
-                        catList.slick('unslick');
+                var catSwiper = '';
+                if($(window).width() > $desktop - 1) {
+                    if(catSwiper == '') {
+                        var sumCatList = catItem.length * catItemWidth,
+                            itemCount = Math.floor(windowWidth/catItemWidth);
+                        catSwiper = new Swiper('.swiper-container', {
+                            slidesPerView: itemCount,
+                            paginationClickable: true,
+                            spaceBetween: 0,
+                            autoplay: 5000,
+                            autoplayDisableOnInteraction: false,
+                            freeMode: true,
+                            loop: true
+                        });
                     }
                 }
                 else {
-                    var sumCatList = catItem.length * catItemWidth,
-                        itemCount = Math.floor(windowWidth/catItemWidth);
-                    if(sumCatList > windowWidth) {
-                        if(!catList.hasClass('slick-slider')) {
-                            catList.slick({
-                                arrows: false,
-                                autoplay: true,
-                                autoplaySpeed: 5000,
-                                easing: 'ease',
-                                infinite: false,
-                                slidesToShow: itemCount,
-                                slidesToScroll: 1,
-                                swipeToSlide: true
-                            });
-                        }
-                        catList.width(itemCount*catItemWidth);
-                    }
-                    else {
-                        if(catList.hasClass('slick-slider')) {
-                            catList.slick('unslick');
-                        }
-                        catList.width('auto');
+                    if(catSwiper != '') {
+                        catSwiper.destroy();
+                        catSwiper = '';
                     }
                 }
             }

@@ -4,7 +4,7 @@
     background: $search-input-bd;
     max-height: 200px;
     overflow: hidden;
-    ul.cat-list {
+    .cat-list {
         list-style: none;
         margin: 0 auto;
         padding: 0;
@@ -16,10 +16,12 @@
         &.rightIn {
             @include transform(translateX(0));
         }
-        li {
+        .swiper-slide {
             font-size: 0;
             display: inline-block;
             vertical-align: top;
+            height: auto;
+            width: auto;
             a {
                 display: inline-block;
                 vertical-align: top;
@@ -73,7 +75,7 @@
     }
 
     @include bp(max-width, $desktop - 1) {
-        ul.cat-list {
+        .cat-list {
             padding: 0 0 20px;
             max-height: 100%;
             max-width: 100%;
@@ -84,8 +86,8 @@
 
     @include bp(max-width, $tablet - 1) {
         max-height: 150px;
-        ul.cat-list {
-            li {
+        .cat-list {
+            .swiper-slide {
                 a {
                     width: 125px;
                     padding: 10px 5px 0;

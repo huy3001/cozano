@@ -644,26 +644,26 @@
         },
 
         subCategory: function() {
-            var catList = $('.cat-sub-list .cat-list'),
+            var catSubList = $('.cat-sub-list'),
+                catList = $('.cat-list', catSubList),
                 catItem = $('div', catList),
                 catLink = $('a', catItem),
                 catItemWidth = catLink.outerWidth(),
-                windowWidth = $(window).width();
+                catContainerWidth = $('.cat-sub-list .container').outerWidth();
             if(catList.length) {
                 catList.addClass('rightIn');
                 var catSwiper = '';
                 if($(window).width() > $desktop - 1) {
+                    var sumCatList = catItem.length * catItemWidth,
+                        itemCount = Math.floor(catContainerWidth/catItemWidth);
                     if(catSwiper == '') {
-                        var sumCatList = catItem.length * catItemWidth,
-                            itemCount = Math.floor(windowWidth/catItemWidth);
-                        catSwiper = new Swiper('.swiper-container', {
+                        catSwiper = new Swiper(catList, {
                             slidesPerView: itemCount,
-                            paginationClickable: true,
                             spaceBetween: 0,
                             autoplay: 5000,
                             autoplayDisableOnInteraction: false,
-                            freeMode: true,
-                            loop: true
+                            mousewheelControl: true,
+                            freeMode: true
                         });
                     }
                 }

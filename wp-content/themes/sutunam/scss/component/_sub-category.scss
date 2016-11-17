@@ -12,7 +12,7 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         @include transition(all 0.5s ease);
-        @include transform(translateX(150%));
+        @include transform(translateX(200%));
         &.rightIn {
             @include transform(translateX(0));
         }

@@ -14,7 +14,7 @@ $jk_options = get_option('redux_demo');
 <div class="right-content">
     <?php
     global $wp_query;
-    echo '<div class="cat-sub-list swiper-container">';
+    echo '<div class="cat-sub-list"><div class="container"><div class="row">';
     $cat = get_term_by('slug','women','product_cat');
     $args = array(
         'hierarchical' => 1,
@@ -24,7 +24,7 @@ $jk_options = get_option('redux_demo');
         'taxonomy' => 'product_cat'
     );
     $categories = get_categories( $args );
-    echo '<div class="cat-list swiper-wrapper">';
+    echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
     foreach($categories as $category){
         $link = get_term_link( $category->slug, $category->taxonomy );
         $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
@@ -34,7 +34,7 @@ $jk_options = get_option('redux_demo');
         else
             echo '<div class="swiper-slide"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
     }
-    echo '</div></div>';
+    echo '</div></div></div></div></div>';
     ?>
 	<div class="container">
 		<div class="row">

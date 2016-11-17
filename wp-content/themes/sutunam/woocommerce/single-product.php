@@ -34,7 +34,7 @@ get_header( 'shop' ); ?>
 	<?php
 	global $product;
 	//Display sub-category
-	echo '<div class="cat-sub-list swiper-container">';
+	echo '<div class="cat-sub-list"><div class="container"><div class="row">';
 	$cats = get_the_terms( $product->ID, 'product_cat' );
 	foreach ($cats as $cat){
 		if($cat->parent == 0){
@@ -51,7 +51,7 @@ get_header( 'shop' ); ?>
 		'taxonomy' => 'product_cat'
 	);
 	$categories = get_categories( $args );
-	echo '<div class="cat-list swiper-wrapper">';
+	echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
 	foreach($categories as $category){
 		$link = get_term_link( $category->slug, $category->taxonomy );
 		$thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
@@ -61,7 +61,7 @@ get_header( 'shop' ); ?>
         else
             echo '<div class="swiper-slide"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
 	}
-    echo '</div></div>';
+    echo '</div></div></div></div></div>';
 	?>
 		<?php while ( have_posts() ) : the_post(); ?>
 

@@ -42,14 +42,15 @@ get_header( 'shop' ); ?>
 		}else{
             $parent = $cat->parent;
         }
+        break;
 	}
-	$args = array(
-		'hierarchical' => 1,
-		'show_option_none' => '',
-		'hide_empty' => 0,
-		'parent' => $parent,
-		'taxonomy' => 'product_cat'
-	);
+    $args = array(
+        'hierarchical' => 1,
+        'show_option_none' => '',
+        'hide_empty' => 0,
+        'parent' => $parent,
+        'taxonomy' => 'product_cat'
+    );
 	$categories = get_categories( $args );
 	echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
 	foreach($categories as $category){

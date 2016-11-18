@@ -77,7 +77,6 @@
 
     @include bp(max-width, $desktop - 1) {
         .cat-list {
-            padding: 0 0 20px;
             max-height: 100%;
             max-width: 100%;
             overflow-x: auto;
@@ -86,21 +85,20 @@
     }
 
     @include bp(max-width, $tablet - 1) {
-        max-height: 150px;
+        max-height: 160px;
         .cat-list {
             .swiper-slide {
                 a {
                     width: 125px;
-                    padding: 10px 5px 0;
                 }
                 figure {
                     height:115px;
                 }
                 span {
                     font-size: 12px;
-                    padding: 5px 0;
                     line-height: normal;
                     text-transform: none;
+                    padding: 5px;
                 }
             }
         }

@@ -646,7 +646,7 @@
         subCategory: function() {
             var catSubList = $('.cat-sub-list'),
                 catList = $('.cat-list', catSubList),
-                catItem = $('div', catList),
+                catItem = $('.swiper-slide', catList),
                 catLink = $('a', catItem),
                 catItemWidth = catLink.outerWidth(),
                 catContainerWidth = $('.cat-sub-list .container').outerWidth();
@@ -672,6 +672,15 @@
                         catSwiper.destroy();
                         catSwiper = '';
                     }
+                    setTimeout(function() {
+                        catItem.each(function() {
+                            if($(this).hasClass('active')) {
+                                catList.animate({
+                                    scrollLeft: $(this).position().left
+                                }, 500);
+                            }
+                        });
+                    }, 500);
                 }
             }
         },

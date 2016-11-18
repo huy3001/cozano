@@ -75,6 +75,12 @@
         }
     }
 
+    @include bp(min-width, $huge-desktop + 10) {
+        .container {
+            width: 1610px;
+        }
+    }
+
     @include bp(max-width, $desktop - 1) {
         .cat-list {
             max-height: 100%;

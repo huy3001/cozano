@@ -98,7 +98,7 @@ get_header( 'shop' ); ?>
         </div><!-- End cat header -->
 
         <!-- Filter bar -->
-        <div class="filter-bar">
+        <div class="filter-bar"><div class="container"><div class="row">
 			<?php
 				/**
 				 * woocommerce_before_shop_loop hook.

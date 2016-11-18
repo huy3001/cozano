@@ -620,9 +620,8 @@
         footerMobileMenu: function() {
             var footerTitle = $('.footer-title');
             if(footerTitle.length) {
-                if($(window).width() < $tablet) {
-                    footerTitle.off('click').on('click', function(e) {
-                        e.preventDefault();
+                if($(window).width() < $mobile + 1) {
+                    footerTitle.off('click').on('click', function() {
                         if($(this).hasClass('open-menu')) {
                             $(this).removeClass('open-menu');
                         }
@@ -638,6 +637,9 @@
                     });
                 }
                 else {
+                    footerTitle.off('click').on('click', function() {
+                        return false;
+                    });
                     footerTitle.parent().find('.menu').removeAttr('style');
                 }
             }

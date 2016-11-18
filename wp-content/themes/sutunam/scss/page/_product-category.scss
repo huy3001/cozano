@@ -38,12 +38,12 @@
         background: $body-bg;
         float: left;
         width: 100%;
-        padding-top: 10px;
+        padding-top: 7px;
         z-index: 111;
     }
 
     .woocommerce-ordering {
-        margin: 0 10px 10px;
+        margin: 0 12px 7px 7px;
         .bootstrap-select {
             width: auto !important;
             .dropdown-toggle {
@@ -87,7 +87,7 @@
         color: $main-color;
         font-weight: bold;
         line-height: normal;
-        margin: 0 10px 10px;
+        margin: 0 7px 7px 12px;
         padding: 10px 12px;
         outline: none;
     }
@@ -109,11 +109,11 @@
 
     #placeHolder {
         float: left;
-        margin: 0 10px 10px;
+        margin: 0 7px 7px 12px;
         ul.ft-menu {
             > li.ft-field {
                 float: left;
-                margin-right: 12px;
+                margin-right: 7px;
                 &:last-child {
                     margin-right: 0;
                 }
@@ -290,7 +290,7 @@
         text-align: center;
         height: 40px;
         line-height: 40px;
-        margin: 0 10px 10px 0;
+        margin: 0 7px 7px 0;
         padding: 0 12px;
     }
 

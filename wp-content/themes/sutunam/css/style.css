@@ -4501,7 +4501,7 @@ h6 {
   background: #ffffff;
   position: absolute;
   left: -2px;
-  bottom: -12px;
+  bottom: -9px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -4534,7 +4534,7 @@ h6 {
 /* line 155, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
 .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > span.ft-label.ft-clicked:before {
-  height: 10px;
+  height: 7px;
 }
 
 /* line 158, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
@@ -4556,7 +4556,7 @@ h6 {
   background: #ffffff;
   border: none;
   left: 0;
-  top: 50px;
+  top: 47px;
   margin: 0;
   min-width: 300px;
 }

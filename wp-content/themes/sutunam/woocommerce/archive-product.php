@@ -36,6 +36,7 @@ get_header( 'shop' ); ?>
             <?php
             global $wp_query;
             $cat = $wp_query->get_queried_object();
+			WC()->session->set('category_id' , $cat->term_id );
             ?>
             <?php
 

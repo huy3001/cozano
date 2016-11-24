@@ -10,7 +10,8 @@
 
     // Product detail functions
     var imageList = $('.image-list'),
-        thumbList = $('.thumb-list');
+        thumbList = $('.thumb-list'),
+        productContainer = $('.product-container');
     var productDetail = {
         // Add zoom to product slider
         addZoom: function(imageList) {
@@ -29,43 +30,46 @@
                             $(this).removeClass('zoomed');
                             $(this).removeData('elevateZoom'); // remove zoom instance from image
                             $('.zoomContainer').remove(); // remove zoom container from DOM
+                            productContainer.removeAttr('style');
                         }
                         else {
                             $(this).addClass('zoomed');
-                            if($(window).width() < $desktop) {
-                                $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
-                                var zoomContainer = $('.zoomContainer'),
-                                    imgZoom = $('.zoomContainer img'),
-                                    offsetLeft = $(window).width()/2,
-                                    offsetTop = $(window).height()/2;
-                                imgZoom.panzoom({
-                                    contain: 'invert',
-                                    minScale: 1,
-                                    maxScale: 3,
-                                    increment: 0.5,
-                                    startTransform: 'scale(1,1)',
-                                    transition: true
-                                });
-                                zoomContainer.animate({
-                                    scrollLeft: '50%',
-                                    scrollTop: '50%'
-                                });
-                                zoomContainer.animate({
-                                    opacity: 1
-                                }, 300);
-                                setTimeout(function() {
-                                    $('body').css('position', 'fixed');
-                                    imgZoom.on('tap', function() {
-                                        image.removeClass('zoomed');
-                                        zoomContainer.remove(); // remove zoom container from DOM
-                                        $('body').removeAttr('style');
-                                    });
-                                }, 500);
-                            }
-                            else {
+                            productContainer.css('opacity', 0);
+                            //if($(window).width() < $desktop) {
+                            //    $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
+                            //    var zoomContainer = $('.zoomContainer'),
+                            //        imgZoom = $('.zoomContainer img'),
+                            //        offsetLeft = $(window).width()/2,
+                            //        offsetTop = $(window).height()/2;
+                            //    imgZoom.panzoom({
+                            //        contain: 'invert',
+                            //        minScale: 1,
+                            //        maxScale: 3,
+                            //        increment: 0.5,
+                            //        startTransform: 'scale(1,1)',
+                            //        transition: true
+                            //    });
+                            //    zoomContainer.animate({
+                            //        scrollLeft: '50%',
+                            //        scrollTop: '50%'
+                            //    });
+                            //    zoomContainer.animate({
+                            //        opacity: 1
+                            //    }, 300);
+                            //    setTimeout(function() {
+                            //        $('body').css('position', 'fixed');
+                            //        imgZoom.on('tap', function() {
+                            //            image.removeClass('zoomed');
+                            //            zoomContainer.remove(); // remove zoom container from DOM
+                            //            productContainer.removeAttr('style');
+                            //            $('body').removeAttr('style');
+                            //        });
+                            //    }, 500);
+                            //}
+                            //else {
                                 $('.zoomContainer').show();
                                 image.elevateZoom(zoomOption); // init zoom
-                            }
+                            //}
                         }
                     });
                 }

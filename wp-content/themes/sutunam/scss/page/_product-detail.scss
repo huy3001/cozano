@@ -937,8 +937,9 @@
     .zoomContainer {
         z-index: 111;
         .zoomWindow {
-            background-color: $white;
+            background-color: transparent;
             cursor: url("../images/zoom-out-cursor.png"), zoom-out !important;
+            display: block !important;
             max-height: $product-img-height;
         }
         .zoomClose {

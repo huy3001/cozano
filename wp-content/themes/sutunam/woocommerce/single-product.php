@@ -34,6 +34,7 @@ get_header( 'shop' ); ?>
 	<?php
 	global $product;
 	//Display sub-category
+
 	echo '<div class="cat-sub-list"><div class="container"><div class="row">';
 	$cats = get_the_terms( $product->ID, 'product_cat' );
 	foreach ($cats as $cat){
@@ -64,6 +65,18 @@ get_header( 'shop' ); ?>
 	}
     echo '</div></div></div></div></div>';
 	?>
+	<?php
+	//Add prev,next products
+	$cat_id = WC()->session->get( 'category_id' );
+	$cat = get_term_by('id', $cat_id, 'product_cat');
+	?>
+	<div class="navigation">
+		<a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" class="btn-left-detail">Prev</a>
+		<?php if($cat->name):?>
+		<a href="<?php echo get_term_link( $cat->slug, $cat->taxonomy ); ?>" class="center-navigation">Back to <?php echo $cat->name;?> </a>
+		<?php endif;?>
+		<a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" class="btn-right-detail">Next</a>
+	</div>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>

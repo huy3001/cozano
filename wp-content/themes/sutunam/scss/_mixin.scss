@@ -1,3 +1,11 @@
+/* animation */
+@mixin animation($value) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -o-animation: $value;
+    animation: $value;
+}
+
 /* border radius */
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;

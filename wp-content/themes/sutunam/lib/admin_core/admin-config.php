@@ -304,13 +304,13 @@
                     array(
                         'id'    => 'logo_icon',
                         'type'  => 'text',
-                        'title' => 'Logo Icon',
+                        'title' => __('Logo Icon', 'sutunam'),
                         'desc'  => '<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">Use Any font awesome Icon</a>'
                     ),
                     array(
                         'id'    => 'logo_txt',
                         'type'  => 'text',
-                        'title' => 'Logo Text',
+                        'title' => __('Logo Text', 'sutunam'),
                     ),
                     array(
                         'id'        => 'logo_img',
@@ -341,6 +341,13 @@
                         //    'title'     => 'Hint Title',
                         //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
                         //)
+                    ),
+                    array(
+                        'id'    => 'addon_script',
+                        'type'  => 'textarea',
+                        'title' => __('Addon Scipt', 'sutunam'),
+                        'desc'      => __('Insert your script here.', 'sutunam'),
+                        'subtitle'  => __('Add a special effect on your site', 'sutunam'),
                     )
                 )
             ));

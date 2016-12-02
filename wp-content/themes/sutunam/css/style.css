@@ -14,6 +14,8 @@
 
 /* Mixin */
 
+/* animation */
+
 /* border radius */
 
 /* box shadow */
@@ -58,7 +60,7 @@
 
 /* Font */
 
-/* line 184, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 192, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 body,
 .home .content-block-info .info h2,
@@ -95,7 +97,7 @@ body,
   font-weight: normal;
 }
 
-/* line 184, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 192, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 body,
 .home .content-block-info .info h2,
@@ -111,7 +113,7 @@ body,
   font-weight: 700;
 }
 
-/* line 184, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 192, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 #footer .footer-menu ul.menu li,
 #footer .copyright,
@@ -138,7 +140,7 @@ body,
   font-weight: 500;
 }
 
-/* line 184, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 192, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 .home .slider-block .slick-prev:before,
 .page-template-men .slider-block .slick-prev:before,
@@ -159,6 +161,10 @@ body,
 }
 
 /* Layout */
+
+/* Keyframes */
+
+/* Keyframes styles */
 
 /* Slick */
 
@@ -1057,25 +1063,25 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/* line 95, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 103, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 #header .search-form input ::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-/* line 98, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 106, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 #header .search-form input :-moz-placeholder {
   color: #ffffff;
 }
 
-/* line 101, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 109, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 #header .search-form input ::-moz-placeholder {
   color: #ffffff;
 }
 
-/* line 104, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+/* line 112, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
 #header .search-form input :-ms-input-placeholder {
   color: #ffffff;
@@ -1989,25 +1995,25 @@ h6 {
     outline: none;
   }
 
-  /* line 95, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+  /* line 103, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
   .left-content .left-search .form-search input ::-webkit-input-placeholder {
     color: #303030;
   }
 
-  /* line 98, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+  /* line 106, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
   .left-content .left-search .form-search input :-moz-placeholder {
     color: #303030;
   }
 
-  /* line 101, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+  /* line 109, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
   .left-content .left-search .form-search input ::-moz-placeholder {
     color: #303030;
   }
 
-  /* line 104, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
+  /* line 112, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/_mixin.scss */
 
   .left-content .left-search .form-search input :-ms-input-placeholder {
     color: #303030;

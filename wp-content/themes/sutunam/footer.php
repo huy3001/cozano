@@ -95,6 +95,22 @@ if (!isset($jk_options['copy_text'])) {
 </div> <!-- end #wrapper -->
 <a href="#" class="back-top"><?php echo __('Back top', 'sutunam') ?></a>
 <?php wp_footer(); ?>
+<!-- Addon script -->
+<?php if ($jk_options['addon_script']) {?>
+<script type="text/javascript">
+    <?php echo $jk_options['addon_script']; ?>
+</script>
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+            if($('body').hasClass('home')) {
+                $.fn.snow();
+            }
+        });
+    })(jQuery);
+</script>
+<?php } ?>
+<!-- End Addon script -->
 </body> <!-- end body -->
 </html> <!-- end html -->
 

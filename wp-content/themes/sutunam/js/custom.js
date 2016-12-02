@@ -36,12 +36,13 @@
                             $(this).addClass('zoomed');
                             productContainer.css('opacity', 0);
                             if($(window).width() < $desktop) {
-                                $('body').append('<div class="zoomContainer"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div>'); // add zoom container to body
+                                $('body').append('<div class="zoomContainer"><div class="panzoom"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div></div>'); // add zoom container to body
                                 var zoomContainer = $('.zoomContainer'),
-                                    imgZoom = $('.zoomContainer img'),
+                                    panZoom = $('.panzoom', zoomContainer),
+                                    imgZoom = $('img', zoomContainer),
                                     offsetLeft = $(window).width()/2,
                                     offsetTop = $(window).height()/2;
-                                imgZoom.panzoom({
+                                panZoom.panzoom({
                                     contain: 'invert',
                                     minScale: 1,
                                     maxScale: 3,

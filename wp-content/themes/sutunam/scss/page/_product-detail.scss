@@ -970,6 +970,7 @@
             }
         }
         @include bp(max-width, $mobile) {
+            .panzoom,
             img {
                 height: 100%;
             }

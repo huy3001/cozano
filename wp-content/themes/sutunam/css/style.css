@@ -6903,6 +6903,7 @@ h6 {
 @media only screen and (max-width: 480px) {
   /* line 973, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
+  .single-product .zoomContainer .panzoom,
   .single-product .zoomContainer img {
     height: 100%;
   }

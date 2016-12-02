@@ -19,6 +19,19 @@
             width: 24%;
             padding: 0 1%;
         }
+        .widget_text {
+            border-top: 1px solid $left-menu-bd;
+            border-bottom: 1px solid $left-menu-bd;
+            text-align: center;
+            margin: 20px auto;
+            ul {
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 10px 30px;
+                }
+            }
+        }
         li {
             list-style: none;
         }
@@ -81,6 +94,18 @@
         }
     }
 
+    @include bp(max-width, $desktop - 1) {
+        .footer-menu {
+            .widget_text {
+                ul {
+                    li {
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+
     @include bp(max-width, $laptop - 1) {
         .footer-menu {
             .widget_nav_menu {
@@ -133,6 +158,16 @@
                 &.open-menu {
                     &:after {
                         @include transform(rotate(90deg));
+                    }
+                }
+            }
+            .widget_text {
+                border-top: none;
+                text-align: left;
+                padding-bottom: 20px;
+                ul {
+                    li {
+                        padding: 10px 0;
                     }
                 }
             }

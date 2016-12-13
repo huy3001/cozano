@@ -715,37 +715,39 @@
         snowEffect: function() {
             var snowComtainer = $('#snowContainer');
             if($('body').hasClass('home')) {
-                snowComtainer.css('display', 'block');
-                setTimeout(function() {
-                    var snowImg = $('div > img', snowComtainer);
-                    snowImg.each(function() {
-                        var imgUrl = $(this).attr('src'),
-                            imgName = imgUrl.substr(imgUrl.indexOf('/') + 1, 5);
-                        if (imgName == 'snow1') {
-                            $(this).parent().width(18);
-                            $(this).parent().height(18);
-                        }
-                        else if (imgName == 'snow2') {
-                            $(this).parent().width(10);
-                            $(this).parent().height(10);
-                        }
-                        else if (imgName == 'snow3') {
-                            $(this).parent().width(22);
-                            $(this).parent().height(24);
-                        }
-                        else if (imgName == 'snow4') {
-                            $(this).parent().width(14);
-                            $(this).parent().height(14);
-                        }
-                        else {
-                            $(this).parent().width(454);
-                            $(this).parent().height(340);
-                        }
+                if($(window).width() > $desktop - 1) {
+                    snowComtainer.css('display', 'block');
+                    setTimeout(function() {
+                        var snowImg = $('div > img', snowComtainer);
+                        snowImg.each(function() {
+                            var imgUrl = $(this).attr('src'),
+                                imgName = imgUrl.substr(imgUrl.indexOf('/') + 1, 5);
+                            if (imgName == 'snow1') {
+                                $(this).parent().width(18);
+                                $(this).parent().height(18);
+                            }
+                            else if (imgName == 'snow2') {
+                                $(this).parent().width(10);
+                                $(this).parent().height(10);
+                            }
+                            else if (imgName == 'snow3') {
+                                $(this).parent().width(22);
+                                $(this).parent().height(24);
+                            }
+                            else if (imgName == 'snow4') {
+                                $(this).parent().width(14);
+                                $(this).parent().height(14);
+                            }
+                            else {
+                                $(this).parent().width(454);
+                                $(this).parent().height(340);
+                            }
+                        });
+                    }, 300);
+                    snowComtainer.on('click', function() {
+                        $(this).css('display', 'none');
                     });
-                }, 300);
-                snowComtainer.on('click', function() {
-                    $(this).css('display', 'none');
-                });
+                }
             }
         }
     };

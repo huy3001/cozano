@@ -94,11 +94,11 @@ if (!isset($jk_options['copy_text'])) {
 </div> <!-- end #container -->
 </div> <!-- end #wrapper -->
 <a href="#" class="back-top"><?php echo __('Back top', 'sutunam') ?></a>
-<div id="snowContainer"></div>
 <?php wp_footer(); ?>
 <!-- Addon script -->
 <?php if ($jk_options['addon_script']) {?>
-<script type="text/javascript">
+    <div id="snowContainer"></div>
+    <script type="text/javascript">
     <?php echo $jk_options['addon_script']; ?>
 </script>
 <?php } ?>

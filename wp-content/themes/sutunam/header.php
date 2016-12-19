@@ -102,6 +102,7 @@ $jk_options = get_option('redux_demo');
             global $woocommerce;
             $cart_url = $woocommerce->cart->get_cart_url();
             $cart_count = $woocommerce->cart->cart_contents_count;
+            if ($cart_count > 0) {
             ?>
             <div class="shopping-cart">
                 <a class="cart-icon" href="<?php echo $cart_url;?>">
@@ -109,7 +110,7 @@ $jk_options = get_option('redux_demo');
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
             </div>
-
+			<?php } ?>
             <?php sutunam_menu('top-menu'); ?>
         </div>
     </div>

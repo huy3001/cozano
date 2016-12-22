@@ -2,10 +2,25 @@
 
 .single-product {
     @import "../component/sub-category";
+    .navigation {
+        float: left;
+        width: 100%;
+        a {
+            color: $main-color;
+            padding: 10px 15px;
+            &.btn-left-detail {
+                float: left;
+            }
+            &.btn-right-detail {
+                float: right;
+            }
+        }
+    }
     div.product {
+        clear: both;
         .product-content-detail {
             background-color: $white;
-            margin: 40px auto 0;
+            margin: 0 auto;
         }
         .product-container {
             clear: both;

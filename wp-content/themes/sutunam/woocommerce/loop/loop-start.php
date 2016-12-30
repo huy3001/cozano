@@ -15,13 +15,13 @@
  * @version     2.0.0
  */
 ?>
-<button class="btn-filter" type="button"><?php echo __('Filter','sutunam') ?></button>
-<button class="btn-close" type="button"><?php echo __('Close','sutunam') ?></button>
+<button class="btn-filter" type="button"><?php echo __('Lọc sản phẩm','sutunam') ?></button>
+<button class="btn-close" type="button"><?php echo __('Đóng','sutunam') ?></button>
 
 <div id="placeHolder"></div>
 <div id="legend" style="display:none;"></div>
-<div class="reset-filter" title="<?php echo __('Reset filter','sutunam') ?>" style="display:none;">
-    <span><?php echo __('Reset','sutunam') ?></span>
+<div class="reset-filter" title="<?php echo __('Đặt lại','sutunam') ?>" style="display:none;">
+    <span><?php echo __('Đặt lại','sutunam') ?></span>
 </div><!-- End reset filter -->
 <?php if(is_product_category()):?>
 </div></div></div><!-- End filter bar -->

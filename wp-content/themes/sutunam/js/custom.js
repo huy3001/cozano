@@ -549,15 +549,21 @@
                     var closeBtn = $('.btn-close'),
                         filterBtn = $('.btn-filter');
                     filterBtn.off('click').on('click', function() {
-                        closeBtn.fadeIn(300);
-                        filterPanel.fadeIn(300);
-                        $('body').css('overflow-y', 'hidden');
+                        if($(this).hasClass('clicked')) {
+                            closeBtn.fadeOut(300);
+                            filterPanel.slideUp(300);
+                            $(this).removeClass('clicked');
+                        }
+                        else {
+                            closeBtn.fadeIn(300);
+                            filterPanel.slideDown(300);
+                            $(this).addClass('clicked');
+                        }
                     });
                     closeBtn.off('click').on('click', function() {
                         $(this).fadeOut(300);
-                        filterPanel.fadeOut(300);
+                        filterPanel.slideUp(300);
                         resetFilter.hide();
-                        $('body').removeAttr('style');
                     });
                 }
 

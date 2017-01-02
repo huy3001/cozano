@@ -547,21 +547,24 @@
                 }
                 else {
                     var closeBtn = $('.btn-close'),
-                        filterBtn = $('.btn-filter');
+                        filterBtn = $('.btn-filter'),
+                        filterTarget = $('.btn-filter, #placeHolder');
                     filterBtn.off('click').on('click', function() {
                         if($(this).hasClass('clicked')) {
                             closeBtn.fadeOut(300);
                             filterPanel.slideUp(300);
+                            resetFilter.hide();
                             $(this).removeClass('clicked');
                         }
                         else {
                             closeBtn.fadeIn(300);
                             filterPanel.slideDown(300);
+                            resetFilter.show();
                             $(this).addClass('clicked');
                         }
                     });
                     closeBtn.off('click').on('click', function() {
-                        $(this).fadeOut(300);
+                        $(this).hide(300);
                         filterPanel.slideUp(300);
                         resetFilter.hide();
                     });
@@ -569,9 +572,19 @@
 
                 $(document).on('click', function(e) {
                     var target = e.target;
-                    if (!$(target).is(ftTarget) && !$(target).parents().is(ftTarget)) {
-                        ftLabel.removeClass('ft-clicked');
-                        ftPanel.slideUp(300);
+                    if($(window).width() > $laptop - 1) {
+                        if (!$(target).is(ftTarget) && !$(target).parents().is(ftTarget)) {
+                            ftLabel.removeClass('ft-clicked');
+                            ftPanel.slideUp(300);
+                        }
+                    }
+                    else {
+                        if (!$(target).is(filterTarget) && !$(target).parents().is(filterTarget)) {
+                            closeBtn.fadeOut(300);
+                            filterPanel.slideUp(300);
+                            filterBtn.removeClass('clicked');
+                            resetFilter.hide();
+                        }
                     }
                 });
             }, 100);

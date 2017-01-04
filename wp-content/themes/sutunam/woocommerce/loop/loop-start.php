@@ -16,7 +16,7 @@
  */
 ?>
 <button class="btn-filter" type="button"><?php echo __('Lọc sản phẩm','sutunam') ?></button>
-<button class="btn-close" type="button"><?php echo __('Đóng','sutunam') ?></button>
+<button class="btn-close" type="button"><?php echo __('Lọc','sutunam') ?></button>
 
 <div id="placeHolder"></div>
 <div id="legend" style="display:none;"></div>

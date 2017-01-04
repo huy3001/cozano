@@ -113,9 +113,9 @@
         }
     }
     .btn-close {
-        background: none;
-        border: 2px solid $black;
-        color: $black;
+        background: $red;
+        border: none;
+        color: $white;
         font-size: 14px;
         height: 40px;
         line-height: 40px;
@@ -615,6 +615,7 @@
         .is-sticky {
             .filter-bar {
                 margin-top: -$header-height;
+                position: relative !important;
             }
         }
     }

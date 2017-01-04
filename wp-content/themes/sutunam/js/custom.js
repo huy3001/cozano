@@ -551,13 +551,13 @@
                         filterTarget = $('.btn-filter, #placeHolder');
                     filterBtn.off('click').on('click', function() {
                         if($(this).hasClass('clicked')) {
-                            closeBtn.fadeOut(300);
+                            closeBtn.hide(300);
                             filterPanel.slideUp(300);
                             resetFilter.hide();
                             $(this).removeClass('clicked');
                         }
                         else {
-                            closeBtn.fadeIn(300);
+                            closeBtn.show(300);
                             filterPanel.slideDown(300);
                             resetFilter.show();
                             $(this).addClass('clicked');
@@ -580,7 +580,7 @@
                     }
                     else {
                         if (!$(target).is(filterTarget) && !$(target).parents().is(filterTarget)) {
-                            closeBtn.fadeOut(300);
+                            closeBtn.hide(300);
                             filterPanel.slideUp(300);
                             filterBtn.removeClass('clicked');
                             resetFilter.hide();

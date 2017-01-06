@@ -213,7 +213,7 @@
     // Global functions
     var customJS = {
         customScrollbar: function() {
-            if($(window).width() > $laptop - 1) {
+            if($(window).width() > $desktop - 1) {
                 $('body').niceScroll({
                     cursorcolor: '#00a2ff',
                     cursorborder: 'none',

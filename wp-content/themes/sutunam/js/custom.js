@@ -213,14 +213,16 @@
     // Global functions
     var customJS = {
         customScrollbar: function() {
-            $('body').niceScroll({
-                cursorcolor: '#00a2ff',
-                cursorborder: 'none',
-                cursorborderradius: '0px',
-                mousescrollstep: 60,
-                scrollspeed: 60,
-                zindex: 999
-            });
+            if($(window).width() > $laptop - 1) {
+                $('body').niceScroll({
+                    cursorcolor: '#00a2ff',
+                    cursorborder: 'none',
+                    cursorborderradius: '0px',
+                    mousescrollstep: 60,
+                    scrollspeed: 60,
+                    zindex: 999
+                });
+            }
         },
 
         accordionMenu: function() {

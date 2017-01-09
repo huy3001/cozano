@@ -830,7 +830,7 @@
         customJS.relateProductSlider();
 
         // Sub category
-        //customJS.subCategory();
+        customJS.subCategory();
 
         // Footer mobile menu
         customJS.footerMobileMenu();
@@ -872,7 +872,7 @@
         customJS.filterProduct();
 
         // Sub category
-        //customJS.subCategory();
+        customJS.subCategory();
 
         // Footer mobile menu
         customJS.footerMobileMenu();

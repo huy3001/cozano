@@ -415,17 +415,21 @@
 
         productImageHeight: function() {
             var productImage = $('#product-category li.product .image');
-            if(productImage.length) {
-                productImage.each(function() {
-                    $(this).height($(this).width()*1.3);
-                });
+            if($(window).width() > $desktop - 1) {
+                if(productImage.length) {
+                    productImage.each(function() {
+                        $(this).height($(this).width()*1.3);
+                    });
+                }
             }
         },
 
         productMatchHeight: function() {
             var productItem = $('.tax-product_cat #product-category li.product');
-            if(productItem.length) {
-                productItem.matchHeight();
+            if($(window).width() > $desktop - 1) {
+                if(productItem.length) {
+                    productItem.matchHeight();
+                }
             }
         },
 
@@ -821,10 +825,10 @@
         //customJS.homePromotion();
 
         // Product image height
-        //customJS.productImageHeight();
+        customJS.productImageHeight();
 
         // Product match height
-        //customJS.productMatchHeight();
+        customJS.productMatchHeight();
 
         // Relate product slider
         customJS.relateProductSlider();
@@ -863,10 +867,10 @@
         //customJS.homePromotion();
 
         // Product image height
-        //customJS.productImageHeight();
+        customJS.productImageHeight();
 
         // Product match height
-        //customJS.productMatchHeight();
+        customJS.productMatchHeight();
 
         // Filter product
         customJS.filterProduct();

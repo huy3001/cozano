@@ -5,9 +5,14 @@
     .navigation {
         float: left;
         width: 100%;
+        text-align: center;
         a {
             color: $main-color;
             padding: 10px 15px;
+            &.center-navigation {
+                display: inline-block;
+                vertical-align: top;
+            }
             &.btn-left-detail {
                 float: left;
             }

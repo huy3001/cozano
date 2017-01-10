@@ -821,10 +821,10 @@
         //customJS.homePromotion();
 
         // Product image height
-        customJS.productImageHeight();
+        //customJS.productImageHeight();
 
         // Product match height
-        customJS.productMatchHeight();
+        //customJS.productMatchHeight();
 
         // Relate product slider
         customJS.relateProductSlider();
@@ -863,10 +863,10 @@
         //customJS.homePromotion();
 
         // Product image height
-        customJS.productImageHeight();
+        //customJS.productImageHeight();
 
         // Product match height
-        customJS.productMatchHeight();
+        //customJS.productMatchHeight();
 
         // Filter product
         customJS.filterProduct();

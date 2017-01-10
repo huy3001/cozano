@@ -698,6 +698,9 @@
                             freeMode: true
                         });
                     }
+                    catLink.on('click', function() {
+                        window.location = $(this).attr('href');
+                    });
                 }
                 else {
                     if(catSwiper != '') {

@@ -530,6 +530,9 @@
                 position: relative !important;
             }
         }
+        .woocommerce-ordering {
+            display: none;
+        }
         .filter-container {
             background: rgba(255,255,255,0.95);
             display: none;
@@ -600,10 +603,9 @@
             }
         }
         .reset-filter {
-            display: inline-block;
-            vertical-align: top;
-            float: none;
-            margin: 0;
+            float: right;
+            min-width: 130px;
+            margin: 0 12px 7px 7px;
         }
         ul.products {
             li.product {

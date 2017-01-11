@@ -520,11 +520,26 @@
         .filter-bar {
             position: relative;
         }
+        .is-sticky {
+            .filter-bar {
+                position: relative !important;
+            }
+        }
+        .filter-container {
+            background: rgba(255,255,255,0.95);
+            display: none;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
         .btn-filter {
             display: inline-block;
             vertical-align: middle;
         }
         .btn-close {
+            display: block;
             width: 45%;
             position: absolute;
             bottom: 12px;
@@ -532,8 +547,6 @@
             z-index: 1111;
         }
         #placeHolder {
-            background: rgba(255,255,255,0.95);
-            display: none;
             width: 100%;
             height: auto;
             margin: 0 0 64px;
@@ -610,12 +623,6 @@
                 .image {
                     height: 300px;
                 }
-            }
-        }
-        .is-sticky {
-            .filter-bar {
-                margin-top: -$header-height;
-                position: relative !important;
             }
         }
     }

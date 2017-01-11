@@ -437,7 +437,7 @@
             var filterBar = $('.filter-bar');
             if(filterBar.length) {
                 filterBar.sticky({
-                    topSpacing: 54,
+                    topSpacing: 0,
                     zIndex: 111
                 });
             }
@@ -510,13 +510,16 @@
             });
             
             setTimeout(function() {
-                var filterPanel = $('#placeHolder'),
+                var filterPanel = $('.filter-container'),
                     ftMenu = $('.ft-menu'),
                     ftLabel= $('.ft-label', ftMenu),
                     ftPanel = $('.ft-panel', ftMenu),
                     ftTags = $('.ft-tags', ftPanel),
                     ftTarget = $('.ft-label, .ft-panel', ftMenu),
-                    sortingBtn = $('.woocommerce-ordering .dropdown-toggle');
+                    sortingBtn = $('.woocommerce-ordering .dropdown-toggle'),
+                    closeBtn = $('.btn-close'),
+                    filterBtn = $('.btn-filter'),
+                    filterTarget = $('.btn-filter, .filter-container');
                 if(ftMenu.length) {
                     ftLabel.off('click').on('click', function() {
                         if($(this).hasClass('ft-clicked')) {
@@ -550,29 +553,22 @@
 
                 if($(window).width() > $laptop - 1) {
                     filterPanel.removeAttr('style');
+                    filterBtn.removeClass('clicked');
                 }
                 else {
-                    var closeBtn = $('.btn-close'),
-                        filterBtn = $('.btn-filter'),
-                        filterTarget = $('.btn-filter, #placeHolder');
                     filterBtn.off('click').on('click', function() {
                         if($(this).hasClass('clicked')) {
-                            closeBtn.hide(300);
                             filterPanel.slideUp(300);
-                            resetFilter.hide();
                             $(this).removeClass('clicked');
                         }
                         else {
-                            closeBtn.show(300);
                             filterPanel.slideDown(300);
-                            resetFilter.show();
                             $(this).addClass('clicked');
                         }
                     });
                     closeBtn.off('click').on('click', function() {
-                        $(this).hide(300);
                         filterPanel.slideUp(300);
-                        resetFilter.hide();
+                        filterBtn.removeClass('clicked');
                     });
                 }
 
@@ -586,10 +582,8 @@
                     }
                     else {
                         if (!$(target).is(filterTarget) && !$(target).parents().is(filterTarget)) {
-                            closeBtn.hide(300);
                             filterPanel.slideUp(300);
                             filterBtn.removeClass('clicked');
-                            resetFilter.hide();
                         }
                     }
                 });

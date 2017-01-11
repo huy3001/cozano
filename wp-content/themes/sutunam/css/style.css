@@ -5412,6 +5412,7 @@ h6 {
 
   /* line 588, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
+  .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > span.ft-label.ft-active,
   .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > span.ft-label.ft-clicked {
     background: none;
     border: none;
@@ -5419,20 +5420,20 @@ h6 {
     font-weight: bold;
   }
 
-  /* line 595, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 596, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel {
     background: none;
     position: static;
   }
 
-  /* line 598, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 599, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat #placeHolder ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags {
     padding: 0;
   }
 
-  /* line 605, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 606, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat .reset-filter {
     float: right;
@@ -5440,19 +5441,19 @@ h6 {
     margin: 0 12px 7px 7px;
   }
 
-  /* line 611, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 612, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product {
     width: 33.333%;
   }
 
-  /* line 613, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 614, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product:nth-child(2n) {
     float: left;
   }
 
-  /* line 616, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 617, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .image {
     height: 340px;
@@ -5460,7 +5461,7 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 626, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 627, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .image {
     height: 300px;
@@ -5468,26 +5469,26 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 635, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 636, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat .cat-header .page-title {
     font-size: 40px;
   }
 
-  /* line 640, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 641, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat #placeHolder ul.ft-menu {
     max-height: 90%;
   }
 
-  /* line 645, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 646, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product {
     width: 50%;
     margin: 0 0 20px;
   }
 
-  /* line 648, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 649, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .onsale {
     height: 40px;
@@ -5496,7 +5497,7 @@ h6 {
     padding: 12px 0;
   }
 
-  /* line 654, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 655, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .image {
     height: 250px;

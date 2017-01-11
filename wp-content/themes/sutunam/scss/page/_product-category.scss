@@ -81,6 +81,10 @@
         }
     }
 
+    .filter-container {
+        float: left;
+    }
+
     .btn-filter {
         background: $red;
         border: none;
@@ -112,6 +116,7 @@
             }
         }
     }
+
     .btn-close {
         background: $red;
         border: none;
@@ -543,8 +548,9 @@
             width: 45%;
             position: absolute;
             bottom: 12px;
-            left: 12px;
+            left: 50%;
             z-index: 1111;
+            margin-left: -22.5%;
         }
         #placeHolder {
             width: 100%;
@@ -594,15 +600,10 @@
             }
         }
         .reset-filter {
-            font-size: 14px;
-            line-height: 40px;
-            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+            float: none;
             margin: 0;
-            padding: 0 10px;
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            z-index: 1111;
         }
         ul.products {
             li.product {

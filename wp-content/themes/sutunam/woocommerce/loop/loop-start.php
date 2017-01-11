@@ -20,11 +20,11 @@
     <button class="btn-close" type="button"><?php echo __('Lọc','sutunam') ?></button>
     <div id="placeHolder"></div>
     <div id="legend" style="display:none;"></div>
-    <div class="reset-filter" title="<?php echo __('Đặt lại','sutunam') ?>" style="display:none;">
-        <span><?php echo __('Đặt lại','sutunam') ?></span>
-    </div><!-- End reset filter -->
-    <?php if(is_product_category()):?>
 </div>
+<div class="reset-filter" title="<?php echo __('Đặt lại','sutunam') ?>" style="display:none;">
+    <span><?php echo __('Đặt lại','sutunam') ?></span>
+</div><!-- End reset filter -->
+<?php if(is_product_category()):?>
 </div></div></div><!-- End filter bar -->
 <?php endif;?>
 <ul class="products" id="product-category">

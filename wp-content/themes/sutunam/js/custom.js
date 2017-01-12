@@ -520,8 +520,10 @@
                     closeBtn = $('.btn-close'),
                     filterBtn = $('.btn-filter'),
                     filterTarget = $('.btn-filter, .filter-container');
+                var ua = navigator.userAgent,
+                    event = (ua.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) ? "touchstart" : "click";
                 if(ftMenu.length) {
-                    ftLabel.off('click').on('click', function() {
+                    ftLabel.off(event).on(event, function() {
                         if($(this).hasClass('ft-clicked')) {
                             $(this).removeClass('ft-clicked');
                         }
@@ -572,7 +574,7 @@
                     });
                 }
 
-                $(document).on('click', function(e) {
+                $(document).on(event, function(e) {
                     var target = e.target;
                     if($(window).width() > $laptop - 1) {
                         if (!$(target).is(ftTarget) && !$(target).parents().is(ftTarget)) {

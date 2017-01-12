@@ -520,10 +520,8 @@
                     closeBtn = $('.btn-close'),
                     filterBtn = $('.btn-filter'),
                     filterTarget = $('.btn-filter, .filter-container');
-                var ua = navigator.userAgent,
-                    event = (ua.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) ? "tap" : "click";
                 if(ftMenu.length) {
-                    ftLabel.off(event).on(event, function() {
+                    ftLabel.off('click').on('click', function() {
                         if($(this).hasClass('ft-clicked')) {
                             $(this).removeClass('ft-clicked');
                         }
@@ -574,7 +572,7 @@
                     });
                 }
 
-                $(document).on(event, function(e) {
+                $(document).on('click', function(e) {
                     var target = e.target;
                     if($(window).width() > $laptop - 1) {
                         if (!$(target).is(ftTarget) && !$(target).parents().is(ftTarget)) {
@@ -852,38 +850,52 @@
     });
 
     /* Window resize function */
-    $(window).resize(function () {
-        // Close sidebar
-        customJS.closeSidebar();
+    var width = $(window).width();
+    var resize = 0;
+    $(window).resize(function() {
+        var _self = $(this);
+        resize++;
+        setTimeout(function() {
+            resize--;
+            if (resize === 0) {
+                // Done resize ...
+                // Close sidebar
+                customJS.closeSidebar();
 
-        // Search toggle
-        customJS.searchToggle();
+                // Search toggle
+                customJS.searchToggle();
 
-        // Home upbar slider
-        customJS.homeUpbarSlider();
+                // Home upbar slider
+                customJS.homeUpbarSlider();
 
-        // Home promotion
-        //customJS.homePromotion();
+                // Home promotion
+                //customJS.homePromotion();
 
-        // Product image height
-        customJS.productImageHeight();
+                // Product image height
+                customJS.productImageHeight();
 
-        // Product match height
-        customJS.productMatchHeight();
+                // Product match height
+                customJS.productMatchHeight();
 
-        // Filter product
-        customJS.filterProduct();
+                // Sub category
+                customJS.subCategory();
 
-        // Sub category
-        customJS.subCategory();
+                // Footer mobile menu
+                customJS.footerMobileMenu();
 
-        // Footer mobile menu
-        customJS.footerMobileMenu();
+                // Product summary centering
+                productDetail.summaryCenter();
 
-        // Product summary centering
-        productDetail.summaryCenter();
+                // Product thumbnail centering
+                productDetail.thumbnailCenter();
 
-        // Product thumbnail centering
-        productDetail.thumbnailCenter();
+                if (_self.width() !== width) {
+                    width = _self.width();
+                    // Done resize width ...
+                    // Filter product
+                    customJS.filterProduct();
+                }
+            }
+        }, 100);
     });
 })(jQuery);

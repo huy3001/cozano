@@ -2190,12 +2190,11 @@ h6 {
 /* line 3, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
 .upsbar {
-  height: 40px;
   overflow: hidden;
   text-align: center;
 }
 
-/* line 7, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+/* line 6, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
 .upsbar .upsbar-list {
   background: #ffffff;
@@ -2204,14 +2203,14 @@ h6 {
   list-style: none;
 }
 
-/* line 12, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+/* line 11, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
 .upsbar .upsbar-list li {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 15, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+/* line 14, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
 .upsbar .upsbar-list li a {
   color: #303030;
@@ -2220,15 +2219,49 @@ h6 {
   padding: 10px 30px;
 }
 
-/* line 20, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+/* line 19, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
 .upsbar .upsbar-list li a:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
 
+/* line 25, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+
+.upsbar .top-menu {
+  display: none;
+}
+
+/* line 27, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+
+.upsbar .top-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 31, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+
+.upsbar .top-menu ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: -moz-calc(50% - 15px);
+  width: -webkit-calc(50% - 15px);
+  width: calc(50% - 15px);
+}
+
+/* line 35, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+
+.upsbar .top-menu ul li a {
+  border: 2px solid #303030;
+  color: #303030;
+  display: block;
+  margin: 10px 2px;
+  padding: 8px 10px;
+}
+
 @media only screen and (max-width: 1199px) {
-  /* line 30, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+  /* line 49, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
   .upsbar .upsbar-list li a {
     padding: 10px 20px;
@@ -2236,45 +2269,11 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 38, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
+  /* line 57, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
 
   .upsbar .upsbar-list {
     max-height: 40px;
     overflow: hidden;
-  }
-
-  /* line 42, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
-
-  .upsbar .top-menu {
-    display: none;
-  }
-
-  /* line 44, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
-
-  .upsbar .top-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  /* line 48, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
-
-  .upsbar .top-menu ul li {
-    display: inline-block;
-    vertical-align: top;
-    width: -moz-calc(50% - 15px);
-    width: -webkit-calc(50% - 15px);
-    width: calc(50% - 15px);
-  }
-
-  /* line 52, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_upsbar.scss */
-
-  .upsbar .top-menu ul li a {
-    border: 2px solid #303030;
-    color: #303030;
-    display: block;
-    margin: 10px 2px;
-    padding: 8px 10px;
   }
 }
 

@@ -1,7 +1,6 @@
 /* Upsbar style */
 
 .upsbar {
-    height: 40px;
     overflow: hidden;
     text-align: center;
     .upsbar-list {
@@ -23,6 +22,26 @@
             }
         }
     }
+    .top-menu {
+        display: none;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                @include calc(width, '50% - 15px');
+                a {
+                    border: 2px solid $main-color;
+                    color: $main-color;
+                    display: block;
+                    margin: 10px 2px;
+                    padding: 8px 10px;
+                }
+            }
+        }
+    }
 
     @include bp(max-width, $desktop - 1) {
         .upsbar-list {
@@ -38,26 +57,6 @@
         .upsbar-list {
             max-height: 40px;
             overflow: hidden;
-        }
-        .top-menu {
-            display: none;
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                li {
-                    display: inline-block;
-                    vertical-align: top;
-                    @include calc(width, '50% - 15px');
-                    a {
-                        border: 2px solid $main-color;
-                        color: $main-color;
-                        display: block;
-                        margin: 10px 2px;
-                        padding: 8px 10px;
-                    }
-                }
-            }
         }
     }
 }

@@ -521,7 +521,7 @@
                     filterBtn = $('.btn-filter'),
                     filterTarget = $('.btn-filter, .filter-container');
                 var ua = navigator.userAgent,
-                    event = (ua.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) ? "touchstart" : "click";
+                    event = (ua.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) ? "tap" : "click";
                 if(ftMenu.length) {
                     ftLabel.off(event).on(event, function() {
                         if($(this).hasClass('ft-clicked')) {

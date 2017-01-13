@@ -43,6 +43,17 @@ get_header( 'shop' ); ?>
 
                     <p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
+                    <div class="woocommerce-thankyou">
+                        <h3><?php _e( 'Thank you!', 'woocommerce' ) ?></h3>
+                        <p class="woocommerce-confirm">
+                            <span><?php _e( 'Your order has been sent.', 'woocommerce' ) ?></span>
+                            <span><?php _e( 'We will contact you to confirm order soon.', 'woocommerce' ) ?></span>
+                        </p>
+                        <p class="woocommerce-contact"><?php _e( 'Any questions please contact customer service or call 090 222 7717 for assistance.', 'woocommerce' ) ?></p>
+                        <a class="continue-shopping" href="#"><?php _e( 'Continue shopping', 'woocommerce' ) ?></a>
+                        <a class="back-home" href="#"><?php _e( 'Back to home', 'woocommerce' ) ?></a>
+                    </div>
+
                     <ul class="woocommerce-thankyou-order-details order_details">
                         <li class="order">
                             <?php _e( 'Order Number:', 'woocommerce' ); ?>
@@ -67,9 +78,25 @@ get_header( 'shop' ); ?>
 
                 <?php endif; ?>
 
+                <div class="woocommerce-thankyou-order-details order_info">
+                    <?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+                    <?php do_action( 'woocommerce_thankyou', $order->id ); ?>
+                </div>
+
             <?php else : ?>
 
                 <p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
+
+                <div class="woocommerce-thankyou">
+                    <h3><?php _e( 'Thank you!', 'woocommerce' ) ?></h3>
+                    <p class="woocommerce-confirm">
+                        <span><?php _e( 'Your order has been sent.', 'woocommerce' ) ?></span>
+                        <span><?php _e( 'We will contact you to confirm order soon.', 'woocommerce' ) ?></span>
+                    </p>
+                    <p class="woocommerce-contact"><?php _e( 'Any questions please contact customer service or call 090 222 7717 for assistance.', 'woocommerce' ) ?></p>
+                    <a class="continue-shopping" href="#"><?php _e( 'Continue shopping', 'woocommerce' ) ?></a>
+                    <a class="back-home" href="#"><?php _e( 'Back to home', 'woocommerce' ) ?></a>
+                </div>
 
             <?php endif; ?>
 

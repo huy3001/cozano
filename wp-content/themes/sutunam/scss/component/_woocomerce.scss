@@ -29,9 +29,9 @@
     }
 
     .woocommerce-info {
-        background: $grey;
+        background: $green;
         .button {
-            color: $grey;
+            color: $green;
         }
     }
 
@@ -40,6 +40,57 @@
         .button {
             color: $blue;
         }
+    }
+
+    form {
+        .form-row {
+            label,
+            .select2-container {
+                line-height: normal;
+            }
+            .select2-container {
+                .select2-choice {
+                    @include border-radius(0);
+                    border-color: $search-input-bd;
+                    color: $main-color;
+                    padding: 5px;
+                    &:focus {
+                        border-color: $main-color;
+                    }
+                }
+            }
+            input.input-text,
+            textarea {
+                border: 1px solid $search-input-bd;
+                color: $main-color;
+                font-weight: normal;
+                padding: 5px;
+                &:focus {
+                    border-color: $main-color;
+                }
+            }
+            &.woocommerce-invalid {
+                label {
+                    color: $red;
+                }
+                input.input-text,
+                select,
+                textarea {
+                    border-color: $red;
+                }
+            }
+            &.woocommerce-validated {
+                input.input-text,
+                select,
+                textarea {
+                    border-color: $green;
+                }
+            }
+        }
+    }
+
+    .select2-drop {
+        @include border-radius(0);
     }
 
     @include bp(max-width, $tablet - 1) {

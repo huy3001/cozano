@@ -1,7 +1,65 @@
 /* Checkout page style */
 
 .woocommerce-checkout {
+    #content {
+        padding-top: 30px;
+    }
     .woocommerce-info {
         display: none;
+    }
+    .col2-set {
+        h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+    form {
+        .form-row {
+            &#billing_company_field {
+                display: none;
+            }
+        }
+    }
+    .woocommerce-shipping-fields {
+        h3 {
+            display: none;
+        }
+    }
+    .create-account,
+    .woocommerce-checkout-review-order-table {
+        display: none;
+    }
+    #payment {
+        @include border-radius(0);
+        background: none;
+        ul.payment_methods {
+            li {
+                line-height: normal;
+                input {
+                    cursor: pointer;
+                    outline: none;
+                }
+                input:checked + label {
+                    font-weight: bold;
+                }
+                label {
+                    font-weight: normal;
+                }
+            }
+        }
+        div.payment_box {
+            @include border-radius(0);
+            background: $blue;
+            color: $white;
+            margin: 10px 0 15px;
+            padding: 15px;
+            &:before {
+                display: none;
+            }
+        }
+        #place_order {
+            @include border-radius(0);
+            background: $blue;
+        }
     }
 }

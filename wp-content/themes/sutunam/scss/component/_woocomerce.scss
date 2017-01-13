@@ -53,7 +53,7 @@
                     @include border-radius(0);
                     border-color: $search-input-bd;
                     color: $main-color;
-                    padding: 5px;
+                    padding: 10px 15px;
                     &:focus {
                         border-color: $main-color;
                     }
@@ -64,10 +64,13 @@
                 border: 1px solid $search-input-bd;
                 color: $main-color;
                 font-weight: normal;
-                padding: 5px;
+                padding: 10px 15px;
                 &:focus {
                     border-color: $main-color;
                 }
+            }
+            textarea {
+                height: 80px;
             }
             &.woocommerce-invalid {
                 label {
@@ -86,6 +89,15 @@
                     border-color: $green;
                 }
             }
+        }
+    }
+
+    a, button, input {
+        &.button {
+            @include border-radius(0);
+            color: $main-color;
+            line-height: normal;
+            padding: 11px 15px;
         }
     }
 

@@ -2534,7 +2534,7 @@ h6 {
   border-radius: 0;
   border-color: #666666;
   color: #303030;
-  padding: 5px;
+  padding: 10px 15px;
 }
 
 /* line 57, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
@@ -2550,7 +2550,7 @@ h6 {
   border: 1px solid #666666;
   color: #303030;
   font-weight: normal;
-  padding: 5px;
+  padding: 10px 15px;
 }
 
 /* line 68, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
@@ -2560,13 +2560,19 @@ h6 {
   border-color: #303030;
 }
 
-/* line 73, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+/* line 72, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+
+.woocommerce form .form-row textarea {
+  height: 80px;
+}
+
+/* line 76, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
 
 .woocommerce form .form-row.woocommerce-invalid label {
   color: #ff0000;
 }
 
-/* line 76, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+/* line 79, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
 
 .woocommerce form .form-row.woocommerce-invalid input.input-text,
 .woocommerce form .form-row.woocommerce-invalid select,
@@ -2574,7 +2580,7 @@ h6 {
   border-color: #ff0000;
 }
 
-/* line 83, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+/* line 86, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
 
 .woocommerce form .form-row.woocommerce-validated input.input-text,
 .woocommerce form .form-row.woocommerce-validated select,
@@ -2582,7 +2588,20 @@ h6 {
   border-color: #69bf29;
 }
 
-/* line 92, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+/* line 96, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #303030;
+  line-height: normal;
+  padding: 11px 15px;
+}
+
+/* line 104, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
 
 .woocommerce .select2-drop {
   -moz-border-radius: 0;
@@ -2591,7 +2610,7 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 97, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
+  /* line 109, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/component/_woocomerce.scss */
 
   .woocommerce .woocommerce-error,
   .woocommerce .woocommerce-info,
@@ -8057,6 +8076,13 @@ h6 {
   color: #000000;
 }
 
+/* line 53, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+
+.woocommerce-cart .cart-empty,
+.woocommerce-cart .return-to-shop {
+  text-align: center;
+}
+
 /* Checkout page style */
 
 /* line 4, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
@@ -8093,11 +8119,12 @@ h6 {
 /* line 28, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .create-account,
-.woocommerce-checkout .woocommerce-checkout-review-order-table {
+.woocommerce-checkout .woocommerce-checkout-review-order-table,
+.woocommerce-checkout .woocommerce-thankyou-order-details {
   display: none;
 }
 
-/* line 32, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 33, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment {
   -moz-border-radius: 0;
@@ -8106,32 +8133,32 @@ h6 {
   background: none;
 }
 
-/* line 36, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 37, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment ul.payment_methods li {
   line-height: normal;
 }
 
-/* line 38, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 39, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment ul.payment_methods li input {
   cursor: pointer;
   outline: none;
 }
 
-/* line 42, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 43, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment ul.payment_methods li input:checked + label {
   font-weight: bold;
 }
 
-/* line 45, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 46, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment ul.payment_methods li label {
   font-weight: normal;
 }
 
-/* line 50, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 51, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment div.payment_box {
   -moz-border-radius: 0;
@@ -8143,17 +8170,20 @@ h6 {
   padding: 15px;
 }
 
-/* line 56, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 57, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment div.payment_box:before {
   display: none;
 }
 
-/* line 60, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 61, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout #payment #place_order {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
   background: #00a2ff;
+  line-height: normal;
+  padding: 11px 15px;
+  outline: none;
 }

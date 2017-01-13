@@ -486,6 +486,11 @@
                 callback : function( query, match, mismatch ) {
                     if ( mismatch.length ) {
                         resetFilter.show();
+                        var count = $('#product-category .product:not("li.ft-hidden")').length;
+                        if(count == 0){
+                            count = 'Không tìm thấy';
+                        }
+                        $(".product-count span").html(count);
                         var category, tags, i, tag, legend = "";
                         for (category in query) {
                             tags = query[category];
@@ -508,6 +513,11 @@
 
             resetFilter.on('click', function() {
                 ft.reset();
+                var count = $('#product-category .product:not("li.ft-hidden")').length;
+                if(count == 0){
+                    count = 'Không tìm thấy';
+                }
+                $(".product-count span").html(count);
                 customJS.productMatchHeight();
             });
             

@@ -24,6 +24,10 @@
 <div class="reset-filter" title="<?php echo __('Đặt lại','sutunam') ?>" style="display:none;">
     <span><?php echo __('Đặt lại','sutunam') ?></span>
 </div><!-- End reset filter -->
+<div class="product-count">
+    <?php global $wp_query;?>
+    <span><?php echo $wp_query->found_posts == 0 ? 'Không tìm thấy' : $wp_query->found_posts;?></span> <?php echo __('sản phẩm','sutunam')?>
+</div>
 <?php if(is_product_category()):?>
 </div></div></div><!-- End filter bar -->
 <?php endif;?>

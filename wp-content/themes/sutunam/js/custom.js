@@ -269,8 +269,10 @@
 
         bootstrapSelect: function() {
             var select = $('select');
-            if(select.length) {
-                select.selectpicker();
+            if(!$('body').hasClass('woocommerce-checkout')) {
+                if(select.length) {
+                    select.selectpicker();
+                }
             }
         },
 

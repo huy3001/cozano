@@ -7985,3 +7985,11 @@ h6 {
   background: transparent;
   color: #000000;
 }
+
+/* Checkout page style */
+
+/* line 4, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+
+.woocommerce-checkout .woocommerce-info {
+  display: none;
+}

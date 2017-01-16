@@ -788,7 +788,7 @@
                         position: relative;
                         &:before {
                             content: '';
-                            display: block;
+                            display: none;
                             width: 41px;
                             height: 41px;
                             background: url('../images/zoom-in-cursor.png') no-repeat center transparent;
@@ -880,12 +880,13 @@
                 .image-list {
                     .slick-dots {
                         width: auto;
-                        bottom: 5px;
+                        bottom: 0;
                         left: 50%;
                         @include transform(translateX(-50%));
                         li {
                             height: 6px;
                             width: 6px;
+                            margin: 0 3px;
                             vertical-align: middle;
                             button {
                                 @include border-radius(50%);
@@ -997,7 +998,7 @@
         @include bp(max-width, $laptop - 1) {
             &:after {
                 content: '';
-                display: block;
+                display: none;
                 width: 41px;
                 height: 41px;
                 background: url('../images/zoom-out-cursor.png') no-repeat center transparent;

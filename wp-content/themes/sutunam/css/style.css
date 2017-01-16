@@ -7014,7 +7014,7 @@ h6 {
 
   .single-product div.product .images .image-list a:before {
     content: '';
-    display: block;
+    display: none;
     width: 41px;
     height: 41px;
     background: url("../images/zoom-in-cursor.png") no-repeat center transparent;
@@ -7155,7 +7155,7 @@ h6 {
 
   .single-product div.product .images .image-list .slick-dots {
     width: auto;
-    bottom: 5px;
+    bottom: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -7169,10 +7169,11 @@ h6 {
   .single-product div.product .images .image-list .slick-dots li {
     height: 6px;
     width: 6px;
+    margin: 0 3px;
     vertical-align: middle;
   }
 
-  /* line 890, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 891, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .images .image-list .slick-dots li button {
     -moz-border-radius: 50%;
@@ -7184,25 +7185,25 @@ h6 {
     padding: 0;
   }
 
-  /* line 896, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 897, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .images .image-list .slick-dots li button:before {
     display: none;
   }
 
-  /* line 901, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 902, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .images .image-list .slick-dots li.slick-active button {
     background: #999999;
   }
 
-  /* line 908, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 909, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .images .thumbnails {
     display: none;
   }
 
-  /* line 912, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 913, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .summary {
     width: 100% !important;
@@ -7214,26 +7215,26 @@ h6 {
     transform: none;
   }
 
-  /* line 916, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 917, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .summary .price {
     font-size: 18px !important;
     margin-bottom: 20px;
   }
 
-  /* line 921, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 922, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .product_title {
     font-size: 25px;
   }
 
-  /* line 923, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 924, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .product_title .product-name {
     font-size: 18px;
   }
 
-  /* line 927, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 928, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .cart,
   .single-product div.product div[itemprop="description"] {
@@ -7242,7 +7243,7 @@ h6 {
     padding: 0;
   }
 
-  /* line 934, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 935, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product .upsells.products h2,
   .single-product div.product .related.products h2 {
@@ -7250,7 +7251,7 @@ h6 {
     padding: 0 15px;
   }
 
-  /* line 941, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 942, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product ul.products li.product .image {
     height: 300px;
@@ -7258,14 +7259,14 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 950, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 951, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product ul.products li.product {
     width: 50%;
     margin: 0 0 20px;
   }
 
-  /* line 953, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 954, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product ul.products li.product .onsale {
     height: 40px;
@@ -7274,20 +7275,20 @@ h6 {
     padding: 12px 0;
   }
 
-  /* line 959, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 960, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product div.product ul.products li.product .image {
     height: 250px;
   }
 }
 
-/* line 967, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+/* line 968, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
 .single-product .zoomContainer {
   z-index: 111;
 }
 
-/* line 969, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+/* line 970, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
 .single-product .zoomContainer .zoomWindow {
   background-color: transparent;
@@ -7296,7 +7297,7 @@ h6 {
   max-height: 768px;
 }
 
-/* line 975, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+/* line 976, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
 .single-product .zoomContainer .zoomClose {
   color: #000000;
@@ -7307,7 +7308,7 @@ h6 {
 }
 
 @media only screen and (max-width: 1199px) {
-  /* line 967, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 968, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product .zoomContainer {
     background: #ffffff;
@@ -7322,7 +7323,7 @@ h6 {
     filter: alpha(opacity=0);
   }
 
-  /* line 992, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 993, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product .zoomContainer img {
     width: auto;
@@ -7331,11 +7332,11 @@ h6 {
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 998, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 999, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product .zoomContainer:after {
     content: '';
-    display: block;
+    display: none;
     width: 41px;
     height: 41px;
     background: url("../images/zoom-out-cursor.png") no-repeat center transparent;
@@ -7347,7 +7348,7 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 1011, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 1012, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product .zoomContainer img {
     max-width: 767px;
@@ -7355,7 +7356,7 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 1016, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
+  /* line 1017, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
   .single-product .zoomContainer .panzoom,
   .single-product .zoomContainer img {

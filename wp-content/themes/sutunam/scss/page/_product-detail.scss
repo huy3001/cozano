@@ -786,7 +786,7 @@
                         background: none !important;
                         max-height: inherit;
                         position: relative;
-                        &:after {
+                        &:before {
                             content: '';
                             display: block;
                             width: 41px;
@@ -879,7 +879,10 @@
             .images {
                 .image-list {
                     .slick-dots {
+                        width: auto;
                         bottom: 5px;
+                        left: 50%;
+                        @include transform(translateX(-50%));
                         li {
                             height: 6px;
                             width: 6px;

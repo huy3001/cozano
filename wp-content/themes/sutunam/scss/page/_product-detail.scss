@@ -785,6 +785,18 @@
                     a {
                         background: none !important;
                         max-height: inherit;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 41px;
+                            height: 41px;
+                            background: url('../images/zoom-in-cursor.png') no-repeat center transparent;
+                            position: absolute;
+                            bottom: 10px;
+                            right: 10px;
+                            z-index: 1;
+                        }
                         img {
                             max-height: inherit;
                             @include opacity(1);
@@ -867,16 +879,11 @@
             .images {
                 .image-list {
                     .slick-dots {
-                        text-align: left;
-                        width: auto;
-                        bottom: auto;
-                        left: 10px;
-                        top: 10px;
+                        bottom: 5px;
                         li {
-                            display: block;
                             height: 6px;
                             width: 6px;
-                            margin: 3px 0;
+                            vertical-align: middle;
                             button {
                                 @include border-radius(50%);
                                 background: $product-slider-dot;
@@ -982,6 +989,19 @@
             img {
                 width: auto;
                 max-width: $desktop - 1;
+            }
+        }
+        @include bp(max-width, $laptop - 1) {
+            &:after {
+                content: '';
+                display: block;
+                width: 41px;
+                height: 41px;
+                background: url('../images/zoom-out-cursor.png') no-repeat center transparent;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                z-index: 1;
             }
         }
         @include bp(max-width, $tablet - 1) {

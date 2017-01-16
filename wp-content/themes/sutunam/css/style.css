@@ -6517,12 +6517,6 @@ h6 {
   float: left;
 }
 
-/* line 468, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
-
-.single-product div.product .related.products {
-  display: none;
-}
-
 /* line 471, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-detail.scss */
 
 .single-product div.product .upsells.products,

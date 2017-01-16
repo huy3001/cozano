@@ -71,11 +71,15 @@ get_header( 'shop' ); ?>
 	$cat = get_term_by('id', $cat_id, 'product_cat');
 	?>
 	<div class="navigation">
-		<a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" class="btn-left-detail"><?php echo __('Trước', 'sutunam') ?></a>
-		<?php if($cat->name):?>
-		<a href="<?php echo get_term_link( $cat->slug, $cat->taxonomy ); ?>" class="center-navigation"><?php echo __('Trở về', 'sutunam') ?> <?php echo $cat->name;?> </a>
-		<?php endif;?>
-		<a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" class="btn-right-detail"><?php echo __('Sau', 'sutunam') ?></a>
+        <div class="container">
+            <div class="row">
+                <a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" class="btn-left-detail"><?php echo __('Trước', 'sutunam') ?></a>
+                <?php if($cat->name):?>
+                    <a href="<?php echo get_term_link( $cat->slug, $cat->taxonomy ); ?>" class="center-navigation"><?php echo __('Trở về', 'sutunam') ?> <?php echo $cat->name;?> </a>
+                <?php endif;?>
+                <a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" class="btn-right-detail"><?php echo __('Sau', 'sutunam') ?></a>
+            </div>
+        </div>
 	</div>
 		<?php while ( have_posts() ) : the_post(); ?>
 

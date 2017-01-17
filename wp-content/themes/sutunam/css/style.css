@@ -8064,7 +8064,7 @@ h6 {
 .woocommerce-cart table.shop_table td.actions .input-text {
   font-weight: normal;
   width: auto !important;
-  padding: 9px 15px 8px;
+  padding: 9px 15px 8px !important;
 }
 
 /* line 20, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */

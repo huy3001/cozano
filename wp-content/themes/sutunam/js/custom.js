@@ -128,7 +128,6 @@
                             settings: {
                                 arrows: true,
                                 asNavFor: '',
-                                dots: true,
                                 fade: false,
                                 swipe: true
                             }

@@ -89,10 +89,10 @@
             text-align: center;
             text-transform: uppercase;
             margin: 0 10px 15px;
-            padding: 10px 15px;
+            padding: 9px 15px;
             &.continue-shopping {
                 background: $left-menu-bg;
-                border: 1px solid $left-menu-bg;
+                border: 2px solid $left-menu-bg;
                 &:hover {
                     background: none;
                     color: $left-menu-bg;
@@ -100,7 +100,7 @@
             }
             &.back-home {
                 background: $main-color;
-                border: 1px solid $main-color;
+                border: 2px solid $main-color;
                 &:hover {
                     background: none;
                     color: $main-color;

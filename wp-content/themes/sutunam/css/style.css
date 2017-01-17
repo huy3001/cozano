@@ -8257,14 +8257,14 @@ h6 {
   text-align: center;
   text-transform: uppercase;
   margin: 0 10px 15px;
-  padding: 10px 15px;
+  padding: 9px 15px;
 }
 
 /* line 93, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou a.continue-shopping {
   background: #999999;
-  border: 1px solid #999999;
+  border: 2px solid #999999;
 }
 
 /* line 96, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
@@ -8278,7 +8278,7 @@ h6 {
 
 .woocommerce-checkout .woocommerce-thankyou a.back-home {
   background: #303030;
-  border: 1px solid #303030;
+  border: 2px solid #303030;
 }
 
 /* line 104, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */

@@ -50,8 +50,8 @@ get_header( 'shop' ); ?>
                             <span><?php _e( 'We will contact you to confirm order soon.', 'woocommerce' ) ?></span>
                         </p>
                         <p class="woocommerce-contact"><?php _e( 'Any questions please contact customer service or call 090 222 7717 for assistance.', 'woocommerce' ) ?></p>
-                        <a class="continue-shopping" href="#"><?php _e( 'Continue shopping', 'woocommerce' ) ?></a>
-                        <a class="back-home" href="#"><?php _e( 'Back to home', 'woocommerce' ) ?></a>
+                        <a class="continue-shopping" href="<?php echo home_url(); ?>"><?php _e( 'Continue shopping', 'woocommerce' ) ?></a>
+                        <a class="back-home" href="<?php echo home_url(); ?>"><?php _e( 'Back to home', 'woocommerce' ) ?></a>
                     </div>
 
                     <ul class="woocommerce-thankyou-order-details order_details">

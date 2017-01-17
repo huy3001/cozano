@@ -16,7 +16,7 @@
         // Add zoom to product slider
         addZoom: function(imageList) {
             setTimeout(function() {
-                var activeImg = imageList.find('.slick-active img'),
+                var activeLink = imageList.find('.slick-active a'),
                     zoomOption = {
                         zoomType: 'inner',
                         cursor: 'crosshair',
@@ -24,24 +24,24 @@
                         easingType: 'linear'
                     };
 
-                function makeZoom(image) {
-                    image.off('click').on('click', function() {
-                        if($(this).hasClass('zoomed')) {
-                            $(this).removeClass('zoomed');
-                            $(this).removeData('elevateZoom'); // remove zoom instance from image
+                function makeZoom(imageLink) {
+                    imageLink.off('click').on('click', function(e) {
+                        e.preventDefault();
+                        var image = $(this).find('img');
+                        if(image.hasClass('zoomed')) {
+                            image.removeClass('zoomed');
+                            image.removeData('elevateZoom'); // remove zoom instance from image
                             $('.zoomContainer').remove(); // remove zoom container from DOM
                             productContainer.removeAttr('style');
                         }
                         else {
-                            $(this).addClass('zoomed');
+                            image.addClass('zoomed');
                             productContainer.css('opacity', 0);
                             if($(window).width() < $desktop) {
-                                $('body').append('<div class="zoomContainer"><div class="panzoom"><img src="'+ $(this).attr('src') +'" alt="'+ $(this).attr('alt') +'"></div></div>'); // add zoom container to body
+                                $('body').append('<div class="zoomContainer"><div class="panzoom"><img src="'+ image.attr('src') +'" alt="'+ image.attr('alt') +'"></div></div>'); // add zoom container to body
                                 var zoomContainer = $('.zoomContainer'),
                                     panZoom = $('.panzoom', zoomContainer),
-                                    imgZoom = $('img', zoomContainer),
-                                    offsetLeft = $(window).width()/2,
-                                    offsetTop = $(window).height()/2;
+                                    imgZoom = $('img', zoomContainer);
                                 panZoom.panzoom({
                                     contain: 'invert',
                                     minScale: 1,
@@ -51,15 +51,11 @@
                                     transition: true
                                 });
                                 zoomContainer.animate({
-                                    scrollLeft: '50%',
-                                    scrollTop: '50%'
-                                });
-                                zoomContainer.animate({
                                     opacity: 1
                                 }, 300);
                                 setTimeout(function() {
                                     $('body').css('position', 'fixed');
-                                    imgZoom.on('tap', function() {
+                                    panZoom.on('tap', function() {
                                         image.removeClass('zoomed');
                                         zoomContainer.remove(); // remove zoom container from DOM
                                         productContainer.removeAttr('style');
@@ -76,7 +72,7 @@
                 }
 
                 // First active image zoom
-                makeZoom(activeImg);
+                makeZoom(activeLink);
 
                 // Remove zoom before slide change
                 imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
@@ -88,8 +84,8 @@
 
                 // Zoom after slide change
                 imageList.on('afterChange', function(event, slick, currentSlide) {
-                    var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
-                    makeZoom(currentImg);
+                    var currentLink = imageList.find('li[data-slick-index="'+ currentSlide +'"] a');
+                    makeZoom(currentLink);
                 });
             }, 100);
         },

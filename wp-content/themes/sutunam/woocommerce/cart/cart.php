@@ -34,6 +34,8 @@ get_header( 'shop' ); ?>
 
             <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
+            <h2 class="cart-title"><?php _e( 'Your cart', 'woocommerce' ); ?></h2>
+
             <table class="shop_table shop_table_responsive cart" cellspacing="0">
                 <thead>
                     <tr>

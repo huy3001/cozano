@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-01-13 18:06+0700\n"
+"PO-Revision-Date: 2017-01-18 11:38+0700\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #: includes/api/class-wc-rest-products-controller.php:769
 msgid "#%s is an invalid image ID."
-msgstr ""
+msgstr "#%s là một ID hình ảnh không hợp lệ."
 
 #: includes/admin/class-wc-admin-menus.php:105
 msgid "Extensions"
@@ -4892,6 +4892,10 @@ msgstr "Chưa có sản phẩm trong giỏ hàng."
 msgid "You may be interested in&hellip;"
 msgstr "Bạn có thể thích&hellip;"
 
+#: templates/cart/cart.php:37
+msgid "Your cart"
+msgstr "Giỏ hàng của bạn"
+
 #: templates/cart/cart.php:144
 msgid "Update Cart"
 msgstr "Cập nhật Giỏ hàng"
@@ -4917,6 +4921,10 @@ msgstr "Tổng phụ"
 #: templates/cart/cart-totals.php:28
 msgid "Cart Totals"
 msgstr "Tổng giỏ hàng"
+
+#: templates/cart/cart-totals.php:105
+msgid "Select more"
+msgstr "Chọn thêm sản phẩm"
 
 #: templates/cart/cart-shipping.php:50
 msgid "There are no shipping methods available. Please double check your address, or contact us if you need any help."

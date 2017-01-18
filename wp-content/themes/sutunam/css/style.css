@@ -8220,7 +8220,7 @@ h6 {
 /* line 16, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .bootstrap-select {
-  width: 100%;
+  width: 100% !important;
 }
 
 /* line 18, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */

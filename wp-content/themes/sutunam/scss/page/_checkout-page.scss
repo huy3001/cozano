@@ -13,14 +13,38 @@
             text-transform: uppercase;
         }
     }
-    form {
-        .form-row {
-            &#billing_company_field {
-                display: none;
+    .bootstrap-select {
+        width: 100%;
+        .dropdown-toggle {
+            background: $white;
+            border-color: $search-input-bd;
+            @include border-radius(0);
+            @include box-shadow(none);
+            color: $main-color;
+            line-height: normal;
+            padding: 10px 15px;
+            &:focus {
+                background: $white;
+                border-color: $main-color;
+                outline: none !important;
+            }
+        }
+        .dropdown-menu {
+            border-color: $search-input-bd;
+            @include border-radius(0);
+            @include box-shadow(none);
+            margin: -1px 0 0;
+            padding: 0;
+            li {
+                a {
+                    padding: 5px 15px;
+                    outline: none !important;
+                }
             }
         }
     }
     .woocommerce-shipping-fields {
+        clear: both;
         h3 {
             display: none;
         }

@@ -794,7 +794,7 @@
                             background: url('../images/zoom-in-cursor.png') no-repeat center transparent;
                             position: absolute;
                             bottom: 10px;
-                            right: 10px;
+                            left: 10px;
                             z-index: 1;
                         }
                         img {
@@ -1008,7 +1008,7 @@
                     background: url('../images/zoom-out-cursor.png') no-repeat center transparent;
                     position: absolute;
                     bottom: 10px;
-                    right: 10px;
+                    left: 10px;
                     z-index: 1;
                 }
             }

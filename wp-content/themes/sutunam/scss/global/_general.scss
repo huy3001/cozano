@@ -51,10 +51,12 @@ h1, h2, h3, h4, h5, h6 {
     color: $left-menu-bg;
     font-size: 13px;
     display: inline-block;
-    padding: 10px 30px 10px 20px;
+    padding: 10px 30px;
     position: fixed;
     bottom: -40px;
     right: 0;
+    z-index: 1;
+    &:before,
     &:after {
         content: "";
         display: block;
@@ -66,12 +68,20 @@ h1, h2, h3, h4, h5, h6 {
         border-right: 5px solid transparent;
         position: absolute;
         top: 50%;
-        right: 10px;
         margin-top: -3px;
         @include transition();
     }
+    &:before {
+        left: 10px;
+    }
+    &:after {
+        right: 10px;
+    }
     &:hover, &:focus {
+        background: $product-slider-dot;
         color: $header-bg;
+        outline: none;
+        &:before,
         &:after {
             border-bottom-color: $header-bg;
         }
@@ -146,6 +156,13 @@ h1, h2, h3, h4, h5, h6 {
                 color: $white;
             }
         }
+    }
+}
+
+@include bp(max-width, $desktop - 1) {
+    .back-top {
+        right: 50%;
+        @include transform(translateX(50%));
     }
 }
 

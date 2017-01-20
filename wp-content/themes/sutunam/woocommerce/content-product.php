@@ -156,6 +156,9 @@ if ($price <= 100000){
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 	?>
+
+	<!-- Add background image -->
+	<?php echo types_render_field("background-image", array('url'=>true, 'size' => 'thumbnail')); ?>
 	</div>
 
 	<div class="info">

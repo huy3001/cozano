@@ -157,8 +157,12 @@ if ($price <= 100000){
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 	?>
 
-	<!-- Add background image -->
-	<?php echo types_render_field("background-image", array('url'=>true, 'size' => 'thumbnail')); ?>
+        <?php
+        $hoverImg = types_render_field("hover-image", array('url'=>true, 'size' => 'thumbnail'));
+        if($hoverImg) { ?>
+            <!-- Add hover image -->
+            <img class="hover-image" src="<?php echo $hoverImg ?>" alt=""/>
+        <?php } ?>
 	</div>
 
 	<div class="info">

@@ -412,3 +412,41 @@ function jk_related_products_args( $args ) {
     $args['posts_per_page'] = 6; // 6 related products
     return $args;
 }
+
+function size_validation() {
+    if ( empty( $_REQUEST['size'] ) ) {
+        wc_add_notice( __( 'Please choose size', 'woocommerce' ), 'error' );
+        return false;
+    }
+    return true;
+}
+add_action( 'woocommerce_add_to_cart_validation', 'size_validation', 10, 3 );
+
+function save_size_field( $cart_item_data, $product_id ) {
+    if( isset( $_REQUEST['size'] ) ) {
+        $cart_item_data[ 'size' ] = $_REQUEST['size'];
+        /* below statement make sure every add to cart action as unique line item */
+        $cart_item_data['unique_key'] = md5( microtime().rand() );
+    }
+    return $cart_item_data;
+}
+add_action( 'woocommerce_add_cart_item_data', 'save_size_field', 10, 2 );
+
+function render_meta_on_cart_and_checkout( $cart_data, $cart_item = null ) {
+    $custom_items = array();
+    if( !empty( $cart_data ) ) {
+        $custom_items = $cart_data;
+    }
+    if( isset( $cart_item['size'] ) ) {
+        $custom_items[] = array( "name" => 'Size', "value" => $cart_item['size'] );
+    }
+    return $custom_items;
+}
+add_filter( 'woocommerce_get_item_data', 'render_meta_on_cart_and_checkout', 10, 2 );
+
+function size_order_meta_handler( $item_id, $values, $cart_item_key ) {
+    if( isset( $values['size'] ) ) {
+        wc_add_order_item_meta( $item_id, "size", $values['size'] );
+    }
+}
+add_action( 'woocommerce_add_order_item_meta', 'size_order_meta_handler', 1, 3 );

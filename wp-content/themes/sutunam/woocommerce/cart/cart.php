@@ -40,8 +40,9 @@ get_header( 'shop' ); ?>
                 <thead>
                     <tr>
                         <th class="product-remove">&nbsp;</th>
-                        <th class="product-thumbnail"><?php _e( 'Product', 'woocommerce' ); ?></th>
-                        <th class="product-name"><?php _e( 'Product ID', 'woocommerce' ); ?></th>
+                        <th class="product-thumbnail">&nbsp;</th>
+                        <th class="product-size"><?php _e( 'Size', 'woocommerce' ); ?></th>
+                        <th class="product-sku"><?php _e( 'SKU', 'woocommerce' ); ?></th>
                         <th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
                         <th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
                         <th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
@@ -84,12 +85,12 @@ get_header( 'shop' ); ?>
                                     ?>
                                 </td>
 
-                                <td class="product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
+                                <td class="product-size" data-title="<?php _e( 'Size', 'woocommerce' ); ?>">
                                     <?php
                                         if ( ! $product_permalink ) {
                                             echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
                                         } else {
-                                            echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
+                                            echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s" style="display:none;">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
                                         }
 
                                         // Meta data
@@ -99,6 +100,12 @@ get_header( 'shop' ); ?>
                                         if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
                                             echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
                                         }
+                                    ?>
+                                </td>
+
+                                <td class="product-sku" data-title="<?php _e( 'SKU', 'woocommerce' ); ?>">
+                                    <?php
+                                    echo $_product->sku;
                                     ?>
                                 </td>
 

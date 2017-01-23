@@ -388,7 +388,12 @@ function add_content_before_addtocart_button_func() {
     //Size
     $sizes = get_the_terms( get_the_ID(), 'size' );
     foreach ($sizes as $size){
-        echo '<span><input type="radio" name="size" id="'.$size->slug.'" value="'.$size->slug.'"><label for="'.$size->slug.'">'.$size->name .'</label></span>';
+        if($size->slug == 's'){
+            $value = 'SS';
+        }else{
+            $value = $size->slug;
+        }
+        echo '<span><input type="radio" name="size" id="'.$value.'" value="'.$size->slug.'"><label for="'.$value.'">'.$size->name .'</label></span>';
     }
     echo '</select>';
 }

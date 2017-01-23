@@ -40,7 +40,7 @@ get_header( 'shop' ); ?>
                 <thead>
                     <tr>
                         <th class="product-remove">&nbsp;</th>
-                        <th class="product-thumbnail">&nbsp;</th>
+                        <th class="product-thumbnail"><?php _e( 'Product', 'woocommerce' ); ?></th>
                         <th class="product-size"><?php _e( 'Size', 'woocommerce' ); ?></th>
                         <th class="product-sku"><?php _e( 'SKU', 'woocommerce' ); ?></th>
                         <th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>

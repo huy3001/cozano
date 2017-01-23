@@ -8224,6 +8224,25 @@ h6 {
 
 /* line 30, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
+.woocommerce-cart table.shop_table td.product-size .variation {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 33, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+
+.woocommerce-cart table.shop_table td.product-size .variation dt {
+  display: none;
+}
+
+/* line 36, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+
+.woocommerce-cart table.shop_table td.product-size .variation p {
+  margin: 0;
+}
+
+/* line 42, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+
 .woocommerce-cart table.shop_table td.actions .input-text {
   border: 2px solid #dcdcdc !important;
   font-weight: normal;
@@ -8231,7 +8250,7 @@ h6 {
   padding: 8px 15px 7px !important;
 }
 
-/* line 36, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 48, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart table.shop_table td.actions .button {
   -moz-border-radius: 0;
@@ -8243,40 +8262,40 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/* line 39, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 51, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart table.shop_table td.actions .button:hover {
   background: #505050;
   color: #ffffff;
 }
 
-/* line 47, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 59, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart table.shop_table .product-name a {
   color: #303030;
 }
 
-/* line 52, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 64, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart table.shop_table .quantity .qty {
   border: 2px solid #dcdcdc;
   outline: none;
 }
 
-/* line 58, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 70, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout {
   clear: both;
   text-align: center;
 }
 
-/* line 61, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 73, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a {
   min-width: 200px;
 }
 
-/* line 63, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 75, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.select-more {
   background: #999999;
@@ -8291,14 +8310,14 @@ h6 {
   padding: 9px 15px;
 }
 
-/* line 74, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 86, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.select-more:hover {
   background: none;
   color: #999999;
 }
 
-/* line 79, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 91, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
   background: #000000;
@@ -8320,14 +8339,14 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/* line 92, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 104, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
   background: transparent;
   color: #000000;
 }
 
-/* line 99, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 111, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .cart-empty,
 .woocommerce-cart .return-to-shop {

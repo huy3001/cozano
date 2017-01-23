@@ -26,6 +26,18 @@
                     width: 90px;
                 }
             }
+            &.product-size {
+                .variation {
+                    text-transform: uppercase;
+                    margin: 0;
+                    dt {
+                        display: none;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
             &.actions {
                 .input-text {
                     border: 2px solid $left-menu-bd !important;

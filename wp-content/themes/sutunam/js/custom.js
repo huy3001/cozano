@@ -782,7 +782,7 @@
     /* Window ready function */
     $(window).ready(function () {
         // Custom scrollbar
-        customJS.customScrollbar();
+        //customJS.customScrollbar();
 
         // Close sidebar
         customJS.closeSidebar();

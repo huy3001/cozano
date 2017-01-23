@@ -36,20 +36,28 @@
             position: relative;
             overflow: hidden;
         }
+        .onsold,
         .onsale {
+            @include border-radius(50%);
             background: $red;
             width: 60px;
             height: 60px;
+            color: $white;
             font-size: 22px;
             line-height: normal;
+            text-align: center;
             min-height: inherit;
             min-width: inherit;
             white-space: nowrap;
             padding: 17px 0;
+            position: absolute;
             top: 10px;
             left: auto;
             right: 28%;
             z-index: 1;
+        }
+        .onsold {
+            background: $black;
         }
         .images {
             width: 100% !important;
@@ -531,6 +539,7 @@
                         @include opacity(0.5);
                     }
                 }
+                .onsold,
                 .onsale {
                     top: 10px;
                     left: 10px;
@@ -665,6 +674,7 @@
             .product-container {
                 max-height: inherit;
             }
+            .onsold,
             .onsale {
                 right: 10px;
             }
@@ -866,6 +876,7 @@
         }
 
         @include bp(max-width, $tablet - 1) {
+            .onsold,
             .onsale {
                 left: auto;
                 right: 10px;
@@ -941,18 +952,53 @@
         }
 
         @include bp(max-width, $mobile) {
+            .onsold,
+            .onsale {
+                height: 40px;
+                width: 40px;
+                font-size: 12px;
+                padding: 13px 0;
+            }
             ul.products {
                 li.product {
                     width: 50%;
                     margin: 0 0 20px;
+                    .onsold,
                     .onsale {
                         height: 40px;
                         width: 40px;
                         font-size: 12px;
-                        padding: 12px 0;
+                        padding: 13px 0;
                     }
                     .image {
                         height: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+    &[lang="vi"] {
+        div.product {
+            .onsold,
+            .onsale {
+                font-size: 15px;
+                white-space: normal;
+                padding: 12px 0;
+            }
+            @include bp(max-width, $mobile) {
+                .onsold,
+                .onsale {
+                    font-size: 12px;
+                    padding: 6px 0;
+                }
+                ul.products {
+                    li.product {
+                        .onsold,
+                        .onsale {
+                            font-size: 12px;
+                            padding: 6px 0;
+                        }
                     }
                 }
             }

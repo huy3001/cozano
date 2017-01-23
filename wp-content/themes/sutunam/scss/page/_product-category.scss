@@ -348,6 +348,8 @@
             a {
                 img {
                     margin: 0 0 10px;
+                    -webkit-backface-visibility: hidden;
+                    @include transform(translate3d(0,0,0));
                     &.hover-image {
                         @include opacity(0);
                         z-index: 1;
@@ -397,21 +399,30 @@
                     @include opacity(0.5);
                 }
             }
+            .onsold,
             .onsale {
+                @include border-radius(50%);
                 background: $red;
                 width: 60px;
                 height: 60px;
+                color: $white;
                 font-size: 20px;
+                font-weight: bold;
                 line-height: normal;
+                text-align: center;
                 min-height: inherit;
                 min-width: inherit;
                 white-space: nowrap;
                 padding: 18px 0;
                 margin: 0;
+                position: absolute;
                 top: 10px;
                 left: 10px;
                 right: auto;
-                z-index: 1;
+                z-index: 2;
+            }
+            .onsold {
+                background: $black;
             }
             .star-rating {
                 color: $main-color;
@@ -469,6 +480,19 @@
             @include transition();
             &:hover {
                 color: $main-color;
+            }
+        }
+    }
+
+    &[lang="vi"] {
+        ul.products {
+            li.product {
+                .onsold,
+                .onsale {
+                    font-size: 15px;
+                    white-space: normal;
+                    padding: 12px 0;
+                }
             }
         }
     }
@@ -665,10 +689,21 @@
                     height: 40px;
                     width: 40px;
                     font-size: 12px;
-                    padding: 12px 0;
+                    padding: 13px 0;
                 }
                 .image {
                     height: 250px;
+                }
+            }
+        }
+        &[lang="vi"] {
+            ul.products {
+                li.product {
+                    .onsold,
+                    .onsale {
+                        font-size: 12px;
+                        padding: 6px 0;
+                    }
                 }
             }
         }

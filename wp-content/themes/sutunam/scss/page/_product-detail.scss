@@ -232,7 +232,7 @@
                 span {
                     font-size: 14px;
                 }
-                input[type=checkbox] {
+                input[type=radio] {
                     display: none;
                 }
                 label {
@@ -249,7 +249,7 @@
                         background: $product-slider-dot;
                     }
                 }
-                input[type=checkbox]:checked + label {
+                input[type=radio]:checked + label {
                     background: $black;
                     color: $white;
                 }

@@ -46,8 +46,11 @@ $bgColor = types_render_field("color", array());
     }
     ?>;">
     <div class="product-container">
-    <?php if ( $product->is_on_sale() ) : ?>
+    <?php if(!$product->is_in_stock()):?>
+        <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sold!', 'woocommerce' ) . '</span>', $post, $product ); ?>
+    <?php elseif ( $product->is_on_sale() ) : ?>
 
         <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
 
     <?php endif; ?>
+

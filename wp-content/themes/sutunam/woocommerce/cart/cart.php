@@ -40,8 +40,8 @@ get_header( 'shop' ); ?>
                 <thead>
                     <tr>
                         <th class="product-remove">&nbsp;</th>
-                        <th class="product-thumbnail">&nbsp;</th>
-                        <th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+                        <th class="product-thumbnail"><?php _e( 'Product', 'woocommerce' ); ?></th>
+                        <th class="product-name"><?php _e( 'Product ID', 'woocommerce' ); ?></th>
                         <th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
                         <th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
                         <th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>

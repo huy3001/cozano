@@ -503,6 +503,19 @@
                     outline: none;
                     img {
                         margin: 0 0 10px;
+                        -webkit-backface-visibility: hidden;
+                        @include transform(translate3d(0,0,0));
+                        &.hover-image {
+                            @include opacity(0);
+                            z-index: 1;
+                        }
+                    }
+                    &:hover {
+                        img {
+                            &.hover-image {
+                                @include opacity(1);
+                            }
+                        }
                     }
                 }
                 .image {
@@ -518,6 +531,7 @@
                         position: absolute;
                         left: 50%;
                         @include transform(translateX(-50%));
+                        @include transition(opacity 0.3s ease);
                     }
                 }
                 .info {

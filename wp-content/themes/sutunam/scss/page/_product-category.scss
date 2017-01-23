@@ -379,8 +379,7 @@
             }
             .info {
                 float: left;
-                min-height: 35px;
-                width: 70%;
+                width: 100%;
                 padding: 0 10px;
                 h3 {
                     color: $main-color;
@@ -423,10 +422,10 @@
                 color: $main-color;
                 font-size: 13px;
                 font-weight: bold;
-                float: right;
+                float: left;
                 line-height: normal;
-                min-height: 35px;
-                margin: 0;
+                width: 100%;
+                margin: 5px 0 0;
                 padding: 0 10px;
                 position: relative;
                 del {
@@ -521,18 +520,11 @@
                     height: 340px;
                 }
                 .info {
-                    width: 100%;
-                    min-height: inherit;
                     h3, h4 {
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
                     }
-                }
-                .price {
-                    width: 100%;
-                    min-height: inherit;
-                    margin-top: 5px;
                 }
             }
         }

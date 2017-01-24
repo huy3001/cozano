@@ -41,8 +41,8 @@ get_header( 'shop' ); ?>
                     <tr>
                         <th class="product-remove">&nbsp;</th>
                         <th class="product-thumbnail"><?php _e( 'Product', 'woocommerce' ); ?></th>
-                        <th class="product-size"><?php _e( 'Size', 'woocommerce' ); ?></th>
                         <th class="product-sku"><?php _e( 'SKU', 'woocommerce' ); ?></th>
+                        <th class="product-size"><?php _e( 'Size', 'woocommerce' ); ?></th>
                         <th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
                         <th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
                         <th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
@@ -85,6 +85,12 @@ get_header( 'shop' ); ?>
                                     ?>
                                 </td>
 
+                                <td class="product-sku" data-title="<?php _e( 'SKU', 'woocommerce' ); ?>">
+                                    <?php
+                                    echo $_product->sku;
+                                    ?>
+                                </td>
+
                                 <td class="product-size" data-title="<?php _e( 'Size', 'woocommerce' ); ?>">
                                     <?php
                                         if ( ! $product_permalink ) {
@@ -100,12 +106,6 @@ get_header( 'shop' ); ?>
                                         if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
                                             echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
                                         }
-                                    ?>
-                                </td>
-
-                                <td class="product-sku" data-title="<?php _e( 'SKU', 'woocommerce' ); ?>">
-                                    <?php
-                                    echo $_product->sku;
                                     ?>
                                 </td>
 
@@ -145,7 +145,7 @@ get_header( 'shop' ); ?>
                     do_action( 'woocommerce_cart_contents' );
                     ?>
                     <tr>
-                        <td colspan="6" class="actions">
+                        <td colspan="7" class="actions">
 
                             <?php if ( wc_coupons_enabled() ) { ?>
                                 <div class="coupon">

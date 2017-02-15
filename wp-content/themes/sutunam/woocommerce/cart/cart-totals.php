@@ -102,6 +102,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <div class="wc-proceed-to-checkout">
-    <a class="select-more" href="<?php echo home_url(); ?>"><?php _e( 'Select more', 'woocommerce' ) ?></a>
     <?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+    <a class="select-more" href="<?php echo home_url(); ?>"><?php _e( 'Select more', 'woocommerce' ) ?></a>
 </div>

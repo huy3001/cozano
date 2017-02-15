@@ -8338,44 +8338,46 @@ h6 {
 
 /* line 77, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
+.woocommerce-cart .cross-sells {
+  display: none;
+}
+
+/* line 80, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+
 .woocommerce-cart .wc-proceed-to-checkout {
   clear: both;
   text-align: center;
 }
 
-/* line 80, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 83, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a {
   min-width: 200px;
 }
 
-/* line 82, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 85, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.select-more {
-  background: #999999;
-  border: 2px solid #999999;
   display: inline-block;
   vertical-align: top;
-  color: #ffffff;
+  color: #999999;
   line-height: normal;
   text-align: center;
-  text-transform: uppercase;
   margin: 15px 10px;
-  padding: 9px 15px;
+  padding: 11px 15px;
 }
 
 /* line 93, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.select-more:hover {
-  background: none;
-  color: #999999;
+  color: #303030;
 }
 
-/* line 98, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 97, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
-  background: #000000;
-  border: 2px solid #000000;
+  background: #00a2ff;
+  border: 2px solid #00a2ff;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -8393,14 +8395,14 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/* line 111, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 110, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
   background: transparent;
-  color: #000000;
+  color: #00a2ff;
 }
 
-/* line 118, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+/* line 117, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
 .woocommerce-cart .cart-empty,
 .woocommerce-cart .return-to-shop {
@@ -8409,44 +8411,44 @@ h6 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 126, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 125, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table thead {
     display: table-header-group;
   }
 
-  /* line 129, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 128, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr {
     display: table-row;
   }
 
-  /* line 131, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 130, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr td {
     display: table-cell;
     text-align: center !important;
   }
 
-  /* line 134, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 133, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr td:before {
     display: none;
   }
 
-  /* line 140, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 139, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr:first-child td:first-child {
     border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
   }
 
-  /* line 146, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 145, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table th {
     display: table-cell !important;
   }
 
-  /* line 151, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 150, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table th.product-thumbnail,
   .woocommerce-cart table.shop_table td.product-thumbnail {
@@ -8455,25 +8457,25 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 159, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 158, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart .cart-title {
     font-size: 25px;
   }
 
-  /* line 163, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 162, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table thead {
     display: none;
   }
 
-  /* line 167, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 166, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item {
     display: block;
   }
 
-  /* line 169, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 168, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td {
     clear: both;
@@ -8481,27 +8483,27 @@ h6 {
     text-align: right !important;
   }
 
-  /* line 173, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 172, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td:before {
     display: block;
   }
 
-  /* line 176, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 175, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td.product-remove,
   .woocommerce-cart table.shop_table tr.cart_item td.product-thumbnail {
     border-top: none;
   }
 
-  /* line 179, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 178, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td.product-remove:before,
   .woocommerce-cart table.shop_table tr.cart_item td.product-thumbnail:before {
     display: none;
   }
 
-  /* line 183, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 182, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td.product-remove {
     display: inline-block;
@@ -8509,7 +8511,7 @@ h6 {
     margin-top: 15px;
   }
 
-  /* line 188, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 187, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td.product-thumbnail {
     display: inline-block !important;
@@ -8517,31 +8519,31 @@ h6 {
     float: right;
   }
 
-  /* line 193, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 192, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item td.product-subtotal {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  /* line 199, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 198, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table tr.cart_item:first-child td:first-child {
     border-top: none !important;
   }
 
-  /* line 208, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 207, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table td.product-thumbnail img {
     width: 50px;
   }
 
-  /* line 213, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 212, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart table.shop_table td.actions .input-text {
     width: 48% !important;
   }
 
-  /* line 220, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 219, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart .cart_totals h3 {
     font-size: 20px;
@@ -8549,7 +8551,7 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 229, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
+  /* line 228, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_cart-page.scss */
 
   .woocommerce-cart .wc-proceed-to-checkout a.select-more,
   .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
@@ -8711,24 +8713,25 @@ h6 {
   border-radius: 0;
   background: #00a2ff;
   line-height: normal;
+  text-transform: uppercase;
   padding: 11px 15px;
   outline: none;
 }
 
-/* line 94, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 95, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou {
   text-align: center;
 }
 
-/* line 96, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 97, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou h3 {
   color: #00a2ff;
   text-transform: uppercase;
 }
 
-/* line 100, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 101, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou p {
   font-weight: normal;
@@ -8736,13 +8739,13 @@ h6 {
   margin: 20px 0;
 }
 
-/* line 104, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 105, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou p.woocommerce-contact {
   color: #a2a2a2;
 }
 
-/* line 108, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 109, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou a {
   display: inline-block;
@@ -8755,28 +8758,28 @@ h6 {
   padding: 9px 15px;
 }
 
-/* line 117, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 118, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou a.continue-shopping {
   background: #999999;
   border: 2px solid #999999;
 }
 
-/* line 120, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 121, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou a.continue-shopping:hover {
   background: none;
   color: #999999;
 }
 
-/* line 125, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 126, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou a.back-home {
   background: #303030;
   border: 2px solid #303030;
 }
 
-/* line 128, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+/* line 129, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
 .woocommerce-checkout .woocommerce-thankyou a.back-home:hover {
   background: none;
@@ -8784,7 +8787,7 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 138, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
+  /* line 139, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_checkout-page.scss */
 
   .woocommerce-checkout .woocommerce-thankyou a {
     display: block;

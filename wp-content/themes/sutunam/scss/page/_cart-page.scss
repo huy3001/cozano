@@ -74,30 +74,29 @@
             }
         }
     }
+    .cross-sells {
+        display: none;
+    }
     .wc-proceed-to-checkout {
         clear: both;
         text-align: center;
         a {
             min-width: 200px;
             &.select-more {
-                background: $left-menu-bg;
-                border: 2px solid $left-menu-bg;
                 display: inline-block;
                 vertical-align: top;
-                color: $white;
+                color: $left-menu-bg;
                 line-height: normal;
                 text-align: center;
-                text-transform: uppercase;
                 margin: 15px 10px;
-                padding: 9px 15px;
+                padding: 11px 15px;
                 &:hover {
-                    background: none;
-                    color: $left-menu-bg;
+                    color: $main-color;
                 }
             }
             &.checkout-button {
-                background: $black;
-                border: 2px solid $black;
+                background: $blue;
+                border: 2px solid $blue;
                 @include border-radius(0);
                 display: inline-block;
                 vertical-align: top;
@@ -110,7 +109,7 @@
                 @include transition();
                 &:hover {
                     background: transparent;
-                    color: $black;
+                    color: $blue;
                 }
             }
         }

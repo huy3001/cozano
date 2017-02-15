@@ -92,7 +92,7 @@
                     width: 100%;
                     outline: none;
                     &:hover {
-                        cursor: url("../images/zoom-in-cursor.png"), zoom-in;
+                        cursor: url("../images/zoom-in.png"), zoom-in;
                     }
                     img {
                         max-height: $product-img-height;
@@ -807,9 +807,10 @@
                         &:before {
                             content: '';
                             display: block;
-                            width: 41px;
-                            height: 41px;
+                            width: 40px;
+                            height: 40px;
                             background: url('../images/zoom-in-cursor.png') no-repeat center transparent;
+                            background-size: 40px auto;
                             position: absolute;
                             bottom: 10px;
                             left: 10px;
@@ -1023,7 +1024,7 @@
         z-index: 111;
         .zoomWindow {
             background-color: transparent;
-            cursor: url("../images/zoom-out-cursor.png"), zoom-out !important;
+            cursor: url("../images/zoom-out.png"), zoom-out !important;
             display: block !important;
             max-height: $product-img-height;
         }
@@ -1057,9 +1058,10 @@
                 &:after {
                     content: '';
                     display: block;
-                    width: 41px;
-                    height: 41px;
+                    width: 40px;
+                    height: 40px;
                     background: url('../images/zoom-out-cursor.png') no-repeat center transparent;
+                    background-size: 40px auto;
                     position: absolute;
                     bottom: 10px;
                     left: 10px;

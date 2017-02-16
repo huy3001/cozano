@@ -342,27 +342,29 @@
         margin: 0 -1px;
         li.product {
             clear: none;
+            display: block;
+            height: 100%;
             width: 16.666%;
             padding: 0 1px;
             margin: 0 0 35px;
-            img {
-                margin: 0 0 10px;
-                -webkit-backface-visibility: hidden;
-                @include transform(translate3d(0,0,0));
-                &.hover-image {
-                    @include opacity(0);
-                    z-index: 1;
-                }
-            }
-            &:hover {
+            a {
+                outline: none;
                 img {
+                    margin: 0 0 10px;
+                    -webkit-backface-visibility: hidden;
+                    @include transform(translate3d(0,0,0));
                     &.hover-image {
-                        @include opacity(1);
+                        @include opacity(0);
+                        z-index: 1;
                     }
                 }
-            }
-            a {
-
+                &:hover {
+                    img {
+                        &.hover-image {
+                            @include opacity(1);
+                        }
+                    }
+                }
             }
             .image {
                 height: 550px;

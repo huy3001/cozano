@@ -345,23 +345,24 @@
             width: 16.666%;
             padding: 0 1px;
             margin: 0 0 35px;
-            a {
+            img {
+                margin: 0 0 10px;
+                -webkit-backface-visibility: hidden;
+                @include transform(translate3d(0,0,0));
+                &.hover-image {
+                    @include opacity(0);
+                    z-index: 1;
+                }
+            }
+            &:hover {
                 img {
-                    margin: 0 0 10px;
-                    -webkit-backface-visibility: hidden;
-                    @include transform(translate3d(0,0,0));
                     &.hover-image {
-                        @include opacity(0);
-                        z-index: 1;
+                        @include opacity(1);
                     }
                 }
-                &:hover {
-                    img {
-                        &.hover-image {
-                            @include opacity(1);
-                        }
-                    }
-                }
+            }
+            a {
+
             }
             .image {
                 height: 550px;

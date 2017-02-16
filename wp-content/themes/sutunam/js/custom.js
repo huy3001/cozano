@@ -843,7 +843,7 @@
         customJS.productMatchHeight();
 
         // Relate product slider
-        //customJS.relateProductSlider();
+        customJS.relateProductSlider();
 
         // Sub category
         customJS.subCategory();

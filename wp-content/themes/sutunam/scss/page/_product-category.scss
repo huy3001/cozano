@@ -346,7 +346,6 @@
             padding: 0 1px;
             margin: 0 0 35px;
             a {
-                display: block;
                 img {
                     margin: 0 0 10px;
                     -webkit-backface-visibility: hidden;
@@ -543,11 +542,6 @@
             li.product {
                 .image {
                     height: 340px;
-                    img:first-of-type {
-                        &:hover {
-                            @include opacity(0);
-                        }
-                    }
                 }
                 .info {
                     h3, h4 {

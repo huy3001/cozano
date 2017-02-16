@@ -543,7 +543,7 @@
             li.product {
                 .image {
                     height: 340px;
-                    img:first-child {
+                    img:first-of-type {
                         &:hover {
                             @include opacity(0);
                         }

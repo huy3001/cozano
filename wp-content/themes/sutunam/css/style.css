@@ -5492,7 +5492,7 @@ h6 {
 
   /* line 547, d:/xampp/htdocs/cozaro/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
-  .tax-product_cat ul.products li.product .image img:first-child:hover {
+  .tax-product_cat ul.products li.product .image img:first-of-type:hover {
     opacity: 0;
     filter: alpha(opacity=0);
   }

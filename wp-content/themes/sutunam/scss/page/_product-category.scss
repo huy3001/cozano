@@ -340,16 +340,8 @@
 
     ul.products {
         margin: 0 -1px;
-        cursor: move; /* fallback if grab cursor is unsupported */
-        cursor: grab;
-        cursor: -moz-grab;
-        cursor: -webkit-grab;
-        touch-action: pan-y;
-        @include transform(translate3d(0,0,0));
         li.product {
             clear: none;
-            display: block;
-            height: 100%;
             width: 16.666%;
             padding: 0 1px;
             margin: 0 0 35px;

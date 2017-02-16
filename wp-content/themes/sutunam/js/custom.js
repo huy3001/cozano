@@ -428,10 +428,16 @@
             }
         },
 
-        productTabIndex: function() {
+        productTouch: function() {
             var productLink = $('#product-category li.product .woocommerce-LoopProduct-link');
             if(productLink.length) {
-                productLink.attr('tabindex', 0);
+                if($(window).width() < $desktop) {
+                    productLink.on('touchstart', function () {
+                        $(this).trigger('hover');
+                    }).on('touchend', function () {
+                        $(this).trigger('hover');
+                    });
+                }
             }
         },
 
@@ -811,9 +817,6 @@
 
         // Show all products
         customJS.showAllProducts();
-
-        // Product tab index
-        customJS.productTabIndex();
     });
 
     /* Window load function */
@@ -841,6 +844,9 @@
 
         // Product match height
         customJS.productMatchHeight();
+
+        // Product tab index
+        customJS.productTouch();
 
         // Relate product slider
         customJS.relateProductSlider();

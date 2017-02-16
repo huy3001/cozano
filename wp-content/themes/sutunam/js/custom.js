@@ -428,6 +428,13 @@
             }
         },
 
+        productTabIndex: function() {
+            var productLink = $('#product-category li.product .woocommerce-LoopProduct-link');
+            if(productLink.length) {
+                productLink.attr('tabindex', 0);
+            }
+        },
+
         filterBarFixed: function() {
             var filterBar = $('.filter-bar');
             if(filterBar.length) {
@@ -804,6 +811,9 @@
 
         // Show all products
         customJS.showAllProducts();
+
+        // Product tab index
+        customJS.productTabIndex();
     });
 
     /* Window load function */

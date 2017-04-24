@@ -481,12 +481,18 @@
                 )
             ));
             Redux::setSection( $opt_name,array(
-                'title'   => 'Men Overview',
+                'title'   => 'Home Overview',
                 'icon'    => 'el-icon-eye-open',
-                'heading' => 'Men Overview',
-                'desc'    => '<br />Men overview can be edited from here.<br />',
+                'heading' => 'Home Overview',
+                'desc'    => '<br />All home overview can be edited from here.<br />',
                 'fields'  => array(
-
+                    array(
+                        'id'=>'section-men-overview-start',
+                        'type' => 'section',
+                        'title' => __('Men Overview'),
+                        'subtitle'=> __('Men overview can be edited from here', 'sutunam'),
+                        'indent' => true // Indent all options below until the next 'section' option is set.
+                    ),
                     array(
                         'id'        => 'men_desc',
                         'type'      => 'textarea',
@@ -535,7 +541,12 @@
                             'center' => 'Center'
                         ),
                         'default'  => 'left',
-                    )
+                    ),
+                    array(
+                        'id'=>'section-men-overview-end',
+                        'type' => 'section',
+                        'indent' => false // Indent all options below until the next 'section' option is set.
+                    ),
                 ),
             ));
 

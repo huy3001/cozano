@@ -71,13 +71,19 @@ $jk_options = get_option('redux_demo');
                 <?php if($jk_options['men_img']['url']): ?>
                     <div class="men-block content-block">
                         <div class="content-block-img">
-                            <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img']['url'] ?>" alt="" />
-                            <?php
-                            $men_img_tablet = wp_get_attachment_image_src($jk_options['men_img']['id'],'medium')[0];
-                            $men_img_mobile = wp_get_attachment_image_src($jk_options['men_img']['id'],'thumbnail')[0];
-                            ?>
-                            <img class="visible-sm" src="<?php echo $men_img_tablet ?>" alt="" />
-                            <img class="visible-xs" src="<?php echo $men_img_mobile ?>" alt="" />
+                            <?php if($jk_options['men_url']): ?>
+                            <a href="<?php echo $jk_options['men_url']?>" target="_blank">
+                            <?php endif; ?>
+                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img']['url'] ?>" alt="" />
+                                <?php
+                                $men_img_tablet = wp_get_attachment_image_src($jk_options['men_img']['id'],'medium')[0];
+                                $men_img_mobile = wp_get_attachment_image_src($jk_options['men_img']['id'],'thumbnail')[0];
+                                ?>
+                                <img class="visible-sm" src="<?php echo $men_img_tablet ?>" alt="" />
+                                <img class="visible-xs" src="<?php echo $men_img_mobile ?>" alt="" />
+                            <?php if($jk_options['men_url']): ?>
+                            </a>
+                            <?php endif; ?>
                         </div>
                         <div class="content-block-body <?php echo $jk_options['men_button_position'];?>">
                             <div class="content-block-info">
@@ -94,13 +100,19 @@ $jk_options = get_option('redux_demo');
                 <?php if($jk_options['women_img']['url']): ?>
                     <div class="women-block content-block">
                         <div class="content-block-img">
-                            <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['women_img']['url'] ?>" alt="" />
-                            <?php
-                            $women_img_tablet = wp_get_attachment_image_src($jk_options['women_img']['id'],'medium')[0];
-                            $women_img_mobile = wp_get_attachment_image_src($jk_options['women_img']['id'],'thumbnail')[0];
-                            ?>
-                            <img class="visible-sm" src="<?php echo $women_img_tablet ?>" alt="" />
-                            <img class="visible-xs" src="<?php echo $women_img_mobile ?>" alt="" />
+                            <?php if($jk_options['women_url']): ?>
+                            <a href="<?php echo $jk_options['women_url']?>" target="_blank">
+                            <?php endif; ?>
+                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['women_img']['url'] ?>" alt="" />
+                                <?php
+                                $women_img_tablet = wp_get_attachment_image_src($jk_options['women_img']['id'],'medium')[0];
+                                $women_img_mobile = wp_get_attachment_image_src($jk_options['women_img']['id'],'thumbnail')[0];
+                                ?>
+                                <img class="visible-sm" src="<?php echo $women_img_tablet ?>" alt="" />
+                                <img class="visible-xs" src="<?php echo $women_img_mobile ?>" alt="" />
+                            <?php if($jk_options['women_url']): ?>
+                            </a>
+                            <?php endif; ?>
                         </div>
                         <div class="content-block-body <?php echo $jk_options['women_button_position'];?>">
                             <div class="content-block-info">
@@ -117,13 +129,19 @@ $jk_options = get_option('redux_demo');
                 <?php if($jk_options['shoes_img']['url']): ?>
                     <div class="shoes-block content-block">
                         <div class="content-block-img">
-                            <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
-                            <?php
-                            $shoes_img_tablet = wp_get_attachment_image_src($jk_options['shoes_img']['id'],'medium')[0];
-                            $shoes_img_mobile = wp_get_attachment_image_src($jk_options['shoes_img']['id'],'thumbnail')[0];
-                            ?>
-                            <img class="visible-sm" src="<?php echo $shoes_img_tablet ?>" alt="" />
-                            <img class="visible-xs" src="<?php echo $shoes_img_mobile ?>" alt="" />
+                            <?php if($jk_options['shoes_url']): ?>
+                            <a href="<?php echo $jk_options['shoes_url']?>" target="_blank">
+                            <?php endif; ?>
+                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
+                                <?php
+                                $shoes_img_tablet = wp_get_attachment_image_src($jk_options['shoes_img']['id'],'medium')[0];
+                                $shoes_img_mobile = wp_get_attachment_image_src($jk_options['shoes_img']['id'],'thumbnail')[0];
+                                ?>
+                                <img class="visible-sm" src="<?php echo $shoes_img_tablet ?>" alt="" />
+                                <img class="visible-xs" src="<?php echo $shoes_img_mobile ?>" alt="" />
+                            <?php if($jk_options['shoes_url']): ?>
+                            </a>
+                            <?php endif; ?>
                         </div>
                         <div class="content-block-body <?php echo $jk_options['shoes_button_position'];?>">
                             <div class="content-block-info">
@@ -140,13 +158,19 @@ $jk_options = get_option('redux_demo');
                 <?php if($jk_options['bigsize_img']['url']): ?>
                     <div class="bigsize-block content-block">
                         <div class="content-block-img">
-                            <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['bigsize_img']['url'] ?>" alt="" />
-                            <?php
-                            $bigsize_img_tablet = wp_get_attachment_image_src($jk_options['bigsize_img']['id'],'medium')[0];
-                            $bigsize_img_mobile = wp_get_attachment_image_src($jk_options['bigsize_img']['id'],'thumbnail')[0];
-                            ?>
-                            <img class="visible-sm" src="<?php echo $bigsize_img_tablet ?>" alt="" />
-                            <img class="visible-xs" src="<?php echo $bigsize_img_mobile ?>" alt="" />
+                            <?php if($jk_options['bigsize_url']): ?>
+                            <a href="<?php echo $jk_options['bigsize_url']?>" target="_blank">
+                            <?php endif; ?>
+                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['bigsize_img']['url'] ?>" alt="" />
+                                <?php
+                                $bigsize_img_tablet = wp_get_attachment_image_src($jk_options['bigsize_img']['id'],'medium')[0];
+                                $bigsize_img_mobile = wp_get_attachment_image_src($jk_options['bigsize_img']['id'],'thumbnail')[0];
+                                ?>
+                                <img class="visible-sm" src="<?php echo $bigsize_img_tablet ?>" alt="" />
+                                <img class="visible-xs" src="<?php echo $bigsize_img_mobile ?>" alt="" />
+                            <?php if($jk_options['bigsize_url']): ?>
+                            </a>
+                            <?php endif; ?>
                         </div>
                         <div class="content-block-body <?php echo $jk_options['bigsize_button_position'];?>">
                             <div class="content-block-info">
@@ -163,13 +187,19 @@ $jk_options = get_option('redux_demo');
                 <?php if($jk_options['touch_img']['url']): ?>
                     <div class="touch-block content-block">
                         <div class="content-block-img">
-                            <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['touch_img']['url'] ?>" alt="" />
-                            <?php
-                            $touch_img_tablet = wp_get_attachment_image_src($jk_options['touch_img']['id'],'medium')[0];
-                            $touch_img_mobile = wp_get_attachment_image_src($jk_options['touch_img']['id'],'thumbnail')[0];
-                            ?>
-                            <img class="visible-sm" src="<?php echo $touch_img_tablet ?>" alt="" />
-                            <img class="visible-xs" src="<?php echo $touch_img_mobile ?>" alt="" />
+                            <?php if($jk_options['touch_url']): ?>
+                            <a href="<?php echo $jk_options['touch_url']?>" target="_blank">
+                            <?php endif; ?>
+                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['touch_img']['url'] ?>" alt="" />
+                                <?php
+                                $touch_img_tablet = wp_get_attachment_image_src($jk_options['touch_img']['id'],'medium')[0];
+                                $touch_img_mobile = wp_get_attachment_image_src($jk_options['touch_img']['id'],'thumbnail')[0];
+                                ?>
+                                <img class="visible-sm" src="<?php echo $touch_img_tablet ?>" alt="" />
+                                <img class="visible-xs" src="<?php echo $touch_img_mobile ?>" alt="" />
+                            <?php if($jk_options['touch_url']): ?>
+                            </a>
+                            <?php endif; ?>
                         </div>
                         <div class="content-block-body <?php echo $jk_options['touch_button_position'];?>">
                             <div class="content-block-info">

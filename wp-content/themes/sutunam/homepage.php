@@ -72,7 +72,7 @@ $jk_options = get_option('redux_demo');
                     <div class="men-block content-block">
                         <div class="content-block-img">
                             <?php if($jk_options['men_url']): ?>
-                            <a href="<?php echo $jk_options['men_url']?>" target="_blank">
+                            <a href="<?php echo $jk_options['men_url']?>" target="_self">
                             <?php endif; ?>
                                 <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['men_img']['url'] ?>" alt="" />
                                 <?php
@@ -101,7 +101,7 @@ $jk_options = get_option('redux_demo');
                     <div class="women-block content-block">
                         <div class="content-block-img">
                             <?php if($jk_options['women_url']): ?>
-                            <a href="<?php echo $jk_options['women_url']?>" target="_blank">
+                            <a href="<?php echo $jk_options['women_url']?>" target="_self">
                             <?php endif; ?>
                                 <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['women_img']['url'] ?>" alt="" />
                                 <?php
@@ -130,7 +130,7 @@ $jk_options = get_option('redux_demo');
                     <div class="shoes-block content-block">
                         <div class="content-block-img">
                             <?php if($jk_options['shoes_url']): ?>
-                            <a href="<?php echo $jk_options['shoes_url']?>" target="_blank">
+                            <a href="<?php echo $jk_options['shoes_url']?>" target="_self">
                             <?php endif; ?>
                                 <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
                                 <?php
@@ -159,7 +159,7 @@ $jk_options = get_option('redux_demo');
                     <div class="bigsize-block content-block">
                         <div class="content-block-img">
                             <?php if($jk_options['bigsize_url']): ?>
-                            <a href="<?php echo $jk_options['bigsize_url']?>" target="_blank">
+                            <a href="<?php echo $jk_options['bigsize_url']?>" target="_self">
                             <?php endif; ?>
                                 <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['bigsize_img']['url'] ?>" alt="" />
                                 <?php
@@ -188,7 +188,7 @@ $jk_options = get_option('redux_demo');
                     <div class="touch-block content-block">
                         <div class="content-block-img">
                             <?php if($jk_options['touch_url']): ?>
-                            <a href="<?php echo $jk_options['touch_url']?>" target="_blank">
+                            <a href="<?php echo $jk_options['touch_url']?>" target="_self">
                             <?php endif; ?>
                                 <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['touch_img']['url'] ?>" alt="" />
                                 <?php

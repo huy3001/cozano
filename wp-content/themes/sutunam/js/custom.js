@@ -724,10 +724,10 @@
                             if($(this).hasClass('active')) {
                                 catList.animate({
                                     scrollLeft: $(this).position().left
-                                }, 500);
+                                }, 100);
                             }
                         });
-                    }, 500);
+                    }, 100);
                 }
             }
         },

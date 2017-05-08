@@ -147,15 +147,15 @@ if ($price <= 100000){
 	?>
 
 	<div class="image">
-	<?php
-	/**
-	 * woocommerce_before_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
-	?>
+        <?php
+        /**
+         * woocommerce_before_shop_loop_item_title hook.
+         *
+         * @hooked woocommerce_show_product_loop_sale_flash - 10
+         * @hooked woocommerce_template_loop_product_thumbnail - 10
+         */
+        do_action( 'woocommerce_before_shop_loop_item_title' );
+        ?>
 
         <?php
         $hoverImg = types_render_field("hover-image", array('url'=>true, 'size' => 'thumbnail'));
@@ -163,6 +163,20 @@ if ($price <= 100000){
             <!-- Add hover image -->
             <img class="hover-image" src="<?php echo $hoverImg ?>" alt=""/>
         <?php } ?>
+
+        <div class="size">
+            <?php
+            $sizes = get_the_terms( get_the_ID(), 'size' );
+            foreach ($sizes as $size){
+                if($size->slug == 's'){
+                    $value = 'SS';
+                }else{
+                    $value = $size->slug;
+                }
+                echo '<span>'.$size->name .'</span>';
+            }
+            ?>
+        </div>
 	</div>
 
 	<div class="info">

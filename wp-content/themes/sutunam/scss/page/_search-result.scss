@@ -8,6 +8,7 @@
             margin: 30px auto;
         }
     }
+
     .search-result-content {
         margin: 0 -1px;
         .result-block {
@@ -30,11 +31,42 @@
         }
     }
 
+    &[lang="vi"] {
+        .tax-product_cat {
+            ul.products {
+                li.product {
+                    .onsold,
+                    .onsale {
+                        font-size: 15px;
+                        white-space: normal;
+                        padding: 12px 0;
+                    }
+                }
+            }
+        }
+    }
+
     @include bp(max-width, $tablet - 1) {
         .search-result-heading {
             h1 {
                 font-size: 20px;
                 margin: 20px auto;
+            }
+        }
+    }
+
+    @include bp(max-width, $mobile) {
+        &[lang="vi"] {
+            .tax-product_cat {
+                ul.products {
+                    li.product {
+                        .onsold,
+                        .onsale {
+                            font-size: 12px;
+                            padding: 6px 0;
+                        }
+                    }
+                }
             }
         }
     }

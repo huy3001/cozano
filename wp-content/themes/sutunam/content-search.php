@@ -53,6 +53,27 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
          */
         do_action( 'woocommerce_before_shop_loop_item_title' );
         ?>
+
+        <?php
+        $hoverImg = types_render_field("hover-image", array('url'=>true, 'size' => 'thumbnail'));
+        if($hoverImg) { ?>
+            <!-- Add hover image -->
+            <img class="hover-image" src="<?php echo $hoverImg ?>" alt=""/>
+        <?php } ?>
+
+        <div class="size">
+            <?php
+            $sizes = get_the_terms( get_the_ID(), 'size' );
+            foreach ($sizes as $size){
+                if($size->slug == 's'){
+                    $value = 'SS';
+                }else{
+                    $value = $size->slug;
+                }
+                echo '<span>'.$size->name .'</span>';
+            }
+            ?>
+        </div>
     </div>
 
     <div class="info">

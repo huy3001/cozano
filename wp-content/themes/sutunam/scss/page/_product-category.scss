@@ -357,6 +357,10 @@
                         &:hover {
                             @include opacity(1);
                         }
+                        &:hover + .size {
+                            z-index: 1;
+                            @include opacity(0.8);
+                        }
                     }
                 }
             }
@@ -390,6 +394,28 @@
                     left: 50%;
                     @include transform(translateX(-50%));
                     @include transition(opacity 0.3s ease);
+                }
+            }
+            .size {
+                width: 60%;
+                text-align: center;
+                position: absolute;
+                bottom: 10px;
+                left: 20%;
+                z-index: -1;
+                @include opacity(0);
+                @include transition(opacity 0.3s ease);
+                span {
+                    background: $black;
+                    display: inline-block;
+                    vertical-align: top;
+                    color: $white;
+                    font-size: 14px;
+                    text-align: center;
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 3px 3px 0;
+                    padding: 8px 4px;
                 }
             }
             .info {
@@ -678,6 +704,16 @@
             li.product {
                 .image {
                     height: 300px;
+                }
+                .size {
+                    width: 80%;
+                    left: 10%;
+                    span {
+                        font-size: 12px;
+                        width: 28px;
+                        height: 28px;
+                        padding: 6px 2px;
+                    }
                 }
             }
         }

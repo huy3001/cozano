@@ -354,11 +354,7 @@
                     &.hover-image {
                         @include opacity(0);
                         z-index: 1;
-                    }
-                }
-                &:hover {
-                    img {
-                        &.hover-image {
+                        &:hover {
                             @include opacity(1);
                         }
                     }
@@ -370,6 +366,22 @@
                 margin: 0 0 10px;
                 overflow: hidden;
                 position: relative;
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 10%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    z-index: 2;
+                }
+                &:before {
+                    left: 0;
+                }
+                &:after {
+                    right: 0;
+                }
                 img {
                     height: 100%;
                     width: auto;

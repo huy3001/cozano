@@ -163,7 +163,13 @@ if ($price <= 100000){
             <!-- Add hover image -->
             <img class="hover-image" src="<?php echo $hoverImg ?>" alt=""/>
         <?php } ?>
+	</div>
 
+	<div class="info">
+        <?php if($product->sku): ?>
+        <h3><?php echo $product->sku; ?></h3>
+        <?php endif; ?>
+        <h4><?php echo get_the_title();?></h4>
         <div class="size">
             <?php
             $sizes = get_the_terms( get_the_ID(), 'size' );
@@ -177,13 +183,6 @@ if ($price <= 100000){
             }
             ?>
         </div>
-	</div>
-
-	<div class="info">
-        <?php if($product->sku): ?>
-        <h3><?php echo $product->sku; ?></h3>
-        <?php endif; ?>
-        <h4><?php echo get_the_title();?></h4>
     </div>
 
 	<?php

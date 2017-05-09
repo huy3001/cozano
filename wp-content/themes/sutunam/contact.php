@@ -6,12 +6,15 @@
  * Time: 10:47
  * Template Name: Contact Page
  */
+
 get_header();
+include(TEMPLATEPATH . '/left-content.php');
 ?>
+<div class="right-content">
 <?php
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), FALSE);
 ?>
-<section class="contact-top-img parallax-window" style="background-image: url('<?php echo $image[0] ?>')">
+<!--<section class="contact-top-img parallax-window" style="background-image: url('<?php echo $image[0] ?>')">
     <img src="<?php echo $image[0] ?>" alt=""/>
 </section>
 <section class="contact-wrapper">
@@ -48,7 +51,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), FALSE);
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <?php
 get_footer();
 ?>

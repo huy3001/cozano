@@ -564,7 +564,7 @@
                         text-align: center;
                         width: 30px;
                         height: 30px;
-                        margin: 0 3px 3px 0;
+                        margin: 2px;
                         padding: 6px 2px;
                     }
                 }
@@ -824,6 +824,15 @@
                     .image {
                         height: 340px;
                     }
+                    .size {
+                        width: 100%;
+                        left: 0;
+                        span {
+                            width: 26px;
+                            height: 26px;
+                            padding: 4px 2px;
+                        }
+                    }
                     .info {
                         h3, h4 {
                             overflow: hidden;
@@ -1004,11 +1013,13 @@
                         height: 300px;
                     }
                     .size {
+                        top: -60px;
                         span {
-                            font-size: 10px;
-                            width: 18px;
-                            height: 18px;
-                            padding: 2px;
+                            font-size: 12px;
+                            width: 22px;
+                            height: 22px;
+                            margin: 1px;
+                            padding: 3px 2px;
                         }
                     }
                 }

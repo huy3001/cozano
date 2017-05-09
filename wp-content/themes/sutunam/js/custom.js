@@ -429,7 +429,7 @@
         },
 
         touchLink: function() {
-            var hoverLink = $('#product-category li.product .hover-image, #product-category li.product .info, .content-block-body a');
+            var hoverLink = $('#product-category li.product .hover-image, #product-category li.product .info, .content-block-body a, .cat-list .swiper-slide');
             if(hoverLink.length) {
                 if($(window).width() < $desktop) {
                     hoverLink.on('touchstart', function () {

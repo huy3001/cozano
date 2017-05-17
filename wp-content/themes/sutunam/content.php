@@ -25,6 +25,7 @@
             </div>
             <div class="entry-content">
                 <?php sutunam_entry_content(); ?>
+                <span class="read-more"><?php echo __('Read more', 'sutunam') ?></span>
             </div>
         </div>
     </a>

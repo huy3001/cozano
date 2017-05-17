@@ -253,15 +253,8 @@ if (!function_exists('sutunam_entry_meta')) {
 }
 
 /**
- * Add Read More to excerpt
+ * Custom excerpt length
  */
-function sutunam_readmore()
-{
-    return '<span class="read-more">' . __('Read more', 'sutunam') . '</span>';
-}
-
-add_filter('excerpt_more', 'sutunam_readmore');
-
 function wpdocs_custom_excerpt_length( $length ) {
     return 10;
 }

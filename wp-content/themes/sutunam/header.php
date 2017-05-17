@@ -24,10 +24,6 @@ $jk_options = get_option('redux_demo');
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta name="keywords" content="" />
 
-    <!-- Global Facebook Open Graph tags -->
-    <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
-    <!-- End Global Facebook Open Graph tags -->
-
     <!-- ======================================================================
     Mobile Specific Meta
     ======================================================================= -->

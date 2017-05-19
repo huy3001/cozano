@@ -39,6 +39,26 @@ $jk_options = get_option('redux_demo');
 
 </head>
 <body <?php body_class('no-sidebar'); ?> <?php language_attributes(); ?>>
+<!-- Facebook SDK -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '297276577364321',
+            xfbml      : true,
+            version    : 'v2.9'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- End Facebook SDK -->
 <div id="wrapper">
 <header id="header">
     <div class="menu nav-menu">

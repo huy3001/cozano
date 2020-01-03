@@ -43,7 +43,7 @@ if($bgType) {
 if($bgColor) {
     echo 'background-color:'.$bgColor.';';
 }
-?>;">
+?>">
     <ul class="image-list">
 	<?php
 		if ( has_post_thumbnail() ) {

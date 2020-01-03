@@ -44,7 +44,7 @@ $bgColor = types_render_field("color", array());
     if($bgColor) {
         echo 'background-color:'.$bgColor.';';
     }
-    ?>;">
+    ?>">
     <div class="product-container">
     <?php if(!$product->is_in_stock()):?>
         <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsold">' . __( 'Sold!', 'woocommerce' ) . '</span>', $post, $product ); ?>

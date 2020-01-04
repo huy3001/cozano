@@ -44,7 +44,7 @@ if($bgColor) {
     echo 'background-color:'.$bgColor.';';
 }
 ?>">
-    <ul class="image-list">
+    <div class="image-list">
 	<?php
 		if ( has_post_thumbnail() ) {
 			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
@@ -62,14 +62,14 @@ if($bgColor) {
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s" style="background-image: url(%s);">%s</a></li>', $image_link, $image_caption, $image_link, $image ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<div><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s" style="background-image: url(%s);">%s</a></div>', $image_link, $image_caption, $image_link, $image ), $post->ID );
 			$attachment_ids = $product->get_gallery_attachment_ids();
 			if ( $attachment_ids ) {
 				foreach ( $attachment_ids as $attachment_id ) {
 					$image_link    = wp_get_attachment_url( $attachment_id );
 					$img = wp_get_attachment_image_src($attachment_id,'large')[0];
 
-					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s" style="background-image: url(%s);"><img src="%s" data-zoom-image="%s" /></a></li>', $image_link, '', $image_link, $img, $image_link ), $attachment_id );
+					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<div><a href="%s" itemprop="image" class="woocommerce-main-image" title="%s" style="background-image: url(%s);"><img src="%s" data-zoom-image="%s" /></a></div>', $image_link, '', $image_link, $img, $image_link ), $attachment_id );
 				}
 			}
 		} else {
@@ -78,7 +78,7 @@ if($bgColor) {
 
 		}
 	?>
-    </ul>
+    </div>
 
 	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 </div>

@@ -11,7 +11,9 @@
     // Product detail functions
     var imageList = $('.image-list'),
         thumbList = $('.thumb-list'),
-        productContainer = $('.product-container');
+        productContainer = $('.product-container'),
+        productImages = $('.images', productContainer);
+
     var productDetail = {
         // Add zoom to product slider
         addZoom: function(imageList) {
@@ -38,6 +40,7 @@
                             image.addClass('zoomed');
                             productContainer.css('opacity', 0);
                             if($(window).width() < $desktop) {
+                                // Init pan zoom
                                 $('body').append('<div class="zoomContainer"><div class="panzoom"><img src="'+ image.attr('src') +'" alt="'+ image.attr('alt') +'"></div></div>'); // add zoom container to body
                                 var zoomContainer = $('.zoomContainer'),
                                     panZoom = $('.panzoom', zoomContainer),
@@ -64,6 +67,7 @@
                                 }, 500);
                             }
                             else {
+                                // Init elevate zoom
                                 $('.zoomContainer').show();
                                 image.elevateZoom(zoomOption); // init zoom
                             }
@@ -106,7 +110,6 @@
                     asNavFor: '.thumb-list',
                     fade: true,
                     speed: 500,
-                    slide: 'li',
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     swipe: false,
@@ -130,7 +133,7 @@
                         }
                     ]
                 });
-                $('li a', imageList).on('click', function(e) {
+                $('a', imageList).on('click', function(e) {
                     e.preventDefault();
                 });
             }
@@ -141,13 +144,12 @@
                     arrows: arrow,
                     asNavFor: '.image-list',
                     focusOnSelect: true,
-                    slide: 'li',
                     slidesToShow: thumbCount,
                     slidesToScroll: slideToScroll,
                     swipe: false,
                     vertical: true
                 });
-                $('li a', thumbList).on('click', function(e) {
+                $('a', thumbList).on('click', function(e) {
                     e.preventDefault();
                 });
             }
@@ -158,12 +160,12 @@
 
         // Reinit product slider
         sliderReinit: function(imageList, thumbList) {
-            if(imageList.length) {
+            if(imageList.hasClass('slick-initialized')) {
                 imageList.slick('unslick');
             }
 
-            if(thumbList.length) {
-                thumbList.slick('unslick')
+            if(thumbList.hasClass('slick-initialized')) {
+                thumbList.slick('unslick');
             }
 
             setTimeout(function() {
@@ -734,20 +736,17 @@
 
         sidebarToggle: function () {
             var toggleBtn = $('.toggle-menu'),
-                sidebar = $('.left-content'),
                 body = $('body');
             if(toggleBtn.length) {
                 toggleBtn.off('click').on('click', function() {
                     if(body.hasClass('no-sidebar')) {
                         body.removeClass('no-sidebar');
-                        customJS.productMatchHeight();
-                        productDetail.sliderReinit(imageList, thumbList);
                     }
                     else {
                         body.addClass('no-sidebar');
-                        customJS.productMatchHeight();
-                        productDetail.sliderReinit(imageList, thumbList);
                     }
+                    customJS.productMatchHeight();
+                    productDetail.sliderReinit(imageList, thumbList);
                 });
             }
         },

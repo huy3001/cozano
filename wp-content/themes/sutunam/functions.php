@@ -294,6 +294,7 @@ function stn_frontend_scripts() {
     wp_enqueue_style( 'bootstrap-select',   get_template_directory_uri() . '/css/bootstrap-select.min.css');
     wp_enqueue_style( 'font-awesome-styles',   get_template_directory_uri() . '/css/font-awesome.min.css');
     wp_enqueue_style( 'font-roboto',   'https://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,vietnamese');
+    wp_enqueue_style( 'fancybox',   get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.css');
     wp_enqueue_style( 'swiper',   get_template_directory_uri() . '/css/swiper.min.css');
     wp_enqueue_style( 'styles',   get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style( 'custom',   get_template_directory_uri() . '/css/custom.css');
@@ -306,11 +307,11 @@ function stn_frontend_scripts() {
     wp_enqueue_script( 'bootstrap-select',   get_template_directory_uri() . '/js/bootstrap-select.min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'elevatezoom',   get_template_directory_uri() . '/js/jquery.elevatezoom.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'slick',   get_template_directory_uri() . '/js/slick/slick.min.js',array('jquery'), '3.1.1', true);
+    wp_enqueue_script( 'fancybox',   get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'sticky',   get_template_directory_uri() . '/js/jquery.sticky.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'match-height',   get_template_directory_uri() . '/js/jquery.matchHeight-min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'nicescroll',   get_template_directory_uri() . '/js/jquery.nicescroll.min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'img-centering',   get_template_directory_uri() . '/js/imgcentering.min.js',array('jquery'), '3.1.1', true);
-    wp_enqueue_script( 'panzoom',   get_template_directory_uri() . '/js/jquery.panzoom.min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'mobile-events',   get_template_directory_uri() . '/js/jquery.mobile-events.min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'swiper',   get_template_directory_uri() . '/js/swiper.min.js',array('jquery'), '3.1.1', true);
     wp_enqueue_script( 'custom',   get_template_directory_uri() . '/js/custom.js',array('jquery'), '3.1.1', true);

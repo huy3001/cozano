@@ -11,8 +11,7 @@
     // Product detail functions
     var imageList = $('.image-list'),
         thumbList = $('.thumb-list'),
-        productContainer = $('.product-container'),
-        productImages = $('.images', productContainer);
+        productContainer = $('.product-container');
 
     var productDetail = {
         // Add zoom to product slider
@@ -27,52 +26,39 @@
                     };
 
                 function makeZoom(imageLink) {
-                    imageLink.off('click').on('click', function(e) {
-                        e.preventDefault();
-                        var image = $(this).find('img');
-                        if(image.hasClass('zoomed')) {
-                            image.removeClass('zoomed');
-                            image.removeData('elevateZoom'); // remove zoom instance from image
-                            $('.zoomContainer').remove(); // remove zoom container from DOM
-                            productContainer.removeAttr('style');
-                        }
-                        else {
-                            image.addClass('zoomed');
-                            productContainer.css('opacity', 0);
-                            if($(window).width() < $desktop) {
-                                // Init pan zoom
-                                $('body').append('<div class="zoomContainer"><div class="panzoom"><img src="'+ image.attr('src') +'" alt="'+ image.attr('alt') +'"></div></div>'); // add zoom container to body
-                                var zoomContainer = $('.zoomContainer'),
-                                    panZoom = $('.panzoom', zoomContainer),
-                                    imgZoom = $('img', zoomContainer);
-                                panZoom.panzoom({
-                                    contain: 'invert',
-                                    minScale: 1,
-                                    maxScale: 3,
-                                    increment: 0.5,
-                                    startTransform: 'scale(1,1)',
-                                    transition: true
-                                });
-                                zoomContainer.animate({
-                                    opacity: 1
-                                }, 300);
-                                setTimeout(function() {
-                                    $('body').css('position', 'fixed');
-                                    panZoom.on('tap', function() {
-                                        image.removeClass('zoomed');
-                                        zoomContainer.remove(); // remove zoom container from DOM
-                                        productContainer.removeAttr('style');
-                                        $('body').removeAttr('style');
-                                    });
-                                }, 500);
+                    if($(window).width() < $desktop) {
+                        var productImages = $('[data-fancybox="images"]', imageList);
+                        // Init fancybox zoom
+                        productImages.fancybox({
+                            image: {
+                                preload: true
+                            },
+                            infobar: false,
+                            loop: true,
+                            toolbar: false,
+                            transitionEffect: "slide",
+                            clickSlide: "close",
+                            clickOutside: "close"
+                        });
+                    }
+                    else {
+                        imageLink.off('click').on('click', function(e) {
+                            e.preventDefault();
+                            var image = $(this).find('img');
+                            if(image.hasClass('zoomed')) {
+                                image.removeClass('zoomed');
+                                image.removeData('elevateZoom'); // remove zoom instance from image
+                                $('.zoomContainer').remove(); // remove zoom container from DOM
+                                productContainer.removeAttr('style');
                             }
                             else {
+                                image.addClass('zoomed');
+                                productContainer.css('opacity', 0);
                                 // Init elevate zoom
-                                $('.zoomContainer').show();
                                 image.elevateZoom(zoomOption); // init zoom
                             }
-                        }
-                    });
+                        });
+                    }
                 }
 
                 // First active image zoom
@@ -132,9 +118,6 @@
                             }
                         }
                     ]
-                });
-                $('a', imageList).on('click', function(e) {
-                    e.preventDefault();
                 });
             }
 

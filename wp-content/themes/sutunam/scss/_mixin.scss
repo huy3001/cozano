@@ -6,6 +6,12 @@
     animation: $value;
 }
 
+/* backdrop-filter */
+@mixin backdrop-filter($value) {
+    -webkit-backdrop-filter: $value;
+    backdrop-filter: $value;
+}
+
 /* border radius */
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;

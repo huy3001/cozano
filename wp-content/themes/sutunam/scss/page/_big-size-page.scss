@@ -1,8 +1,11 @@
 /* Shoes page style */
 
-.page-template-shoes {
+.page-template-bigsize {
     @extend .home;
+    @import "../component/sub-category";
     @import "../component/featured-product";
+    @import "../component/content-desc";
+    @import "../component/content-image";
     .content-block {
         &.no-feature {
             min-height: 550px;

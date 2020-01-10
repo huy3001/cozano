@@ -4,7 +4,7 @@
  * User: chutienphuc
  * Date: 23/09/2015
  * Time: 10:47
- * Template Name: Shoes Page
+ * Template Name: Sale Page
  */
 get_header(); ?>
 <?php
@@ -12,19 +12,44 @@ $jk_options = get_option('redux_demo');
 ?>
 <?php include (TEMPLATEPATH . '/left-content.php'); ?>
 <div class="right-content">
+    <?php
+    global $wp_query;
+    echo '<div class="cat-sub-list"><div class="container"><div class="row">';
+    $cat = get_term_by('slug','men','product_cat');
+    $args = array(
+        'hierarchical' => 1,
+        'show_option_none' => '',
+        'hide_empty' => 0,
+        'parent' => $cat->term_id,
+        'taxonomy' => 'product_cat'
+    );
+    $categories = get_categories( $args );
+    echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
+    foreach($categories as $category){
+        $link = get_term_link( $category->slug, $category->taxonomy );
+        $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+        $image_sub = wp_get_attachment_url( $thumbnail );
+        if($category->term_id == $cat->term_id)
+            echo '<div class="swiper-slide active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
+        else
+            echo '<div class="swiper-slide"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
+    }
+    echo '</div></div></div></div></div>';
+    ?>
+
 	<div class="container">
 		<div class="row">
             <?php
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'shoes',
+                'product_cat' =>'sale',
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
             );
             $loop = new WP_Query( $args );
             ?>
-			<div class="shoes-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+			<div class="sale-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -44,11 +69,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
-				    <img src="<?php echo $jk_options['shoes_img_option_1']['url'] ?>" alt="" />
+				    <img src="<?php echo $jk_options['sale_img_option_1']['url'] ?>" alt="" />
                 </div>
 				<div class="content-block-body">
-					<?php echo $jk_options['shoes_desc_option_1']?>
-					<a href="<?php echo $jk_options['shoes_url_option_1']?>" target="_self">
+					<?php echo $jk_options['sale_desc_option_1']?>
+					<a href="<?php echo $jk_options['sale_url_option_1']?>" target="_self">
 						<span>shopping</span>
 					</a>
 				</div>
@@ -58,14 +83,14 @@ $jk_options = get_option('redux_demo');
             <?php
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'shoes',
+                'product_cat' =>'sale',
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="shoes-option-2 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="sale-option-2 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -85,11 +110,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
-                    <img src="<?php echo $jk_options['shoes_img_option_2']['url'] ?>" alt="" />
+                    <img src="<?php echo $jk_options['sale_img_option_2']['url'] ?>" alt="" />
                 </div>
                 <div class="content-block-body">
-                    <?php echo $jk_options['shoes_desc_option_2']?>
-                    <a href="<?php echo $jk_options['shoes_url_option_2']?>" target="_self">
+                    <?php echo $jk_options['sale_desc_option_2']?>
+                    <a href="<?php echo $jk_options['sale_url_option_2']?>" target="_self">
                         <span>shopping</span>
                     </a>
                 </div>
@@ -99,14 +124,14 @@ $jk_options = get_option('redux_demo');
             <?php
             $args = array(
                 'post_type' => 'product',
-                'product_cat' =>'shoes',
+                'product_cat' =>'sale',
                 'meta_key' => '_featured',
                 'meta_value' => 'yes',
                 'posts_per_page' => 1
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="shoes-option-3 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="sale-option-3 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -126,11 +151,11 @@ $jk_options = get_option('redux_demo');
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
                 <div class="content-block-img">
-                    <img src="<?php echo $jk_options['shoes_img_option_3']['url'] ?>" alt="" />
+                    <img src="<?php echo $jk_options['sale_img_option_3']['url'] ?>" alt="" />
                 </div>
                 <div class="content-block-body">
-                    <?php echo $jk_options['shoes_desc_option_3']?>
-                    <a href="<?php echo $jk_options['shoes_url_option_3']?>" target="_self">
+                    <?php echo $jk_options['sale_desc_option_3']?>
+                    <a href="<?php echo $jk_options['sale_url_option_3']?>" target="_self">
                         <span>shopping</span>
                     </a>
                 </div>

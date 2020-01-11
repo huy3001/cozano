@@ -912,7 +912,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'men_des_option_1',
             'type' => 'textarea',
-            'title' => __('Men option description 1'),
+            'title' => __('Men Description Option 1'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -928,7 +928,7 @@ Redux::setSection($opt_name, array(
             'id' => 'men_img_option_1',
             'type' => 'media',
             'url' => true,
-            'title' => __('Men Option Image 1'),
+            'title' => __('Men Image Option 1'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -980,7 +980,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'men_des_option_2',
             'type' => 'textarea',
-            'title' => __('Men option description 2'),
+            'title' => __('Men Description Option 2'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -996,7 +996,7 @@ Redux::setSection($opt_name, array(
             'id' => 'men_img_option_2',
             'type' => 'media',
             'url' => true,
-            'title' => __('Men Option Image 2'),
+            'title' => __('Men Image Option 2'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1048,7 +1048,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'men_des_option_3',
             'type' => 'textarea',
-            'title' => __('Men option description 3'),
+            'title' => __('Men Description Option 3'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1064,7 +1064,7 @@ Redux::setSection($opt_name, array(
             'id' => 'men_img_option_3',
             'type' => 'media',
             'url' => true,
-            'title' => __('Men Option Image 3'),
+            'title' => __('Men Image Option 3'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1112,142 +1112,6 @@ Redux::setSection($opt_name, array(
                 'center' => 'Center'
             ),
             'default' => 'left',
-        ),
-        array(
-            'id' => 'men_des_option_4',
-            'type' => 'textarea',
-            'title' => __('Men option description 4'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'men_img_option_4',
-            'type' => 'media',
-            'url' => true,
-            'title' => __('Men Option Image 4'),
-            'compiler' => 'true',
-            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-            'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
-            'subtitle' => __('Upload any media using the WordPress native uploader', 'sutunam')
-        ),
-        array(
-            'id' => 'men_url_option_4',
-            'type' => 'text',
-            'title' => 'Men Url Option 4',
-        ),
-        array(
-            'id' => 'men_category_4',
-            'type' => 'select',
-            'title' => __('Select category to display feature product', 'redux-framework-demo'),
-            'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-            'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-            // Must provide key => value pairs for select options
-            'data' => 'product_cat'
-        ),
-        array(
-            'id' => 'men_content_option_4',
-            'type' => 'textarea',
-            'title' => __('Men Content Option 4'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'men_button_option_4',
-            'type' => 'select',
-            'title' => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc' => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options' => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default' => 'left',
-        ),
-        array(
-            'id' => 'men_des_option_5',
-            'type' => 'textarea',
-            'title' => __('Men option description 5'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'men_img_option_5',
-            'type' => 'media',
-            'url' => true,
-            'title' => __('Men Option Image 5'),
-            'compiler' => 'true',
-            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-            'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
-            'subtitle' => __('Upload any media using the WordPress native uploader', 'sutunam')
-        ),
-        array(
-            'id' => 'men_url_option_5',
-            'type' => 'text',
-            'title' => 'Men Url Option 5',
-        ),
-        array(
-            'id' => 'men_category_5',
-            'type' => 'select',
-            'title' => __('Select category to display feature product', 'redux-framework-demo'),
-            'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-            'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-            // Must provide key => value pairs for select options
-            'data' => 'product_cat'
-        ),
-        array(
-            'id' => 'men_content_option_5',
-            'type' => 'textarea',
-            'title' => __('Men Content Option 5'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'men_button_option_5',
-            'type' => 'select',
-            'title' => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc' => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options' => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default' => 'left',
         )
     ),
 ));
@@ -1262,7 +1126,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'women_des_option_1',
             'type' => 'textarea',
-            'title' => __('Women option description 1'),
+            'title' => __('Women Description Option 1'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1278,7 +1142,7 @@ Redux::setSection($opt_name, array(
             'id' => 'women_img_option_1',
             'type' => 'media',
             'url' => true,
-            'title' => __('Women Option Image 1'),
+            'title' => __('Women Image Option 1'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1330,7 +1194,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'women_des_option_2',
             'type' => 'textarea',
-            'title' => __('Women option description 2'),
+            'title' => __('Women Description Option 2'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1346,7 +1210,7 @@ Redux::setSection($opt_name, array(
             'id' => 'women_img_option_2',
             'type' => 'media',
             'url' => true,
-            'title' => __('Women Option Image 2'),
+            'title' => __('Women Image Option 2'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1398,7 +1262,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'women_des_option_3',
             'type' => 'textarea',
-            'title' => __('Women option description 3'),
+            'title' => __('Women Description Option 3'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1414,7 +1278,7 @@ Redux::setSection($opt_name, array(
             'id' => 'women_img_option_3',
             'type' => 'media',
             'url' => true,
-            'title' => __('Women Option Image 3'),
+            'title' => __('Women Image Option 3'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1462,142 +1326,6 @@ Redux::setSection($opt_name, array(
                 'center' => 'Center'
             ),
             'default' => 'left',
-        ),
-        array(
-            'id' => 'women_des_option_4',
-            'type' => 'textarea',
-            'title' => __('Women option description 4'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'women_img_option_4',
-            'type' => 'media',
-            'url' => true,
-            'title' => __('Women Option Image 4'),
-            'compiler' => 'true',
-            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-            'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
-            'subtitle' => __('Upload any media using the WordPress native uploader', 'sutunam')
-        ),
-        array(
-            'id' => 'women_url_option_4',
-            'type' => 'text',
-            'title' => 'Women Url Option 4',
-        ),
-        array(
-            'id' => 'women_category_4',
-            'type' => 'select',
-            'title' => __('Select category to display feature product', 'redux-framework-demo'),
-            'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-            'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-            // Must provide key => value pairs for select options
-            'data' => 'product_cat'
-        ),
-        array(
-            'id' => 'women_content_option_4',
-            'type' => 'textarea',
-            'title' => __('Women Content Option 4'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'women_button_option_4',
-            'type' => 'select',
-            'title' => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc' => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options' => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default' => 'left',
-        ),
-        array(
-            'id' => 'women_des_option_5',
-            'type' => 'textarea',
-            'title' => __('Women option description 5'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'women_img_option_5',
-            'type' => 'media',
-            'url' => true,
-            'title' => __('Women Option Image 5'),
-            'compiler' => 'true',
-            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-            'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
-            'subtitle' => __('Upload any media using the WordPress native uploader', 'sutunam')
-        ),
-        array(
-            'id' => 'women_url_option_5',
-            'type' => 'text',
-            'title' => 'Women Url Option 5',
-        ),
-        array(
-            'id' => 'women_category_5',
-            'type' => 'select',
-            'title' => __('Select category to display feature product', 'redux-framework-demo'),
-            'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-            'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-            // Must provide key => value pairs for select options
-            'data' => 'product_cat'
-        ),
-        array(
-            'id' => 'women_content_option_5',
-            'type' => 'textarea',
-            'title' => __('Women Content Option 5'),
-            'subtitle' => __('HTML can be used', 'sutunam'),
-            'allowed_html' => array(
-                'a' => array(
-                    'href' => array(),
-                    'title' => array()
-                ),
-                'br' => array(),
-                'em' => array(),
-                'strong' => array()
-            )
-        ),
-        array(
-            'id' => 'women_button_option_5',
-            'type' => 'select',
-            'title' => __('Position of button'),
-            'subtitle' => __('No validation can be done on this field type'),
-            'desc' => __('This is the description field, again good for additional info.'),
-            // Must provide key => value pairs for select options
-            'options' => array(
-                'left' => 'Left',
-                'right' => 'Right',
-                'center' => 'Center'
-            ),
-            'default' => 'left',
         )
     ),
 ));
@@ -1612,7 +1340,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'bigsize_des_option_1',
             'type' => 'textarea',
-            'title' => __('Big Size option description 1'),
+            'title' => __('Big Size Description Option 1'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1628,7 +1356,7 @@ Redux::setSection($opt_name, array(
             'id' => 'bigsize_img_option_1',
             'type' => 'media',
             'url' => true,
-            'title' => __('Big Size Option Image 1'),
+            'title' => __('Big Size Image Option 1'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1640,9 +1368,38 @@ Redux::setSection($opt_name, array(
             'title' => 'Big Size Url Option 1',
         ),
         array(
+            'id' => 'bigsize_content_option_1',
+            'type' => 'textarea',
+            'title' => __('Big Size Content Option 1'),
+            'subtitle' => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id' => 'bigsize_button_option_1',
+            'type' => 'select',
+            'title' => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc' => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options' => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default' => 'left',
+        ),
+        array(
             'id' => 'bigsize_des_option_2',
             'type' => 'textarea',
-            'title' => __('Big Size option description 2'),
+            'title' => __('Big Size Description Option 2'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1658,7 +1415,7 @@ Redux::setSection($opt_name, array(
             'id' => 'bigsize_img_option_2',
             'type' => 'media',
             'url' => true,
-            'title' => __('Big Size Option Image 2'),
+            'title' => __('Big Size Image Option 2'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1670,9 +1427,38 @@ Redux::setSection($opt_name, array(
             'title' => 'Big Size Url Option 2',
         ),
         array(
+            'id' => 'bigsize_content_option_2',
+            'type' => 'textarea',
+            'title' => __('Big Size Content Option 2'),
+            'subtitle' => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id' => 'bigsize_button_option_2',
+            'type' => 'select',
+            'title' => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc' => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options' => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default' => 'left',
+        ),
+        array(
             'id' => 'bigsize_des_option_3',
             'type' => 'textarea',
-            'title' => __('Big Size option description 3'),
+            'title' => __('Big Size Description Option 3'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1688,7 +1474,7 @@ Redux::setSection($opt_name, array(
             'id' => 'bigsize_img_option_3',
             'type' => 'media',
             'url' => true,
-            'title' => __('Big Size Option Image 3'),
+            'title' => __('Big Size Image Option 3'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1698,6 +1484,35 @@ Redux::setSection($opt_name, array(
             'id' => 'bigsize_url_option_3',
             'type' => 'text',
             'title' => 'Big Size Url Option 3',
+        ),
+        array(
+            'id' => 'bigsize_content_option_3',
+            'type' => 'textarea',
+            'title' => __('Big Size Content Option 3'),
+            'subtitle' => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id' => 'bigsize_button_option_3',
+            'type' => 'select',
+            'title' => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc' => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options' => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default' => 'left',
         )
     ),
 ));
@@ -1712,7 +1527,7 @@ Redux::setSection($opt_name, array(
         array(
             'id' => 'sale_des_option_1',
             'type' => 'textarea',
-            'title' => __('Sale option description 1'),
+            'title' => __('Sale Description Option 1'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1728,7 +1543,7 @@ Redux::setSection($opt_name, array(
             'id' => 'sale_img_option_1',
             'type' => 'media',
             'url' => true,
-            'title' => __('Sale Option Image 1'),
+            'title' => __('Sale Image Option 1'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1740,9 +1555,38 @@ Redux::setSection($opt_name, array(
             'title' => 'Sale Url Option 1',
         ),
         array(
+            'id' => 'sale_content_option_1',
+            'type' => 'textarea',
+            'title' => __('Sale Content Option 1'),
+            'subtitle' => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id' => 'sale_button_option_1',
+            'type' => 'select',
+            'title' => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc' => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options' => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default' => 'left',
+        ),
+        array(
             'id' => 'sale_des_option_2',
             'type' => 'textarea',
-            'title' => __('Sale option description 2'),
+            'title' => __('Sale Description Option 2'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1758,7 +1602,7 @@ Redux::setSection($opt_name, array(
             'id' => 'sale_img_option_2',
             'type' => 'media',
             'url' => true,
-            'title' => __('Sale Option Image 2'),
+            'title' => __('Sale Image Option 2'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1770,9 +1614,38 @@ Redux::setSection($opt_name, array(
             'title' => 'Sale Url Option 2',
         ),
         array(
+            'id' => 'sale_content_option_2',
+            'type' => 'textarea',
+            'title' => __('Sale Content Option 2'),
+            'subtitle' => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id' => 'sale_button_option_2',
+            'type' => 'select',
+            'title' => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc' => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options' => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default' => 'left',
+        ),
+        array(
             'id' => 'sale_des_option_3',
             'type' => 'textarea',
-            'title' => __('Sale option description 3'),
+            'title' => __('Sale Description Option 3'),
             'subtitle' => __('HTML can be used', 'sutunam'),
             'allowed_html' => array(
                 'a' => array(
@@ -1788,7 +1661,7 @@ Redux::setSection($opt_name, array(
             'id' => 'sale_img_option_3',
             'type' => 'media',
             'url' => true,
-            'title' => __('Sale Option Image 3'),
+            'title' => __('Sale Image Option 3'),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'desc' => __('Basic media uploader with disabled URL input field.', 'sutunam'),
@@ -1798,6 +1671,35 @@ Redux::setSection($opt_name, array(
             'id' => 'sale_url_option_3',
             'type' => 'text',
             'title' => 'Sale Url Option 3',
+        ),
+        array(
+            'id' => 'sale_content_option_3',
+            'type' => 'textarea',
+            'title' => __('Sale Content Option 3'),
+            'subtitle' => __('HTML can be used', 'sutunam'),
+            'allowed_html' => array(
+                'a' => array(
+                    'href' => array(),
+                    'title' => array()
+                ),
+                'br' => array(),
+                'em' => array(),
+                'strong' => array()
+            )
+        ),
+        array(
+            'id' => 'sale_button_option_3',
+            'type' => 'select',
+            'title' => __('Position of button'),
+            'subtitle' => __('No validation can be done on this field type'),
+            'desc' => __('This is the description field, again good for additional info.'),
+            // Must provide key => value pairs for select options
+            'options' => array(
+                'left' => 'Left',
+                'right' => 'Right',
+                'center' => 'Center'
+            ),
+            'default' => 'left',
         )
     ),
 ));

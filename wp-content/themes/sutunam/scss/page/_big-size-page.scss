@@ -7,54 +7,49 @@
     @import "../component/content-desc";
     @import "../component/content-image";
     .content-block {
-        &.no-feature {
-            min-height: 550px;
-        }
-    }
-    .content-block-img {
-        img {
-            position: absolute;
-            top: 0;
-        }
-    }
-
-    @include bp(max-width, $large-desktop) {
-        .content-block {
-            &.no-feature {
-                min-height: 315px;
+        margin: 1px 0;
+        .content-block-body {
+            a {
+                border-color: $white;
+                &:hover {
+                    background: none;
+                }
             }
         }
     }
-
-    @include bp(max-width, $desktop) {
-        .content-block {
-            &.no-feature {
-                min-height: 330px;
+    .row {
+        &:first-child {
+            .content-block {
+                margin-top: 0;
+            }
+        }
+        &:last-child {
+            .content-block {
+                margin-bottom: 0;
             }
         }
     }
-
-    @include bp(max-width, $laptop) {
-        .content-block {
-            &.no-feature {
-                min-height: 255px;
-            }
+    .men-option-1,
+    .men-option-3 {
+        .content-block-img {
+            right: 0;
         }
     }
-
-    @include bp(max-width, $tablet - 1) {
-        .content-block {
-            &.no-feature {
-                min-height: inherit;
-            }
-        }
-        .feature-product {
-            display: none;
+    .men-option-2 {
+        .feature-product,
+        .content-block-desc {
+            float: right;
         }
         .content-block-img {
-            img {
-                position: static;
-            }
+            right: auto;
+            left: 0;
+        }
+    }
+
+    @include bp(max-width, $laptop - 1) {
+        .feature-product,
+        .content-block-desc {
+            display: none;
         }
     }
 }

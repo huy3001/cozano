@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 // Create task for browser sync
 gulp.task('browserSync', function() {
     browserSync({
-        proxy: 'http://cozaro.local/'
+        proxy: 'http://cozano.local/'
     })
 });
 

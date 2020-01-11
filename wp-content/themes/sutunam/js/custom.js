@@ -12,6 +12,7 @@
     var imageList = $('.image-list'),
         thumbList = $('.thumb-list'),
         productContainer = $('.product-container');
+
     var productDetail = {
         // Add zoom to product slider
         addZoom: function(imageList) {
@@ -25,50 +26,39 @@
                     };
 
                 function makeZoom(imageLink) {
-                    imageLink.off('click').on('click', function(e) {
-                        e.preventDefault();
-                        var image = $(this).find('img');
-                        if(image.hasClass('zoomed')) {
-                            image.removeClass('zoomed');
-                            image.removeData('elevateZoom'); // remove zoom instance from image
-                            $('.zoomContainer').remove(); // remove zoom container from DOM
-                            productContainer.removeAttr('style');
-                        }
-                        else {
-                            image.addClass('zoomed');
-                            productContainer.css('opacity', 0);
-                            if($(window).width() < $desktop) {
-                                $('body').append('<div class="zoomContainer"><div class="panzoom"><img src="'+ image.attr('src') +'" alt="'+ image.attr('alt') +'"></div></div>'); // add zoom container to body
-                                var zoomContainer = $('.zoomContainer'),
-                                    panZoom = $('.panzoom', zoomContainer),
-                                    imgZoom = $('img', zoomContainer);
-                                panZoom.panzoom({
-                                    contain: 'invert',
-                                    minScale: 1,
-                                    maxScale: 3,
-                                    increment: 0.5,
-                                    startTransform: 'scale(1,1)',
-                                    transition: true
-                                });
-                                zoomContainer.animate({
-                                    opacity: 1
-                                }, 300);
-                                setTimeout(function() {
-                                    $('body').css('position', 'fixed');
-                                    panZoom.on('tap', function() {
-                                        image.removeClass('zoomed');
-                                        zoomContainer.remove(); // remove zoom container from DOM
-                                        productContainer.removeAttr('style');
-                                        $('body').removeAttr('style');
-                                    });
-                                }, 500);
+                    if($(window).width() < $desktop) {
+                        var productImages = $('[data-fancybox="images"]', imageList);
+                        // Init fancybox zoom
+                        productImages.fancybox({
+                            image: {
+                                preload: true
+                            },
+                            infobar: false,
+                            loop: true,
+                            toolbar: false,
+                            transitionEffect: "slide",
+                            clickSlide: "close",
+                            clickOutside: "close"
+                        });
+                    }
+                    else {
+                        imageLink.off('click').on('click', function(e) {
+                            e.preventDefault();
+                            var image = $(this).find('img');
+                            if(image.hasClass('zoomed')) {
+                                image.removeClass('zoomed');
+                                image.removeData('elevateZoom'); // remove zoom instance from image
+                                $('.zoomContainer').remove(); // remove zoom container from DOM
+                                productContainer.removeAttr('style');
                             }
                             else {
-                                $('.zoomContainer').show();
+                                image.addClass('zoomed');
+                                productContainer.css('opacity', 0);
+                                // Init elevate zoom
                                 image.elevateZoom(zoomOption); // init zoom
                             }
-                        }
-                    });
+                        });
+                    }
                 }
 
                 // First active image zoom
@@ -106,7 +96,6 @@
                     asNavFor: '.thumb-list',
                     fade: true,
                     speed: 500,
-                    slide: 'li',
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     swipe: false,
@@ -130,9 +119,6 @@
                         }
                     ]
                 });
-                $('li a', imageList).on('click', function(e) {
-                    e.preventDefault();
-                });
             }
 
             if(thumbList.length) {
@@ -141,13 +127,12 @@
                     arrows: arrow,
                     asNavFor: '.image-list',
                     focusOnSelect: true,
-                    slide: 'li',
                     slidesToShow: thumbCount,
                     slidesToScroll: slideToScroll,
                     swipe: false,
                     vertical: true
                 });
-                $('li a', thumbList).on('click', function(e) {
+                $('a', thumbList).on('click', function(e) {
                     e.preventDefault();
                 });
             }
@@ -158,12 +143,12 @@
 
         // Reinit product slider
         sliderReinit: function(imageList, thumbList) {
-            if(imageList.length) {
+            if(imageList.hasClass('slick-initialized')) {
                 imageList.slick('unslick');
             }
 
-            if(thumbList.length) {
-                thumbList.slick('unslick')
+            if(thumbList.hasClass('slick-initialized')) {
+                thumbList.slick('unslick');
             }
 
             setTimeout(function() {
@@ -734,20 +719,17 @@
 
         sidebarToggle: function () {
             var toggleBtn = $('.toggle-menu'),
-                sidebar = $('.left-content'),
                 body = $('body');
             if(toggleBtn.length) {
                 toggleBtn.off('click').on('click', function() {
                     if(body.hasClass('no-sidebar')) {
                         body.removeClass('no-sidebar');
-                        customJS.productMatchHeight();
-                        productDetail.sliderReinit(imageList, thumbList);
                     }
                     else {
                         body.addClass('no-sidebar');
-                        customJS.productMatchHeight();
-                        productDetail.sliderReinit(imageList, thumbList);
                     }
+                    customJS.productMatchHeight();
+                    productDetail.sliderReinit(imageList, thumbList);
                 });
             }
         },

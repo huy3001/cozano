@@ -49,7 +49,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-			<div class="bigsize-option-1 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+			<div class="bigsize-option-1 content-block <?php if($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -68,14 +68,32 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <div class="content-block-img">
-				    <img src="<?php echo $jk_options['bigsize_img_option_1']['url'] ?>" alt="" />
+                <?php if($jk_options['bigsize_des_option_1']): ?>
+                <div class="content-block-desc">
+                    <?php echo $jk_options['bigsize_des_option_1']?>
                 </div>
-				<div class="content-block-body">
-					<?php echo $jk_options['bigsize_desc_option_1']?>
-					<a href="<?php echo $jk_options['bigsize_url_option_1']?>" target="_self">
-						<span>shopping</span>
-					</a>
+                <?php endif;?>
+                <div class="content-block-img">
+                    <?php if($jk_options['bigsize_url_option_1']): ?>
+                    <a href="<?php echo $jk_options['bigsize_url_option_1']?>" target="_self">
+                    <?php endif; ?>
+                        <?php if($jk_options['bigsize_img_option_1']['url']): ?>
+                        <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['bigsize_img_option_1']['url'] ?>" alt="" />
+                        <?php
+                            $bigsize_img_option_1_tablet = wp_get_attachment_image_src($jk_options['bigsize_img_option_1']['id'],'medium')[0];
+                            $bigsize_img_option_1_mobile = wp_get_attachment_image_src($jk_options['bigsize_img_option_1']['id'],'thumbnail')[0];
+                        ?>
+                        <img class="visible-sm" src="<?php echo $bigsize_img_option_1_tablet ?>" alt="" />
+                        <img class="visible-xs" src="<?php echo $bigsize_img_option_1_mobile ?>" alt="" />
+                        <?php endif; ?>
+                    <?php if($jk_options['bigsize_url_option_1']): ?>
+                    </a>
+                    <?php endif; ?>
+                </div>
+				<div class="content-block-body <?php echo $jk_options['bigsize_button_option_1'];?>">
+                    <div class="content-block-info">
+                        <?php echo $jk_options['bigsize_content_option_1']?>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -90,7 +108,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="bigsize-option-2 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="bigsize-option-2 content-block <?php if($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -109,14 +127,32 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <div class="content-block-img">
-                    <img src="<?php echo $jk_options['bigsize_img_option_2']['url'] ?>" alt="" />
+                <?php if($jk_options['bigsize_des_option_2']): ?>
+                <div class="content-block-desc">
+                    <?php echo $jk_options['bigsize_des_option_2']?>
                 </div>
-                <div class="content-block-body">
-                    <?php echo $jk_options['bigsize_desc_option_2']?>
+                <?php endif;?>
+                <div class="content-block-img">
+                    <?php if($jk_options['bigsize_url_option_2']): ?>
                     <a href="<?php echo $jk_options['bigsize_url_option_2']?>" target="_self">
-                        <span>shopping</span>
+                    <?php endif; ?>
+                        <?php if($jk_options['bigsize_img_option_2']['url']): ?>
+                        <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['bigsize_img_option_2']['url'] ?>" alt="" />
+                        <?php
+                        $bigsize_img_option_2_tablet = wp_get_attachment_image_src($jk_options['bigsize_img_option_2']['id'],'medium')[0];
+                        $bigsize_img_option_2_mobile = wp_get_attachment_image_src($jk_options['bigsize_img_option_2']['id'],'thumbnail')[0];
+                        ?>
+                        <img class="visible-sm" src="<?php echo $bigsize_img_option_2_tablet ?>" alt="" />
+                        <img class="visible-xs" src="<?php echo $bigsize_img_option_2_mobile ?>" alt="" />
+                        <?php endif; ?>
+                    <?php if($jk_options['bigsize_url_option_2']): ?>
                     </a>
+                    <?php endif; ?>
+                </div>
+                <div class="content-block-body <?php echo $jk_options['bigsize_button_option_2'];?>">
+                    <div class="content-block-info">
+                        <?php echo $jk_options['bigsize_content_option_2']?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,7 +167,7 @@ $jk_options = get_option('redux_demo');
             );
             $loop = new WP_Query( $args );
             ?>
-            <div class="bigsize-option-3 content-block <?php if (!$loop->have_posts()) echo 'no-feature'?>">
+            <div class="bigsize-option-3 content-block <?php if($loop->have_posts()) echo 'has-feature'; ?>">
                 <?php
                 if ($loop->have_posts()) :?>
                     <div class="feature-product">
@@ -150,14 +186,32 @@ $jk_options = get_option('redux_demo');
                     </div>
                 <?php endif;?>
                 <?php wp_reset_postdata(); ?>
-                <div class="content-block-img">
-                    <img src="<?php echo $jk_options['bigsize_img_option_3']['url'] ?>" alt="" />
+                <?php if($jk_options['bigsize_des_option_3']): ?>
+                <div class="content-block-desc">
+                    <?php echo $jk_options['bigsize_des_option_3']?>
                 </div>
-                <div class="content-block-body">
-                    <?php echo $jk_options['bigsize_desc_option_3']?>
+                <?php endif;?>
+                <div class="content-block-img">
+                    <?php if($jk_options['bigsize_url_option_3']): ?>
                     <a href="<?php echo $jk_options['bigsize_url_option_3']?>" target="_self">
-                        <span>shopping</span>
+                    <?php endif; ?>
+                        <?php if($jk_options['bigsize_img_option_3']['url']): ?>
+                        <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['bigsize_img_option_3']['url'] ?>" alt="" />
+                        <?php
+                        $bigsize_img_option_3_tablet = wp_get_attachment_image_src($jk_options['bigsize_img_option_3']['id'],'medium')[0];
+                        $bigsize_img_option_3_mobile = wp_get_attachment_image_src($jk_options['bigsize_img_option_3']['id'],'thumbnail')[0];
+                        ?>
+                        <img class="visible-sm" src="<?php echo $bigsize_img_option_3_tablet ?>" alt="" />
+                        <img class="visible-xs" src="<?php echo $bigsize_img_option_3_mobile ?>" alt="" />
+                        <?php endif; ?>
+                    <?php if($jk_options['bigsize_url_option_3']): ?>
                     </a>
+                    <?php endif; ?>
+                </div>
+                <div class="content-block-body <?php echo $jk_options['bigsize_button_option_3'];?>">
+                    <div class="content-block-info">
+                        <?php echo $jk_options['bigsize_content_option_3']?>
+                    </div>
                 </div>
             </div>
         </div>

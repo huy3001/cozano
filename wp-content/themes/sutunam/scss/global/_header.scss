@@ -285,8 +285,19 @@
         left: $left-content-width;
         @include transition();
         .no-sidebar & {
-            position: relative;
+            background: $black-8;
             left: 0;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                @include backdrop-filter(saturate(180%) blur(20px));
+            }
         }
         .toggle-menu {
             display: block;

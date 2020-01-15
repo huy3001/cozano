@@ -26,57 +26,57 @@
                     };
 
                 function makeZoom(imageLink) {
-                    if($(window).width() < $desktop) {
-                        var productImages = $('[data-fancybox="images"]', imageList);
-                        // Init fancybox zoom
-                        productImages.fancybox({
-                            image: {
-                                preload: true
-                            },
-                            infobar: false,
-                            loop: true,
-                            toolbar: false,
-                            transitionEffect: "slide",
-                            clickSlide: "close",
-                            clickOutside: "close"
-                        });
-                    }
-                    else {
-                        imageLink.off('click').on('click', function(e) {
-                            e.preventDefault();
-                            var image = $(this).find('img');
-                            if(image.hasClass('zoomed')) {
-                                image.removeClass('zoomed');
-                                image.removeData('elevateZoom'); // remove zoom instance from image
-                                $('.zoomContainer').remove(); // remove zoom container from DOM
-                                productContainer.removeAttr('style');
-                            }
-                            else {
-                                image.addClass('zoomed');
-                                productContainer.css('opacity', 0);
-                                // Init elevate zoom
-                                image.elevateZoom(zoomOption); // init zoom
-                            }
-                        });
-                    }
+                    imageLink.off('click').on('click', function(e) {
+                        e.preventDefault();
+                        var image = $(this).find('img');
+                        if(image.hasClass('zoomed')) {
+                            image.removeClass('zoomed');
+                            image.removeData('elevateZoom'); // remove zoom instance from image
+                            $('.zoomContainer').remove(); // remove zoom container from DOM
+                            productContainer.removeAttr('style');
+                        }
+                        else {
+                            image.addClass('zoomed');
+                            productContainer.css('opacity', 0);
+                            // Init elevate zoom
+                            image.elevateZoom(zoomOption); // init zoom
+                        }
+                    });
                 }
 
-                // First active image zoom
-                makeZoom(activeLink);
+                if($(window).width() < $desktop) {
+                    var productImages = $('[data-fancybox="images"]', imageList);
+                    // Init fancybox zoom on mobile
+                    productImages.fancybox({
+                        image: {
+                            preload: true
+                        },
+                        infobar: false,
+                        loop: true,
+                        toolbar: false,
+                        transitionEffect: "slide",
+                        clickSlide: "close",
+                        clickOutside: "close"
+                    });
+                }
+                else {
+                    // First active image zoom
+                    makeZoom(activeLink);
 
-                // Remove zoom before slide change
-                imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                    var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
-                    currentImg.removeClass('zoomed');
-                    currentImg.removeData('elevateZoom'); // remove zoom instance from image
-                    $('.zoomContainer').remove(); // remove zoom container from DOM
-                });
+                    // Remove zoom before slide change
+                    imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                        var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
+                        currentImg.removeClass('zoomed');
+                        currentImg.removeData('elevateZoom'); // remove zoom instance from image
+                        $('.zoomContainer').remove(); // remove zoom container from DOM
+                    });
 
-                // Zoom after slide change
-                imageList.on('afterChange', function(event, slick, currentSlide) {
-                    var currentLink = imageList.find('li[data-slick-index="'+ currentSlide +'"] a');
-                    makeZoom(currentLink);
-                });
+                    // Zoom after slide change
+                    imageList.on('afterChange', function(event, slick, currentSlide) {
+                        var currentLink = imageList.find('li[data-slick-index="'+ currentSlide +'"] a');
+                        makeZoom(currentLink);
+                    });
+                }
             }, 100);
         },
 

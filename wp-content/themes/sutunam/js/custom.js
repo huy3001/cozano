@@ -17,7 +17,7 @@
         // Add zoom to product slider
         addZoom: function(imageList) {
             setTimeout(function() {
-                var activeLink = imageList.find('.slick-active a'),
+                var activeLink = '.slick-active a',
                     zoomOption = {
                         zoomType: 'inner',
                         cursor: 'crosshair',
@@ -26,57 +26,45 @@
                     };
 
                 function makeZoom(imageLink) {
-                    if($(window).width() < $desktop) {
-                        var productImages = $('[data-fancybox="images"]', imageList);
-                        // Init fancybox zoom
-                        productImages.fancybox({
-                            image: {
-                                preload: true
-                            },
-                            infobar: false,
-                            loop: true,
-                            toolbar: false,
-                            transitionEffect: "slide",
-                            clickSlide: "close",
-                            clickOutside: "close"
-                        });
-                    }
-                    else {
-                        imageLink.off('click').on('click', function(e) {
-                            e.preventDefault();
-                            var image = $(this).find('img');
-                            if(image.hasClass('zoomed')) {
-                                image.removeClass('zoomed');
-                                image.removeData('elevateZoom'); // remove zoom instance from image
-                                $('.zoomContainer').remove(); // remove zoom container from DOM
-                                productContainer.removeAttr('style');
-                            }
-                            else {
-                                image.addClass('zoomed');
-                                productContainer.css('opacity', 0);
-                                // Init elevate zoom
-                                image.elevateZoom(zoomOption); // init zoom
-                            }
-                        });
-                    }
+                    imageList.off('click').on('click', imageLink, function(e) {
+                        e.preventDefault();
+                        var image = $(this).find('img');
+                        if(image.hasClass('zoomed')) {
+                            image.removeClass('zoomed');
+                            image.removeData('elevateZoom'); // remove zoom instance from image
+                            $('.zoomContainer').remove(); // remove zoom container from DOM
+                            productContainer.removeAttr('style');
+                        }
+                        else {
+                            image.addClass('zoomed');
+                            productContainer.css('opacity', 0);
+                            // Init elevate zoom
+                            image.elevateZoom(zoomOption); // init zoom
+                        }
+                    });
                 }
 
-                // First active image zoom
-                makeZoom(activeLink);
-
-                // Remove zoom before slide change
-                imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                    var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
-                    currentImg.removeClass('zoomed');
-                    currentImg.removeData('elevateZoom'); // remove zoom instance from image
-                    $('.zoomContainer').remove(); // remove zoom container from DOM
-                });
-
-                // Zoom after slide change
-                imageList.on('afterChange', function(event, slick, currentSlide) {
-                    var currentLink = imageList.find('li[data-slick-index="'+ currentSlide +'"] a');
-                    makeZoom(currentLink);
-                });
+                if($(window).width() < $desktop) {
+                    var productImages = $('[data-fancybox="images"]', imageList);
+                    // Init fancybox zoom on mobile
+                    productImages.fancybox({
+                        image: {
+                            preload: true
+                        },
+                        buttons: [
+                            "close"
+                        ],
+                        infobar: false,
+                        loop: true,
+                        transitionEffect: "slide",
+                        clickSlide: "close",
+                        clickOutside: "close"
+                    });
+                }
+                else {
+                    // First active image zoom
+                    makeZoom(activeLink);
+                }
             }, 100);
         },
 

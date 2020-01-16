@@ -7,7 +7,24 @@
     position: fixed;
     left: 0;
     top: 0;
+    @include transition(background .44s .2s $header-effect);
     z-index: 111;
+
+    &.fixed {
+        background: $black-8;
+
+        &:before {
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            @include backdrop-filter(saturate(180%) blur(20px));
+        }
+    }
+
     @include bp(max-width, $desktop) {
         z-index: 1111;
         .no-sidebar & {
@@ -17,6 +34,7 @@
     .nav-menu {
         height: 100%;
         position: relative;
+        z-index: 1;
     }
     .toggle-menu {
         background: none;
@@ -285,19 +303,7 @@
         left: $left-content-width;
         @include transition();
         .no-sidebar & {
-            background: $black-8;
             left: 0;
-
-            &:before {
-                content: '';
-                display: block;
-                height: 100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                @include backdrop-filter(saturate(180%) blur(20px));
-            }
         }
         .toggle-menu {
             display: block;

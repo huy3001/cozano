@@ -207,6 +207,21 @@
 
     // Global functions
     var customJS = {
+        stickyHeader: function() {
+            var header = $('#header');
+
+            if(header.length) {
+                $(window).on('scroll', function() {
+                    if($(window).scrollTop() > 0) {
+                        header.addClass('fixed');
+                    }
+                    else {
+                        header.removeClass('fixed');
+                    }
+                });
+            }
+        },
+
         customScrollbar: function() {
             if($(window).width() > $desktop - 1) {
                 $('body').niceScroll({
@@ -794,6 +809,9 @@
 
     /* Window ready function */
     $(window).ready(function () {
+        // Sticky header
+        customJS.stickyHeader();
+
         // Custom scrollbar
         //customJS.customScrollbar();
 

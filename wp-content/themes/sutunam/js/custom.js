@@ -17,7 +17,7 @@
         // Add zoom to product slider
         addZoom: function(imageList) {
             setTimeout(function() {
-                var activeLink = imageList.find('.slick-active a'),
+                var activeLink = '.slick-active a',
                     zoomOption = {
                         zoomType: 'inner',
                         cursor: 'crosshair',
@@ -26,7 +26,7 @@
                     };
 
                 function makeZoom(imageLink) {
-                    imageLink.off('click').on('click', function(e) {
+                    imageList.off('click').on('click', imageLink, function(e) {
                         e.preventDefault();
                         var image = $(this).find('img');
                         if(image.hasClass('zoomed')) {
@@ -51,9 +51,11 @@
                         image: {
                             preload: true
                         },
+                        buttons: [
+                            "close"
+                        ],
                         infobar: false,
                         loop: true,
-                        toolbar: false,
                         transitionEffect: "slide",
                         clickSlide: "close",
                         clickOutside: "close"
@@ -62,20 +64,6 @@
                 else {
                     // First active image zoom
                     makeZoom(activeLink);
-
-                    // Remove zoom before slide change
-                    imageList.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                        var currentImg = imageList.find('li[data-slick-index="'+ currentSlide +'"] img');
-                        currentImg.removeClass('zoomed');
-                        currentImg.removeData('elevateZoom'); // remove zoom instance from image
-                        $('.zoomContainer').remove(); // remove zoom container from DOM
-                    });
-
-                    // Zoom after slide change
-                    imageList.on('afterChange', function(event, slick, currentSlide) {
-                        var currentLink = imageList.find('li[data-slick-index="'+ currentSlide +'"] a');
-                        makeZoom(currentLink);
-                    });
                 }
             }, 100);
         },

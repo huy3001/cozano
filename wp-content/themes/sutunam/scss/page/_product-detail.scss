@@ -1015,19 +1015,6 @@
                         max-height: inherit;
                         position: relative;
 
-                        &:before {
-                            content: '';
-                            display: block;
-                            width: 40px;
-                            height: 40px;
-                            background: url('../images/zoom-in-cursor.png') no-repeat center transparent;
-                            background-size: 40px auto;
-                            position: absolute;
-                            bottom: 10px;
-                            left: 10px;
-                            z-index: 1;
-                        }
-
                         img {
                             max-height: inherit;
                             @include opacity(1);
@@ -1335,8 +1322,58 @@
         }
     }
 
-    .fancybox-image {
-        height: 100%;
-        max-width: none;
+    .fancybox {
+        &-slide--image {
+            padding: 0;
+        }
+
+        &-content {
+            height: 100% !important;
+            transform: none !important;
+            width: 100% !important;
+        }
+
+        &-image {
+            height: 100%;
+            max-width: none;
+            object-fit: cover;
+        }
+
+        &-navigation {
+            .fancybox-button {
+                background: none;
+                height: 40px;
+                top: calc(50% - 20px);
+                width: 40px;
+
+                &--arrow_left {
+                    padding: 0;
+
+                    &:before {
+                        content: "\f104";
+                    }
+                }
+
+                &--arrow_right {
+                    padding: 0;
+
+                    &:before {
+                        content: "\f105";
+                    }
+                }
+
+                &:before {
+                    color: $left-menu-bg;
+                    display: block;
+                    @include font('font-awesome');
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+
+                div {
+                    display: none;
+                }
+            }
+        }
     }
 }

@@ -58,7 +58,12 @@
                         loop: true,
                         transitionEffect: "slide",
                         clickSlide: "close",
-                        clickOutside: "close"
+                        clickOutside: "close",
+                        mobile: {
+                            clickContent: function(current, event) {
+                                return current.type === "image" ? "close" : false;
+                            }
+                        }
                     });
                 }
                 else {

@@ -45,7 +45,7 @@
                 }
 
                 if($(window).width() < $desktop) {
-                    var productImages = $('[data-fancybox="images"]', imageList);
+                    var productImages = $('.slick-slide:not(.slick-cloned) [data-fancybox="images"]', imageList);
                     // Init fancybox zoom on mobile
                     productImages.fancybox({
                         image: {
@@ -58,7 +58,24 @@
                         loop: true,
                         transitionEffect: "slide",
                         clickSlide: "close",
-                        clickOutside: "close"
+                        clickOutside: "close",
+                        touch: {
+                            vertical: false
+                        },
+                        mobile: {
+                            clickContent: function(current, event) {
+                                return current.type === "image" ? "close" : false;
+                            }
+                        },
+                        afterShow: function(instance, current) {
+                            var fancybox = instance;
+                            $('.fancybox-container').off('swipeleft').on('swipeleft', function() {
+                                fancybox.next();
+                            })
+                            $('.fancybox-container').off('swiperight').on('swiperight', function() {
+                                fancybox.previous();
+                            })
+                        }
                     });
                 }
                 else {

@@ -997,7 +997,7 @@ h6 {
 /* line 13, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
 #header.fixed {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* line 16, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
@@ -1024,7 +1024,7 @@ h6 {
   /* line 30, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   .no-sidebar #header {
-    z-index: 111;
+    z-index: 1111;
   }
 }
 

@@ -11,7 +11,7 @@
     z-index: 111;
 
     &.fixed {
-        background: $black-8;
+        background: $black-7;
 
         &:before {
             content: '';
@@ -28,7 +28,7 @@
     @include bp(max-width, $desktop) {
         z-index: 1111;
         .no-sidebar & {
-            z-index: 111;
+            z-index: 1111;
         }
     }
     .nav-menu {

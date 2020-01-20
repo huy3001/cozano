@@ -457,10 +457,11 @@
         },
 
         filterBarFixed: function() {
-            var filterBar = $('.filter-bar');
+            var filterBar = $('.filter-bar'),
+                headerHeight = $('#header').height();
             if(filterBar.length) {
                 filterBar.sticky({
-                    topSpacing: 0,
+                    topSpacing: headerHeight,
                     zIndex: 111
                 });
             }

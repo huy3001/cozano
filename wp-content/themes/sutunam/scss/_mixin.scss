@@ -210,3 +210,19 @@ $placeholders: ();
 @mixin font($name) {
     @extend %#{$name}-#{$current-breakpoint} !optional;
 }
+
+/* backdrop-background */
+@mixin backdrop-background($color, $filter) {
+    background: $color;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @include backdrop-filter($filter);
+    }
+}

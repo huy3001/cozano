@@ -39,44 +39,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-top {
-    background: $white;
-    color: $left-menu-bg;
-    font-size: 13px;
+    background: $black-5;
+    color: $white;
+    font-size: 0;
     display: inline-block;
-    padding: 10px 30px;
+    height: 40px;
+    padding: 10px;
     position: fixed;
     bottom: -40px;
     right: 0;
-    z-index: 1;
-    &:before,
-    &:after {
+    width: 40px;
+    z-index: 11;
+    &:before {
         content: "";
         display: block;
-        width: 0;
-        height: 0;
+        width: 10px;
+        height: 10px;
         background: none;
-        border-bottom: 6px solid $left-menu-bg;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
+        border-color: $white;
+        border-style: solid;
+        border-width: 1px 1px 0 0;
+        margin-left: -5px;
         position: absolute;
+        left: 50%;
         top: 50%;
-        margin-top: -3px;
+        @include transform(rotate(-45deg));
         @include transition();
-    }
-    &:before {
-        left: 10px;
-    }
-    &:after {
-        right: 10px;
-    }
-    &:hover, &:focus {
-        background: $product-slider-dot;
-        color: $header-bg;
-        outline: none;
-        &:before,
-        &:after {
-            border-bottom-color: $header-bg;
-        }
     }
 }
 
@@ -151,13 +139,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@include bp(max-width, $desktop - 1) {
-    .back-top {
-        right: 50%;
-        @include transform(translateX(50%));
-    }
-}
-
 @include small-bp($mobile + 1, $laptop - 1) {
     .visible-sm {
         display: block !important;
@@ -165,6 +146,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @include bp(max-width, $tablet - 1) {
+    .back-top {
+        display: none;
+    }
+
     .visible-xs {
         display: none !important;
     }

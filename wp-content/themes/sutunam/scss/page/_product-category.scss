@@ -152,6 +152,8 @@
                     text-transform: capitalize;
                     display: block;
                     padding: 10px 12px;
+                    position: relative;
+                    z-index: 1;
                     @include transition();
                     &:before {
                         content: "";
@@ -685,6 +687,9 @@
             width: 100%;
             height: auto;
             margin: 0 0 64px;
+            max-height: calc(100vh - 110px);
+            overflow-x: hidden;
+            overflow-y: auto;
             ul.ft-menu {
                 max-height: 80%;
                 overflow-x: hidden;

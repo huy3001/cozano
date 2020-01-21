@@ -34,6 +34,7 @@ $black-7: rgba(0, 0, 0, .7);
 $black-8: rgba(0, 0, 0, .8);
 $green: #69bf29;
 $white: #ffffff;
+$white-7: rgba(255, 255, 255, .7);
 $main-color: #303030;
 $header-link-hover: #aaaaaa;
 $submenu-item-color: #a2a2a2;
@@ -71,6 +72,7 @@ $product-select-color: #01385f;
 /* Layout */
 $header-height: 54px;
 $header-effect: cubic-bezier(0.52, 0.16, 0.24, 1);
+$backdrop-filter: saturate(180%) blur(20px);
 $left-content-width: 250px;
 $product-img-height: 768px;
 $desktop-img-height: 600px;

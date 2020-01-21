@@ -11,18 +11,7 @@
     z-index: 111;
 
     &.fixed {
-        background: $black-7;
-
-        &:before {
-            content: '';
-            display: block;
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            @include backdrop-filter(saturate(180%) blur(20px));
-        }
+        @include backdrop-background($black-7, $backdrop-filter);
     }
 
     @include bp(max-width, $desktop) {

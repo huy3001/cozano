@@ -6,17 +6,21 @@
  *
  * @package WordPress
  * @subpackage Administration
+ * @output wp-admin/js/nav-menu.js
  */
 
-/* global menus, postboxes, columns, isRtl, navMenuL10n, ajaxurl */
-
-var wpNavMenu;
+/* global menus, postboxes, columns, isRtl, navMenuL10n, ajaxurl, wpNavMenu */
 
 (function($) {
 
 	var api;
 
-	api = wpNavMenu = {
+	/**
+	 * Contains all the functions to handle WordPress navigation menus administration.
+	 *
+	 * @namespace wpNavMenu
+	 */
+	api = window.wpNavMenu = {
 
 		options : {
 			menuItemDepthPerLevel : 30, // Do not use directly. Use depthToPx and pxToDepth instead.
@@ -82,9 +86,15 @@ var wpNavMenu;
 				shiftDepthClass : function(change) {
 					return this.each(function(){
 						var t = $(this),
-							depth = t.menuItemDepth();
-						$(this).removeClass('menu-item-depth-'+ depth )
-							.addClass('menu-item-depth-'+ (depth + change) );
+							depth = t.menuItemDepth(),
+							newDepth = depth + change;
+
+						t.removeClass( 'menu-item-depth-'+ depth )
+							.addClass( 'menu-item-depth-'+ ( newDepth ) );
+
+						if ( 0 === newDepth ) {
+							t.find( '.is-submenu' ).hide();
+						}
 					});
 				},
 				childMenuItems : function() {
@@ -161,6 +171,8 @@ var wpNavMenu;
 				/**
 				 * Adds selected menu items to the menu.
 				 *
+				 * @ignore
+				 *
 				 * @param jQuery metabox The metabox jQuery object.
 				 */
 				addSelectedToMenu : function(processMethod) {
@@ -196,7 +208,8 @@ var wpNavMenu;
 						// Add the items
 						api.addItemToMenu(menuItems, processMethod, function(){
 							// Deselect the items and hide the ajax spinner
-							checkboxes.removeAttr('checked');
+							checkboxes.prop( 'checked', false );
+							t.find( '.button-controls .select-all' ).prop( 'checked', false );
 							t.find( '.button-controls .spinner' ).removeClass( 'is-active' );
 						});
 					});
@@ -400,14 +413,13 @@ var wpNavMenu;
 			} );
 
 			// Links for moving items
-			menu.on( 'click', '.menus-move', function ( e ) {
+			menu.on( 'click', '.menus-move', function () {
 				var $this = $( this ),
 					dir = $this.data( 'dir' );
 
 				if ( 'undefined' !== typeof dir ) {
 					api.moveMenuItem( $( this ).parents( 'li.menu-item' ).find( 'a.item-edit' ), dir );
 				}
-				e.preventDefault();
 			});
 		},
 
@@ -495,8 +507,7 @@ var wpNavMenu;
 				title = menus.subMenuFocus.replace( '%1$s', itemName ).replace( '%2$d', itemPosition ).replace( '%3$s', parentItemName );
 			}
 
-			// @todo Consider to update just the `aria-label` attribute.
-			$this.attr( 'aria-label', title ).text( title );
+			$this.attr( 'aria-label', title );
 
 			// Mark this item's accessibility as refreshed
 			$this.data( 'needs_accessibility_refresh', false );
@@ -509,8 +520,8 @@ var wpNavMenu;
 		 */
 		refreshAdvancedAccessibility : function() {
 
-			// Hide all links by default
-			$( '.menu-item-settings .field-move a' ).hide();
+			// Hide all the move buttons by default.
+			$( '.menu-item-settings .field-move .menus-move' ).hide();
 
 			// Mark all menu items as unprocessed
 			$( 'a.item-edit' ).data( 'needs_accessibility_refresh', true );
@@ -825,6 +836,20 @@ var wpNavMenu;
 					}
 				}
 			});
+
+			$( '#menu-name' ).on( 'input', _.debounce( function () {
+				var menuName = $( document.getElementById( 'menu-name' ) ),
+					menuNameVal = menuName.val();
+
+				if ( ! menuNameVal || ! menuNameVal.replace( /\s+/, '' ) ) {
+					// Add warning for invalid menu name.
+					menuName.parent().addClass( 'form-invalid' );
+				} else {
+					// Remove warning for valid menu name.
+					menuName.parent().removeClass( 'form-invalid' );
+				}
+			}, 500 ) );
+
 			$('#add-custom-links input[type="text"]').keypress(function(e){
 				$('#customlinkdiv').removeClass('form-invalid');
 
@@ -863,36 +888,28 @@ var wpNavMenu;
 		},
 
 		attachQuickSearchListeners : function() {
-			var searchTimer,
-				inputEvent;
+			var searchTimer;
 
 			// Prevent form submission.
 			$( '#nav-menu-meta' ).on( 'submit', function( event ) {
 				event.preventDefault();
 			});
 
-			/*
-			 * Use feature detection to determine whether inputs should use
-			 * the `keyup` or `input` event. Input is preferred but lacks support
-			 * in legacy browsers. See changeset 34078, see also ticket #26600#comment:59
-			 */
-			if ( 'oninput' in document.createElement( 'input' ) ) {
-				inputEvent = 'input';
-			} else {
-				inputEvent = 'keyup';
-			}
+			$( '#nav-menu-meta' ).on( 'input', '.quick-search', function() {
+				var $this = $( this );
 
-			$( '.quick-search' ).on( inputEvent, function() {
-				var t = $(this);
+				$this.attr( 'autocomplete', 'off' );
 
-				if( searchTimer ) clearTimeout(searchTimer);
+				if ( searchTimer ) {
+					clearTimeout( searchTimer );
+				}
 
-				searchTimer = setTimeout(function(){
-					api.updateQuickSearchResults( t );
-				}, 500 );
-			}).on( 'blur', function() {
+				searchTimer = setTimeout( function() {
+					api.updateQuickSearchResults( $this );
+ 				}, 500 );
+			}).on( 'blur', '.quick-search', function() {
 				api.lastSearch = '';
-			}).attr('autocomplete','off');
+			});
 		},
 
 		updateQuickSearchResults : function(input) {
@@ -928,12 +945,12 @@ var wpNavMenu;
 		},
 
 		addCustomLink : function( processMethod ) {
-			var url = $('#custom-menu-item-url').val(),
+			var url = $('#custom-menu-item-url').val().trim(),
 				label = $('#custom-menu-item-name').val();
 
 			processMethod = processMethod || api.addMenuItemToBottom;
 
-			if ( '' === url || 'http://' == url ) {
+			if ( '' === url || 'https://' == url || 'http://' == url ) {
 				$('#customlinkdiv').addClass('form-invalid');
 				return false;
 			}
@@ -945,7 +962,7 @@ var wpNavMenu;
 				$( '.customlinkdiv .spinner' ).removeClass( 'is-active' );
 				// Set custom link form back to defaults
 				$('#custom-menu-item-name').val('').blur();
-				$('#custom-menu-item-url').val('http://');
+				$( '#custom-menu-item-url' ).val( '' ).attr( 'placeholder', 'https://' );
 			});
 		},
 
@@ -994,21 +1011,33 @@ var wpNavMenu;
 		},
 
 		/**
-		 * Process the add menu item request response into menu list item.
+		 * Process the add menu item request response into menu list item. Appends to menu.
 		 *
-		 * @param string menuMarkup The text server response of menu item markup.
-		 * @param object req The request arguments.
+		 * @param {string} menuMarkup The text server response of menu item markup.
+		 *
+		 * @fires document#menu-item-added Passes menuMarkup as a jQuery object.
 		 */
 		addMenuItemToBottom : function( menuMarkup ) {
-			$(menuMarkup).hideAdvancedMenuItemFields().appendTo( api.targetList );
+			var $menuMarkup = $( menuMarkup );
+			$menuMarkup.hideAdvancedMenuItemFields().appendTo( api.targetList );
 			api.refreshKeyboardAccessibility();
 			api.refreshAdvancedAccessibility();
+			$( document ).trigger( 'menu-item-added', [ $menuMarkup ] );
 		},
 
+		/**
+		 * Process the add menu item request response into menu list item. Prepends to menu.
+		 *
+		 * @param {string} menuMarkup The text server response of menu item markup.
+		 *
+		 * @fires document#menu-item-added Passes menuMarkup as a jQuery object.
+		 */
 		addMenuItemToTop : function( menuMarkup ) {
-			$(menuMarkup).hideAdvancedMenuItemFields().prependTo( api.targetList );
+			var $menuMarkup = $( menuMarkup );
+			$menuMarkup.hideAdvancedMenuItemFields().prependTo( api.targetList );
 			api.refreshKeyboardAccessibility();
 			api.refreshAdvancedAccessibility();
+			$( document ).trigger( 'menu-item-added', [ $menuMarkup ] );
 		},
 
 		attachUnsavedChangesListener : function() {
@@ -1033,7 +1062,7 @@ var wpNavMenu;
 
 		attachTabsPanelListeners : function() {
 			$('#menu-settings-column').bind('click', function(e) {
-				var selectAreaMatch, panelId, wrapper, items,
+				var selectAreaMatch, selectAll, panelId, wrapper, items,
 					target = $(e.target);
 
 				if ( target.hasClass('nav-tab-link') ) {
@@ -1043,7 +1072,7 @@ var wpNavMenu;
 					wrapper = target.parents('.accordion-section-content').first();
 
 					// upon changing tabs, we want to uncheck all checkboxes
-					$('input', wrapper).removeAttr('checked');
+					$( 'input', wrapper ).prop( 'checked', false );
 
 					$('.tabs-panel-active', wrapper).removeClass('tabs-panel-active').addClass('tabs-panel-inactive');
 					$('#' + panelId, wrapper).removeClass('tabs-panel-inactive').addClass('tabs-panel-active');
@@ -1054,16 +1083,36 @@ var wpNavMenu;
 					// select the search bar
 					$('.quick-search', wrapper).focus();
 
+					// Hide controls in the search tab if no items found.
+					if ( ! wrapper.find( '.tabs-panel-active .menu-item-title' ).length ) {
+						wrapper.addClass( 'has-no-menu-item' );
+					} else {
+						wrapper.removeClass( 'has-no-menu-item' );
+					}
+
 					e.preventDefault();
-				} else if ( target.hasClass('select-all') ) {
-					selectAreaMatch = /#(.*)$/.exec(e.target.href);
-					if ( selectAreaMatch && selectAreaMatch[1] ) {
-						items = $('#' + selectAreaMatch[1] + ' .tabs-panel-active .menu-item-title input');
-						if( items.length === items.filter(':checked').length )
-							items.removeAttr('checked');
-						else
-							items.prop('checked', true);
-						return false;
+				} else if ( target.hasClass( 'select-all' ) ) {
+					selectAreaMatch = target.closest( '.button-controls' ).data( 'items-type' );
+					if ( selectAreaMatch ) {
+						items = $( '#' + selectAreaMatch + ' .tabs-panel-active .menu-item-title input' );
+
+						if ( items.length === items.filter( ':checked' ).length && ! target.is( ':checked' ) ) {
+							items.prop( 'checked', false );
+						} else if ( target.is( ':checked' ) ) {
+							items.prop( 'checked', true );
+						}
+					}
+				} else if ( target.hasClass( 'menu-item-checkbox' ) ) {
+					selectAreaMatch = target.closest( '.tabs-panel-active' ).parent().attr( 'id' );
+					if ( selectAreaMatch ) {
+						items     = $( '#' + selectAreaMatch + ' .tabs-panel-active .menu-item-title input' );
+						selectAll = $( '.button-controls[data-items-type="' + selectAreaMatch + '"] .select-all' );
+
+						if ( items.length === items.filter( ':checked' ).length && ! selectAll.is( ':checked' ) ) {
+							selectAll.prop( 'checked', true );
+						} else if ( selectAll.is( ':checked' ) ) {
+							selectAll.prop( 'checked', false );
+						}
 					}
 				} else if ( target.hasClass('submit-add-to-menu') ) {
 					api.registerChange();
@@ -1073,34 +1122,38 @@ var wpNavMenu;
 					else if ( e.target.id && -1 != e.target.id.indexOf('submit-') )
 						$('#' + e.target.id.replace(/submit-/, '')).addSelectedToMenu( api.addMenuItemToBottom );
 					return false;
-				} else if ( target.hasClass('page-numbers') ) {
-					$.post( ajaxurl, e.target.href.replace(/.*\?/, '').replace(/action=([^&]*)/, '') + '&action=menu-get-metabox',
-						function( resp ) {
-							if ( -1 == resp.indexOf('replace-id') )
-								return;
-
-							var metaBoxData = $.parseJSON(resp),
-							toReplace = document.getElementById(metaBoxData['replace-id']),
-							placeholder = document.createElement('div'),
-							wrap = document.createElement('div');
-
-							if ( ! metaBoxData.markup || ! toReplace )
-								return;
-
-							wrap.innerHTML = metaBoxData.markup ? metaBoxData.markup : '';
-
-							toReplace.parentNode.insertBefore( placeholder, toReplace );
-							placeholder.parentNode.removeChild( toReplace );
-
-							placeholder.parentNode.insertBefore( wrap, placeholder );
-
-							placeholder.parentNode.removeChild( placeholder );
-
-						}
-					);
-
-					return false;
 				}
+			});
+
+			/*
+			 * Delegate the `click` event and attach it just to the pagination
+			 * links thus excluding the current page `<span>`. See ticket #35577.
+			 */
+			$( '#nav-menu-meta' ).on( 'click', 'a.page-numbers', function() {
+				var $container = $( this ).closest( '.inside' );
+
+				$.post( ajaxurl, this.href.replace( /.*\?/, '' ).replace( /action=([^&]*)/, '' ) + '&action=menu-get-metabox',
+					function( resp ) {
+						var metaBoxData = $.parseJSON( resp ),
+							toReplace;
+
+						if ( -1 === resp.indexOf( 'replace-id' ) ) {
+							return;
+						}
+
+						// Get the post type menu meta box to update.
+						toReplace = document.getElementById( metaBoxData['replace-id'] );
+
+						if ( ! metaBoxData.markup || ! toReplace ) {
+							return;
+						}
+
+						// Update the post type menu meta box with new content from the response.
+						$container.html( metaBoxData.markup );
+					}
+				);
+
+				return false;
 			});
 		},
 
@@ -1141,8 +1194,8 @@ var wpNavMenu;
 			menuName = $('#menu-name'),
 			menuNameVal = menuName.val();
 			// Cancel and warn if invalid menu name
-			if( !menuNameVal || menuNameVal == menuName.attr('title') || !menuNameVal.replace(/\s+/, '') ) {
-				menuName.parent().addClass('form-invalid');
+			if ( ! menuNameVal || ! menuNameVal.replace( /\s+/, '' ) ) {
+				menuName.parent().addClass( 'form-invalid' );
 				return false;
 			}
 			// Copy menu theme locations
@@ -1186,11 +1239,14 @@ var wpNavMenu;
 			form = document.getElementById('nav-menu-meta'),
 			pattern = /menu-item[(\[^]\]*/,
 			$items = $('<div>').html(resp).find('li'),
+			wrapper = panel.closest( '.accordion-section-content' ),
+			selectAll = wrapper.find( '.button-controls .select-all' ),
 			$item;
 
 			if( ! $items.length ) {
 				$('.categorychecklist', panel).html( '<li><p>' + navMenuL10n.noResultsFound + '</p></li>' );
 				$( '.spinner', panel ).removeClass( 'is-active' );
+				wrapper.addClass( 'has-no-menu-item' );
 				return;
 			}
 
@@ -1218,11 +1274,23 @@ var wpNavMenu;
 
 			$('.categorychecklist', panel).html( $items );
 			$( '.spinner', panel ).removeClass( 'is-active' );
+			wrapper.removeClass( 'has-no-menu-item' );
+
+			if ( selectAll.is( ':checked' ) ) {
+				selectAll.prop( 'checked', false );
+			}
 		},
 
+		/**
+		 * Remove a menu item.
+		 * @param  {object} el The element to be removed as a jQuery object.
+		 *
+		 * @fires document#menu-removing-item Passes the element to be removed.
+		 */
 		removeMenuItem : function(el) {
 			var children = el.childMenuItems();
 
+			$( document ).trigger( 'menu-removing-item', [ el ] );
 			el.addClass('deleting').animate({
 					opacity : 0,
 					height: 0

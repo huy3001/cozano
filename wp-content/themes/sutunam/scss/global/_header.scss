@@ -11,7 +11,7 @@
     z-index: 111;
 
     &.fixed {
-        @include backdrop-background($black-7, $backdrop-filter);
+        @include backdrop-background($black-8, $backdrop-filter);
     }
 
     @include bp(max-width, $desktop) {
@@ -291,6 +291,11 @@
     @include bp(max-width, $tablet - 1) {
         left: $left-content-width;
         @include transition();
+        
+        &.fixed {
+            @include backdrop-background($black-7, $backdrop-filter);
+        }
+
         .no-sidebar & {
             left: 0;
         }

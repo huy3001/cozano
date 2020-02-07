@@ -1024,7 +1024,7 @@ h6 {
 /* line 13, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
 #header.fixed {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* line 218, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/_mixin.scss */
@@ -1524,13 +1524,33 @@ h6 {
     transition: all 0.3s ease-out;
   }
 
-  /* line 294, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 295, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+
+  #header.fixed {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  /* line 218, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/_mixin.scss */
+
+  #header.fixed:before {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* line 299, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   .no-sidebar #header {
     left: 0;
   }
 
-  /* line 297, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 302, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .toggle-menu {
     display: block;
@@ -1539,7 +1559,7 @@ h6 {
     margin-top: -7px;
   }
 
-  /* line 302, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 307, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .toggle-menu .icon-bar {
     height: 2px;
@@ -1550,7 +1570,7 @@ h6 {
     transition: all 0.3s ease-out;
   }
 
-  /* line 306, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 311, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .toggle-menu .icon-bar:first-child {
     -webkit-transform: translate(0, 6px) rotate(45deg);
@@ -1560,7 +1580,7 @@ h6 {
     transform: translate(0, 6px) rotate(45deg);
   }
 
-  /* line 309, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 314, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .toggle-menu .icon-bar:nth-child(2) {
     top: 6px;
@@ -1568,7 +1588,7 @@ h6 {
     filter: alpha(opacity=0);
   }
 
-  /* line 313, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 318, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .toggle-menu .icon-bar:last-child {
     -webkit-transform: translate(0, -6px) rotate(-45deg);
@@ -1578,14 +1598,14 @@ h6 {
     transform: translate(0, -6px) rotate(-45deg);
   }
 
-  /* line 318, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 323, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .top-menu,
   #header .login {
     display: none;
   }
 
-  /* line 322, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 327, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .logo {
     position: absolute;
@@ -1594,13 +1614,13 @@ h6 {
     margin-left: -60px;
   }
 
-  /* line 330, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 335, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .search-form button.toggle-search {
     padding-right: 0;
   }
 
-  /* line 335, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
+  /* line 340, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/global/_header.scss */
 
   #header .shopping-cart {
     margin-right: 5px;
@@ -6234,7 +6254,7 @@ h6 {
 
 .tax-product_cat .is-sticky .filter-bar {
   border-top: 1px solid #dfdfdf;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* line 218, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/_mixin.scss */
@@ -6267,7 +6287,7 @@ h6 {
 /* line 368, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
 .tax-product_cat .is-sticky #placeHolder ul.ft-menu > li.ft-field > div.ft-panel {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* line 218, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/_mixin.scss */
@@ -6842,19 +6862,59 @@ h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 757, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 756, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+
+  .tax-product_cat .is-sticky .filter-bar {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  /* line 218, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/_mixin.scss */
+
+  .tax-product_cat .is-sticky .filter-bar:before {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* line 763, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+
+  .tax-product_cat .is-sticky #placeHolder ul.ft-menu > li.ft-field > div.ft-panel {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  /* line 218, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/_mixin.scss */
+
+  .tax-product_cat .is-sticky #placeHolder ul.ft-menu > li.ft-field > div.ft-panel:before {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* line 773, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .image {
     height: 300px;
   }
 
-  /* line 760, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 776, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .size {
     top: -60px;
   }
 
-  /* line 762, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 778, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .size span {
     font-size: 12px;
@@ -6866,26 +6926,26 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 776, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 792, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat .cat-header .page-title {
     font-size: 40px;
   }
 
-  /* line 781, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 797, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat #placeHolder ul.ft-menu {
     max-height: 90%;
   }
 
-  /* line 786, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 802, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product {
     width: 50%;
     margin: 0 0 20px;
   }
 
-  /* line 789, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 805, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .onsold,
   .tax-product_cat ul.products li.product .onsale {
@@ -6895,13 +6955,13 @@ h6 {
     padding: 13px 0;
   }
 
-  /* line 796, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 812, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat ul.products li.product .image {
     height: 250px;
   }
 
-  /* line 804, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
+  /* line 820, /mnt/e/data/websites/dev.sutunam.com/cozano/wp-content/themes/sutunam/scss/page/_product-category.scss */
 
   .tax-product_cat[lang="vi"] ul.products li.product .onsold,
   .tax-product_cat[lang="vi"] ul.products li.product .onsale {

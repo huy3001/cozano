@@ -348,7 +348,7 @@
     .is-sticky {
         .filter-bar {
             border-top: 1px solid $product-select-bd;
-            @include backdrop-background($white-7, $backdrop-filter);
+            @include backdrop-background($white-8, $backdrop-filter);
         }
 
         #placeHolder {
@@ -366,7 +366,7 @@
                     }
 
                     > div.ft-panel {
-                        @include backdrop-background($white-7, $backdrop-filter);
+                        @include backdrop-background($white-8, $backdrop-filter);
 
                         &:before {
                             border: none;
@@ -752,6 +752,22 @@
     }
 
     @include bp(max-width, $tablet - 1) {
+        .is-sticky {
+            .filter-bar {
+                @include backdrop-background($white-7, $backdrop-filter);
+            }
+
+            #placeHolder {
+                ul.ft-menu {
+                    > li.ft-field {
+                        > div.ft-panel {
+                            @include backdrop-background($white-7, $backdrop-filter);
+                        }
+                    }
+                }
+            }
+        }
+
         ul.products {
             li.product {
                 .image {

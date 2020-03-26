@@ -37,29 +37,25 @@ get_header( 'shop' ); ?>
 
 	echo '<div class="cat-sub-list"><div class="container"><div class="row">';
 	$cats = get_the_terms( $product->ID, 'product_cat' );
-	foreach ($cats as $cat){
-		if($cat->parent == 0){
-			$parent = $cat->term_id;
-		}else{
-            $parent = $cat->parent;
-        }
+	foreach ($cats as $cat) {
+		$parent = $cat->term_id;
         break;
 	}
-    $args = array(
-        'hierarchical' => 1,
-        'show_option_none' => '',
-        'hide_empty' => 0,
-        'parent' => $parent,
-        'taxonomy' => 'product_cat'
-    );
-	if (isset($jk_options['men_top_slides']) && !empty($jk_options['men_top_slides'])) {
-		$slides = $jk_options['men_top_slides'];
+	$parent = get_ancestors($parent, 'product_cat');
+	$parent = array_reverse($parent);
+	$ancestor = get_term_by('id', $parent[0], 'product_cat');
+	$slides_id = $ancestor->slug . '_top_slides';
+	
+	if (isset($jk_options[$slides_id]) && !empty($jk_options[$slides_id])) {
+		$slides = $jk_options[$slides_id];
 		echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
 		foreach($slides as $slide) {
 			$slide_title = $slide['title'];
 			$slide_thumb = $slide['thumb'];
 			$slide_link = $slide['url'];
-			if($slide_title == $cat->name)
+			$slide_des = $slide['description'];
+
+			if($slide_des == $cat->slug)
 				echo '<div class="swiper-slide active"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
 			else
 				echo '<div class="swiper-slide"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';

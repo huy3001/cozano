@@ -23,7 +23,6 @@ $jk_options = get_option('redux_demo');
         'parent' => $cat->term_id,
         'taxonomy' => 'product_cat'
     );
-    var_dump($cat);
     if (isset($jk_options['men_top_slides']) && !empty($jk_options['men_top_slides'])) {
         $slides = $jk_options['men_top_slides'];
         echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';

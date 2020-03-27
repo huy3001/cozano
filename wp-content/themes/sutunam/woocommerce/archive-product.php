@@ -42,30 +42,28 @@ get_header( 'shop' ); ?>
 
             // Display sub-category
             echo '<div class="cat-sub-list"><div class="container"><div class="row">';
-            if($cat->parent == 0){
-                $parent = $cat->term_id;
-            }else{
-                $parent = $cat->parent;
+
+            $parent = get_ancestors($cat->term_id, 'product_cat');
+            $parent = array_reverse($parent);
+            $ancestor = get_term_by('id', $parent[0], 'product_cat');
+            $slides_id = $ancestor->slug . '_top_slides';
+            
+            if (isset($jk_options[$slides_id]) && !empty($jk_options[$slides_id])) {
+                $slides = $jk_options[$slides_id];
+                echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
+                foreach($slides as $slide) {
+                    $slide_title = $slide['title'];
+                    $slide_thumb = $slide['thumb'];
+                    $slide_link = $slide['url'];
+                    $slide_des = $slide['description'];
+
+                    if($slide_des == $cat->slug)
+                        echo '<div class="swiper-slide active"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
+                    else
+                        echo '<div class="swiper-slide"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
+                }
+                echo '</div></div></div></div></div>';
             }
-            $args = array(
-                'hierarchical' => 1,
-                'show_option_none' => '',
-                'hide_empty' => 0,
-                'parent' => $parent,
-                'taxonomy' => 'product_cat'
-            );
-            $categories = get_categories( $args );
-            echo '<div class="cat-list swiper-container"><div class="swiper-wrapper">';
-            foreach($categories as $category){
-                $link = get_term_link( $category->slug, $category->taxonomy );
-                $thumbnail = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
-                $image_sub = wp_get_attachment_url( $thumbnail );
-				if($category->term_id == $cat->term_id)
-                	echo '<div class="swiper-slide active"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
-				else
-					echo '<div class="swiper-slide"><a href="'. $link .'"><figure><img src="'. $image_sub .'" /></figure><span>'. $category->name .'</span></a></div>';
-            }
-            echo '</div></div></div></div></div>';
             ?>
             <div class="cat-info">
                 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>

@@ -297,6 +297,7 @@ Redux::setHelpSidebar($opt_name, $content);
 
 // -> START Basic Fields
 
+/* General Settings */
 Redux::setSection($opt_name, array(
     'icon' => 'el-icon-home-alt',
     'title' => __('General Settings', 'sutunam'),
@@ -352,6 +353,7 @@ Redux::setSection($opt_name, array(
     )
 ));
 
+/* Cozano Overview */
 Redux::setSection($opt_name, array(
     'title' => 'Cozano Overview',
     'icon' => 'el-icon-eye-open',
@@ -480,6 +482,8 @@ Redux::setSection($opt_name, array(
         )
     )
 ));
+
+/* Home Overview */
 Redux::setSection($opt_name, array(
     'title' => 'Home Overview',
     'icon' => 'el-icon-eye-open',
@@ -803,6 +807,7 @@ Redux::setSection($opt_name, array(
     ),
 ));
 
+/* Promotion Overview */
 Redux::setSection($opt_name, array(
     'title' => 'Promotion Overview',
     'icon' => 'el-icon-eye-open',
@@ -902,6 +907,7 @@ Redux::setSection($opt_name, array(
     ),
 ));
 
+/* Men Option */
 Redux::setSection($opt_name, array(
     'title' => 'Men Option',
     'icon' => 'el-icon-eye-open',
@@ -977,6 +983,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'men_des_option_2',
             'type' => 'textarea',
@@ -1045,6 +1052,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'men_des_option_3',
             'type' => 'textarea',
@@ -1112,10 +1120,23 @@ Redux::setSection($opt_name, array(
                 'center' => 'Center'
             ),
             'default' => 'left',
+        ),
+
+        array(
+            'id' => 'men_top_slides',
+            'type' => 'slides',
+            'title' => __('Men Slides Options', 'sutunam'),
+            'subtitle' => __('Unlimited slides with drag and drop sortings.', 'sutunam'),
+            'placeholder' => array(
+                'title' => __('Title', 'sutunam'),
+                'description' => __('Description', 'sutunam'),
+                'url' => __('URL', 'sutunam'),
+            )
         )
     ),
 ));
 
+/* Women Option */
 Redux::setSection($opt_name, array(
     'title' => 'Women Option',
     'icon' => 'el-icon-eye-open',
@@ -1191,6 +1212,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'women_des_option_2',
             'type' => 'textarea',
@@ -1259,6 +1281,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'women_des_option_3',
             'type' => 'textarea',
@@ -1326,10 +1349,23 @@ Redux::setSection($opt_name, array(
                 'center' => 'Center'
             ),
             'default' => 'left',
+        ),
+
+        array(
+            'id' => 'women_top_slides',
+            'type' => 'slides',
+            'title' => __('Women Slides Options', 'sutunam'),
+            'subtitle' => __('Unlimited slides with drag and drop sortings.', 'sutunam'),
+            'placeholder' => array(
+                'title' => __('Title', 'sutunam'),
+                'description' => __('Description', 'sutunam'),
+                'url' => __('URL', 'sutunam'),
+            )
         )
     ),
 ));
 
+/* Bigsize Option */
 Redux::setSection($opt_name, array(
     'title' => 'Big Size Option',
     'icon' => 'el-icon-eye-open',
@@ -1396,6 +1432,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'bigsize_des_option_2',
             'type' => 'textarea',
@@ -1455,6 +1492,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'bigsize_des_option_3',
             'type' => 'textarea',
@@ -1513,10 +1551,23 @@ Redux::setSection($opt_name, array(
                 'center' => 'Center'
             ),
             'default' => 'left',
+        ),
+
+        array(
+            'id' => 'bigsize_top_slides',
+            'type' => 'slides',
+            'title' => __('Bigsize Slides Options', 'sutunam'),
+            'subtitle' => __('Unlimited slides with drag and drop sortings.', 'sutunam'),
+            'placeholder' => array(
+                'title' => __('Title', 'sutunam'),
+                'description' => __('Description', 'sutunam'),
+                'url' => __('URL', 'sutunam'),
+            )
         )
     ),
 ));
 
+/* Sale Option */
 Redux::setSection($opt_name, array(
     'title' => 'Sale Option',
     'icon' => 'el-icon-eye-open',
@@ -1583,6 +1634,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'sale_des_option_2',
             'type' => 'textarea',
@@ -1642,6 +1694,7 @@ Redux::setSection($opt_name, array(
             ),
             'default' => 'left',
         ),
+
         array(
             'id' => 'sale_des_option_3',
             'type' => 'textarea',
@@ -1700,30 +1753,50 @@ Redux::setSection($opt_name, array(
                 'center' => 'Center'
             ),
             'default' => 'left',
+        ),
+
+        array(
+            'id' => 'sale_top_slides',
+            'type' => 'slides',
+            'title' => __('Sale Slides Options', 'sutunam'),
+            'subtitle' => __('Unlimited slides with drag and drop sortings.', 'sutunam'),
+            'placeholder' => array(
+                'title' => __('Title', 'sutunam'),
+                'description' => __('Description', 'sutunam'),
+                'url' => __('URL', 'sutunam'),
+            )
         )
-    ),
+    )
 ));
 
+/* Contact Option */
 Redux::setSection($opt_name, array(
     'icon' => 'el-icon-map-marker-alt',
     'title' => __('Contact', 'sutunam'),
-    'fields' => array(array("title" => "Email Address to receive emails",
+    'fields' => array(
+        array("title" => "Email Address to receive emails",
         "id" => "e_add",
         "type" => "text"
-    ), array("title" => "Address",
-        "id" => "address",
-        "type" => "text"
-    ), array("title" => "Latitutde",
-        "id" => "g_lat",
-        "type" => "text"
-    ), array("title" => "Longitude",
-        "id" => "g_long",
-        "type" => "text"
-    ), array("title" => "Telephone",
-        "id" => "telephone",
-        "type" => "text"
-    )
-    )));
+        ), 
+        array("title" => "Address",
+            "id" => "address",
+            "type" => "text"
+        ), 
+        array("title" => "Latitutde",
+            "id" => "g_lat",
+            "type" => "text"
+        ), 
+        array("title" => "Longitude",
+            "id" => "g_long",
+            "type" => "text"
+        ), 
+        array("title" => "Telephone",
+            "id" => "telephone",
+            "type" => "text"
+        )
+)));
+
+/* Footer Option */
 Redux::setSection($opt_name, array(
     'icon' => 'el-icon-website',
     'title' => __('Footer', 'sutunam'),
@@ -1772,7 +1845,7 @@ Redux::setSection($opt_name, array(
             "id" => "copy_text",
             "type" => "text"
         )
-    )));
+)));
 
 
 if (file_exists(dirname(__FILE__) . '/../README.md')) {

@@ -8,6 +8,9 @@
         $tablet = 768,
         $mobile = 480;
 
+    // Get current uri
+    var uri = window.location.href;
+
     // Product detail functions
     var imageList = $('.image-list'),
         thumbList = $('.thumb-list'),
@@ -465,26 +468,34 @@
             var material = [];
             var color = [];
             var price = [];
-            $("#legend p").each(function(){
-                if($(this).attr('data-title') == 'nhãn hiệu'){
-                    brand.push($(this).text());
-                }
-                if($(this).attr('data-title') == 'kiểu dáng'){
-                    style.push($(this).text());
-                }
-                if($(this).attr('data-title') == 'chất liệu'){
-                    material.push($(this).text());
-                }
-                if($(this).attr('data-title') == 'màu sắc'){
-                    color.push($(this).text());
-                }
-                if($(this).attr('data-title') == 'size'){
-                    size.push($(this).text());
-                }
-                if($(this).attr('data-title') == 'giá'){
-                    price.push($(this).text());
+
+            // Push filter criteria to arrays
+            $("#legend p").each(function() {
+                switch ($(this).attr('data-title')) {
+                    case 'nhãn hiệu':
+                        brand.push($(this).text());
+                        break;
+                    case 'kiểu dáng':
+                        style.push($(this).text());
+                        break;
+                    case 'chất liệu':
+                        material.push($(this).text());
+                        break;
+                    case 'màu sắc':
+                        color.push($(this).text());
+                        break;
+                    case 'size':
+                        size.push($(this).text());
+                        break;
+                    case 'giá':
+                        price.push($(this).text());
+                        break;
+                    default:
+                        // do nothing
                 }
             });
+            
+            // Init Filtrify with options
             var ft = $.filtrify('product-category', 'placeHolder', {
                 close : true,
                 query : {
@@ -498,33 +509,86 @@
                 callback : function( query, match, mismatch ) {
                     if ( mismatch.length ) {
                         resetFilter.show();
+                        // Count filtered items
                         var count = $('#product-category .product:not("li.ft-hidden")').length;
-                        if(count == 0){
+                        if(count == 0) {
                             count = 'Không tìm thấy';
                         }
                         $(".product-count span").html(count);
-                        var category, tags, i, tag, legend = "";
+                        var category, tags, i, tag, legend, separator, value, uriQuery = '';
+                        // Get category from query
                         for (category in query) {
                             tags = query[category];
                             if (tags.length) {
                                 for (i = 0; i < tags.length; i++) {
                                     tag = tags[i];
-                                    legend += "<p data-title='"+category +"'>" + tag + "</p>";
+                                    legend += "<p data-title='" + category + "'>" + tag + "</p>";
+                                    separator = uriQuery.indexOf('?') !== -1 ? "&" : "?";
+                                    value = encodeURIComponent(category) + "=" + encodeURIComponent(tag);
+                                    if (uriQuery.indexOf(value) == -1) {
+                                        uriQuery += separator + value;
+                                    }
                                 }
                             }
                         }
-                        legend = legend.substring(0,legend.length -1);
+                        legend = legend.substring(0, legend.length - 1);
                         $("#legend").html(legend);
+                        // Set new uri
+                        var newUri;
+                        if (uri.indexOf('?') == -1) {
+                            newUri = uri + uriQuery;
+                        }
+                        else {
+                            newUri = uri.substr(0, uri.indexOf('?')) + uriQuery
+                        }
+                        // Push new uri to address bar
+                        history.pushState({}, null, newUri);
                     }
-                    else{
+                    else {
                         $("#legend").html("");
                         resetFilter.hide();
                     }
                 }
             });
 
+            // Get query parameter from url
+            function getQueryStringParameters(url) {
+                var urlParams = {},
+                    match,
+                    additional = /\+/g, // Regex for replacing additional symbol with a space
+                    search = /([^&=]+)=?([^&]*)/g,
+                    decode = function (s) {
+                        return decodeURIComponent(s.replace(additional, ' '));
+                    },
+                    query;
+                if (url) {
+                    if (url.split('?').length > 0) {
+                        query = url.split('?')[1];
+                    }
+                } else {
+                    url = window.location.href;
+                    query = window.location.search.substring(1);
+                }
+                while (match = search.exec(query)) {
+                    urlParams[decode(match[1])] = [decode(match[2])];
+                }
+                return urlParams;
+            }
+
+            var filterQuery = getQueryStringParameters(uri);
+            
+            if (filterQuery) {
+                // Trigger filter query
+                ft.trigger(filterQuery);
+            }
+
+            // Reset filter
             resetFilter.on('click', function() {
                 ft.reset();
+                // Reset url back to origin
+                var originUrl = uri.indexOf('?') !== -1 ? uri.substr(0, uri.indexOf('?')) : uri;
+                history.replaceState({}, null, originUrl);
+                // Count reseted items
                 var count = $('#product-category .product:not("li.ft-hidden")').length;
                 if(count == 0){
                     count = 'Không tìm thấy';

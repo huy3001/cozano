@@ -1,2 +1,3 @@
-# cozaro
-# New project for cozaro
+# Project: Cozano
+# Author: Huy Nguyen
+# Description: New project for Cozano website

@@ -4,20 +4,18 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
- * will need to copy the new files to your theme to maintain compatibility. We try to do this.
- * as little as possible, but it does happen. When this occurs the version of the template file will.
- * be bumped and the readme will list any important changes.
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
  *
- * @see     http://docs.woothemes.com/document/template-structure/
- * @author  WooThemes
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 2.5.0
+ * @version 3.6.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
 global $product, $woocommerce_loop;
 
@@ -31,8 +29,8 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
 }
 
-// Ensure visibility
-if ( ! $product || ! $product->is_visible() ) {
+// Ensure visibility.
+if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
@@ -48,13 +46,14 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
 ?>
+
 <?php
-//Add fit filter
+// Add fit filter
 $fits = get_the_terms( $post->ID, 'fit' );
 $fit = null;
 $i =0;
-?>
-<?php foreach($fits as $item){
+
+foreach($fits as $item){
     if($i == 0)
 		$fit = $item->name;
     else
@@ -63,12 +62,12 @@ $i =0;
 }
 ?>
 <?php
-//Add color filter
+// Add color filter
 $colors = get_the_terms( $post->ID, 'color' );
 $color = null;
 $i =0;
-?>
-<?php foreach($colors as $item){
+
+foreach($colors as $item){
     if($i == 0)
 		$color = $item->name.'-'.get_term_meta($item->term_id, 'color', true);
     else
@@ -78,12 +77,12 @@ $i =0;
 ?>
 
 <?php
-//Add fabric filter
+// Add fabric filter
 $fabrics = get_the_terms( $post->ID, 'fabric' );
 $fabric = null;
 $i =0;
-?>
-<?php foreach($fabrics as $item){
+
+foreach($fabrics as $item){
 	if($i == 0)
 		$fabric = $item->name;
 	else
@@ -93,12 +92,12 @@ $i =0;
 ?>
 
 <?php
-//Add brand filter
+// Add brand filter
 $brands = get_the_terms( $post->ID, 'brand' );
 $brand = null;
 $i =0;
-?>
-<?php foreach($brands as $item){
+
+foreach($brands as $item){
 	if($i == 0)
 		$brand = $item->name;
 	else
@@ -108,30 +107,38 @@ $i =0;
 ?>
 
 <?php
-//Add size filter
+// Add size filter
 $sizes = get_the_terms( $post->ID, 'size' );
 $size = null;
 $i =0;
-?>
-<?php foreach($sizes as $item){
+
+foreach($sizes as $item){
 	if($i == 0)
 		$size = $item->name;
 	else
 		$size .= ', '.$item->name;
 	$i++;
 }
-$price = $product->price;
-if ($price <= 100000){
+
+// Product price
+$price = $product->get_price();
+
+if ($price <= 100000) {
 	$filterPrice = '< 100.000 VND';
-}elseif($price > 100000 && $price <= 200000){
+}
+elseif ($price > 100000 && $price <= 200000) {
 	$filterPrice = '> 100.000 VND';
-}elseif($price > 200000 && $price <= 300000){
+}
+elseif($price > 200000 && $price <= 300000) {
 	$filterPrice = '> 200.000 VND';
-}elseif($price > 300000 && $price <= 400000){
+}
+elseif($price > 300000 && $price <= 400000) {
 	$filterPrice = '> 300.000 VND';
-}elseif($price > 400000 && $price <= 500000){
+}
+elseif($price > 400000 && $price <= 500000) {
 	$filterPrice = '> 400.000 VND';
-}else{
+}
+else {
 	$filterPrice = '> 500.000 VND';
 }
 ?>
@@ -166,8 +173,8 @@ if ($price <= 100000){
 	</div>
 
 	<div class="info">
-        <?php if($product->sku): ?>
-        <h3><?php echo $product->sku; ?></h3>
+        <?php if($product->get_sku()): ?>
+        <h3><?php echo $product->get_sku(); ?></h3>
         <?php endif; ?>
         <h4><?php echo get_the_title();?></h4>
         <div class="size">

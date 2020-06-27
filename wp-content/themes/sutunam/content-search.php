@@ -63,8 +63,8 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
     </div>
 
     <div class="info">
-        <?php if($product->sku): ?>
-            <h3><?php echo $product->sku; ?></h3>
+        <?php if($product->get_sku()): ?>
+            <h3><?php echo $product->get_sku(); ?></h3>
         <?php endif; ?>
         <h4><?php echo get_the_title();?></h4>
         <div class="size">

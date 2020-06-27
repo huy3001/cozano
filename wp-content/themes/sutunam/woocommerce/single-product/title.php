@@ -21,6 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 ?>
 <h1 itemprop="name" class="product_title entry-title">
-    <span class="product-id"><?php echo $product->sku;?></span>
+    <span class="product-id"><?php echo $product->get_sku();?></span>
     <span class="product-name"><?php the_title(); ?></span>
 </h1>

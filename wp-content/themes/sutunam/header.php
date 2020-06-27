@@ -116,7 +116,7 @@ $jk_options = get_option('redux_demo');
             </div>
             <?php
             global $woocommerce;
-            $cart_url = $woocommerce->cart->get_cart_url();
+            $cart_url = wc_get_cart_url();
             $cart_count = $woocommerce->cart->cart_contents_count;
             if ($cart_count > 0) {
             ?>

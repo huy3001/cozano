@@ -283,7 +283,7 @@ if (!function_exists('sutunam_entry_content')) {
 }
 
 add_action( 'wp_enqueue_scripts','stn_frontend_scripts' );
-add_filter( 'wp_default_editor', create_function('', 'return "tinymce";') );
+add_filter( 'wp_default_editor', function() {return "tinymce";} );
 /**
  * Enqueue js  css
  */

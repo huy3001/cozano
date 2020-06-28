@@ -412,7 +412,7 @@ class THWCFD_Checkout {
 						$label = isset($field['label']) && $field['label'] ? THWCFD_Utils::t($field['label']) : $key;
 
 						$label = esc_attr($label);
-						$value = wptexturize($value);
+						//$value = wptexturize($value);
 						$value = THWCFD_Utils::get_option_text($field, $value);
 						
 						if(is_account_page()){

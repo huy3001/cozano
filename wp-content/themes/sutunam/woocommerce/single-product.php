@@ -37,10 +37,12 @@ get_header( 'shop' ); ?>
 
 	echo '<div class="cat-sub-list"><div class="container"><div class="row">';
 	$cats = get_the_terms( $product->ID, 'product_cat' );
-	foreach ($cats as $cat) {
-		$parent = $cat->term_id;
-        break;
-	}
+	if ($cats) :
+		foreach ($cats as $cat) {
+			$parent = $cat->term_id;
+			break;
+		}
+	endif;
 	$parent = get_ancestors($parent, 'product_cat');
 	$parent = array_reverse($parent);
 	$ancestor = get_term_by('id', $parent[0], 'product_cat');

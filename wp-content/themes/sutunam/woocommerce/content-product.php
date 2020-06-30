@@ -54,13 +54,16 @@ $fits = get_the_terms( $post->ID, 'fit' );
 $fit = null;
 $i =0;
 ?>
-<?php foreach($fits as $item){
-    if($i == 0)
-		$fit = $item->name;
-    else
-		$fit .= ', '.$item->name;
-    $i++;
-}
+<?php 
+if ($fits) :
+	foreach($fits as $item){
+		if($i == 0)
+			$fit = $item->name;
+		else
+			$fit .= ', '.$item->name;
+		$i++;
+	}
+endif;
 ?>
 <?php
 //Add color filter
@@ -68,13 +71,16 @@ $colors = get_the_terms( $post->ID, 'color' );
 $color = null;
 $i =0;
 ?>
-<?php foreach($colors as $item){
-    if($i == 0)
-		$color = $item->name.'-'.get_term_meta($item->term_id, 'color', true);
-    else
-		$color .= ', '.$item->name.'-'.get_term_meta($item->term_id, 'color', true);
-    $i++;
-}
+<?php 
+if ($colors) :
+	foreach($colors as $item){
+		if($i == 0)
+			$color = $item->name.'-'.get_term_meta($item->term_id, 'color', true);
+		else
+			$color .= ', '.$item->name.'-'.get_term_meta($item->term_id, 'color', true);
+		$i++;
+	}
+endif;
 ?>
 
 <?php
@@ -83,13 +89,16 @@ $fabrics = get_the_terms( $post->ID, 'fabric' );
 $fabric = null;
 $i =0;
 ?>
-<?php foreach($fabrics as $item){
-	if($i == 0)
-		$fabric = $item->name;
-	else
-		$fabric .= ', '.$item->name;
-	$i++;
-}
+<?php 
+if ($fabrics) :
+	foreach($fabrics as $item){
+		if($i == 0)
+			$fabric = $item->name;
+		else
+			$fabric .= ', '.$item->name;
+		$i++;
+	}
+endif;
 ?>
 
 <?php
@@ -98,13 +107,16 @@ $brands = get_the_terms( $post->ID, 'brand' );
 $brand = null;
 $i =0;
 ?>
-<?php foreach($brands as $item){
-	if($i == 0)
-		$brand = $item->name;
-	else
-		$brand .= ', '.$item->name;
-	$i++;
-}
+<?php 
+if ($brands) :
+	foreach($brands as $item){
+		if($i == 0)
+			$brand = $item->name;
+		else
+			$brand .= ', '.$item->name;
+		$i++;
+	}
+endif;
 ?>
 
 <?php
@@ -113,13 +125,17 @@ $sizes = get_the_terms( $post->ID, 'size' );
 $size = null;
 $i =0;
 ?>
-<?php foreach($sizes as $item){
-	if($i == 0)
-		$size = $item->name;
-	else
-		$size .= ', '.$item->name;
-	$i++;
-}
+<?php 
+if ($sizes) :
+	foreach($sizes as $item){
+		if($i == 0)
+			$size = $item->name;
+		else
+			$size .= ', '.$item->name;
+		$i++;
+	}
+endif;
+
 $price = $product->price;
 if ($price <= 100000){
 	$filterPrice = '< 100.000 VND';

@@ -126,19 +126,19 @@ $jk_options = get_option('redux_demo');
                         </div>
                     </div>
                 <?php endif; ?>
-                <?php if($jk_options['shoes_img']['url']): ?>
+                <?php if($jk_options['sale_img']['url']): ?>
                     <div class="shoes-block content-block">
                         <div class="content-block-img">
                             <?php if($jk_options['shoes_url']): ?>
                             <a href="<?php echo $jk_options['shoes_url']?>" target="_self">
                             <?php endif; ?>
-                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['shoes_img']['url'] ?>" alt="" />
+                                <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['sale_img']['url'] ?>" alt="" />
                                 <?php
-                                $shoes_img_tablet = wp_get_attachment_image_src($jk_options['shoes_img']['id'],'medium')[0];
-                                $shoes_img_mobile = wp_get_attachment_image_src($jk_options['shoes_img']['id'],'thumbnail')[0];
+                                $sale_img_tablet = wp_get_attachment_image_src($jk_options['sale_img']['id'],'medium')[0];
+                                $sale_img_mobile = wp_get_attachment_image_src($jk_options['sale_img']['id'],'thumbnail')[0];
                                 ?>
-                                <img class="visible-sm" src="<?php echo $shoes_img_tablet ?>" alt="" />
-                                <img class="visible-xs" src="<?php echo $shoes_img_mobile ?>" alt="" />
+                                <img class="visible-sm" src="<?php echo $sale_img_tablet ?>" alt="" />
+                                <img class="visible-xs" src="<?php echo $sale_img_mobile ?>" alt="" />
                             <?php if($jk_options['shoes_url']): ?>
                             </a>
                             <?php endif; ?>

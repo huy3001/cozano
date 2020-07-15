@@ -9,6 +9,7 @@
 get_header(); ?>
 <?php
 $jk_options = get_option('redux_demo');
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 ?>
 <?php include (TEMPLATEPATH . '/left-content.php'); ?>
 <div class="right-content">
@@ -32,9 +33,9 @@ $jk_options = get_option('redux_demo');
             $slide_link = $slide['url'];
 
             if($slide_title == $cat->name)
-                echo '<div class="swiper-slide active"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
+                echo '<div class="swiper-slide active"><a href="'. $slide_link .'"><figure><img class="lazyload" src="'. $base64_image .'" data-src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
             else
-                echo '<div class="swiper-slide"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
+                echo '<div class="swiper-slide"><a href="'. $slide_link .'"><figure><img class="lazyload" src="'. $base64_image .'" data-src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
         }
         echo '</div></div></div></div></div>';
     }
@@ -81,13 +82,15 @@ $jk_options = get_option('redux_demo');
                     <a href="<?php echo $jk_options['sale_url_option_1']?>" target="_self">
                     <?php endif; ?>
                         <?php if($jk_options['sale_img_option_1']['url']): ?>
-                        <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['sale_img_option_1']['url'] ?>" alt="" />
                         <?php
                             $sale_img_option_1_tablet = wp_get_attachment_image_src($jk_options['sale_img_option_1']['id'],'medium')[0];
                             $sale_img_option_1_mobile = wp_get_attachment_image_src($jk_options['sale_img_option_1']['id'],'thumbnail')[0];
                         ?>
-                        <img class="visible-sm" src="<?php echo $sale_img_option_1_tablet ?>" alt="" />
-                        <img class="visible-xs" src="<?php echo $sale_img_option_1_mobile ?>" alt="" />
+                        <picture>
+                            <source media="(min-width:992px)" data-srcset="<?php echo $jk_options['sale_img_option_1']['url'] ?>">
+                            <source media="(min-width:480px)" data-srcset="<?php echo $sale_img_option_1_tablet ?>">
+                            <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $sale_img_option_1_mobile ?>" alt="">
+                        </picture>
                         <?php endif; ?>
                     <?php if($jk_options['sale_url_option_1']): ?>
                     </a>
@@ -140,13 +143,15 @@ $jk_options = get_option('redux_demo');
                     <a href="<?php echo $jk_options['sale_url_option_2']?>" target="_self">
                     <?php endif; ?>
                         <?php if($jk_options['sale_img_option_2']['url']): ?>
-                        <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['sale_img_option_2']['url'] ?>" alt="" />
                         <?php
                         $sale_img_option_2_tablet = wp_get_attachment_image_src($jk_options['sale_img_option_2']['id'],'medium')[0];
                         $sale_img_option_2_mobile = wp_get_attachment_image_src($jk_options['sale_img_option_2']['id'],'thumbnail')[0];
                         ?>
-                        <img class="visible-sm" src="<?php echo $sale_img_option_2_tablet ?>" alt="" />
-                        <img class="visible-xs" src="<?php echo $sale_img_option_2_mobile ?>" alt="" />
+                        <picture>
+                            <source media="(min-width:992px)" data-srcset="<?php echo $jk_options['sale_img_option_2']['url'] ?>">
+                            <source media="(min-width:480px)" data-srcset="<?php echo $sale_img_option_2_tablet ?>">
+                            <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $sale_img_option_2_mobile ?>" alt="">
+                        </picture>
                         <?php endif; ?>
                     <?php if($jk_options['sale_url_option_2']): ?>
                     </a>
@@ -199,13 +204,15 @@ $jk_options = get_option('redux_demo');
                     <a href="<?php echo $jk_options['sale_url_option_3']?>" target="_self">
                     <?php endif; ?>
                         <?php if($jk_options['sale_img_option_3']['url']): ?>
-                        <img class="hidden-sm hidden-xs" src="<?php echo $jk_options['sale_img_option_3']['url'] ?>" alt="" />
                         <?php
                         $sale_img_option_3_tablet = wp_get_attachment_image_src($jk_options['sale_img_option_3']['id'],'medium')[0];
                         $sale_img_option_3_mobile = wp_get_attachment_image_src($jk_options['sale_img_option_3']['id'],'thumbnail')[0];
                         ?>
-                        <img class="visible-sm" src="<?php echo $sale_img_option_3_tablet ?>" alt="" />
-                        <img class="visible-xs" src="<?php echo $sale_img_option_3_mobile ?>" alt="" />
+                        <picture>
+                            <source media="(min-width:992px)" data-srcset="<?php echo $jk_options['sale_img_option_3']['url'] ?>">
+                            <source media="(min-width:480px)" data-srcset="<?php echo $sale_img_option_3_tablet ?>">
+                            <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $sale_img_option_3_mobile ?>" alt="">
+                        </picture>
                         <?php endif; ?>
                     <?php if($jk_options['sale_url_option_3']): ?>
                     </a>

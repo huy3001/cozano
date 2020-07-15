@@ -13,9 +13,10 @@ include(TEMPLATEPATH . '/left-content.php');
 <div class="right-content">
 <?php
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), FALSE);
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 ?>
 <!--<section class="contact-top-img parallax-window" style="background-image: url('<?php echo $image[0] ?>')">
-    <img src="<?php echo $image[0] ?>" alt=""/>
+    <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $image[0] ?>" alt=""/>
 </section>
 <section class="contact-wrapper">
     <div class="container">

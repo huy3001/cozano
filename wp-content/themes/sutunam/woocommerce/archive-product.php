@@ -19,6 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+
 get_header( 'shop' ); ?>
 <?php include (TEMPLATEPATH . '/left-content.php'); ?>
 <div class="right-content">
@@ -58,9 +60,9 @@ get_header( 'shop' ); ?>
                     $slide_des = $slide['description'];
 
                     if($slide_des == $cat->slug)
-                        echo '<div class="swiper-slide active"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
+                        echo '<div class="swiper-slide active"><a href="'. $slide_link .'"><figure><img class="lazyload" src="'. $base64_image .'" data-src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
                     else
-                        echo '<div class="swiper-slide"><a href="'. $slide_link .'"><figure><img src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
+                        echo '<div class="swiper-slide"><a href="'. $slide_link .'"><figure><img class="lazyload" src="'. $base64_image .'" data-src="'. $slide_thumb .'" /></figure><span>'. $slide_title .'</span></a></div>';
                 }
                 echo '</div></div></div></div></div>';
             }
@@ -91,7 +93,7 @@ get_header( 'shop' ); ?>
             if($image):
                 ?>
                 <div class="cat-image">
-                    <img src="<?php echo $image;?>" />
+                    <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $image;?>" alt="" />
                 </div>
             <?php endif;?>
         </div><!-- End cat header -->

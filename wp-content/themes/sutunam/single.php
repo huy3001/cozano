@@ -8,6 +8,7 @@
 
 get_header();
 include(TEMPLATEPATH . '/left-content.php');
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 ?>
 <div class="right-content">
 <?php
@@ -54,7 +55,7 @@ if (have_posts()) :
                         <div class="row">
                             <div class="news-item col-xs-12 col-sm-12">
                                 <div class="news-image">
-                                    <img src="<?php echo esc_url($image[0]) ?>" alt="<?php echo get_the_title() ?>"/>
+                                    <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo esc_url($image[0]) ?>" alt="<?php echo get_the_title() ?>"/>
                                 </div>
                                 <div class="news-content">
                                     <div class="category-list">

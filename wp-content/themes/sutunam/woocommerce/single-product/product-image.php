@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $woocommerce, $product;
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
 // Background image
 $bgImage = types_render_field("upload-image", array('url'=>true));
@@ -70,12 +71,12 @@ if($bgColor) {
 					$image_link    = wp_get_attachment_url( $attachment_id );
 					$img = wp_get_attachment_image_src($attachment_id,'large')[0];
 
-					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<div><a href="%s" itemprop="image" class="woocommerce-main-image" data-fancybox="images" title="%s" style="background-image: url(%s);"><img src="%s" data-zoom-image="%s" /></a></div>', $image_link, '', $image_link, $img, $image_link ), $attachment_id );
+					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<div><a href="%s" itemprop="image" class="woocommerce-main-image" data-fancybox="images" title="%s" style="background-image: url(%s);"><img class="lazyload" src="'. $base64_image .'" data-src="%s" data-zoom-image="%s" /></a></div>', $image_link, '', $image_link, $img, $image_link ), $attachment_id );
 				}
 			}
 		} else {
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img class="lazyload" src="'. $base64_image .'" data-src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
 
 		}
 	?>

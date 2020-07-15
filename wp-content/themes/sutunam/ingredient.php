@@ -11,11 +11,12 @@ get_header();
 <?php
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), FALSE);
 $ingredient_background = types_render_field("ingredient-background", array('output' => 'raw'));
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 ?>
 
     <section class="ingredient-top-img parallax-window"
              style="background-image: url('<?php echo $ingredient_background ?>')">
-        <img src="<?php echo $ingredient_background ?>" alt=""/>
+        <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $ingredient_background ?>" alt=""/>
     </section>
     <section class="ingredient-wrapper">
         <div class="container">
@@ -49,7 +50,7 @@ $ingredient_background = types_render_field("ingredient-background", array('outp
                             <div class="col-lg-7 col-md-7 product-item">
                                 <div class="product-img">
                                     <?php $large_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large'); ?>
-                                    <img src="<?php echo $large_image_url[0] ?>"
+                                    <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo $large_image_url[0] ?>"
                                          width="100%"/>
                                     <?php $terms = apply_filters('taxonomy-images-get-the-terms', '', array(
                                             'taxonomy' => 'ingredient-distributor',
@@ -60,8 +61,7 @@ $ingredient_background = types_render_field("ingredient-background", array('outp
                                         $distributor_img = wp_get_attachment_image_src($term->image_id, FALSE);
                                     } ?>
                                     <div class="distributor">
-                                        <img
-                                            src="<?php echo esc_url($distributor_img[0]) ?>"/>
+                                        <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo esc_url($distributor_img[0]) ?>"/>
                                     </div>
                                 </div>
 
@@ -105,7 +105,7 @@ $ingredient_background = types_render_field("ingredient-background", array('outp
                     ?>
                     <li class="ingredient-item item-<?php echo $post->post_name ?>">
                         <a href="#<?php echo($post->post_name); ?>">
-                            <img class="lazyOwl" data-src="
+                            <img class="lazyload" src="<?php echo $base64_image ?>" data-src="
                                     <?php echo esc_url(types_render_field("ingredient-product-thumbnail", array('output' => 'raw'))) ?>"
                                  width="100%"/>
 

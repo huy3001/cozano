@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product, $woocommerce_loop;
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
 // Store loop count we're currently on
 if ( empty( $woocommerce_loop['loop'] ) ) {
@@ -58,7 +59,7 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
         $hoverImg = types_render_field("hover-image", array('url'=>true, 'size' => 'thumbnail'));
         if($hoverImg) { ?>
             <!-- Add hover image -->
-            <img class="hover-image" src="<?php echo $hoverImg ?>" alt=""/>
+            <img class="lazyload hover-image" src="<?php echo $base64_image ?>" data-src="<?php echo $hoverImg ?>" alt=""/>
         <?php } ?>
     </div>
 

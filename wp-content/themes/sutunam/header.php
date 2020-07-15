@@ -10,6 +10,7 @@
 <?php
 
 $jk_options = get_option('redux_demo');
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
 ?>
 <!DOCTYPE html>
@@ -75,11 +76,14 @@ $jk_options = get_option('redux_demo');
                             class="fa <?php echo $jk_options['logo_icon'] ?>"></i></i><a
                         href="<?php echo home_url(); ?>"> <?php echo $jk_options['logo_txt'] ?></a>
                 <?php else: ?>
-                    <a href="<?php echo home_url(); ?>"> <img
-                            src="<?php echo esc_url($jk_options['logo_img']['url']); ?>"
+                    <a href="<?php echo home_url(); ?>">
+                        <img class="lazyload"
+                            src="<?php echo $base64_image ?>"
+                            data-src="<?php echo esc_url($jk_options['logo_img']['url']); ?>"
                             alt="<?php echo get_site_url() ?>"
                             width="160"
-                            height="30"></a>
+                            height="30">
+                    </a>
                 <?php endif ?>
             </div>
 

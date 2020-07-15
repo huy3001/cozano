@@ -7,7 +7,10 @@
  * This template to display footer
  */
 ?>
-<?php $jk_options = get_option('redux_demo');
+<?php 
+$jk_options = get_option('redux_demo');
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+
 if (!isset($jk_options['copy_text'])) {
     $copy_text = '© Copyright 2016 by Phucct. All rights reserved.';
 } else
@@ -84,7 +87,7 @@ if (!isset($jk_options['copy_text'])) {
 			</div>
             <div class="informed">
                 <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=24676" target="_blank">
-                    <img src="http://online.gov.vn/PublicImages/2015/08/27/11/20150827110756-dathongbao.png" alt="Đã thông báo Bộ công thương"/>
+                    <img class="lazyload" src="<?php echo $base64_image ?>" data-src="http://online.gov.vn/PublicImages/2015/08/27/11/20150827110756-dathongbao.png" alt="Đã thông báo Bộ công thương"/>
                 </a>
             </div>
 		</div>

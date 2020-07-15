@@ -10,9 +10,10 @@ get_header();
 ?>
 <?php
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), FALSE);
+$base64_image = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 ?>
 <section class="news-top-img parallax-window" style="background-image: url('<?php echo esc_url($image[0])?>')">
-    <img src="<?php echo esc_url($image[0])?>" alt=""/>
+    <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo esc_url($image[0])?>" alt=""/>
 </section>
 <section class="news-wrapper">
     <div class="container">
@@ -66,7 +67,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), FALSE);
                                 <a href="<?php the_permalink(); ?>"><?php echo __('Read more &rarr;');?></a>
                             </div>
                             <div class="news-image">
-                                <img src="<?php echo esc_url($url[0])?>" alt="<?php echo get_the_title()?>" />
+                                <img class="lazyload" src="<?php echo $base64_image ?>" data-src="<?php echo esc_url($url[0])?>" alt="<?php echo get_the_title()?>" />
                             </div>
                         </div>
                     <?php

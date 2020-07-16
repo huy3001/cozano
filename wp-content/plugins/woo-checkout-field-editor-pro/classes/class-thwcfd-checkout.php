@@ -352,14 +352,24 @@ class THWCFD_Checkout {
 		}
 	}
 
-	private function maybe_skip_fieldset( $fieldset_key, $data ) {
+	/*private function maybe_skip_fieldset( $fieldset_key, $data ) {
 		$ship_to_different_address = isset($data['ship_to_different_address']) ? $data['ship_to_different_address'] : false;
 
 		if ( 'shipping' === $fieldset_key && ( ! $ship_to_different_address || ! WC()->cart->needs_shipping_address() ) ) {
 			return true;
 		}
 		return false;
-	}
+	}*/
+
+	private function maybe_skip_fieldset( $fieldset_key, $data ) {
+        $ship_to_different_address = isset($data['ship_to_different_address']) ? $data['ship_to_different_address'] : false;
+        $ship_to_destination = get_option( 'woocommerce_ship_to_destination' );
+
+        if ( 'shipping' === $fieldset_key && ( ! $ship_to_different_address || ! WC()->cart->needs_shipping_address() ) ) {
+            return  $ship_to_destination != 'billing_only' ? true : false;
+        }
+        return false;
+    }
 	
 	/****************************************
 	----- Display Field Values - START ------

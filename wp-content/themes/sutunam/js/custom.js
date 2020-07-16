@@ -874,7 +874,7 @@
         customJS.sidebarToggle();
 
         // Bootstrap select
-        customJS.bootstrapSelect();
+        // customJS.bootstrapSelect();
         
         // Hover product image
         customJS.moreImageProduct();

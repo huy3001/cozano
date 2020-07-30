@@ -383,6 +383,10 @@
         homeMainSlider: function() {
             var sliderBlock = $('.slider-block');
             if(sliderBlock.length) {
+                var sliderHeight = sliderBlock.find('.content-block-img').height();
+                // Set max height for slider when loading
+                sliderBlock.css('max-height', sliderHeight + 'px');
+                // Init slider
                 sliderBlock.slick({
                     dots: true,
                     autoplay: true,

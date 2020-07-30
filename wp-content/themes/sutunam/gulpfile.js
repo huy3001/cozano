@@ -30,7 +30,7 @@ gulp.task('sass', function() {
 });
 
 // Create task for watch changes
-gulp.task('watch', ['browserSync', 'sass'], function() {
+gulp.task('watch', ['sass'], function() {
     // Watch changes of files
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('js/**/*.js', browserSync.reload);
